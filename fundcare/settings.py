@@ -14,8 +14,9 @@ from pathlib import Path
 import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles/')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -40,8 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'frenchise',
     'crispy_forms',
-    'django_filters',
+    # 'django_filters',
     'companystaff',
+    'corsheaders',
+    'storages',
     'crispy_bootstrap4',
 
 ]
@@ -62,7 +65,7 @@ ROOT_URLCONF = 'fundcare.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,8 +126,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
-
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
@@ -146,3 +148,21 @@ MEDIA_URL ='/media/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static/"),
 ]
+
+# S3 Bucket
+
+AWS_ACCESS_KEY_ID = "AKIATUKOIRDACVWFMEDE"
+AWS_SECRET_ACCESS_KEY = "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"
+AWS_STORAGE_BUCKET_NAME = "fundcarebucket1"
+
+# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+# Set static and media URLs
+STATIC_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/staticfiles/'
+MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/media/'
+
+AWS_LOCATION = 'staticfiles/'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'

@@ -12,7 +12,7 @@ from django.core.mail import send_mail
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404
 from companystaff.models import *
-from .filters import frenchise_filter
+# from .filters import frenchise_filter
 from datetime import datetime
 # Create your views here.
 # import matplotlib.pyplot as plt
