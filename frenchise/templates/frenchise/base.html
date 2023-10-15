@@ -1,0 +1,252 @@
+<!doctype html>
+{% load static %}
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{% block title %} {% endblock title %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="manifest" href="{% static 'site.webmanifest' %}> -->
+		<link rel="shortcut icon" type="image/x-icon" href="{% static 'frenchise/img/favicon.ico'%}">
+
+		<!-- CSS here -->
+            <link rel="stylesheet" href="{% static 'frenchise/css/bootstrap.min.css' %}">
+            <link rel="stylesheet" href="{% static 'frenchise/css/owl.carousel.min.css' %}">
+            <link rel="stylesheet" href="{% static 'frenchise/css/slicknav.css' %}" >
+            <link rel="stylesheet" href="{% static 'frenchise/css/flaticon.css' %}">
+            <link rel="stylesheet" href="{% static 'frenchise/css/animate.min.css' %}">
+            <link rel="stylesheet" href="{% static 'frenchise/css/magnific-popup.css' %}">
+            <link rel="stylesheet" href="{% static 'frenchise/css/fontawesome-all.min.css' %}">
+            <link rel="stylesheet" href="{% static 'frenchise/css/themify-icons.css' %}">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="{% static 'frenchise/css/slick.css' %}">
+            <link rel="stylesheet" href="{% static 'frenchise/css/nice-select.css' %}">
+            <link rel="stylesheet" href="{% static 'frenchise/css/style.css' %}">
+    <!-- FontAwesome 5 -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">   -->
+ </head>
+
+   <body>
+<!-- Preloader Start -->
+<div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="preloader-circle"></div>
+            <div class="preloader-img pere-text">
+                
+                <!-- <img src="{% static 'frenchise/img/logo/logo.png' %}" alt=""> -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Preloader Start -->
+<header>
+    <!-- Header Start -->
+    <div class="header-area header-transparent">
+            <div class="main-header  header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2 col-md-1">
+                            <div class="logo ">
+                                <a href="{% url 'home' %}"><h1>FUNDCARE</h1></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10">
+                        <div class="menu-main d-flex align-items-center justify-content-end">
+                            <!-- Main-menu -->
+                            <div class="main-menu f-right d-none d-lg-block">
+                                <nav> 
+                                    <ul id="navigation">  
+                                        <li class="active"><a href="{% url 'home' %}">Home</a></li>
+                                        <li><a href="{% url 'about' %}">About</a></li>
+                                        <li><a href="{% url 'services' %}">Services</a></li>
+                                        <li><a href="{% url 'blog' %}">Blog</a>
+                                            <ul class="submenu">
+                                                <li><a href="{% url 'services' %}">Blog</a></li>
+                                                <li><a href="{% url 'blog_details' %}">Blog Details</a></li>
+                                                
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                                        {% if request.user.is_authenticated %}
+                                            <li><a href="#">{{ request.user.username|capfirst }}</a>
+                                                <ul class="submenu">
+                                                    <li><a href="{% url 'dashboard' %}">My Account</a></li>
+                                                    <li><a href="{% url 'logout' %}">
+                                                        <i class="fa fa-sign-out-alt fa-2x"></i>
+                                                    </a></li>
+                                                    
+                                                </ul>
+                                            </li>
+                                        {% else %}
+                                    
+                                
+                                            <li><a href="{% url 'register' %}" class=""><i class="fa-light fa-user-plus"></i><small>Partner Dashboard</small> </a></li>
+                                            <li><a href="{% url 'login' %}" class=""><i class="fa-light fa-user-plus"></i><small> Login </small> </a></li>
+                                            
+                                        {% endif %}
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- <div class="header-right-btn f-right d-none d-lg-block mx-2">
+                                <a href="{% url 'register' %}" class="btn header-btn">Partner Dashboard </a>                                
+                            </div>
+                            <div class="header-right-btn f-right d-none d-lg-block">
+                                <a href="{% url 'emp_registration' %}" class="btn header-btn">Staff Sign Up</a>                              
+                            </div> -->
+                        </div>
+                        </div>   
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- Header End -->
+</header>
+
+
+
+
+{% block home-page %} {% endblock home-page %}
+<div class="container">
+{% block Loan-page %} {% endblock Loan-page %}
+</div>
+
+    <footer class="mt-5">
+        <!-- Footer Start-->
+        <div class="footer-area">
+            <div class="container-fluid">
+               <div class="footer-top footer-padding">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="single-footer-caption mb-30">
+                                    <!-- logo -->
+                                    <div class="footer-logo">
+                                        <h1><a href="{% url 'home' %}" class="btn-secondary">Fundcare</a></h1>
+                                    </div>
+                                    <ul>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Offers & Discounts</a></li>
+                                        <li><a href="#">Get Coupon</a></li>
+                                        <li><a href="#"> Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Quick Link</h4>
+                                    <ul>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Offers & Discounts</a></li>
+                                        <li><a href="#">Get Coupon</a></li>
+                                        <li><a href="#"> Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>New Products</h4>
+                                    <ul>
+                                        <li><a href="#">Personal Loan</a></li>
+                                        <li><a href="#">Business Loan</a></li>
+                                        <li><a href="#">Home Loan</a></li>
+                                        <li><a href="#">Gold Loan</a></li>     
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Support</h4>
+                                    <ul>
+                                        <li><a href="#">Frequently Asked Questions</a></li>
+                                        <li><a href="#">Terms & Conditions</a></li>
+                                        <li><a href="#"> Privacy Policy</a></li>
+                                        <li><a href="#">Report a Payment Issue</a></li>     
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+                <div class="footer-bottom">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-xl-9 col-lg-8">
+                            <div class="footer-copy-right">
+                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4">
+                            <!-- Footer Social -->
+                            <div class="footer-social f-right">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top" >
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+    
+    <!-- JS here -->
+        <!-- chartjs -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="{% static 'frenchise/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="{% static 'frenchise/js/vendor/jquery-1.12.4.min.js' %}"></script>
+        <script src="{% static 'frenchise/js/popper.min.js' %}"></script>
+        <script src="{% static 'frenchise/js/bootstrap.min.js' %}"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="{% static 'frenchise/js/jquery.slicknav.min.js' %}"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="{% static 'frenchise/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'frenchise/js/slick.min.js' %}"></script>
+		<!-- One Page, Animated-HeadLin -->
+        <script src="{% static 'frenchise/js/wow.min.js' %}"></script>
+		<script src="{% static 'frenchise/js/animated.headline.js' %}"></script>
+        <script src="{% static 'frenchise/js/jquery.magnific-popup.js' %}"></script>
+
+		<!-- Nice-select, sticky -->
+        <script src="{% static 'frenchise/js/jquery.nice-select.min.js' %}"></script>
+		<script src="{% static 'frenchise/js/jquery.sticky.js' %}"></script>
+        
+        <!-- contact js -->
+        <script src="{% static 'frenchise/js/contact.js' %}"></script>
+        <script src="{% static 'frenchise/js/jquery.form.js' %}"></script>
+        <script src="{% static 'frenchise/js/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'frenchise/js/mail-script.js' %}"></script>
+        <script src="{% static 'frenchise/js/jquery.ajaxchimp.min.js' %}"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="{% static 'frenchise/js/plugins.js' %}"></script>
+        <script src="{% static 'frenchise/js/main.js' %}"></script>
+        <!-- font awsome -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+        {% block javascripttags %}{% endblock javascripttags %}
+
+
+    </body>
+</html>

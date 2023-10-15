@@ -1,0 +1,221 @@
+{% extends 'frenchise/base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+
+{% block home-page %}
+
+<main>
+    <br>
+   
+
+    <div id="wrapper">
+        <div class="overlay"></div>
+         
+             <!-- Sidebar -->
+         <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
+          <ul class="nav sidebar-nav">
+            <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <a href="{% url 'f' %}">Employee Overview</a></div></div>
+            
+            <li><a href="{% url 'dashboard' %}">Franchise Dashboard</a></li>
+            <li><a href="{% url 'employee' %}">Employee</a></li>
+            
+            <div class="dropdown">
+                <li><a href="#about">Loans</a></li>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <li><a class="dropdown-item" href="#">Personal Loan</a></li>
+                  <li><a class="dropdown-item" href="#">Home Loan</a></li>
+                  <li><a class="dropdown-item" href="#">Business Loan</a></li>
+                </ul>
+              </div>
+           </li>
+           <li><a href="#services">Services</a></li>
+           <li><a href="#contact">Contact</a></li>
+           <li><a href="#followme">Follow me</a></li>
+           </ul>
+       </nav>
+             <!-- /#sidebar-wrapper -->
+     
+             <!-- Page Content -->
+             <div id="page-content-wrapper">
+                 <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
+                     <span class="hamb-top"></span>
+                     <span class="hamb-middle"></span>
+                     <span class="hamb-bottom"></span>
+                 </button>
+                 <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">	<h2>Employees</h2> </div>
+                    </div>
+                    
+                    <div class="row">
+                                        
+                                        <div class="col-md-12">
+                                            <div class="widget blank no-padding">
+                                                <div class="panel panel-default work-progress-table">
+                                                      <!-- Default panel contents -->
+                                                    <div class="panel-heading"> Username : {{request.user.username}}<i></i>
+                                                        <div class="dropdown rounded">
+                                                            
+                                                            <button class="btn btn-danger pull-right"  data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+                                                        </div>
+                                                    </div>
+                                                      <!-- Table -->
+                                                    
+                                                    
+                                                      <i class="fa fa-pen fa-xs edit"></i>
+                                                        <table class="table">
+                                                            <thead>
+                                                            <tr>
+                                                                <th scope="col">#</th>
+                                                                <th scope="col">Employee ID:</th>
+                                                                <th scope="col">Email</th>
+                                                                <th scope="col">Username</th>
+                                                                <th>Edit</th>
+                                                            </tr>
+                                                            </thead>
+                                                            
+                                                            <tbody>
+                                                            {% for ad in e_register %}
+                                                                <tr>
+                                                                <th scope="row">{{forloop.counter}}</th>
+                                                                <td class="text-primary"><a href="{% url 'e_overview' %}">{{ad.employee_id}}</a></td>
+                                                                <td>{{ad.email}}</td>
+                                                                <td>{{ad.username}}</td>
+                                                                <td><a href="{% url 'emp_details' empid=ad.id %}"><i class="fa fa-pen fa-xs edit bg-primary"></i></a></td>
+                                                                </tr>
+                                                                    <!-- <div class="col-lg-6">
+                                                                        <p>Employee ID: </p>
+                                                                        <p>Employee ID: </p>
+                                                                        <p>Employee ID: </p>
+                                                                        
+                                                                    </div> -->
+                                                            <!-- </div> -->
+                                                        {% endfor %}
+                                                            </tbody>
+                                                            </table>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                </div>
+                
+                <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+                      <div class="modal-dialog">
+                    <div class="modal-content">
+                          <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                        <h4 class="modal-title custom_align" id="Heading">Delete this entry</h4>
+                      </div>
+                          <div class="modal-body">
+                       
+                       <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Record?</div>
+                       
+                      </div>
+                        <div class="modal-footer ">
+                        <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
+                      </div>
+                        </div>
+                    <!-- /.modal-content --> 
+                  </div>
+                      <!-- /.modal-dialog --> 
+                    </div>
+             </div>
+             <!-- /#page-content-wrapper -->
+     
+         </div>
+         <!-- /#wrapper -->
+
+{% endblock home-page %}
+
+{% block javascripttags %}
+
+<script>
+    var xValues = ["Success", "Total form Submitted"];
+    var yValues = [55, 13];
+    var barColors = [
+      "#b91d47",
+      "#00aba9",
+      "#2b5797",
+      "#e8c3b9",
+      "#1e7145"
+    ];
+    
+    new Chart("myChart1", {
+      type: "pie",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "Total leads Generating"
+        }
+      }
+    });
+    </script>
+
+
+<script>
+    var xValues = ["Loans", "France", "Spain", "USA", "Argentina"];
+    var yValues = [55, 49, 44, 24, 15];
+    var barColors = [
+      "#b91d47",
+      "#00aba9",
+      "#2b5797",
+      "#e8c3b9",
+      "#1e7145"
+    ];
+    
+    new Chart("myChart2", {
+      type: "doughnut",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "World Wide Wine Production 2018"
+        }
+      }
+    });
+    </script>
+
+<!-- Bar growth chart start -->
+
+<script>
+    const xValues = ["January", "February", "March", "April", "May","June", "July", "August", "Sept", "Oct","Nov", "Dec"];
+    const yValues = [55, 49, 44, 24, 15, 55, 49, 44, 24, 15,55, 49];
+    const barColors = ["red", "green","blue","orange","brown","red", "green","blue","orange","brown",,"blue","orange"];
+    
+    new Chart("myChart", {
+      type: "bar",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        legend: {display: false},
+        title: {
+          display: true,
+          text: "Annual Growth"
+        }
+      }
+    });
+    </script>   
+
+<!-- bar growth chart end -->

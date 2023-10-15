@@ -1,0 +1,458 @@
+{% extends 'frenchise/base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+<style>
+    /* Style for the full-screen card container */
+
+    .card-container {
+      width: 100%;
+      max-width: 400px; /* You can adjust the max-width as needed */
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Additional styles for form elements */
+    .form-control {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  </style>
+
+
+
+
+
+
+
+
+
+{% block home-page %}
+
+<main>
+    <br>
+    
+
+    <div id="wrapper">
+        <div class="overlay"></div>
+         
+             <!-- Sidebar -->
+         <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
+          <ul class="nav sidebar-nav">
+            <div class="sidebar-header">
+            <div class="sidebar-brand">
+                <a href="{% url 'home' %}">Home</a></div></div>
+            
+            <li><a href="{% url 'f_overview' %}">Franchise Dashboard</a></li>
+            <li><a href="{% url 'employee' %}">Employee</a></li>
+
+            
+            <div class="dropdown">
+                <li><a href="#about">Loans</a></li>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <li><a class="dropdown-item" href="#">Personal Loan</a></li>
+                  <li><a class="dropdown-item" href="#">Home Loan</a></li>
+                  <li><a class="dropdown-item" href="#">Business Loan</a></li>
+                </ul>
+              </div>
+           </li>
+           <li><a href="#services">Services</a></li>
+           <li><a href="#contact">Contact</a></li>
+           <li><a href="#followme">Follow me</a></li>
+           </ul>
+       </nav>
+       <br>
+       <br>
+             <!-- /#sidebar-wrapper -->
+
+             <!-- Filter start -->
+
+             <div class="container-fluid">
+                <form action="{% url 'search_frenchise' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="card-container">
+                        <div class="card-body"> 
+                          <div class="row">
+                            <div class="col-lg-8">
+                              <input type="text" class="form-control" placeholder="Enter Email Number Pan" name="Search">
+                            </div>
+                            <div class="col-lg-2"></div>
+                            <input type="submit" value="Submit" class="btn btn-primary">
+                          </div>
+                        </div>
+                    </div>
+                </form>
+             </div>
+
+             <!-- Filter end -->
+     
+             <!-- Page Content -->
+             <div id="page-content-wrapper">
+                 <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
+                     <span class="hamb-top"></span>
+                     <span class="hamb-middle"></span>
+                     <span class="hamb-bottom"></span>
+                 </button>
+                 <div class="container">
+                    <div class="row  justify-content-center">
+                        <div class="col-md-12">	<h2>Admin Dashboard</h2> </div>
+                    </div>
+                    
+                    <div class="row">
+                                        
+                                        <div class="col-md-12">
+                                            <div class="widget blank no-padding">
+                                                <div class="panel panel-default work-progress-table">
+                                                      <!-- Default panel contents -->
+                                                    <div class="panel-heading"><h4> Username : {{request.user.username}}</h4><i></i>
+
+                                                    </div>
+
+
+
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <!-- USER DATA-->
+                                                            <div class="card">
+                                                                <div class="card-body">
+
+                                                                    <div class="user-data m-b-30">
+                                                                        <h3 class="title-3 m-b-30">
+                                                                            <i class="zmdi zmdi-account-calendar"></i>user data</h3>
+                                                                        
+                                                                        <div class="table-responsive table-data">
+                                                                            <table class="table">
+                                                                                <thead>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <label class="au-checkbox">
+                                                                                                <input type="checkbox">
+                                                                                                <span class="au-checkmark"></span>
+                                                                                            </label>
+                                                                                        </td>
+                                                                                        <td>name</td>
+                                                                                        <td>role</td>
+                                                                                        <td>type</td>
+                                                                                        <td></td>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <label class="au-checkbox">
+                                                                                                <input type="checkbox">
+                                                                                                <span class="au-checkmark"></span>
+                                                                                            </label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class="table-data__info">
+                                                                                                <h6>lori lynch</h6>
+                                                                                                <span>
+                                                                                                    <a href="#">johndoe@gmail.com</a>
+                                                                                                </span>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <span class="role admin">admin</span>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class="rs-select2--trans rs-select2--sm">
+                                                                                                <select class="js-select2" name="property">
+                                                                                                    <option selected="selected">Full Control</option>
+                                                                                                    <option value="">Post</option>
+                                                                                                    <option value="">Watch</option>
+                                                                                                </select>
+                                                                                                <div class="dropDownSelect2"></div>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <span class="more">
+                                                                                                <i class="zmdi zmdi-more"></i>
+                                                                                            </span>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <label class="au-checkbox">
+                                                                                                <input type="checkbox" checked="checked">
+                                                                                                <span class="au-checkmark"></span>
+                                                                                            </label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class="table-data__info">
+                                                                                                <h6>lori lynch</h6>
+                                                                                                <span>
+                                                                                                    <a href="#">johndoe@gmail.com</a>
+                                                                                                </span>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <span class="role user">user</span>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class="rs-select2--trans rs-select2--sm">
+                                                                                                <select class="js-select2" name="property">
+                                                                                                    <option value="">Full Control</option>
+                                                                                                    <option value="" selected="selected">Post</option>
+                                                                                                    <option value="">Watch</option>
+                                                                                                </select>
+                                                                                                <div class="dropDownSelect2"></div>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <span class="more">
+                                                                                                <i class="zmdi zmdi-more"></i>
+                                                                                            </span>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <label class="au-checkbox">
+                                                                                                <input type="checkbox">
+                                                                                                <span class="au-checkmark"></span>
+                                                                                            </label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class="table-data__info">
+                                                                                                <h6>lori lynch</h6>
+                                                                                                <span>
+                                                                                                    <a href="#">johndoe@gmail.com</a>
+                                                                                                </span>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <span class="role user">user</span>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class="rs-select2--trans rs-select2--sm">
+                                                                                                <select class="js-select2" name="property">
+                                                                                                    <option value="">Full Control</option>
+                                                                                                    <option value="" selected="selected">Post</option>
+                                                                                                    <option value="">Watch</option>
+                                                                                                </select>
+                                                                                                <div class="dropDownSelect2"></div>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <span class="more">
+                                                                                                <i class="zmdi zmdi-more"></i>
+                                                                                            </span>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <label class="au-checkbox">
+                                                                                                <input type="checkbox">
+                                                                                                <span class="au-checkmark"></span>
+                                                                                            </label>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class="table-data__info">
+                                                                                                <h6>lori lynch</h6>
+                                                                                                <span>
+                                                                                                    <a href="#">johndoe@gmail.com</a>
+                                                                                                </span>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <span class="role member">member</span>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class="rs-select2--trans rs-select2--sm">
+                                                                                                <select class="js-select2" name="property">
+                                                                                                    <option selected="selected">Full Control</option>
+                                                                                                    <option value="">Post</option>
+                                                                                                    <option value="">Watch</option>
+                                                                                                </select>
+                                                                                                <div class="dropDownSelect2"></div>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <span class="more">
+                                                                                                <i class="zmdi zmdi-more"></i>
+                                                                                            </span>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                        <div class="user-data__footer">
+                                                                            <button class="au-btn au-btn-load">load more</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- END USER DATA-->
+                                                        </div>
+
+                                                            <div class="col-lg-6">
+                                                                <!-- TOP CAMPAIGN-->
+                                                                <div class="top-campaign">
+                                                                    <h3 class="title-3 m-b-30">top campaigns</h3>
+                                                                    <div class="table-responsive">
+                                                                        <table class="table table-top-campaign">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>1. Australia</td>
+                                                                                    <td>$70,261.65</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>2. United Kingdom</td>
+                                                                                    <td>$46,399.22</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>3. Turkey</td>
+                                                                                    <td>$35,364.90</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>4. Germany</td>
+                                                                                    <td>$20,366.96</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>5. France</td>
+                                                                                    <td>$10,366.96</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>3. Turkey</td>
+                                                                                    <td>$35,364.90</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>4. Germany</td>
+                                                                                    <td>$20,366.96</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>5. France</td>
+                                                                                    <td>$10,366.96</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>3. Turkey</td>
+                                                                                    <td>$35,364.90</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>4. Germany</td>
+                                                                                    <td>$20,366.96</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>5. France</td>
+                                                                                    <td>$10,366.96</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>4. Germany</td>
+                                                                                    <td>$20,366.96</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                                <!--  END TOP CAMPAIGN-->
+                                                            </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <!-- DATA TABLE -->
+                                                            <h3 class="title-5 m-b-35">data table</h3>
+                                                            <div class="table-data__tool">
+                                                                <div class="table-data__tool-left">
+                                                        
+                                                            </div>
+                                                            <div class="table-responsive table-responsive-data2">
+                                                                <table class="table table-data2">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>
+                                                                                <label class="au-checkbox">
+                                                                                    <input type="checkbox">
+                                                                                    <span class="au-checkmark"></span>
+                                                                                </label>
+                                                                            </th>
+                                                                            <th>s.no</th>
+                                                                            <th>Username</th>
+                                                                            <th>Email</th>
+                                                                            <th>Active Status</th>
+                                                                            <th>status</th>
+                                                                            <th>Edit Frenchise</th>
+                                                                            <th></th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        {% for ad in usersWithout %}
+                                                                        <tr class="tr-shadow">
+                                                            
+                                                                            <th scope="row">{{ forloop.counter }}</th>
+                                                                            <td><a href="{% url 'alldata' frenchid=ad.id %}" class="text-danger">{{ ad.username }}</a></td>
+                                                    
+                                                                            <td>{{ad.email}}</td>
+                                                                            <td>{{ad.is_active}}</td>
+                                                                            <td>
+                                                                                {% if ad.is_active %}
+                                                                                    <input type="checkbox" id="option2" name="preference" value="Option 2" {% if ad.is_active %}checked{% endif %}>
+                                                    
+                                                                                {% else %}
+                                                                                    <input type="checkbox" id="option2" name="preference" value="Option 2">
+                                                                                {% endif %}
+                                                                                </td>
+                                                                                <td><a type="button" href="{% url 'editfrenchise' frenchid=ad.id %}" class="btn btn-danger">Edit</a></td>
+
+                                                                                <td>
+                                                                                    <div class="table-data-feature">
+                                                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
+                                                                                            <i class="zmdi zmdi-mail-send"></i>
+                                                                                        </button>
+                                                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
+                                                                                            <i class="zmdi zmdi-edit"></i>
+                                                                                        </button>
+                                                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                                                                            <i class="zmdi zmdi-delete"></i>
+                                                                                        </button>
+                                                                                        <button class="item" data-toggle="tooltip" data-placement="top" title="More">
+                                                                                            <i class="zmdi zmdi-more"></i>
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </td>
+                                                                        </tr>
+                                                                        {% endfor %}
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <!-- END DATA TABLE -->
+                                                        </div>
+                                                    </div>
+                                       
+                                                   
+                                                    </table>
+                                                         <input type="submit" class="btn btn-primary">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                </div>
+                
+                <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+                      <div class="modal-dialog">
+                    <div class="modal-content">
+                          <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                        <h4 class="modal-title custom_align" id="Heading">Delete this entry</h4>
+                      </div>
+                          <div class="modal-body">
+                       
+                       <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Record?</div>
+                       
+                      </div>
+                        <div class="modal-footer ">
+                        <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
+                      </div>
+                        </div>
+                    <!-- /.modal-content --> 
+                  </div>
+                      <!-- /.modal-dialog --> 
+                    </div>
+             </div>
+             <!-- /#page-content-wrapper -->
+     
+         </div>
+         <!-- /#wrapper -->
+
+{% endblock home-page %}

@@ -1,0 +1,159 @@
+{% extends 'frenchise/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+
+{% block home-page %}
+
+
+
+<main>
+<br>
+<hr>
+  
+  <!-- Navbar top -->
+    <div class="navbar-top mt-5">
+        <div class="title">
+            <h1>Apply for Frenchise</h1>
+        </div>
+
+        <!-- Navbar -->
+        <ul>
+            <li>
+              
+            </li>
+            <li>
+                <a href="#notification">
+                    <span class="icon-count">59</span>
+                    <i class="fa fa-bell fa-2x"></i>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'logout' %}">
+                    <i class="fa fa-sign-out-alt fa-2x"></i>
+                </a>
+            </li>
+        </ul>
+        <!-- End -->
+    </div>
+    <!-- End -->
+
+    <!-- Sidenav -->
+    <div class="sidenav mt-5">
+        <div class="profile">
+            <img src="https://imdezcode.files.wordpress.com/2020/02/imdezcode-logo.png" alt="" width="100" height="100">
+
+            <div class="name">
+                {{request.user.username}}
+            </div>
+            <div class="job">
+                {{request.user}}
+            </div>
+        </div>
+
+        <div class="sidenav-url">
+            <div class="url">
+                <a href="{% url 'dashboard' %}" class="active">Profile</a>
+                <hr align="center">
+            </div>
+            <div class="url">
+                <a href="{% url 'employee' %}" class="active">Employee</a>
+                <hr align="center">
+            </div>
+        </div>
+    </div>
+    <!-- End -->
+
+    <!-- Main -->
+    <div class="main mb-5">
+        
+        <div class="card">
+            <div class="card-body">
+                <i class="fa fa-pen fa-xs edit"></i>
+                <form method="post">
+                    {% csrf_token %}
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Active</th>
+                        <th>Active Status</th>
+                      </tr>
+                    </thead>
+                    
+                    <tbody>
+                    {% for ad in usersWithout %}
+                        <tr>
+                          <th scope="row">{{ forloop.counter }}</th>
+                          <td><a href="{% url 'alldata' %}" class="color-secondary">{{ad.username}}</a></td>
+                          <td>{{ad.email}}</td>
+                          <td>{{ad.is_active}}</td>
+                          <td>
+                            {% if ad.is_active %}
+                                <input type="checkbox" id="option2" name="activeuser" value="activeuser" {% if ad.is_active %}checked{% endif %}>
+
+                            {% else %}
+                                <input type="checkbox" id="option2" name="preference" value="Option 2">
+                            {% endif %}
+                            </td>
+                        </tr>
+                            <!-- <div class="col-lg-6">
+                                <p>Employee ID: </p>
+                                <p>Employee ID: </p>
+                                <p>Employee ID: </p>
+                                
+                            </div> -->
+                    <!-- </div> -->
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+                    
+                </div>
+            <input type="submit" class="btn btn-primary"/>
+            
+        </div>
+
+        {% comment %} <h2>SOCIAL MEDIA</h2>
+        <div class="card">
+            <div class="card-body">
+                <i class="fa fa-pen fa-xs edit"></i>
+                <div class="social-media">
+                    <span class="fa-stack fa-sm">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="fa-stack fa-sm">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="fa-stack fa-sm">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="fa-stack fa-sm">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-invision fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="fa-stack fa-sm">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="fa-stack fa-sm">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="fa-stack fa-sm">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-snapchat fa-stack-1x fa-inverse"></i>
+                    </span>
+                </div>
+            </div>
+        </div> {% endcomment %}
+    </div>
+    <!-- End -->
+ 
+
+    {% endblock home-page %}
