@@ -44,7 +44,7 @@ urlpatterns = [
 
     #Employee URLS
     path('emp-dashboard/', employee_dashboard_view, name= 'e_dashboard'),
-    path('edit-emp-dashboard/', employee_dashboard_view, name= 'edit_e_dashboard'),
+    path('edit-emp-dashboard/', edit_employee_dashboard_view, name= 'edit_e_dashboard'),
     path('f-overview/', frenchise_overview_view, name= 'f_overview'),
     path('emp-overview/', employee_overview_view, name= 'e_overview'),
 
