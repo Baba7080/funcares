@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\lenovo\Desktop\New folder\fundcare\env"
+VIRTUAL_ENV="C:\Users\abhis\Desktop\normal_projects\astrotalks\fundcare\new\funcares\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

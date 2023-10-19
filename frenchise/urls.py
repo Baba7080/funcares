@@ -72,8 +72,11 @@ urlpatterns = [
         ,name='password_reset_complete'),
 
     path('appllyloan',appllyloan,name='appllyloan'),
+    path('loans',loan,name='loans'),
     path('appllyinsurance',appllyloan,name='appllyinsurance'),
-    path('editfrenchise/<int:frenchid>',editfrenchise,name='editfrenchise')
+    path('editfrenchise/<int:frenchid>',editfrenchise,name='editfrenchise'),
+    path('editloan/<int:ad_id>/<str:ad_type>/', editsection, name='editloan')
+
 ]
 
 if settings.DEBUG:

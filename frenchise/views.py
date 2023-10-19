@@ -221,7 +221,7 @@ def employee_view(request):
     else:
         # If the request method is not POST, render the employee application form
         emp_form = Employee_application_form()
-        return render(request, 'frenchise/employee_dashboard.html', {'emp_form': emp_form})
+        return render(request, 'frenchise/employeregistration.html', {'emp_form': emp_form})
     
 
 #frenchise status True or False
@@ -424,6 +424,7 @@ def dashboard(request):
         print("ljhjhjhg")
         return render(request, 'frenchise/frenchise_overview.html', {'data':all_data})
     else:
+        print("jhkjh")
         e_register = frenchise_employee_register_model.objects.filter(username=n)
         return render(request, 'frenchise/employesales.html', {'e_register': e_register})
 @login_required
@@ -578,12 +579,134 @@ def employee_overview_view(request):
     return render(request, 'frenchise/employee_overview.html')
 
 # Admin Overview frenchise and employee data
+@login_required
 def frenchise_overview_view(request):
-    return render(request, 'frenchise/frenchise_overview.html')
+    loginUser = request.user
+    if loginUser.is_superuser:
+        return render(request, 'frenchise/frenchise_overview.html')
+
+def loan(request):
+    loginUser = request.user
+    if loginUser.is_superuser:
+        loandata = Loan.objects.exclude(status='Completed')
+        Insurancedata = Insurance.objects.exclude(status='Completed')
+        Dematdata = Demat_Account.objects.exclude(status='Completed')
+        Mutualdata = Mutual_Fund.objects.exclude(status='Completed')
+        print(loandata)
+        appdata = []
+        for i in loandata:
+            dataprepare = {
+                'id': i.id,
+                'type':i.type,
+                'name':i.clientName,
+                'status':i.status,
+                'created':i.created,
+                'email':i.email,
+                'amount':i.amount,
+                'number':i.number,
+                'PAN':i.PAN,
+                'typeof':'Loan'
+            }
+            appdata.append(dataprepare)
+        for i in Insurancedata:
+            dataprepare = {
+                'id': i.id,
+                'type':i.type,
+                'name':i.clientName,
+                'status':i.status,
+                'created':i.created,
+                'email':i.email,
+                'amount':i.amount,
+                'number':i.number,
+                'PAN':i.PAN,
+                'typeof':'Insurance'
+            }
+            appdata.append(dataprepare)
+        for i in Mutualdata:
+            dataprepare = {
+                'id': i.id,
+                'type':i.type,
+                'name':i.clientName,
+                'status':i.status,
+                'created':i.created,
+                'email':i.email,
+                'amount':i.amount,
+                'number':i.number,
+                'PAN':i.PAN,
+                'typeof':'Mutual'
+            }
+            appdata.append(dataprepare)
+        for i in Dematdata:
+            dataprepare = {
+                'id': i.id,
+                'type':i.type,
+                'name':i.clientName,
+                'status':i.status,
+                'created':i.created,
+                'email':i.email,
+                'amount':i.amount,
+                'number':i.number,
+                'PAN':i.PAN,
+                'typeof':'Demat'
+            }
+            appdata.append(dataprepare)
+        print(appdata)
+        return render(request,'frenchise/loandatarender.html',{'loandata':appdata})
+
+
+def editsection(request,ad_id,ad_type):
+    # print(ad_id,ad_type)
+    loginUser = request.user
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        emails = request.POST.get('email')
+        amount = request.POST.get('amount')
+        type = request.POST.get('type')
+        number = request.POST.get('number')
+        pan = request.POST.get('pan')
+        istype = request.POST.get('istype')
+        ad_id = request.POST.get('ad_id')
+        statuss = request.POST.get('status')
+        print(statuss)
+        print([name,emails,amount,type,number,pan,istype,ad_id,statuss])
+        if loginUser.is_superuser:
+            if istype == 'Loan':
+                update = Loan.objects.filter(id=ad_id).update(clientName=name,PAN=pan,number=number,amount=amount,email=emails,status=statuss)
+            if istype == 'Insurance':
+                update = Insurance.objects.filter(id=ad_id).update(clientName=name,PAN=pan,number=number,amount=amount,email=emails,status=statuss)
+                return redirect('loans')
+                print("")
+
+            if istype == 'Demat':
+                update = Demat_Account.objects.filter(id=ad_id).update(clientName=name,PAN=pan,number=number,amount=amount,email=emails,status=statuss)
+                return redirect('loans')
+
+            if istype == 'Mutual':
+                update = Mutual_Fund.objects.filter(id=ad_id).update(clientName=name,PAN=pan,number=number,amount=amount,email=emails,status=statuss)
+                print(update)
+                return redirect('loans')
 
 
 
+    if loginUser.is_superuser:
+        if ad_type == 'Loan':
+            dataEdit = Loan.objects.get(id=ad_id)
+            return render(request,'frenchise/Editloan.html',{'ad_data':dataEdit,'type':'Loan'})
+            print('in loan')
+        if ad_type == 'Insurance':
+            dataEdit = Insurance.objects.get(id=ad_id)
+            return render(request,'frenchise/Editloan.html',{'ad_data':dataEdit,'type':'Insurance'})
+            print('in Insurance')
+        if ad_type == 'Mutual':
+            dataEdit = Mutual_Fund.objects.get(id=ad_id)
+            return render(request,'frenchise/Editloan.html',{'ad_data':dataEdit,'type':'Mutual'})
+            print('in Mutual')
+        if ad_type == 'Demat':
+            dataEdit = Demat_Account.objects.get(id=ad_id)
+            return render(request,'frenchise/Editloan.html',{'ad_data':dataEdit,'type':'Demat'})
+            print('in Demat')
 
+    
 # def frenchise_chart_view(request):
 #     if request.method == 'POST':
 #         print("date from to")

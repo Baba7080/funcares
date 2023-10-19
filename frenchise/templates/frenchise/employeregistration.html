@@ -1,0 +1,169 @@
+{% extends 'frenchise/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+
+{% block home-page %}
+<!-- Preloader Start -->
+
+<main>
+<br> 
+{% comment %} <hr> {% endcomment %}
+  
+  <!-- Navbar top -->
+
+<!-- End -->
+
+<!-- Sidenav -->
+{% comment %} <div class="sidenav mr-5 mt-4">
+    <div class="profile">
+        <img src="https://imdezcode.files.wordpress.com/2020/02/imdezcode-logo.png" alt="" width="100" height="100">
+
+        <div class="name">
+            {{request.user.username}}
+        </div>
+        <div class="job">
+            {{request.user}}
+        </div>
+    </div>
+
+    <div class="sidenav-url">
+        <div class="url">
+            <a href="{% url 'dashboard' %}" class="active">Profile</a>
+            <hr align="center">
+        </div>
+        <div class="url">
+            <a href="{% url 'applyfrenchise' %}" class="active">Apply for Frenchise</a>
+            <hr align="center">
+        </div>
+
+        <div class="url">
+            <a href="{% url 'employee' %}" class="active">Employee</a>
+            <hr align="center">
+        </div>
+    </div>
+</div> {% endcomment %}
+<!-- End -->
+
+<!-- Main -->
+<div class="container main mt-5">
+
+    <div class="mt-5">
+        <br><br>
+    </div> 
+     <div class="row">
+        <div class="col-4">
+            <div class="profile">
+                <div class="name">
+                   Welcome  {{request.user.username}}
+                </div>
+                <div class="job">
+                    {{request.user}}
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="sidenav-url ml-3">
+                {% comment %} <div class="url"> {% endcomment %}
+                    <a href="{% url 'dashboard' %}" class="btn btn-primary">Profile</a>
+                    <hr align="center">
+                {% comment %} </div> {% endcomment %}
+             
+        
+            </div>
+        </div>
+    </div> 
+    {% comment %} <div class="container card m-5"> {% endcomment %}
+        <div class="card-body">
+            <i class="fa fa-pen fa-xs edit"></i>
+            <form action=""  method="post" novalidate class="shadow p-5">
+                {% csrf_token %}
+                <div id="forms"></div>
+                {% if messages %}
+                {% for message in messages %}
+                <p {% if message.tags %} class="alert alert-{{message.tags}} mb-5"{% endif %}>{{message}}</p>
+                {% endfor %}
+                {% endif %}
+
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Employee ID</label>
+                  <input type="text" name="employee_id" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your employee id" required>
+              </div>
+              <div class="form-group">
+                  <label for="exampleFormControlInput1">Enter Your email</label>
+                  <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Email" required>
+              </div>
+              <div class="form-group">
+                  <label for="exampleFormControlInput1">Enter your Username</label>
+                  <input type="text" name="username" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your Username" required>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Enter Employee Name</label>
+                <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Enter Username" required>
+            </div>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Enter your Password</label>
+                <input type="password" name="password" class="form-control" id="exampleFormControlInput1" placeholder="Enter Your password" required>
+            </div>
+                <input type="submit" value="Submit" class="btn btn-primary my-2">
+              
+            </form>
+           
+        
+
+
+                
+                <br>
+                
+                {% if form.non_field_errors %}
+                {% for error in form.non_field_errors %}
+                <p class="alert alert-danger my-3">{{error}}</p>
+                {% endfor %}
+                {% endif %}
+            </div>
+    </div>
+
+    <h2>SOCIAL MEDIA</h2>
+    <div class="card ">
+        <div class="card-body">
+            <i class="fa fa-pen fa-xs edit"></i>
+            <div class="social-media">
+                <span class="fa-stack fa-sm">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="fa-stack fa-sm">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="fa-stack fa-sm">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="fa-stack fa-sm">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-invision fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="fa-stack fa-sm">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="fa-stack fa-sm">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="fa-stack fa-sm">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-snapchat fa-stack-1x fa-inverse"></i>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End -->
+
+
+
+
+
+{% endblock home-page %}

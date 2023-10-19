@@ -1,0 +1,165 @@
+{% extends 'frenchise/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+
+{% block home-page %}
+<main class="mt-5">
+    <br>
+{% comment %} <hr> {% endcomment %}
+
+<div id="wrapper">
+    
+     
+         <!-- Sidebar -->
+    <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
+        <ul class="nav sidebar-nav">
+            <div class="sidebar-header">
+                <div class="sidebar-brand">
+                    <a href="{% url 'e_overview' %}">Dashboard</a>
+                </div>
+            </div>
+            
+            <!-- <li><a href="{% url 'dashboard' %}">Franchise Dashboard</a></li> -->
+            <li>
+                <a href="{% url 'appllyloan' %}">Employee</a>
+            </li>
+            
+            
+            <li>
+                <a href="#services">Services</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+            <li>
+                <a href="#followme">Follow me</a>
+            </li>
+        </ul>
+    </nav>
+         <!-- /#sidebar-wrapper -->
+ 
+         <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+        </button>
+        <div class="container">
+        <div class="row">
+            <div class="col-md-12">	<h2>Frenchises</h2> </div>
+        </div>
+        
+        <div class="row">
+                            
+                            <div class="col-md-12">
+                                <div class="widget blank no-padding">
+                                    <div class="panel panel-default work-progress-table">
+                                            <!-- Default panel contents -->
+                                        <div class="panel-heading"> Username : {{request.user.username}}<i></i>
+                                            <div class="dropdown rounded">
+                                                
+                                                <button class="btn btn-danger pull-right"  data-title="Delete" data-toggle="modal" data-target="#delete"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+                                            </div>
+                                        </div>
+                                            <!-- Table -->
+                                        
+                                        
+                                            <div class="container mt-5">
+
+                                            <form action="" method="post">
+                                                {% csrf_token %}
+                                                <!-- Name -->
+                                                <input type="hidden" value="{{type}}" name="istype">
+                                                <input type="hidden" value="{{ad_data.id}}" name="ad_id">
+                                                <div class="mb-3">
+                                                    <label for="name" class="form-label">Name</label>
+                                                    <input type="text" class="form-control" name="name" placeholder="Enter your name" value="{{ad_data.clientName}}" required>
+                                                </div>
+                                                <!-- Amount -->
+                                                <div class="mb-3">
+                                                    <label for="amount" class="form-label">Amount</label>
+                                                    <input type="text" class="form-control" name="amount" value={{ad_data.amount}} placeholder="Enter the amount" required>
+                                                </div>
+                                                <!-- Type -->
+                                                <div class="mb-3">
+                                                    <label for="type" class="form-label">Type</label>
+                                                    <select class="form-select"  name="type" required>
+                                                        <option value="{{ad_data.type}}" disabled selected>{{ad_data.type}}</option>
+                                                        {% comment %} <option value="Personal Loan">Personal Loan</option>
+                                                        <option value="Home Loan">Home Loan</option>
+                                                        <option value="Auto Loan">Auto Loan</option>
+                                                        <option value="Business Loan">Business Loan</option>
+                                                        <option value="Education Loan">Education Loan</option> {% endcomment %}
+                                                        <!-- Add more loan types as needed -->
+                                                    </select>
+                                                </div>
+                                                
+                                                <!-- Email -->
+                                                <div class="mb-3">
+                                                    <label for="email" class="form-label">Email</label>
+                                                    <input type="email" class="form-control" name="email" value="{{ad_data.email}}" placeholder="Enter your email" required>
+                                                </div>
+                                                <!-- Number -->
+                                                <div class="mb-3">
+                                                    <label for="number" class="form-label">Number</label>
+                                                    <input type="text" class="form-control" name="number" value="{{ad_data.number}}" placeholder="Enter your number" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="number" class="form-label">PAN</label>
+                                                    <input type="text" class="form-control" name="pan" placeholder="Enter your User PAN" value="{{ad_data.PAN}}" required maxlength="16">
+                                                </div>
+                                                <div class="mb-5">
+                                                    <label for="status" class="form-label">Status</label>
+                                                    <select class="form-select" name="status" required>
+                                                        <option value="{{ ad_data.status }}" disabled selected>{{ ad_data.status }}</option>
+                                                        <option value="In Progress">In Progress</option>
+                                                        <option value="Completed">Completed</option>
+                                                        <option value="Rejected">Rejected</option>
+                                                        <option value="Active">Active</option>
+                                                        <!-- Add more status options as needed -->
+                                                    </select>
+                                                </div>
+                                                
+                                                
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </form>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    </div>
+
+    <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+            <div class="modal-dialog">
+        <div class="modal-content">
+                <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+            <h4 class="modal-title custom_align" id="Heading">Delete this entry</h4>
+            </div>
+                <div class="modal-body">
+            
+            <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Record?</div>
+            
+            </div>
+            <div class="modal-footer ">
+            <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
+            </div>
+            </div>
+        <!-- /.modal-content --> 
+        </div>
+            <!-- /.modal-dialog --> 
+        </div>
+    </div>
+         <!-- /#page-content-wrapper -->
+ 
+     </div>
+     <!-- /#wrapper -->
+ 
+
+</main>
+{% endblock home-page %}
