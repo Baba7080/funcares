@@ -40,6 +40,13 @@ class frenchise_register_model(models.Model):
     Work_Type = models.CharField(max_length=20, choices=WORKTYPE_CHOICE)
     Address_Type = models.CharField(max_length=50, choices=ADDRESS_CHOICE)
 
+class Revenue(models.Model):
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    amount =  models.DecimalField(
+        max_digits=8,  # Change this to the desired maximum number of digits
+        decimal_places=2,  # Change this to the desired number of decimal places
+        default=0.0
+    )
 
 
 #Employee Registration
@@ -76,5 +83,10 @@ class ProfileFrenchise(models.Model):
     Occupation = models.CharField(max_length=100)
     Address_Type = models.CharField(max_length=50)
     Role = models.CharField(max_length=120,default="not specified")
+    partner_at = models.DecimalField(
+        max_digits=8,  # Change this to the desired maximum number of digits
+        decimal_places=2,  # Change this to the desired number of decimal places
+        default=0.5
+    )
     def __str__(self):
         return f"{self.number}"

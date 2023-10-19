@@ -14,6 +14,7 @@ from django.shortcuts import get_object_or_404
 from companystaff.models import *
 # from .filters import frenchise_filter
 from datetime import datetime
+
 # Create your views here.
 # import matplotlib.pyplot as plt
 from io import BytesIO
@@ -85,6 +86,7 @@ def frenchise_registration_view(request):
             # user.is_active = False
         users.passwo = passs
         ProfileFrenchise.objects.create(user=users,DOB=raw_dob,state=raw_state,email=raw_email,city=raw_city,number=raw_number,Occupation=raw_occupation,Education=raw_education,Role="Frenchise")
+        # Revenue.object
         send_mail(
         "Request for frenchise",
         "Your request for a franchise is under review. Our team will get back to you within 24 hours.",
@@ -351,6 +353,14 @@ def dashboard(request):
             # print
             for i in userdataemp:
                 usrnme = i.id
+
+            current_date = datetime.now()
+            current_year = current_date.year
+            current_month = current_date.month
+            current_day = current_date.day
+
+            formatted_date = current_date.strftime('%Y-%m-%d')
+            print(formatted_date)
             # loan data fiilter model
             loandataActive = Loan.objects.filter(user=usrnme,status='Active')
             loandata = Loan.objects.filter(user=usrnme)
@@ -407,6 +417,7 @@ def dashboard(request):
             total_da= count_Demat_Account_count
 
             total_submit = total_loan + total_mf + total_insurance + total_da
+            # total_revenue = count_Mutual_Fund_completed+count_Insurance_completed+count_loan_completed+count_Demat_Account_completed
 
         
 
@@ -417,12 +428,16 @@ def dashboard(request):
                 'total_mf': total_mf,
                 'total_insurance':total_insurance,
                 'total_da':total_da,
+                'total_da_completed':count_Demat_Account_completed,
+                'total_mutual_completed':count_Mutual_Fund_completed,
+                'total_loan_completed':count_loan_completed,
+                'total_insurance_completed':count_Insurance_completed,
                 'total_submit':total_submit
             }
             all_data.append(data_dict)
         print(all_data)
         print("ljhjhjhg")
-        return render(request, 'frenchise/frenchise_overview.html', {'data':all_data})
+        return render(request, 'frenchise/frenchise_overview.html', {'data_all':all_data})
     else:
         print("jhkjh")
         e_register = frenchise_employee_register_model.objects.filter(username=n)
@@ -567,8 +582,15 @@ def appllyloan(request):
         type = request.POST.get('type')
         number = request.POST.get('number')
         pan = request.POST.get('pan')
+        current_date = datetime.now()
+        current_year = current_date.year
+        current_month = current_date.month
+        current_day = current_date.day
+
+        formatted_date = current_date.strftime('%Y-%m-%d')
+        print(formatted_date)
         print([name,emails,amount,type,number])
-        createloan = Loan.objects.create(user=users,clientName=name,type=type,PAN=pan,number=number,amount=amount,email=emails)
+        createloan = Loan.objects.create(user=users,clientName=name,type=type,PAN=pan,number=number,amount=amount,email=emails,creation=formatted_date)
         
         return render(request,'frenchise/apply_loan.html')
 
@@ -600,7 +622,7 @@ def loan(request):
                 'type':i.type,
                 'name':i.clientName,
                 'status':i.status,
-                'created':i.created,
+                'creation':i.creation,
                 'email':i.email,
                 'amount':i.amount,
                 'number':i.number,
@@ -614,7 +636,7 @@ def loan(request):
                 'type':i.type,
                 'name':i.clientName,
                 'status':i.status,
-                'created':i.created,
+                'creation':i.creation,
                 'email':i.email,
                 'amount':i.amount,
                 'number':i.number,
@@ -628,7 +650,7 @@ def loan(request):
                 'type':i.type,
                 'name':i.clientName,
                 'status':i.status,
-                'created':i.created,
+                'creation':i.creation,
                 'email':i.email,
                 'amount':i.amount,
                 'number':i.number,
@@ -642,7 +664,7 @@ def loan(request):
                 'type':i.type,
                 'name':i.clientName,
                 'status':i.status,
-                'created':i.created,
+                'creation':i.created,
                 'email':i.email,
                 'amount':i.amount,
                 'number':i.number,

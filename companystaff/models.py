@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User 
+from django.utils import timezone
 
 CHOICES_STATUS = [
     ('Active', 'Active'),
@@ -17,7 +18,8 @@ class Loan(models.Model):
     number = models.IntegerField()
     amount = models.IntegerField()
     email = models.EmailField(blank=True)
-    created = models.DateField(auto_now=True)
+    creation = models.DateField(max_length=8,null=False)
+
     status = models.CharField(
         max_length=50,
         choices=CHOICES_STATUS,
@@ -37,7 +39,8 @@ class Insurance(models.Model):
     number = models.IntegerField()
     amount = models.IntegerField()
     email = models.EmailField(blank=True)
-    created = models.DateField(auto_now=True)
+    creation = models.DateField(max_length=8,null=True)
+
     status = models.CharField(
         max_length=50,
         choices=CHOICES_STATUS,
@@ -57,7 +60,7 @@ class Mutual_Fund(models.Model):
     number = models.IntegerField()
     amount = models.IntegerField()
     email = models.EmailField(blank=True)
-    created = models.DateField(auto_now=True)
+    creation = models.DateField(max_length=8,null=True)
     status = models.CharField(
         max_length=50,
         choices=CHOICES_STATUS,
@@ -76,7 +79,7 @@ class Demat_Account(models.Model):
     number = models.IntegerField()
     amount = models.IntegerField()
     email = models.EmailField(blank=True)
-    created = models.DateField(auto_now=True)
+    creation = models.DateField(max_length=8,null=True)
     status = models.CharField(
         max_length=50,
         choices=CHOICES_STATUS,
