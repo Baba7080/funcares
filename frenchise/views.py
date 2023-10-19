@@ -14,6 +14,7 @@ from django.shortcuts import get_object_or_404
 from companystaff.models import *
 # from .filters import frenchise_filter
 from datetime import datetime
+
 # Create your views here.
 # import matplotlib.pyplot as plt
 from io import BytesIO
@@ -85,6 +86,7 @@ def frenchise_registration_view(request):
             # user.is_active = False
         users.passwo = passs
         ProfileFrenchise.objects.create(user=users,DOB=raw_dob,state=raw_state,email=raw_email,city=raw_city,number=raw_number,Occupation=raw_occupation,Education=raw_education,Role="Frenchise")
+        # Revenue.object
         send_mail(
         "Request for frenchise",
         "Your request for a franchise is under review. Our team will get back to you within 24 hours.",
@@ -221,7 +223,7 @@ def employee_view(request):
     else:
         # If the request method is not POST, render the employee application form
         emp_form = Employee_application_form()
-        return render(request, 'frenchise/employee_dashboard.html', {'emp_form': emp_form})
+        return render(request, 'frenchise/employee_registration.html', {'emp_form': emp_form})
     
 
 #frenchise status True or False
@@ -351,12 +353,20 @@ def dashboard(request):
             # print
             for i in userdataemp:
                 usrnme = i.id
+
+            current_date = datetime.now()
+            current_year = current_date.year
+            current_month = current_date.month
+            current_day = current_date.day
+
+            formatted_date = current_date.strftime('%Y-%m-%d')
+            print(formatted_date)
             # loan data fiilter model
             loandataActive = Loan.objects.filter(user=usrnme,status='Active')
             loandata = Loan.objects.filter(user=usrnme)
             loancount = loandata.count()
             loandataInprogress = Loan.objects.filter(user=usrnme,status='In Progesss')
-            loandataCompleted = Loan.objects.filter(user=usrnme,status='Completed')
+            loandataCompleted = Loan.objects.filter(user=usrnme,status='Completed', creation=formatted_date)
             loandataRejected = Loan.objects.filter(user=usrnme,status='Rejected')
             count_loan_active = loandataActive.count()
             count_loan_InProgress = loandataInprogress.count()
@@ -368,7 +378,7 @@ def dashboard(request):
             Insurancedata = Insurance.objects.filter(user=usrnme)
             insurancecount = Insurancedata.count()
             InsurancedataInprogress = Insurance.objects.filter(user=usrnme,status='In Progesss')
-            InsurancedataCompleted = Insurance.objects.filter(user=usrnme,status='Completed')
+            InsurancedataCompleted = Insurance.objects.filter(user=usrnme,status='Completed',creation=formatted_date)
             InsurancedataRejected = Insurance.objects.filter(user=usrnme,status='Rejected')
             count_Insurance_active = InsurancedataActive.count()
             count_Insurance_InProgress = InsurancedataInprogress.count()
@@ -379,7 +389,7 @@ def dashboard(request):
             Mutual_Funddata = Mutual_Fund.objects.filter(user=usrnme)
             mutualfundcount = Mutual_Funddata.count()
             Mutual_FunddataInprogress = Mutual_Fund.objects.filter(user=usrnme,status='In Progesss')
-            Mutual_FunddataCompleted = Mutual_Fund.objects.filter(user=usrnme,status='Completed')
+            Mutual_FunddataCompleted = Mutual_Fund.objects.filter(user=usrnme,status='Completed',creation=formatted_date)
             Mutual_FunddataRejected = Mutual_Fund.objects.filter(user=usrnme,status='Rejected')
             count_Mutual_Fund_active = Mutual_FunddataActive.count()
             count_Mutual_Fund_InProgress = Mutual_FunddataInprogress.count()
@@ -389,7 +399,7 @@ def dashboard(request):
             Demat_AccountdataActive = Demat_Account.objects.filter(user=usrnme,status='Active')
             Demat_Accountdata = Demat_Account.objects.filter(user=usrnme)
             Demat_AccountdataInprogress = Demat_Account.objects.filter(user=usrnme,status='In Progesss')
-            Demat_AccountdataCompleted = Demat_Account.objects.filter(user=usrnme,status='Completed')
+            Demat_AccountdataCompleted = Demat_Account.objects.filter(user=usrnme,status='Completed',creation=formatted_date)
             Demat_AccountdataRejected = Demat_Account.objects.filter(user=usrnme,status='Rejected')
             count_Demat_Account_active = Demat_AccountdataActive.count()
             count_Demat_Account_count = Demat_Accountdata.count()
@@ -566,8 +576,15 @@ def appllyloan(request):
         type = request.POST.get('type')
         number = request.POST.get('number')
         pan = request.POST.get('pan')
+        current_date = datetime.now()
+        current_year = current_date.year
+        current_month = current_date.month
+        current_day = current_date.day
+
+        formatted_date = current_date.strftime('%Y-%m-%d')
+        print(formatted_date)
         print([name,emails,amount,type,number])
-        createloan = Loan.objects.create(user=users,clientName=name,type=type,PAN=pan,number=number,amount=amount,email=emails)
+        createloan = Loan.objects.create(user=users,clientName=name,type=type,PAN=pan,number=number,amount=amount,email=emails,creation=formatted_date)
         
         return render(request,'frenchise/apply_loan.html')
 

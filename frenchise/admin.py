@@ -1,11 +1,5 @@
 from django.contrib import admin
-from .models import(
-    frenchise_register_model,
-    frenchise_employee_register_model,
-    ProfileFrenchise,
-   
-    
-)
+from .models import *
 
 # Register your models here.
 
@@ -20,6 +14,7 @@ class frenchise_admin(admin.ModelAdmin):
 #     list_display = ['employee_id','employee_name', 'designation'
 #     ]
 admin.site.register(ProfileFrenchise)
+admin.site.register(Revenue)
 
 
 @admin.register(frenchise_employee_register_model)

@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\lenovo\Desktop\New folder\fundcare\env
+set VIRTUAL_ENV=D:\16 oct\funcares\env
 
 if not defined PROMPT set PROMPT=$P$G
 
