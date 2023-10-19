@@ -14,6 +14,7 @@ from django.shortcuts import get_object_or_404
 from companystaff.models import *
 # from .filters import frenchise_filter
 from datetime import datetime
+import re
 
 # Create your views here.
 # import matplotlib.pyplot as plt
@@ -218,7 +219,6 @@ def employee_view(request):
         return redirect('dashboard')
 
         # If the form is not valid, re-render the form
-        return render(request, 'frenchise/employee_dashboard.html', {'emp_form': emp_form})
 
     else:
         # If the request method is not POST, render the employee application form
@@ -518,14 +518,114 @@ def frenchise_confirmation(request):
 
 def employee_registration_view(request):
     return render(request, 'frenchise/employee.html')
-
+@login_required
 def employee_dashboard_view(request):
-    return render(request, 'frenchise/employee_dashboard.html')
+    # loginusers = request.user
+    loginUser = request.user.username
+    print(loginUser)
+    if request.method == 'POST':
+        if '_emp' not in loginUser:
+            name = request.POST.get('search')
+            print(name)
+            print(type(name))
+            email_pattern = r'^[\w\.-]+@[\w\.-]+$'
+            if re.match(email_pattern, name):
+                employedata = frenchise_employee_register_model.objects.filter(user = request.user,email=name)
+
+                print('email')
+
+            if name.isnumeric():
+                employedata = frenchise_employee_register_model.objects.filter(user = request.user,number=name)
+
+                print('The name contains only numbers.')
+            if name.isalpha():
+                print('name')
+                employedata = frenchise_employee_register_model.objects.filter(user = request.user,name=name)
+
+            # employedata = frenchise_employee_register_model.objects.filter(user = request.user)
+            print(employedata)
+            if employedata:
+                emp_data = []
+                for i in employedata:
+                    loanuser = User.objects.get(username=i.username)
+                    loandata = Loan.objects.filter(user=loanuser)
+                    loandatacompleted = Loan.objects.filter(user=loanuser,status='Completed')
+                    Insurancedata = Insurance.objects.filter(user=loanuser)
+                    Insurancedatacompleted = Insurance.objects.filter(user=loanuser,status='Completed')
+                    Mutualdata = Mutual_Fund.objects.filter(user=loanuser)
+                    Mutualdatacompleted = Mutual_Fund.objects.filter(user=loanuser,status='Completed')
+                    Dematdata = Demat_Account.objects.filter(user=loanuser)
+                    Dematdatacompleted = Demat_Account.objects.filter(user=loanuser,status='Completed')
+                    total_sale = loandata.count()+Insurancedata.count()+Mutualdata.count()+Dematdata.count()
+                    print("---------")
+                    print(loandata)
+                    data_emp = {
+                        'Name':i.name,
+                        'id':i.id,
+                        'email':i.email,
+                        'username':i.username,
+                        'total_sale':total_sale,
+                        'total_loan':loandata.count(),
+                        'total_loan_completed':loandatacompleted.count(),
+                        'total_insurance':Insurancedata.count(),
+                        'total_insurance_completed':Insurancedatacompleted.count(),
+                        'total_mutual':Mutualdata.count(),
+                        'total_mutual_completed':Mutualdatacompleted.count(),
+                        'total_demat':Dematdata.count(),
+                        'total_demat_completed':Dematdatacompleted.count(),
+                    }
+                    emp_data.append(data_emp)
+
+                print(emp_data)
+                return render(request, 'frenchise/employee_dashboard.html',{'em_data':emp_data})
+            else:
+                return render(request,'frenchise/404.html')
+
+    if '_emp' in loginUser:
+        return render(request,'frenchise/404.html')
+    else:
+        print("lgjjkhjgflkhjflkh")
+        employedata = frenchise_employee_register_model.objects.filter(user = request.user)
+        print(employedata)
+        emp_data = []
+        for i in employedata:
+            loanuser = User.objects.get(username=i.username)
+            loandata = Loan.objects.filter(user=loanuser)
+            loandatacompleted = Loan.objects.filter(user=loanuser,status='Completed')
+            Insurancedata = Insurance.objects.filter(user=loanuser)
+            Insurancedatacompleted = Insurance.objects.filter(user=loanuser,status='Completed')
+            Mutualdata = Mutual_Fund.objects.filter(user=loanuser)
+            Mutualdatacompleted = Mutual_Fund.objects.filter(user=loanuser,status='Completed')
+            Dematdata = Demat_Account.objects.filter(user=loanuser)
+            Dematdatacompleted = Demat_Account.objects.filter(user=loanuser,status='Completed')
+            total_sale = loandata.count()+Insurancedata.count()+Mutualdata.count()+Dematdata.count()
+            print("---------")
+            print(loandata)
+            data_emp = {
+                'Name':i.name,
+                'id':i.id,
+                'email':i.email,
+                'username':i.username,
+                'total_sale':total_sale,
+                'total_loan':loandata.count(),
+                'total_loan_completed':loandatacompleted.count(),
+                'total_insurance':Insurancedata.count(),
+                'total_insurance_completed':Insurancedatacompleted.count(),
+                'total_mutual':Mutualdata.count(),
+                'total_mutual_completed':Mutualdatacompleted.count(),
+                'total_demat':Dematdata.count(),
+                'total_demat_completed':Dematdatacompleted.count(),
+            }
+            emp_data.append(data_emp)
+
+        print(emp_data)
+        return render(request, 'frenchise/employee_dashboard.html',{'em_data':emp_data})
 
 
 @login_required
 def edit_employee_dashboard_view(request, empid):
     loginUser = request.user.username
+    
     # getEmployee = frenchise_employee_register_model.objects.filter(id=empid)
     if request.method == 'POST':
         print("inpost")

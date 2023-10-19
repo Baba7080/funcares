@@ -49,20 +49,13 @@ class Revenue(models.Model):
     )
 
 
-#Employee Registration
-
-# class employee_registration_model(models.Model):
-#     user = models.ForeignKey(User, on_delete=models.CASCADE)
-#     email = models.EmailField(null=False)
-#     password = models.CharField(max_length=50)
-
-
 
 class frenchise_employee_register_model(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     employee_id = models.IntegerField(default=123456)
     email = models.EmailField(null=False, blank=False, default= 'employee@gmail.com')
     name = models.CharField(max_length=100,blank=True)
+    number = models.IntegerField(max_length=10,blank=True,default='2')
     username = models.CharField(max_length=15,null=False, blank=False, default='Username')
     password = models.CharField(max_length=50)
     # Role = models.CharField(max_length=120,default="not specified")

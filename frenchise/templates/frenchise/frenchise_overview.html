@@ -1,7 +1,24 @@
 {% extends 'frenchise/frenchise_base.html' %}
 {% load static %}
 {% block title %} Home {% endblock title %}
+{% block graphcss %}
+<style>
+    /* Define the dark theme styles */
+        /* Dark Theme Styles */
+    body.dark {
+        background-color: #333;
+        color: #fff;
+    }
+    
+    /* Light Theme Styles */
+    body.light {
+        background-color: #fff;
+        color: #333;
+    }
+      
 
+</style>
+{% endblock graphcss %}
 {% block dash-page %}
 
 
@@ -9,6 +26,7 @@
 
  <!-- Content Start -->
  <div class="content">
+    
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand bg-secondary navbar-dark sticky-top px-4 py-0">
         <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
@@ -98,7 +116,6 @@
         </div>
     </nav>
     <!-- Navbar End -->
-    
     
     <!-- Sale & Revenue Start -->
     <div class="container-fluid pt-4 px-4">
@@ -559,7 +576,7 @@
 
 {% block javascripttags %}
 
-
+  
 <script>
     var ctx2 = $("#salse-revenue").get(0).getContext("2d");
     alert("kjhfksjd")

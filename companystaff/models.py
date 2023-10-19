@@ -19,15 +19,12 @@ class Loan(models.Model):
     amount = models.IntegerField()
     email = models.EmailField(blank=True)
     creation = models.DateField(max_length=8,null=False)
-
     status = models.CharField(
         max_length=50,
         choices=CHOICES_STATUS,
         default='Active',
         verbose_name='Status'
     )
-
-
     def __str__(self):
         return self.clientName
     
