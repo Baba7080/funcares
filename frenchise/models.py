@@ -36,7 +36,6 @@ class frenchise_register_model(models.Model):
     # Age = models.IntegerField(null=True) 
     city =models.CharField(max_length=20,null=True)
     Pin_code = models.PositiveIntegerField()
-
     Work_Type = models.CharField(max_length=20, choices=WORKTYPE_CHOICE)
     Address_Type = models.CharField(max_length=50, choices=ADDRESS_CHOICE)
 
@@ -47,7 +46,8 @@ class Revenue(models.Model):
         decimal_places=2,  # Change this to the desired number of decimal places
         default=0.0
     )
-
+    def __str__(self):
+        return f"{self.user}"
 
 
 class frenchise_employee_register_model(models.Model):

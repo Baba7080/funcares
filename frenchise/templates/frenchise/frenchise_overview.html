@@ -64,7 +64,7 @@
                     <i class="fa fa-chart-pie fa-3x text-primary"></i>
                     <div class="ms-3">
                         <p class="mb-2">Total Revenue</p>
-                        <h6 class="mb-0">$0.00</h6>
+                        <h6 class="mb-0">${{revenue.amount}}</h6>
                     </div>
                 </div>
             </div>
@@ -563,7 +563,7 @@ var ctx6 = $("#do-chart").get(0).getContext("2d");
 
 
     var ctx2 = $("#salse-revenue").get(0).getContext("2d");
-    alert("kjhfksjd")
+    {% comment %} alert("kjhfksjd") {% endcomment %}
     var myChart2 = new Chart(ctx2, {
         type: "line",
         data: {

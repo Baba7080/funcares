@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate
 from django.views import View
 from django.contrib.auth.models import User
-from .models import frenchise_register_model,frenchise_employee_register_model,ProfileFrenchise
+from .models import *
 from .forms import FrenchiseRegistrationForm, frenchise_application_form, Employee_application_form
 from django.contrib.auth.decorators import login_required
 from fastapi.responses import RedirectResponse, HTMLResponse
@@ -15,6 +15,7 @@ from companystaff.models import *
 # from .filters import frenchise_filter
 from datetime import datetime
 import re
+from decimal import Decimal
 
 # Create your views here.
 # import matplotlib.pyplot as plt
@@ -86,7 +87,8 @@ def frenchise_registration_view(request):
         users = User.objects.get(username=raw_number)
             # user.is_active = False
         users.passwo = passs
-        ProfileFrenchise.objects.create(user=users,DOB=raw_dob,state=raw_state,email=raw_email,city=raw_city,number=raw_number,Occupation=raw_occupation,Education=raw_education,Role="Frenchise")
+        ProfileFrenchise.objects.create(user=users,DOB=raw_dob,state=raw_state,email=raw_email,city=raw_city,number=raw_number,Occupation=raw_occupation,Education=raw_education,Role="Frenchise",partner_at=0.5)
+        Revenue.objects.create(user=user,amount=0)
         # Revenue.object
         send_mail(
         "Request for frenchise",
@@ -344,6 +346,7 @@ def dashboard(request):
     if check:
         f_register = frenchise_register_model.objects.filter(user=request.user)
         e_register = frenchise_employee_register_model.objects.filter(user=request.user)
+        total_revenue = Revenue.objects.get(user=request.user)
 
         all_data = []
         for data in e_register:
@@ -410,7 +413,6 @@ def dashboard(request):
             total_sales =  count_loan_completed + count_Insurance_completed + count_Mutual_Fund_completed + count_Demat_Account_completed
             print("upper loan")
 
-
             total_loan = loancount
             total_mf= mutualfundcount
             total_insurance = insurancecount
@@ -437,7 +439,7 @@ def dashboard(request):
             all_data.append(data_dict)
         print(all_data)
         print("ljhjhjhg")
-        return render(request, 'frenchise/frenchise_overview.html', {'data_all':all_data})
+        return render(request, 'frenchise/frenchise_overview.html', {'data_all':all_data,'revenue':total_revenue})
     else:
         print("jhkjh")
         e_register = frenchise_employee_register_model.objects.filter(username=n)
@@ -792,6 +794,36 @@ def editsection(request,ad_id,ad_type):
         print(statuss)
         print([name,emails,amount,type,number,pan,istype,ad_id,statuss])
         if loginUser.is_superuser:
+            if statuss == 'Completed':
+                getUserbyLoan = Loan.objects.get(id=ad_id)
+                empUser = User.objects.get(username=getUserbyLoan.user)
+                empProfile = frenchise_employee_register_model.objects.get(username=empUser)
+                print(empProfile.user)                    
+                franchiseUser = ProfileFrenchise.objects.get(user=empProfile.user)
+                percentage = Decimal(franchiseUser.partner_at)
+
+                # Perform operations with percentage
+                amount = int(amount)
+                amount1 = (percentage / 100) * amount
+
+                # Print the results
+                print(percentage)
+                print(amount1)
+                try:
+                    revenue_record = Revenue.objects.get(user=franchiseUser.user)
+                except Revenue.DoesNotExist:
+                    revenue_record = None
+                if revenue_record is not None:
+                    # If the record exists, update the amount
+                    revenue_record.amount += amount1
+                    revenue_record.save()
+                else:
+                    # If the record doesn't exist, create a new one
+                    revenue_record = Revenue(user=franchiseUser.user, amount=amount1)
+                    revenue_record.save()
+
+                print(franchiseUser)
+                print(empUser)
             if istype == 'Loan':
                 update = Loan.objects.filter(id=ad_id).update(clientName=name,PAN=pan,number=number,amount=amount,email=emails,status=statuss)
             if istype == 'Insurance':
