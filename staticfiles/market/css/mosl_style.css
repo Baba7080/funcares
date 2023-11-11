@@ -1,0 +1,39 @@
+
+
+#Top {
+    margin: 0px auto;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    top: 0px;
+    float: left;
+    width: 100%;
+}
+
+.fixedtop {
+    position: fixed;
+    top: 0;
+    z-index: 990;
+    background: white;
+    /* background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: white; */
+}
+
+.user-detail {
+    display: inline-block;
+    /* vertical-align: middle; */
+    height: 100%;
+    float: right;
+    background: #f9ce86;
+    padding: 8px 0 8px 50px;
+    border-radius: 0 0 0 70px;
+}
