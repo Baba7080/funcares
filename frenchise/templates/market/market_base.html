@@ -1,0 +1,2011 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Fundcares {% endblock title %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'frenchise/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'frenchise/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'frenchise/css/slicknav.css' %}" >
+    <link rel="stylesheet" href="{% static 'frenchise/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'frenchise/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'frenchise/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'frenchise/css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'frenchise/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'frenchise/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'frenchise/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'frenchise/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'market/css/market.css' %}">
+
+    <!-- Font Awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">  
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="menu-wrap">
+                    <div class="logo-block">
+                        <a href="#" onclick="location.href='/Home/HomePage'" class="logo clearfix">
+                            Fundcares
+                            <!-- <img src="/Images/NewMotilalOswalLogo.svg" alt="" title=""> -->
+                        </a>
+                    </div>
+                    <div class="nav-block">
+                        <div class="top-nav complete-hide">
+                            <ul class="nav-list">
+                                <li>
+                                    <!-- <a href="partner-corner-overview.html" class="partner-con-link">Partner Corner</a> -->
+                                    <div class="indices-glimpse">
+                                        <p class="indices-glimpse--text">
+                                            <span class="indices-glimpse--name">NIFTY 50 :</span>
+                                            <span class="indices-glimpse--amount 026000"
+                                                id="Top_indices_Nifty_Rate">19,675.45</span>
+                                            <span class="indices-glimpse--status" id="Top_indices_Nifty_Arrow">
+                                                <img src="../Images/big-green-arrow.svg"
+                                                    class="vertical-baseline indices-glimpse--status-img">
+                                            </span>
+                                            <span class="indices-glimpse--status" id="Top_indices_Nifty_Arrow_Down"
+                                                style="display:none;">
+                                                <img src="../Images/big-red-varrow.svg"
+                                                    class="vertical-baseline indices-glimpse--status-img">
+                                            </span>
+                                            <span class="indices-glimpse--percent 026000PerChange"
+                                                id="Top_indices_Nifty_PerChange">0.00(0.00%)</span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="indices-glimpse">
+                                        <p class="indices-glimpse--text">
+                                            <span class="indices-glimpse--name">SENSEX :</span>
+                                            <span class="indices-glimpse--amount 1999901"
+                                                id="Top_indices_Sensex_Rate">65,675.93</span>
+                                            <span class="indices-glimpse--status" id="Top_indices_Sensex_Arrow">
+                                                <img src="../Images/big-green-arrow.svg"
+                                                    class="vertical-baseline indices-glimpse--status-img">
+                                            </span>
+                                            <span class="indices-glimpse--status" id="Top_indices_Sensex_Arrow_Down"
+                                                style="display:none;">
+                                                <img src="../Images/big-red-varrow.svg"
+                                                    class="vertical-baseline indices-glimpse--status-img">
+                                            </span>
+                                            <span class="indices-glimpse--percent 1999901PerChange"
+                                                id="Top_indices_Sensex_PerChange">0.00(0.00%)</span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="indices-glimpse">
+                                        <p class="indices-glimpse--text">
+                                            <span class="indices-glimpse--name">USDINR : </span>
+                                            <span class="indices-glimpse--amount 33129"
+                                                id="Top_indices_USDINR_Rate">83.1175</span>
+                                            <span class="indices-glimpse--status" id="Top_indices_USDINR_Arrow"
+                                                style="display:none;">
+                                                <img src="../Images/big-green-arrow.svg"
+                                                    class="vertical-baseline indices-glimpse--status-img">
+    
+                                            </span>
+                                            <span class="indices-glimpse--status" id="Top_indices_USDINR_Arrow_Down"
+                                                style="">
+                                                <img src="../Images/big-red-varrow.svg"
+                                                    class="vertical-baseline indices-glimpse--status-img">
+    
+                                            </span>
+                                            <span class="indices-glimpse--percent 33129PerChange"
+                                                id="Top_indices_USDINR_PerChange"
+                                                style="color: rgb(235, 100, 0);">-0.1975(-0.2371%)</span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="indices-glimpse">
+                                        <p class="indices-glimpse--text">
+                                            <span class="indices-glimpse--name">GOLD :</span>
+                                            <span class="indices-glimpse--amount 6250883"
+                                                id="Top_indices_Gold_Rate">60,107.00</span>
+                                            <span class="indices-glimpse--status" id="Top_indices_Gold_Arrow"
+                                                style="display:none;">
+                                                <img src="../Images/big-green-arrow.svg"
+                                                    class="vertical-baseline indices-glimpse--status-img">
+                                            </span>
+                                            <span class="indices-glimpse--status" id="Top_indices_Gold_Arrow_Down"
+                                                style="display:none;">
+                                                <img src="../Images/big-red-varrow.svg"
+                                                    class="vertical-baseline indices-glimpse--status-img">
+                                            </span>
+                                            <span class="indices-glimpse--percent 6250883PerChange"
+                                                id="Top_indices_Gold_PerChange">0.00(0.00%)</span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="indices-glimpse">
+                                        <p class="indices-glimpse--text">
+                                            <span class="indices-glimpse--name" style="color:red">
+                                                <a href="javascript:void(0);"
+                                                    onclick="LoadPage('Home', 'ReferClient'); PushUserDataToCleverTapECS('Web_Refer_And_Earn', 'EBOM907310', 'Web_Home');"
+                                                    class="list-name" style="cursor:pointer;color:red">
+                                                    Refer &amp; Earn
+    
+                                                </a>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </li>
+    
+                            </ul>
+                        </div>
+    
+    
+                        <div class="bottom-nav d-flex align-items-center justify-content-end justify-md-content-between">
+                            <div class="menu-list-wrap flex-grow-1">
+                                <div class="logo-block">
+                                    <a href="javascript:void(0);" title="Close" class="close-elem">
+                                        <img src="../Images/big-close.svg" alt="" title="" class="img-fluid">
+                                    </a>
+                                    <a href="javascript:OpenReport('Home Page', '', 'main_div')"
+                                        onclick="return LoadHome();" class="logo clearfix">
+                                        <img src="../Images/motilal-logo.jpeg" alt="" title="">
+                                    </a>
+    
+                                </div>
+                                <ul class="menu-list">
+    
+                                    <li class="visible-mob">
+                                        <a href="#" data-toggle="tooltip" title="MANISH" class="orange-text"
+                                            style="font-weight:600"> MANISH (EBOM907310)</a>
+                                    </li>
+    
+                                    <li class="visible-mob">
+                                        <a onclick="LoadPage('Home','ProfileAndSetting')">
+                                            <img src="" alt="" title="">
+                                            View Profile &amp; Settings
+                                            <img src="../images/left-arrow-icon.svg" title="" alt="" class="next-link">
+                                        </a>
+                                    </li>
+    
+                                    <li class="visible-mob">
+                                        <a href="javascript:void(0);" class="item-link mitem-link">
+                                            <img src="/images/arrow-pointing-to-right.svg" title="" alt=""
+                                                class="back-link">
+                                            Other Links
+                                            <img src="../images/left-arrow-icon.svg" title="" alt="" class="next-link">
+                                        </a>
+                                        <div class="dropdown-nav">
+                                            <div class="menu-row more-submenu">
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 border-right">
+                                                        <div class="invest-services-list">
+                                                            <ul class="list">
+                                                                <li>
+                                                                    <div class="display-table">
+                                                                        <div class="">
+                                                                            <div class="row">
+                                                                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                                                                    <ul class="submenu-list MobileMenuLi">
+    
+                                                                                        <li>
+                                                                                            <a
+                                                                                                onclick="LoadPage('Home','ValuePack')">
+                                                                                                <img src="" alt="" title=""
+                                                                                                    style="cursor:pointer">
+                                                                                                Value Pack
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <a
+                                                                                                onclick="LoadPageByID('Home','ServiceRequest',3)">
+                                                                                                <img src="" alt="" title=""
+                                                                                                    style="cursor:pointer">
+                                                                                                Service Request
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <a
+                                                                                                onclick="LoadPage('Home','Circular')">
+                                                                                                <img src="" alt="" title=""
+                                                                                                    style="cursor:pointer">
+                                                                                                Circulars
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <a
+                                                                                                onclick="LoadPage('Home','OpenMTF')">
+                                                                                                <img src="" alt="" title=""
+                                                                                                    style="cursor:pointer">
+                                                                                                MTF VAR Confirmation
+                                                                                            </a>
+                                                                                        </li>
+    
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="close-icon nav-close">
+                                                <a href="javascript:void(0);" title="Close" class="menu-close">
+                                                    <img src="../images/orange-close.svg" alt="" title="" class="img-fluid">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+    
+                                    <li>
+                                        <a href="javascript:void(0)"
+                                            onclick="LoadPage('WatchlistHome', 'WatchlistHome');SendCleverTapData('Web_Watchlist', 'Web_Home');"
+                                            class="item-link mitem-link">
+                                            <img src="../images/arrow-pointing-to-right.svg" title="" alt=""
+                                                class="back-link">
+                                            Watchlist
+                                            <img src="../images/left-arrow-icon.svg" title="" alt="" class="next-link">
+                                        </a>
+                                        <!--    <div class="dropdown-nav">
+                                                                                  <div class="menu-row our-offering-submenu">
+                                                <h1>submenu</h1>
+                                            </div>
+                                                                                <div class="close-icon nav-close">
+                                                                                    <a href="javascript:void(0);" title="Close" class="menu-close">
+                                                                                        <img src="~/Images/orange-close.svg" alt="" title=""
+                                                                                             class="img-fluid">
+                                                                                    </a>
+                                                                                </div>
+                                        </div> -->
+    
+    
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)"
+                                            onclick="LoadPage('Home', 'Portfolio');SendPortfolioCleverTapData('Web_Portfolio', 'Web_Home');"
+                                            class="item-link mitem-link">
+                                            <img src="../images/arrow-pointing-to-right.svg" title="" alt=""
+                                                class="back-link">
+                                            Portfolio
+                                            <img src="../images/left-arrow-icon.svg" title="" alt="" class="next-link">
+                                        </a>
+    
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)"
+                                            onclick="LoadPageWithParam('MutualFund', 'MutualFundHome', '0');;SendCleverTapData('Web_Mutual_Funds', 'Web_Home');"
+                                            class="item-link mitem-link">
+                                            <img src="../images/arrow-pointing-to-right.svg" title="" alt=""
+                                                class="back-link">
+                                            Mutual Fund
+                                            <img src="../images/left-arrow-icon.svg" title="" alt="" class="next-link">
+                                        </a>
+    
+    
+    
+                                    </li>
+    
+                                    <!-- <li> -->
+                                    <!-- <a href="javascript:void(0);" class="item-link mitem-link" onclick="OpenModelPortfolioPage('IAP')"> -->
+                                    <!-- <img src="~/images/arrow-pointing-to-right.svg" title="" alt="" -->
+                                    <!-- class="back-link"> -->
+                                    <!-- Intelligent Advisory Portfolio (IAP) -->
+                                    <!-- <img src="~/images/left-arrow-icon.svg" title="" alt="" -->
+                                    <!-- class="next-link"> -->
+                                    <!-- </a> -->
+                                    <!-- </li> -->
+    
+                                    <li>
+    
+    
+                                        <a href="javascript:SendCleverTapData('Web_Help_Me_Invest','Web_Home');"
+                                            class="item-link mitem-link">
+                                            <img src="/images/arrow-pointing-to-right.svg" title="" alt=""
+                                                class="back-link">
+                                            Help Me Invest
+                                            <img src="/images/left-arrow-icon.svg" title="" alt="" class="next-link">
+                                        </a>
+                                        <div class="dropdown-nav" id="divHelpmeInvest">
+                                            <div class="menu-row">
+    
+                                                <div class="row">
+                                                    <div class="col-md-4 d-flex">
+                                                        <div class="submenu-comp d-flex">
+                                                            <div class="mr-3">
+                                                                <img class="submenu-comp--common-img"
+                                                                    src="/images/stock-sip.jpeg"
+                                                                    style="max-width:none;width:83px;height:83px">
+                                                            </div>
+                                                            <div class="text-left">
+                                                                <p class="submenu-comp--title"> Stock SIP</p>
+                                                                <p class="submenu-comp--desc">
+                                                                    Invest in stocks to grow your investments<br>and enjoy
+                                                                    compounding returns.
+                                                                </p>
+                                                                <a class="submenu-comp--link" href="javascript:void(0)"
+                                                                    onclick="LoadPage('Home', 'SIPBasket');SendCleverTapData('Web_Stock_SIP', 'Web_Home');">Start
+                                                                    An SIP</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4" style="display:none">
+    
+                                                        <div class="submenu-comp d-flex">
+    
+                                                            <div class="mr-3">
+                                                                <img class="submenu-comp--common-img"
+                                                                    src="/images/Invest-in-gold.jpeg"
+                                                                    style="max-width:none;width:83px;height:83px">
+                                                            </div>
+                                                            <div class="text-left">
+                                                                <p class="submenu-comp--title">Invest in Gold</p>
+                                                                <p class="submenu-comp--desc">
+                                                                    Buy, Sell &amp; Store 999.9 pure gold online.<br>Powered
+                                                                    by MMTC-PAMP
+                                                                </p>
+                                                                <a class="submenu-comp--link" href="javascript:void(0)"
+                                                                    onclick="window.open('https://www.motilaloswal.com/non-campaign/info/');">Buy
+                                                                    Gold Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--<div class="text-left">
+                                                        <p class="submenu-comp--title">Ready to Invest Portfolio's (IAP)</p>
+                                                        <p class="submenu-comp--desc">
+                                                            A diverse range of pre-packaged equity portfolio’s for Investors & Traders.
+                                                        </p>
+                                                        <a style="" class="submenu-comp--link" href="javascript:void(0)" onclick="OpenModelPortfolioPage('IAP');">IAP |</a>
+                                                        <a class="submenu-comp--link" href="javascript:void(0)" onclick="OpenModelPortfolioPage('FRN');">Other Products </a>
+                                                        <a class="submenu-comp--link" href="javascript:void(0)" onclick="LoadPage('ACEProduct', 'ACEMobileIntermediate');" style="display:none"> | IAP-Mobile</a>-->
+                                                    <!--</div>-->
+                                                    <!--<div class="col-md-4 d-flex">
+                                                        <div class="submenu-comp d-flex">
+                                                            <div class="mr-3">
+                                                                <img class="submenu-comp--common-img" src="~/images/Ready-to-Invest-Portfolio.jpeg" style="max-width:none;width:83px;height:83px">
+                                                            </div>
+    
+                                                            <div class="text-left">
+                                                                <p class="submenu-comp--title">Ready to Invest Portfolio's </p>
+                                                                <p class="submenu-comp--desc">
+                                                                    A diverse range of pre-packaged equity<br /> portfolio’s for Investors & Traders.
+                                                                </p>
+                                                                <a style="" class="submenu-comp--link" href="javascript:void(0)" onclick="LoadPage('ACEProduct', 'ACEWebIntermediate');">IAP |</a>
+                                                                <a class="submenu-comp--link" href="javascript:void(0)" onclick="OpenModelPortfolioPage('FRN');">Other Products </a>
+                                                                <a class="submenu-comp--link" href="javascript:void(0)" onclick="LoadPage('ACEProduct', 'ACEMobileIntermediate');" style="display:none"> | IAP-Mobile</a>-->
+                                                    <!--</div>
+    
+                                                            </div>
+                                                        </div>-->
+    
+                                                    <div class="col-md-4 d-flex">
+                                                        <div class="submenu-comp d-flex">
+                                                            <div class="mr-3">
+                                                                <img class="submenu-comp--common-img"
+                                                                    src="/images/Don%e2%80%99t-know-where-to-invest.jpeg"
+                                                                    style="max-width:none;width:83px;height:83px">
+                                                            </div>
+                                                            <div class="text-left">
+                                                                <p class="submenu-comp--title">Don’t know where to invest
+                                                                    (SMT)</p>
+                                                                <p class="submenu-comp--desc">
+                                                                    An AI Powered Tool recommending<br>an ideal portfolio to
+                                                                    invest
+                                                                </p>
+                                                                <a class="submenu-comp--link" href="javascript:void(0)"
+                                                                    onclick="LoadPage('Home','OpenSMT');SendCleverTapData('Web_SMT', 'Web_Home');">Suggest
+                                                                    Me Now</a>
+                                                            </div>
+                                                        </div>
+    
+                                                    </div>
+    
+    
+    
+                                                    <!--<div class="col-md-4 d-flex">
+                                                        <div class="submenu-comp d-flex">
+    
+                                                            <div class="mr-3">
+                                                                <img class="submenu-comp--common-img" src="~/images/Insurance-Thumb.png" style="max-width:none;width:83px;height:83px">
+                                                            </div>
+    
+                                                            <div class="text-left">-->
+                                                    <!--<p class="submenu-comp--title">Insurance</p>
+                                                                    <p class="submenu-comp--desc">
+                                                                        Quick, Easy & <br />Hassle free buying.
+                                                                    </p>
+                                                                    <a class="submenu-comp--link" href="javascript:void(0)"
+                                                                       onclick="openHealthInsurance('INSURANCE');SendCleverTapData('Web_Insurance', 'Web_Home');">Get Insured Now</a>
+                                                                    <a href="#" id="ainsurance" class="list-name">
+                                                                </div>
+    
+                                                            </div>
+                                                        </div>-->
+                                                    <div class="col-md-4 d-flex">
+                                                        <div class="submenu-comp d-flex">
+                                                            <div class="mr-3">
+                                                                <img class="submenu-comp--common-img"
+                                                                    src="/images/us-equities.jpeg"
+                                                                    style="max-width:none;width:83px;height:83px">
+                                                            </div>
+                                                            <div class="text-left">
+                                                                <p class="submenu-comp--title"> Invest in US Equities</p>
+                                                                <p class="submenu-comp--desc">
+                                                                    Seamless Global Investing diversified<br>with over 3500
+                                                                    US Securities.
+                                                                </p>
+    
+                                                                <a href="javascript:void(0)" class="submenu-comp--link"
+                                                                    onclick="OpenInvestUSEquity();SendCleverTapData('Web_Invest_In_USEquities', 'Web_Home');">Invest
+                                                                    Now</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+    
+    
+                                                    <div class="col-md-4 d-flex">
+                                                        <div class="submenu-comp d-flex">
+                                                            <div class="mr-3">
+                                                                <img class="submenu-comp--common-img"
+                                                                    src="/images/Ready-to-Invest-Portfolio.jpeg"
+                                                                    style="max-width:none;width:83px;height:83px">
+                                                            </div>
+    
+                                                            <div class="text-left">
+                                                                <p class="submenu-comp--title">Ready to Invest Portfolio's
+                                                                </p>
+                                                                <p class="submenu-comp--desc">
+                                                                    A diverse range of pre-packaged equity<br> portfolio’s
+                                                                    for Investors &amp; Traders.
+                                                                </p>
+                                                                <a style="" class="submenu-comp--link"
+                                                                    href="javascript:void(0);"
+                                                                    onclick="OnclickIAP('IAP'); PushUserDataToCleverTap('Web_IAP', 'Web_Home');">IAP
+                                                                    |</a>
+                                                                <a class="submenu-comp--link" href="javascript:void(0);"
+                                                                    onclick="OnclickIAP('FRN'); PushUserDataToCleverTap('Web_IAP_Otherproducts', 'Web_Home');">Other
+                                                                    Products </a>
+    
+    
+                                                                <a class="submenu-comp--link" href="javascript:void(0)"
+                                                                    onclick="LoadPage('ACEProduct', 'ACEMobileIntermediate');"
+                                                                    style="display:none"> | IAP-Mobile</a>
+    
+    
+    
+                                                                <a class="submenu-comp--link" href="javascript:void(0)"
+                                                                    onclick="LoadPage('ACEProduct', 'ACEMobileIntermediate');"
+                                                                    style="display:none"> | IAP-Mobile</a>
+                                                                <a class="submenu-comp--link" href="javascript:void(0)"
+                                                                    onclick="OpenModelPortfolioPageADV('ADV');"
+                                                                    style="display:none"> | IAP-Mobile</a>
+                                                            </div>
+    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+    
+    
+    
+                                                </div>
+                                                <hr class="my-3">
+                                                <div class="">
+                                                    <div class="row">
+                                                        <div class="col-md-8">
+                                                            <div class="row">
+    
+                                                                <div class="col-md-4" style="display:none">
+                                                                    <div class="submenu-comp mb-4">
+                                                                        <div class="text-left">
+                                                                            <a href="#"
+                                                                                onclick="OpenModelPortfolioPage('MOST'); PushUserDataToCleverTap('Web_Model_Portfolios', 'Web_Home');"
+                                                                                class="submenu-comp--title-link">
+                                                                                Invest In Model Portfolio
+                                                                                <span
+                                                                                    class="iconarrow submenu-comp--iconarrow"></span>
+                                                                            </a>
+                                                                            <p class="submenu-comp--desc">
+                                                                                A ready mix of equity portfolio built &amp;
+                                                                                handpicked by our experts.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="submenu-comp mb-4">
+                                                                        <div class="text-left">
+                                                                            <a href="javascript:void(0)"
+                                                                                onclick="LoadPage('Home', 'MutualFund');SendCleverTapData('Web_IPO', 'Web_Home');"
+                                                                                class="submenu-comp--title-link">
+                                                                                IPO
+                                                                                <span
+                                                                                    class="iconarrow submenu-comp--iconarrow"></span>
+                                                                            </a>
+                                                                            <p class="submenu-comp--desc">
+                                                                                Invest swiftly in IPO’s, by entering UPI id
+                                                                                &amp; payment acceptance through the UPI
+                                                                                enabled app.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4" style="display:block">
+                                                                    <div class="submenu-comp mb-4">
+                                                                        <div class="text-left">
+                                                                            <a href="javascript:void(0)"
+                                                                                onclick="LoadPage('Home', 'Bond');SendCleverTapData('Web_Bond', 'Web_Home');"
+                                                                                class="submenu-comp--title-link">
+                                                                                Bonds
+                                                                                <span
+                                                                                    class="iconarrow submenu-comp--iconarrow"></span>
+                                                                            </a>
+                                                                            <p class="submenu-comp--desc">Do safer
+                                                                                investments &amp; get assured returns by
+                                                                                quick investment in Bonds.</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="submenu-comp mb-4">
+                                                                        <div class="text-left">
+                                                                            <a href="javascript:void(0)"
+                                                                                onclick="LoadPage('Home', 'FD');SendCleverTapData('Web_FD', 'Web_Home');"
+                                                                                class="submenu-comp--title-link">
+                                                                                Fixed Deposits
+                                                                                <span
+                                                                                    class="iconarrow submenu-comp--iconarrow"></span>
+                                                                            </a>
+                                                                            <p class="submenu-comp--desc">
+                                                                                Invest &amp; earn higher returns than the
+                                                                                regular deposits offered by banks.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="submenu-comp">
+                                                                        <div class="text-left">
+                                                                            <a href="javascript:void(0)"
+                                                                                onclick="LoadPage('Home', 'Buyback');SendCleverTapData('Web_BuyBack', 'Web_Home');"
+                                                                                class="submenu-comp--title-link">
+                                                                                Buyback
+                                                                                <span
+                                                                                    class="iconarrow submenu-comp--iconarrow"></span>
+                                                                            </a>
+                                                                            <p class="submenu-comp--desc">
+                                                                                Avail the opportunity to participate &amp;
+                                                                                earn premium with buyback of shares.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="submenu-comp">
+                                                                        <div class="text-left">
+                                                                            <a href="javascript:void(0)"
+                                                                                onclick="LoadPage('Home', 'OFS');SendCleverTapData('Web_OFS', 'Web_Home');"
+                                                                                class="submenu-comp--title-link">
+                                                                                OFS
+                                                                                <span
+                                                                                    class="iconarrow submenu-comp--iconarrow"></span>
+                                                                            </a>
+                                                                            <p class="submenu-comp--desc">
+                                                                                Now, place your bids instantly for OFS &amp;
+                                                                                purchase shares offered at discount.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+    
+                                                                <div class="col-md-4" style="">
+                                                                    <div class="submenu-comp">
+                                                                        <div class="text-left">
+                                                                            <a href="javascript:void(0)"
+                                                                                onclick="OpenBulkOrderData();SendCleverTapData('Web_Bulk', 'Web_Home');"
+                                                                                class="submenu-comp--title-link">
+                                                                                Bulk Order
+                                                                                <span
+                                                                                    class="iconarrow submenu-comp--iconarrow"></span>
+                                                                            </a>
+                                                                            <p class="submenu-comp--desc">
+                                                                                Trade in multiple stocks at one go, from a
+                                                                                single order form
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="submenu-comp submenu-comp__backgroundF9">
+                                                                <div class="text-left mb-1">
+                                                                    <img class="submenu-comp--smallicon28"
+                                                                        src="/images/wallet.svg">
+                                                                </div>
+                                                                <div class="text-left">
+                                                                    <p class="submenu-comp--title">Tax Saving Funds</p>
+                                                                    <p class="submenu-comp--desc">ELSS funds handpicked by
+                                                                        our experts with Tax Benefits &amp; Long Term
+                                                                        Returns.</p>
+                                                                    <a class="submenu-comp--link"
+                                                                        onclick="TaxSaving();SendCleverTapData('Web_TaxSaving', 'Web_Home');"
+                                                                        href="javascript:void(0)">Start Saving Now</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="close-icon nav-close">
+                                                <a href="javascript:void(0);" title="Close" class="menu-close">
+                                                    <img src="/images/orange-close.svg" alt="" title="" class="img-fluid">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+    
+    
+                                    <li>
+    
+                                        <a href="javascript:void(0)"
+                                            onclick="RedirectOptionStore(0);SendCleverTapData('Web_Option_Store', 'Web_Home');"
+                                            class="item-link mitem-link">
+                                            <img src="../images/arrow-pointing-to-right.svg" title="" alt=""
+                                                class="back-link">
+                                            Options Store
+                                            <img src="../images/left-arrow-icon.svg" title="" alt="" class="next-link">
+                                        </a>
+    
+    
+    
+                                    </li>
+                                    <li>
+    
+    
+                                        <a href="javascript:void(0)"
+                                            onclick="OpenHeckylURL(); PushUserDataToCleverTap('Web_Reports', 'FNO_Analysis');"
+                                            class="item-link mitem-link">
+                                            <img src="../images/arrow-pointing-to-right.svg" title="" alt=""
+                                                class="back-link">
+                                            FNO Analytics
+                                            <img src="../images/left-arrow-icon.svg" title="" alt="" class="next-link">
+                                        </a>
+                                    </li>
+    
+                                    <li>
+                                        <a href="javascript:SendCleverTapData('Web_Reports','Web_Home');"
+                                            class="item-link mitem-link">
+                                            <img src="../images/arrow-pointing-to-right.svg" title="" alt=""
+                                                class="back-link">
+                                            Reports
+                                            <img src="../images/left-arrow-icon.svg" title="" alt="" class="next-link">
+                                        </a>
+                                        <div class="dropdown-nav" id="divReport">
+                                            <div class="menu-row ">
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="px-4 border-right-dashed">
+                                                        <div class="submenu-comp submenu-comp__different-theme mx-3">
+                                                            <div class="mr-3 text-left mb-2">
+                                                                <img class="submenu-comp--common-img"
+                                                                    src="/Images/Trading-reports.jpeg">
+                                                            </div>
+                                                            <div class="text-left">
+                                                                <p class="submenu-comp--title">Trading Reports</p>
+                                                                <div class="">
+    
+                                                                    <a href="javascript:void(0)"
+                                                                        onclick="LoadPageByID('Home', 'NetPosition', '?ReportType=Order|Partial'); PushUserDataToCleverTap('Web_Reports', 'Orders / Trades / Net_Positions / Margin');"
+                                                                        class="submenu-comp--title-link">
+                                                                        Orders / Trades / Net Positions / Margin <span
+                                                                            class="iconarrow submenu-comp--iconarrow"></span>
+                                                                    </a><br>
+                                                                    <a href="javascript:void(0)"
+                                                                        onclick="LoadPageByID('Home', 'DemateHolding', '?type=Equity'); PushUserDataToCleverTap('Web_Reports', 'Demat_Holdings');"
+                                                                        class="submenu-comp--title-link">
+                                                                        Demat Holdings <span
+                                                                            class="iconarrow submenu-comp--iconarrow"></span>
+                                                                    </a><br>
+                                                                    <a href="javascript:void(0)"
+                                                                        onclick="LoadPageByID('Home', 'OpenSIPOrderBook'); PushUserDataToCleverTap('Web_Reports', 'Stock_SIP_order_book');"
+                                                                        class="submenu-comp--title-link">
+                                                                        Stock SIP Order Book <span
+                                                                            class="iconarrow submenu-comp--iconarrow"></span>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="px-4 border-right-dashed">
+                                                        <div class="submenu-comp submenu-comp__different-theme mx-3">
+                                                            <div class="mr-3 text-left mb-2">
+                                                                <img class="submenu-comp--common-img"
+                                                                    src="/Images/Operational-Reports.jpeg">
+                                                            </div>
+                                                            <div class="text-left">
+                                                                <p class="submenu-comp--title" style="cursor:Auto">
+                                                                    Operational Reports</p>
+                                                                <div class="">
+    
+                                                                    <a href="javascript:void(0)"
+                                                                        onclick="LoadPage('Home', 'ContractNoteLedger'); PushUserDataToCleverTap('Web_Reports', 'Contract_Note_and_Ledger');"
+                                                                        class="submenu-comp--title-link">
+                                                                        Contract Note and Ledger
+                                                                        <span
+                                                                            class="iconarrow submenu-comp--iconarrow"></span>
+                                                                    </a><br>
+    
+                                                                    <a href="javascript:void(0)"
+                                                                        onclick="LoadPage('Home', 'TransactionsReportExchange'); PushUserDataToCleverTap('Web_Reports', 'Transactions_Report_P_&amp;_L');"
+                                                                        class="submenu-comp--title-link">
+                                                                        Transactions Report / P&amp;L
+                                                                        <span
+                                                                            class="iconarrow submenu-comp--iconarrow"></span>
+                                                                    </a><br>
+                                                                    <a href="/Home/HoldingReport" target="_blank"
+                                                                        class="submenu-comp--title-link"
+                                                                        onclick="PushUserDataToCleverTap('Web_Reports', 'Holdings_Report');">
+                                                                        Holdings Report
+                                                                        <span
+                                                                            class="iconarrow submenu-comp--iconarrow"></span>
+                                                                    </a><br>
+                                                                    <a href="/Home/TransactionReport" target="_blank"
+                                                                        class="submenu-comp--title-link"
+                                                                        onclick="PushUserDataToCleverTap('Web_Reports', 'DP_Holdings_Transaction_Report');">
+                                                                        DP Holdings Transaction Report
+                                                                        <span
+                                                                            class="iconarrow submenu-comp--iconarrow"></span>
+                                                                    </a><br>
+    
+                                                                    <a href="javascript:void(0)"
+                                                                        onclick="triggerITRReport(); PushUserDataToCleverTap('Web_Reports', 'ITR_Report');"
+                                                                        class="submenu-comp--title-link">
+                                                                        ITR Report
+                                                                        <span
+                                                                            class="iconarrow submenu-comp--iconarrow"></span>
+                                                                    </a><br>
+    
+    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="px-4 border-right-dashed">
+                                                        <div class="submenu-comp submenu-comp__different-theme mx-3">
+                                                            <div class="mr-3 text-left mb-2">
+                                                                <img class="submenu-comp--common-img"
+                                                                    src="/Images/Mutual-Fund-Reports.jpeg">
+                                                            </div>
+                                                            <div class="text-left">
+                                                                <p class="submenu-comp--title">Investment Product Reports
+                                                                </p>
+    
+                                                                <div class="">
+                                                                    <a href="javascript:void(0)"
+                                                                        onclick="LoadPage('Home', 'MFOrderBook'); PushUserDataToCleverTap('Web_Reports', 'Mutual_Fund_Order_Book');"
+                                                                        class="submenu-comp--title-link">
+                                                                        Mutual Fund Order Book
+                                                                        <span
+                                                                            class="iconarrow submenu-comp--iconarrow"></span>
+                                                                    </a><br>
+                                                                </div>
+    
+                                                                <div class="">
+                                                                    <a href="javascript:void(0)"
+                                                                        onclick="LoadPage('Home', 'MutualFund?isOrderBook=1'); PushUserDataToCleverTap('Web_Reports', 'IPO_Order_Book');"
+                                                                        class="submenu-comp--title-link">
+                                                                        IPO Order Book
+                                                                        <span
+                                                                            class="iconarrow submenu-comp--iconarrow"></span>
+                                                                    </a><br>
+                                                                </div>
+                                                                <div class="">
+                                                                    <a href="javascript:void(0)"
+                                                                        onclick="LoadPageByID('Home', 'Bond?isOrderBook=1'); PushUserDataToCleverTap('Web_Reports', 'Bond_Order_Book');"
+                                                                        class="submenu-comp--title-link">
+                                                                        Bond Order Book
+                                                                        <span
+                                                                            class="iconarrow submenu-comp--iconarrow"></span>
+                                                                    </a><br>
+                                                                </div>
+                                                                <div class="">
+                                                                    <a href="javascript:void(0)"
+                                                                        onclick="LoadPageByID('Home', 'Buyback?isOrderBook=1'); PushUserDataToCleverTap('Web_Reports', 'Buyback_Order_Book');"
+                                                                        class="submenu-comp--title-link">
+                                                                        Buyback Order Book
+                                                                        <span
+                                                                            class="iconarrow submenu-comp--iconarrow"></span>
+                                                                    </a><br>
+                                                                </div>
+                                                                <div class="">
+                                                                    <a href="javascript:void(0)"
+                                                                        onclick="LoadPageByID('Home', 'OFS?isOrderBook=1'); PushUserDataToCleverTap('Web_Reports', 'OFS_Order_Book');"
+                                                                        class="submenu-comp--title-link">
+                                                                        OFS Order Book
+                                                                        <span
+                                                                            class="iconarrow submenu-comp--iconarrow"></span>
+                                                                    </a><br>
+                                                                </div>
+    
+                                                            </div>
+    
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="px-4 border-right-dashed">
+                                                        <div class="submenu-comp submenu-comp__different-theme mx-3">
+                                                            <div class="mr-3 text-left mb-2">
+                                                                <img class="submenu-comp--common-img"
+                                                                    src="/Images/operational-reportsOthers.jpeg">
+                                                            </div>
+                                                            <div class="text-left">
+                                                                <p class="submenu-comp--title" style="cursor:Auto">Other
+                                                                    Reports</p>
+                                                                <div class="">
+                                                                    <a href="javascript:void(0)"
+                                                                        onclick="ClientDashBoard(); PushUserDataToCleverTap('Web_Reports', 'Client_Dashboard');"
+                                                                        class="submenu-comp--title-link">
+                                                                        Client Dashboard
+                                                                        <span
+                                                                            class="iconarrow submenu-comp--iconarrow"></span>
+                                                                    </a><br>
+                                                                    <a href="javascript:void(0)"
+                                                                        onclick="DReport(); PushUserDataToCleverTap('Web_Reports', 'Detailed_Reports');"
+                                                                        class="submenu-comp--title-link">
+                                                                        Detailed Reports
+                                                                        <span
+                                                                            class="iconarrow submenu-comp--iconarrow"></span>
+                                                                    </a><br>
+                                                                    <a href="javascript:void(0)"
+                                                                        onclick="LoadPageFamilyReport(); PushUserDataToCleverTap('Web_Reports', 'Family_Report');"
+                                                                        class="submenu-comp--title-link">
+                                                                        Family Report
+                                                                        <span
+                                                                            class="iconarrow submenu-comp--iconarrow"></span>
+                                                                    </a><br>
+    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+    
+    
+                                                </div>
+    
+                                            </div>
+    
+                                            <div class="close-icon nav-close">
+                                                <a href="javascript:void(0);" title="Close" class="menu-close">
+                                                    <img src="/images/orange-close.svg" alt="" title="" class="img-fluid">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="visible-mob">
+                                        <a href="javascript:void(0)"
+                                            onclick="LoadPage('Home', 'Markets'); PushUserDataToCleverTap('Web_Menu', 'Markets');"
+                                            class="item-link mitem-link">
+                                            <img src="" title="" alt="" class="back-link">Market
+                                            <img src="../images/left-arrow-icon.svg" title="" alt="" class="next-link">
+                                        </a>
+                                    </li>
+    
+                                    <li class="visible-mob">
+                                        <a href="javascript:void(0);" class="item-link mitem-link">
+                                            <img src="/images/arrow-pointing-to-right.svg" title="" alt=""
+                                                class="back-link">
+                                            Advice
+                                            <img src="../images/left-arrow-icon.svg" title="" alt="" class="next-link">
+                                        </a>
+                                        <div class="dropdown-nav">
+                                            <div class="menu-row more-submenu">
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 border-right">
+                                                        <div class="invest-services-list">
+                                                            <ul class="list">
+                                                                <li>
+                                                                    <div class="display-table">
+                                                                        <div class="">
+                                                                            <div class="row">
+                                                                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                                                                    <ul class="submenu-list MobileMenuLi">
+                                                                                        <li>
+                                                                                            <a
+                                                                                                onclick="LoadPage('Home', 'Recommendations'); PushUserDataToCleverTap('Web_Menu', 'Advice_Calls');">
+                                                                                                <img src="" alt="" title=""
+                                                                                                    style="cursor:pointer">
+                                                                                                Calls
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <a
+                                                                                                onclick="LoadPage('Home', 'Basket'); PushUserDataToCleverTap('Web_Menu', 'Advice_Baskets');">
+                                                                                                <img src="" alt="" title=""
+                                                                                                    style="cursor:pointer">
+                                                                                                Baskets
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <a
+                                                                                                onclick="LoadPage('Home', 'IndexAdvice'); PushUserDataToCleverTap('Web_Menu', 'Index_View');">
+                                                                                                <img src="" alt="" title=""
+                                                                                                    style="cursor:pointer">
+                                                                                                Index View
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <a
+                                                                                                onclick="LoadMOSmallcase(); PushUserDataToCleverTap('Web_Menu', 'MO_SmallCase');">
+                                                                                                <img src="" alt="" title=""
+                                                                                                    style="cursor:pointer">
+                                                                                                SmallCase - MO Recommended
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <a
+                                                                                                onclick="LoadSmallcase(); PushUserDataToCleverTap('Web_Menu', 'All_SmallCases');">
+                                                                                                <img src="" alt="" title=""
+                                                                                                    style="cursor:pointer">
+                                                                                                All SmallCases
+                                                                                            </a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="close-icon nav-close">
+                                                <a href="javascript:void(0);" title="Close" class="menu-close">
+                                                    <img src="../images/orange-close.svg" alt="" title="" class="img-fluid">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+    
+                                    <li class="visible-mob">
+                                        <a href="javascript:void(0)"
+                                            onclick="LoadPage('Home', 'createOrderLink'); PushUserDataToCleverTap('Web_Menu', 'Order_Generator');"
+                                            class="item-link mitem-link">
+                                            <img src="" title="" alt="" class="back-link">Order Generator
+                                            <img src="../images/left-arrow-icon.svg" title="" alt="" class="next-link">
+                                        </a>
+                                    </li>
+                                    <li class="visible-mob">
+                                        <a href="javascript:void(0)"
+                                            onclick="LoadPage('Home', 'ResearchReport'); PushUserDataToCleverTap('Web_Menu', 'ResearchReport');"
+                                            class="item-link mitem-link">
+                                            <img src="" title="" alt="" class="back-link">Research Reports
+                                            <img src="../images/left-arrow-icon.svg" title="" alt="" class="next-link">
+                                        </a>
+                                    </li>
+                                    <li class="visible-mob">
+                                        <a href="javascript:void(0);" class="item-link mitem-link">
+                                            <img src="/images/arrow-pointing-to-right.svg" title="" alt=""
+                                                class="back-link">
+                                            Add Funds
+                                            <img src="../images/left-arrow-icon.svg" title="" alt="" class="next-link">
+                                        </a>
+                                        <div class="dropdown-nav">
+                                            <div class="menu-row more-submenu">
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 border-right">
+                                                        <div class="invest-services-list">
+                                                            <ul class="list">
+                                                                <li>
+                                                                    <div class="display-table">
+                                                                        <div class="">
+                                                                            <div class="row">
+                                                                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                                                                    <ul class="submenu-list MobileMenuLi">
+                                                                                        <li>
+                                                                                            <a
+                                                                                                onclick="return OpenFundTransfer('Menu')">
+                                                                                                <img src="" alt="" title=""
+                                                                                                    style="cursor:pointer">
+                                                                                                Add Funds
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <a
+                                                                                                onclick="LoadPage('Home', 'ManageFunds'); PushUserDataToCleverTap('Web_Menu', 'Withdraw_Funds');">
+                                                                                                <img src="" alt="" title=""
+                                                                                                    style="cursor:pointer">
+                                                                                                Withdraw Funds
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <a
+                                                                                                onclick="LoadPage('Home', 'FundHistory'); PushUserDataToCleverTap('Web_Menu', 'Transfer_Status');">
+                                                                                                <img src="" alt="" title=""
+                                                                                                    style="cursor:pointer">
+                                                                                                Transfer Status
+                                                                                            </a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="close-icon nav-close">
+                                                <a href="javascript:void(0);" title="Close" class="menu-close">
+                                                    <img src="../images/orange-close.svg" alt="" title="" class="img-fluid">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="visible-mob">
+                                        <a href="javascript:void(0)"
+                                            onclick="RedirectToNews();PushUserDataToCleverTap('Web_Menu', 'News');"
+                                            class="item-link mitem-link">
+                                            <img src="" title="" alt="" class="back-link">News
+                                            <img src="../images/left-arrow-icon.svg" title="" alt="" class="next-link">
+                                        </a>
+                                    </li>
+                                    <li class="visible-mob">
+                                        <a href="javascript:void(0)"
+                                            onclick="LoadGlobalSetAlert('22|0'); PushUserDataToCleverTap('Web_Menu', 'Alert');"
+                                            class="item-link mitem-link">
+                                            <img src="" title="" alt="" class="back-link">Alert
+                                            <img src="../images/left-arrow-icon.svg" title="" alt="" class="next-link">
+                                        </a>
+                                    </li>
+                                    <li class="visible-mob">
+                                        <a href="javascript:void(0);" class="item-link mitem-link">
+                                            <img src="/images/arrow-pointing-to-right.svg" title="" alt=""
+                                                class="back-link">
+                                            Other Essentials
+                                            <img src="../images/left-arrow-icon.svg" title="" alt="" class="next-link">
+                                        </a>
+                                        <div class="dropdown-nav">
+                                            <div class="menu-row more-submenu">
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 border-right">
+                                                        <div class="invest-services-list">
+                                                            <ul class="list">
+                                                                <li>
+                                                                    <div class="display-table">
+                                                                        <div class="">
+                                                                            <div class="row">
+                                                                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                                                                    <ul class="submenu-list MobileMenuLi">
+                                                                                        <li>
+                                                                                            <a href="javascript:void(0);"
+                                                                                                onclick="RedirectToStocomo();"
+                                                                                                class="list-name newpatch2">
+                                                                                                Stocomo<span
+                                                                                                    class="iconarrow"></span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <a
+                                                                                                onclick="LoadPage('Home', 'MarginCalculator'); PushUserDataToCleverTap('Web_Menu', 'Other_Essentials | MarginCalculator');">
+                                                                                                <img src="" alt="" title=""
+                                                                                                    style="cursor:pointer">
+                                                                                                Margin Calculator
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <a
+                                                                                                onclick="LoadPage('Home', 'GetWallet');PushUserDataToCleverTap('Web_Menu', 'Other_Essentials | MO Credits');">
+                                                                                                <img src="" alt="" title=""
+                                                                                                    style="cursor:pointer">
+                                                                                                MO Credits
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <a
+                                                                                                onclick="LoadPage('Home', 'ACEOrderConfirmation');PushUserDataToCleverTap('Web_Menu', 'Other_Essentials |  Order Confirmation');">
+                                                                                                <img src="" alt="" title=""
+                                                                                                    style="cursor:pointer">
+                                                                                                Order Confirmation
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <a
+                                                                                                onclick="LoadPage('Home', 'StockInfo');PushUserDataToCleverTap('Web_Menu', 'Other_Essentials |  Stock Info');">
+                                                                                                <img src="" alt="" title=""
+                                                                                                    style="cursor:pointer">
+                                                                                                Stock Info
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <a
+                                                                                                onclick="LoadPage('Home', 'ExchangeMessages');PushUserDataToCleverTap('Web_Menu', 'Other_Essentials |   Exchange Message');">
+                                                                                                <img src="" alt="" title=""
+                                                                                                    style="cursor:pointer">
+                                                                                                Exchange Message
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li>
+                                                                                            <a href="#"
+                                                                                                onclick="LoadPage('ACEProduct', 'IAPOptEmandate'); PushUserDataToCleverTap('Web_Menu', 'Other_Essentials | IAP SIP_E-mandate Registration');"
+                                                                                                class="list-name"
+                                                                                                style="cursor:pointer">
+                                                                                                IAP SIP E-mandate
+                                                                                                Registration
+                                                                                            </a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="close-icon nav-close">
+                                                <a href="javascript:void(0);" title="Close" class="menu-close">
+                                                    <img src="../images/orange-close.svg" alt="" title="" class="img-fluid">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="visible-mob">
+    
+                                        <a href="javascript:void(0)"
+                                            onclick="LoadPage('Home', 'ReferClient'); PushUserDataToCleverTapECS('Web_Refer_And_Earn', 'EBOM907310', 'Web_Home');"
+                                            class="item-link mitem-link">
+                                            <img src="" title="" alt="" class="back-link"> Refer &amp; Earn
+                                            <img src="../images/left-arrow-icon.svg" title="" alt="" class="next-link">
+                                        </a>
+                                    </li>
+                                    <li class="visible-mob">
+                                        <a href="javascript:void(0);"
+                                            onclick="PushUserDataToCleverTap('Web_Menu', 'TradingAPI');" id="btnTradingAPI"
+                                            class="item-link mitem-link">
+                                            <img src="" title="" alt="" class="back-link">Trading APIs
+                                            <img src="../images/left-arrow-icon.svg" title="" alt="" class="next-link">
+                                        </a>
+                                    </li>
+    
+                                    <li class="visible-mob">
+                                        <a href="javascript:void(0);" class="item-link mitem-link">
+                                            <img src="/images/arrow-pointing-to-right.svg" title="" alt=""
+                                                class="back-link">
+                                            Help
+                                            <img src="../images/left-arrow-icon.svg" title="" alt="" class="next-link">
+                                        </a>
+                                        <div class="dropdown-nav">
+                                            <div class="menu-row more-submenu">
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 border-right">
+                                                        <div class="invest-services-list">
+                                                            <ul class="list">
+                                                                <li>
+                                                                    <div class="display-table">
+                                                                        <div class="">
+                                                                            <div class="row">
+                                                                                <div class="col-xs-12 col-sm-4 col-md-4">
+                                                                                    <ul class="submenu-list MobileMenuLi">
+                                                                                        <li class="visible-mob">
+                                                                                            <a href="javascript:void(0);"
+                                                                                                onclick="OpenFAQ(0);PushUserDataToCleverTap('Web_Menu', 'FAQs');"
+                                                                                                class="item-link mitem-link">
+                                                                                                <img src="" title="" alt=""
+                                                                                                    style="cursor:pointer">FAQ's
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="visible-mob">
+                                                                                            <a href="javascript:void(0);"
+                                                                                                onclick="OpenFAQ(1);PushUserDataToCleverTap('Web_Menu', 'Track_Your_Queries');"
+                                                                                                class="item-link mitem-link">
+                                                                                                <img src="" title="" alt=""
+                                                                                                    style="cursor:pointer">Track
+                                                                                                Your Queries
+                                                                                            </a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+    
+                                    <li class="visible-mob">
+                                        <a href="javascript:void(0)"
+                                            onclick="LogoutFunc('Home', 'Test'); PushUserDataToCleverTap('Web_Menu', 'Logout');"
+                                            class="item-link mitem-link">
+                                            <img src="" title="" alt="" class="back-link">Logout
+                                            <img src="../images/left-arrow-icon.svg" title="" alt="" class="next-link">
+                                        </a>
+                                    </li>
+    
+                                </ul>
+    
+    
+                            </div>
+                            <ul class="right-menu-link menu-link flex-shrink-0 mb-0">
+                                <!-- <li class="complete-hide login-li">
+                                    <a href="javascript:void(0);" class="login-link" onclick="loginlink()">Login</a>
+                                    <div class="login-dropdown">
+                                        <div class="signup-wrapper">
+                                            <div class="dropdown-wrapper">
+                                                <h5 class="font16 font-opensans-bold text-center text-transform-upper">login to trade</h5>
+                                                <form>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Client Code/ Mobile Number/ Email" id="username">
+                                                    </div>
+                                                    <div class="form-group password-group">
+                                                        <input type="password" class="form-control password" placeholder="Password" id="password">
+                                                        <i class="eye-icon" onclick="showPassword(event)"></i>
+                                                    </div>
+                                                    <div class="mt20 d-flex justify-content-center align-items-center">
+                                                        <button class="btn btn-secondory mr-4" >MO investor <span class="orangearrow-icon"></span></button>
+                                                        <button class="btn btn-secondory" >MO trader <span class="orangearrow-icon"></span></button>
+                                                    </div>
+                                                    <div class="mt20 d-flex justify-content-between align-items-center">
+                                                        <a href="javascript:void(0)" class="font14 font-default-opensans orange-text">Generate Password</a>
+                                                        <a href="javascript:void(0)" class="font14 font-default-opensans orange-text">Get UCID</a>
+                                                    </div>
+                                                    <div class="mt20 d-flex justify-content-start align-items-center">
+                                                        <p class="font14 font-default-opensans mr-2">Are you a partner?</p>
+                                                        <a href="javascript:void(0)" class="font14 font-default-opensans orange-text login-here" onclick="loginHere()"> Login here </a>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="safety-wrapper">
+                                                <div class="d-flex justify-content-between align-items-center mb5">
+                                                    <p class="font12 font-opensans-semibold">Safety Tips:</p>
+                                                    <img src="../images/verified.png">
+                                                </div>
+                                                <div>
+                                                    <ul class="bullet-asterisk-list">
+                                                        <li class="font12 font-default-opensans text-left">Don't save your Password </li>
+                                                        <li class="font12 font-default-opensans text-left">Don't share your login credentials with anyone </li>
+                                                        <li class="font12 font-default-opensans text-left">Logout the application before closing</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="login-wrapper">
+                                            <div class="dropdown-wrapper">
+                                                <div class="text-center mb20">
+                                                    <a href="javascript:void(0)" class="back-to-link pull-left"><img src="../images/right-arrow-outline.svg" onclick="loginback()"></a>
+                                                    <h5 class="font16 font-opensans-bold text-center text-transform-upper">Partner Portal Login</h5>
+                                                </div>
+                                                <form>
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Login ID" id="loginid">
+                                                    </div>
+                                                    <div class="form-group password-group">
+                                                        <input type="password" class="form-control password" placeholder="Password" id="enterpassword">
+                                                        <i class="eye-icon" onclick="showPassword(event)"></i>
+                                                    </div>
+                                                    <div class="mt20 text-center">
+                                                        <button class="btn btn-primary" >MO investor <span class="whitearrow"></span></button>
+                                                    </div>
+                                                </form>
+                                                <div class=" text-center mt30">
+                                                    <a href="javascript:void(0)" class="font14 font-default-opensans orange-text"> Forgot Password? </a>
+                                                </div>
+                                                <div class="mt10 mb10 d-flex justify-content-center align-items-center">
+                                                    <p class="font14 font-default-opensans mr-2"> Not a Sub-Broker yet?</p>
+                                                    <a href="javascript:void(0)" class="font14 font-default-opensans orange-text">Register now</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li> -->
+                                <li>
+                                    <a class="serach-header">
+                                        <img src="/Images/ic_search.svg" alt="" title="">
+                                    </a>
+                                    <lable id="lblTradingCode"></lable>
+                                </li>
+                                <!--
+                                   Profile Picture Add
+                                -->
+                                <li class="complete-hide profile-li">
+                                    <a href="javascript:GetNotifiction();SendCleverTapData('Web_My_Profile', 'Web_Home');"
+                                        class="" id="profile-img-icon">
+                                        <img src="/Images/user_profile2.svg" alt="" title="">
+                                    </a>
+    
+                                    <div class="profile-info-dropdown dropdown-nav" id="profile-info-detail">
+                                        <div class="profile-component py-3 border-bottom">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div
+                                                        class="profile-component--profile-pic d-flex justify-content-center align-items-center mr-4">
+                                                        <p class="profile-component--initials">MM</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="text-left">
+                                                        <p class="profile-component--text14 orange-text mb-2">MANISH</p>
+                                                        <div class="row mb-2">
+                                                            <div class="col-md-4">
+                                                                <p class="profile-component--text12">Client Code</p>
+                                                                <p class="profile-component--text14">EBOM907310</p>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <p class="profile-component--text12">UCID</p>
+                                                                <p class="profile-component--text14">0</p>
+                                                            </div>
+                                                        </div>
+                                                        <a href="javascript:void(0)" class="profile-component--link-bold"
+                                                            id="aProfileAndSetting"
+                                                            onclick="LoadPage('Home', 'ProfileAndSetting');SendCleverTapCustomData('Web_My_Profile', 'View Profile and Settings');">View
+                                                            Profile &amp; Settings</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="profile-component py-3 border-bottom" id="AdvisorDiv"
+                                            style="display: none;">
+                                            <p class="profile-component--text14 text-left mb-2">Your Advisor</p>
+                                            <ul>
+                                                <li class="d-flex mb-2">
+                                                    <img class="mr-3" src="../Images/user-profile-icon-small.svg">
+                                                    <p class="profile-component--text12-bold" id="AdvName"></p>
+                                                </li>
+    
+                                                <li class="d-flex">
+                                                    <img class="mr-3" src="../Images/user-phone-call-small.svg">
+                                                    <p class="profile-component--text12-bold" id="AdvMobNo"></p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="profile-component py-3">
+                                            <p class="profile-component--text14 text-left">Other Links</p>
+                                            <div class="submenu-comp submenu-comp__different-theme text-left">
+                                                <div class="row">
+    
+                                                    <div class="col-md-6 mb-2" style="display:none">
+                                                        <a href="javascript:void(0)" class="submenu-comp--title-link"
+                                                            onclick="LoadPageEModification()">
+                                                            E-Modification
+                                                            <span class="iconarrow submenu-comp--iconarrow"></span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6 mb-2">
+                                                        <a href="javascript:void(0)" class="submenu-comp--title-link"
+                                                            onclick="LoadPage('Home','ValuePack')">
+                                                            Value Pack
+                                                            <span class="iconarrow submenu-comp--iconarrow"></span>
+                                                        </a>
+                                                    </div>
+    
+                                                    <div class="col-md-6 mb-2">
+    
+    
+                                                        <a href="javascript:void(0)" class="submenu-comp--title-link"
+                                                            onclick="LoadPageByID('Home','ServiceRequest',3)">
+                                                            Service Request
+                                                            <span class="iconarrow submenu-comp--iconarrow"></span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6 mb-2">
+                                                        <a href="javascript:void(0)" class="submenu-comp--title-link"
+                                                            onclick="LoadPage('Home','Circular')">
+                                                            Circulars
+                                                            <span class="iconarrow submenu-comp--iconarrow"></span>
+                                                        </a>
+                                                    </div>
+    
+                                                    <div class="col-md-6 mb-2">
+                                                        <a href="javascript:void(0)" class="submenu-comp--title-link"
+                                                            onclick="LoadPage('Home','OpenMTF')">
+                                                            Margin Trading Facility (MTF)
+                                                            <span class="iconarrow submenu-comp--iconarrow"></span>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-md-6 mb-2">
+                                                        <a href="javascript:void(0)" class="submenu-comp--title-link"
+                                                            onclick="OpenFATCAUrl()">
+                                                            FATCA
+                                                            <span class="iconarrow submenu-comp--iconarrow"></span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-left">
+                                                <a href="javascript:void(0)"
+                                                    onclick="LoadPage('Home', 'KeyPointsForAccount'); PushUserDataToCleverTapECS('Web_Key_Points_on_your_Account', 'EBOM907310', 'Web_Home_Profile');"
+                                                    class="profile-component--link-regular">Key points on your account</a>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                </li>
+                                <!--Profile Picture End -->
+    
+    
+    
+                                <li class="complete-hide">
+                                    <a href="#" data-toggle="tooltip" title="MANISH"> EBOM907310</a>
+                                </li>
+    
+    
+                                <li class="notification-bell-li">
+                                    <a href="javascript:GetNotifiction(0);SendCleverTapData('Web_Notification', 'Web_Home');"
+                                        class="notification-bell" id="notification-bell-header">
+    
+                                        <span><img src="/Images/Notification-Bell-icon.png" alt="" title=""
+                                                onclick="OpenNotiModel()"></span>
+                                        <span id="countId" class="badge"></span>
+    
+                                    </a>
+                                    <div class="notification-bell-dropdown dropdown-nav"
+                                        id="notification-bell-header-dropdown">
+                                        <div class="common-tabs-wrap mt-2">
+                                            <div class="align-items-center pb-2 border-bottom">
+                                                <!-- Nav tabs -->
+                                                <ul class="nav nav-tabs justify-content-start" id="ulIdNot">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active" href="#" onclick="TakeTabData1('All')"
+                                                            data-toggle="tab"> All (37)</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#" onclick="TakeTabData1('Others')"
+                                                            data-toggle="tab">Others (37)</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- Tab panes -->
+                                            <div class="tab-content">
+                                                <div class="tab-pane fade show active" id="all-notification-header">
+                                                    <div class="common-tabs-wrap clearfix">
+                                                        <div class="notification-dropdown-list-wrapper"
+                                                            data-simplebar="init">
+                                                            <div class="simplebar-wrapper" style="margin: 0px;">
+                                                                <div class="simplebar-height-auto-observer-wrapper">
+                                                                    <div class="simplebar-height-auto-observer"></div>
+                                                                </div>
+                                                                <div class="simplebar-mask">
+                                                                    <div class="simplebar-offset"
+                                                                        style="right: 0px; bottom: 0px;">
+                                                                        <div class="simplebar-content-wrapper"
+                                                                            style="height: auto; overflow: hidden;">
+                                                                            <div class="simplebar-content"
+                                                                                style="padding: 0px;">
+                                                                                <div id="notItemsId">
+    
+                                                                                </div>
+    
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="simplebar-placeholder"
+                                                                    style="width: 0px; height: 0px;"></div>
+                                                            </div>
+                                                            <div class="simplebar-track simplebar-horizontal"
+                                                                style="visibility: hidden;">
+                                                                <div class="simplebar-scrollbar"
+                                                                    style="width: 0px; display: none;"></div>
+                                                            </div>
+                                                            <div class="simplebar-track simplebar-vertical"
+                                                                style="visibility: hidden;">
+                                                                <div class="simplebar-scrollbar"
+                                                                    style="height: 0px; display: none;"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+                                            <div
+                                                class="text-center border-top notification-bell-dropdown--view-all-link-wrap">
+                                                <a href="#" style="color:#eb6400"
+                                                    onclick="LoadNotification('Home','Notification')"
+                                                    class="notification-bell-dropdown--view-all-link">View All</a>
+                                            </div>
+    
+                                        </div>
+                                    </div>
+                                </li>
+    
+    
+    
+                                <li class="toggle-menu-li">
+                                    <a href="javascript:showMenu();" class="toggle-menu">
+                                        <img src="/images/ham.svg" alt="" title="" id="hamIcon">
+                                    </a>
+                                    <div class="hamburger-dropdown-nav col-xs-12" id="drpMenu"
+                                        style="margin:0 auto;float:none;">
+                                        <div class="hamburger-dropdown-wrap col-xs-12">
+                                            <ul>
+                                                <li>
+                                                    <div class="list-content">
+                                                        <div class="menu-icon">
+                                                            <img src="/Images/market.svg" alt="" title="">
+                                                        </div>
+                                                        <div class="list-name-wrap">
+                                                            <a href="#"
+                                                                onclick="LoadPage('Home', 'Markets'); PushUserDataToCleverTap('Web_Menu', 'Markets');"
+                                                                class="list-name" style="cursor:pointer">Markets<span
+                                                                    class="iconarrow"></span></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+    
+                                                <li>
+                                                    <div class="list-content">
+                                                        <div class="menu-icon">
+                                                            <img src="/Images/advice.svg" alt="" title="">
+                                                        </div>
+                                                        <div class="list-name-wrap">
+                                                            <span class="cursor-pointer" style="font-family:Open Sans,sans-serif;
+                                                                font-weight: 400;
+                                                                font-size: 14px;
+                                                                line-height: 20px;
+                                                                color: #222020;
+                                                                position: relative;" onclick="showHideAdviceList()">
+                                                                Advice
+                                                            </span>
+                                                            <div id="AdviceIitems" class="collapse hide" data-parent="">
+                                                                <ul class="list-dropdown-items" style="font-size:8px">
+    
+                                                                    <li style="margin:4px 0">
+                                                                        <a href="javascript:void(0)"
+                                                                            onclick="LoadPage('Home', 'Recommendations'); PushUserDataToCleverTap('Web_Menu', 'Advice_Calls');"
+                                                                            class="list-name">
+                                                                            Calls<span class="iconarrow"></span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <!-- <li style="margin:4px 0"> -->
+                                                                    <!-- <a href="javascript:void(0)" onclick="LoadPage('ACEProduct', 'ACEWebIntermediate');" class="list-name"> -->
+                                                                    <!-- Intelligent Advisory Portfolio <span class="iconarrow"></span> -->
+                                                                    <!-- </a> -->
+                                                                    <!-- </li> -->
+                                                                    <li style="margin:4px 0">
+                                                                        <a href="javascript:void(0)"
+                                                                            onclick="LoadPage('Home', 'Basket'); PushUserDataToCleverTap('Web_Menu', 'Advice_Baskets');"
+                                                                            class="list-name">
+                                                                            Baskets<span class="iconarrow"></span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li style="margin:4px 0">
+                                                                        <a href="javascript:void(0)"
+                                                                            onclick="LoadPage('Home', 'IndexAdvice'); PushUserDataToCleverTap('Web_Menu', 'Index_View');"
+                                                                            class="list-name">
+                                                                            Index View<span class="iconarrow"></span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+    
+                                                                        <a href="javascript:void(0)"
+                                                                            onclick="LoadMOSmallcase(); PushUserDataToCleverTap('Web_Menu', 'MO_SmallCase');"
+                                                                            class="list-name">
+                                                                            SmallCase - MO Recommended<span
+                                                                                class="iconarrow"></span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:void(0)"
+                                                                            onclick="LoadSmallcase(); PushUserDataToCleverTap('Web_Menu', 'All_SmallCases');"
+                                                                            class="list-name">
+                                                                            All SmallCases<span class="iconarrow"></span>
+                                                                        </a>
+    
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="list-content">
+                                                        <div class="menu-icon">
+                                                            <img src="/assets/images/OrderGenerator.svg" alt="" title="">
+                                                        </div>
+                                                        <div class="list-name-wrap">
+                                                            <a href="#"
+                                                                onclick="LoadPage('Home', 'createOrderLink'); PushUserDataToCleverTap('Web_Menu', 'Order_Generator');"
+                                                                class="list-name" style="cursor:pointer">
+                                                                Order Generator
+                                                                <span class="iconarrow"></span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="list-content">
+                                                        <div class="menu-icon">
+                                                            <img src="/Images/research report.svg" alt="" title="">
+                                                        </div>
+                                                        <div class="list-name-wrap">
+                                                            <a href="#"
+                                                                onclick="LoadPage('Home', 'ResearchReport'); PushUserDataToCleverTap('Web_Menu', 'ResearchReport');"
+                                                                class="list-name" style="cursor:pointer">
+                                                                Research
+                                                                Reports<span class="iconarrow"></span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="list-content">
+                                                        <div class="menu-icon">
+                                                            <img src="/Images/fund transfer.svg" alt="" title="">
+                                                        </div>
+                                                        <div class="list-name-wrap">
+                                                            <span class="cursor-pointer" style="font-family:Open Sans,sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #222020;
+    position: relative;" onclick="showFundList();PushUserDataToCleverTap('Web_Menu', 'Fund_Transfer_Click');">
+                                                                Fund Transfer
+                                                            </span>
+                                                            <div id="margcollapseOne2" class="collapse hide" data-parent="">
+                                                                <ul class="list-dropdown-items" style="font-size:8px">
+    
+                                                                    <li>
+                                                                        <a href="#"
+                                                                            onclick="OpenFundTransfer('Menu');PushUserDataToCleverTap('Web_Menu', 'Add_Funds');"
+                                                                            class="list-name">
+                                                                            Add Funds<span class="iconarrow"></span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#"
+                                                                            onclick="LoadPage('Home', 'ManageFunds'); PushUserDataToCleverTap('Web_Menu', 'Withdraw_Funds');"
+                                                                            class="list-name">
+                                                                            Withdraw Funds<span class="iconarrow"></span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#"
+                                                                            onclick="LoadPage('Home', 'FundHistory'); PushUserDataToCleverTap('Web_Menu', 'Transfer_Status');"
+                                                                            class="list-name">
+                                                                            Transfer Status<span class="iconarrow"></span>
+                                                                        </a>
+                                                                    </li>
+    
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="list-content">
+                                                        <div class="menu-icon">
+                                                            <img src="/Images/News.svg" alt="" title="">
+                                                        </div>
+                                                        <div class="list-name-wrap">
+    
+                                                            <a href="#"
+                                                                onclick="RedirectToNews();PushUserDataToCleverTap('Web_Menu', 'News');"
+                                                                class="list-name" style="cursor:pointer">
+                                                                News
+                                                                <span class="iconarrow submenu-comp--iconarrow"></span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+    
+                                                <li>
+                                                    <div class="list-content">
+                                                        <div class="menu-icon">
+                                                            <img src="/Images/Alerts.svg" alt="" title="">
+                                                        </div>
+                                                        <div class="list-name-wrap">
+    
+                                                            <a href="#"
+                                                                onclick="LoadGlobalSetAlert('22|0'); PushUserDataToCleverTap('Web_Menu', 'Alert');"
+                                                                class="list-name" style="cursor:pointer">
+                                                                Alerts
+                                                                <span class="iconarrow submenu-comp--iconarrow"></span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li style="display:none">
+                                                    <div class="list-content">
+                                                        <div class="menu-icon">
+                                                            <img src="" alt="" title="">
+                                                        </div>
+                                                        <div class="list-name-wrap">
+                                                            <a href="#" onclick="OpenEducationViewAll('I');"
+                                                                class="list-name" style="cursor:pointer">
+                                                                EDUMO
+                                                                <span class="iconarrow submenu-comp--iconarrow"></span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="list-content">
+    
+    
+                                                        <div class="menu-icon">
+                                                            <img src="/Images/fund transfer.svg" alt="" title="">
+                                                        </div>
+                                                        <div class="list-name-wrap">
+                                                            <span class="cursor-pointer" style="font-family:Open Sans,sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #222020;
+    position: relative;" onclick="showOtherEssentialList()">
+                                                                Other Essentials
+                                                            </span>
+                                                            <div id="OtherEssential" class="collapse hide" data-parent="">
+                                                                <ul class="list-dropdown-items" style="font-size:8px">
+                                                                    <li>
+                                                                        <a href="javascript:void(0);"
+                                                                            onclick="RedirectToStocomo();"
+                                                                            class="list-name newpatch2">
+                                                                            Stocomo<span class="iconarrow"></span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+    
+                                                                        <a href="#"
+                                                                            onclick="LoadPage('Home', 'MarginCalculator'); PushUserDataToCleverTap('Web_Menu', 'Other_Essentials | MarginCalculator');"
+                                                                            class="list-name">
+                                                                            Margin Calculator<span class="iconarrow"></span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#"
+                                                                            onclick="LoadPage('Home', 'GetWallet');PushUserDataToCleverTap('Web_Menu', 'Other_Essentials | MO Credits');"
+                                                                            class="list-name">
+                                                                            MO Credits<span class="iconarrow"></span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#"
+                                                                            onclick="LoadPage('ACEProduct', 'IAPWebAutoConsent');PushUserDataToCleverTap('Web_Menu', 'Other_Essentials |  Order Confirmation');"
+                                                                            class="list-name" style="cursor:pointer">
+                                                                            Order Confirmation
+                                                                            <span class="iconarrow"></span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#"
+                                                                            onclick="LoadPage('ACEProduct', 'IAPOptEmandate');PushUserDataToCleverTap('Web_Menu', 'Other_Essentials | IAP SIP_E-mandate Registration');"
+                                                                            class="list-name" style="cursor:pointer">
+                                                                            IAP SIP E-mandate Registration
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li style="display:block">
+                                                    <div class="list-content">
+                                                        <div class="menu-icon">
+                                                            <img src="/Images/api.svg" alt="" title="" height="17px"
+                                                                width="17px">
+                                                        </div>
+                                                        <div class="list-name-wrap">
+                                                            <a class="cursor-pointer" style="font-family:Open Sans,sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #222020;
+    position: relative;" href="javascript:void(0);" onclick="PushUserDataToCleverTap('Web_Menu', 'TradingAPI');">
+                                                                Trading APIs
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="list-content">
+                                                        <div class="menu-icon">
+                                                            <img src="/Images/Edumo.svg" alt="" title="">
+                                                        </div>
+                                                        <div class="list-name-wrap">
+                                                            <span class="cursor-pointer" style="font-family:Open Sans,sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #222020;
+    position: relative;" onclick="showLearn()">
+                                                                Learn
+                                                            </span>
+                                                            <div id="dvLearn" class="collapse hide" data-parent="">
+                                                                <ul class="list-dropdown-items" style="font-size:8px">
+                                                                    <li>
+                                                                        <a href="#"
+                                                                            onclick="LoadPageByID('Home', 'OpenEducationViewAll', '?type=E');PushUserDataToCleverTap('Web_Menu', 'Learn |  EDUMO');"
+                                                                            class="list-name">
+                                                                            EDUMO<span class="iconarrow"></span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#"
+                                                                            onclick="LoadPage('Home', 'Webinar');PushUserDataToCleverTap('Web_Menu', 'Learn |  Webinar');"
+                                                                            class="list-name">
+                                                                            Webinar<span class="iconarrow"></span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+    
+                                                                        <a href="#"
+                                                                            onclick="LoadMostGuide();PushUserDataToCleverTap('Web_Menu', 'Learn |  MOSt Guide');"
+                                                                            class="list-name">
+                                                                            MOSt Guide<span class="iconarrow"></span>
+                                                                        </a>
+                                                                    </li>
+    
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                                                <li>
+                                                    <div class="list-content">
+                                                        <div class="menu-icon">
+                                                            <img src="/Images/faq.svg" alt="" title="">
+                                                        </div>
+                                                        <div class="list-name-wrap">
+                                                            <span class="cursor-pointer" style="font-family:Open Sans,sans-serif;
+                                                               font-weight: 400;
+                                                               font-size: 14px;
+                                                               line-height: 20px;
+                                                               color: #222020;
+                                                               position: relative;" onclick="showHelp()">
+                                                                Help
+                                                            </span>
+                                                            <div id="dvHelp" class="collapse hide" data-parent="">
+                                                                <ul class="list-dropdown-items" style="font-size:8px">
+                                                                    <li>
+                                                                        <a href="javascript:void(0);"
+                                                                            onclick="OpenFAQ(0); PushUserDataToCleverTap('Web_Menu', 'FAQs');"
+                                                                            class="list-name"
+                                                                            style="cursor:pointer">FAQ's<span
+                                                                                class="iconarrow"></span></a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="javascript:void(0);"
+                                                                            onclick="OpenFAQ(1); PushUserDataToCleverTap('Web_Menu', 'Track_Query');"
+                                                                            class="list-name" style="cursor:pointer">Track
+                                                                            Your Queries<span class="iconarrow"></span></a>
+                                                                    </li>
+    
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="list-content">
+                                                        <div class="menu-icon">
+                                                            <img src="/Images/group.svg" alt="" title="">
+                                                        </div>
+                                                        <div class="list-name-wrap">
+                                                            <a onclick="LoadPage('Home', 'KeyboardShortcuts'); PushUserDataToCleverTap('Web_Menu', 'Keyboard_Shortcuts');"
+                                                                class="list-name" style="cursor:pointer">Keyboard
+                                                                Shortcuts<span class="iconarrow"></span></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+    
+                                                <li>
+                                                    <div class="list-content">
+                                                        <div class="menu-icon">
+                                                            <img src="/Images/logout.svg" alt="" title="">
+                                                        </div>
+                                                        <div class="list-name-wrap">
+                                                            <a href="#"
+                                                                onclick="LogoutFunc('Home', 'Test'); PushUserDataToCleverTap('Web_Menu', 'Logout');"
+                                                                class="list-name" style="cursor:pointer">
+                                                                Logout
+                                                                <span class="iconarrow"></span>
+                                                            </a>
+    
+                                                        </div>
+                                                    </div>
+                                                </li>
+    
+    
+    
+    
+                                            </ul>
+    
+                                        </div>
+                                    </div>
+                                </li>
+    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </nav>
+    
+
+    {% block main %} {% endblock main %}
+
+</header>
+    <!-- JS here -->
+        <!-- chartjs -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="{% static 'frenchise/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="{% static 'frenchise/js/vendor/jquery-1.12.4.min.js' %}"></script>
+        <script src="{% static 'frenchise/js/popper.min.js' %}"></script>
+        <script src="{% static 'frenchise/js/bootstrap.min.js' %}"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="{% static 'frenchise/js/jquery.slicknav.min.js' %}"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="{% static 'frenchise/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'frenchise/js/slick.min.js' %}"></script>
+		<!-- One Page, Animated-HeadLin -->
+        <script src="{% static 'frenchise/js/wow.min.js' %}"></script>
+		<script src="{% static 'frenchise/js/animated.headline.js' %}"></script>
+        <script src="{% static 'frenchise/js/jquery.magnific-popup.js' %}"></script>
+
+		<!-- Nice-select, sticky -->
+        <script src="{% static 'frenchise/js/jquery.nice-select.min.js' %}"></script>
+		<script src="{% static 'frenchise/js/jquery.sticky.js' %}"></script>
+        
+        <!-- contact js -->
+        <script src="{% static 'frenchise/js/contact.js' %}"></script>
+        <script src="{% static 'frenchise/js/jquery.form.js' %}"></script>
+        <script src="{% static 'frenchise/js/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'frenchise/js/mail-script.js' %}"></script>
+        <script src="{% static 'frenchise/js/jquery.ajaxchimp.min.js' %}"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="{% static 'frenchise/js/plugins.js' %}"></script>
+        <script src="{% static 'frenchise/js/main.js' %}"></script>
+        {% block chart %}{% endblock chart %}
+       
+    <!-- font awsome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

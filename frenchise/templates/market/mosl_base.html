@@ -7,6 +7,19 @@
     <title>{% block title %} {% endblock title %}</title>
 
     <!-- CSS here -->
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'frenchise/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'frenchise/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'frenchise/css/slicknav.css' %}" >
+    <link rel="stylesheet" href="{% static 'frenchise/css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'frenchise/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'frenchise/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'frenchise/css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'frenchise/css/themify-icons.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'frenchise/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'frenchise/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'frenchise/css/style.css' %}">
     <link rel="stylesheet" href="{% static 'market/css/mosl_style.css' %}">
 
     <!-- Font Awsome -->
@@ -15,52 +28,89 @@
 </head>
 <body>
 
-<div class="navbar navbar-fixed-top">
+<div class="navbar ">
     <div id="Top" class="fixedtop">
         <header>
             <div class="">
                 <div style="display: table; width: 100%;">
-                    <div class="logo">
+                    <div class="logo d-flex">
                         <img src="{% static 'market/img/fundcares.jpg' %}">
                     </div>
-                    <div class="user-detail" >
-                        <ul  style="display: flex; list-style-type: none;">
-                            <li class="px-2">
-                                <img src="">
-                                <p>
-                                    Welcome
-                                    <b>
-                                        FUNDPEDIA INVESTMENT FINANCIAL SERVICES PVT LTD
-                                    </b>
-                                </p>
-                            </li>
-                            <li class="px-2">
-                                <a>
-                                    <img src="">
-                                    
-                                    <p><i class="fa-solid fa-lock"></i>Change Password</p>
-                                </a>
-                            </li>
-                            <li class="px-2">
-                                <a>
-                                    <img src="">
-                                    
-                                    <p><i class="fa-solid fa-right-from-bracket"></i>Logout</p>
-                                </a>
-                            </li>
-                            <li class="px-2">
-                                <a>
-                                    <img src="">
-                                    
-                                    <p><i class="fa-solid fa-phone"></i>Contact Us</p>
-                                </a>
-                            </li>
-                        </ul>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <div class="card text-bg-secondary">
+                                        <div class="card-body">
+                                            <h5>Nifty</h5>
+                                            <small>19525.55</small>
+                                            <small>+100(+0.52%)</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="card text-bg-secondary">
+                                        <div class="card-body">
+                                            <h5>Sensex</h5>
+                                            <small>64882.86</small>
+                                            <small>-9.34(-0.01%)</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="card text-bg-secondary">
+                                        <div class="card-body">
+                                           <h5>Banknifty</h5>
+                                           <small>43996.65</small>
+                                            <small>+176(+0.40%)</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="user-detail d-flex" >
+                                <ul  style="display: flex; list-style-type: none;">
+                                    <li class="px-2">
+                                        <img src="">
+                                        <p>
+                                            Welcome
+                                            <b>
+                                                FUNDPEDIA INVESTMENT FINANCIAL SERVICES PVT LTD
+                                            </b>
+                                        </p>
+                                    </li>
+                                    <li class="px-2">
+                                        <a>
+                                            <img src="">
+                                            
+                                            <p><i class="fa-solid fa-lock"></i>Change Password</p>
+                                        </a>
+                                    </li>
+                                    <li class="px-2">
+                                        <a>
+                                            <img src="">
+                                            
+                                            <p><i class="fa-solid fa-right-from-bracket"></i>Logout</p>
+                                        </a>
+                                    </li>
+                                    <li class="px-2">
+                                        <a>
+                                            <img src="">
+                                            
+                                            <p><i class="fa-solid fa-phone"></i>Contact Us</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
         </header>
-        <div class="container-fluid head_bottom" style="margin-top: 0px !important;">
+        <!-- <div class="container-fluid head_bottom" style="margin-top: 0px !important;">
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav sm" data-smartmenus-id="1699639926706508">
                     <li class="dropdown">
@@ -74,13 +124,167 @@
                             Dashboard
                         </a>
                     </li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle has-submenu" data-toggle="dropdown" role="button" aria-expanded="false">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle has-submenu" data-toggle="dropdown" role="button" aria-expanded="false">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle has-submenu" data-toggle="dropdown" role="button" aria-expanded="false">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle has-submenu" data-toggle="dropdown" role="button" aria-expanded="false">
+                            Dashboard
+                        </a>
+                    </li>
                 </ul>
             </div>
+        </div> -->
+
+        <div class="navbar navbar-expand-lg navbar-light bg-warning">
+            <div class="container-fluid mx-2 ">
+              <a class="navbar-brand" href="#"><i class="fa-solid fa-house"></i></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown mx-4">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dashboard
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">My Dashboard</a></li> <hr>
+                          <li><a class="dropdown-item" href="#">Advisory Dashboard</a></li> <hr>
+                          <li><a class="dropdown-item" href="#">Clients Dashboard</a></li> <hr>
+                          <li><a class="dropdown-item" href="#">Departments Dashboard</a></li>
+                        </ul>
+                      </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-4" href="#">Approvals</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-4" href="#" >Request</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-4" href="#" >Reports</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-4" href="#" >MIS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-4" href="#" >Masters</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-4" href="#" >Information</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-4" href="#" >Sites</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link mx-4" href="#" >Customer Service</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
         </div>
+
+          <!-- Content Start  -->
+<div class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid mx-2 ">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active mx-2" aria-current="page" href="#">PartyCode</a>
+            
+          </li>
+          <li class="nav-item">
+           
+          <input type="text" class="form-control form-input" placeholder="Search anything...">
+          
+          </li>
+          
+        </ul>
+        <form class="d-flex">
+            <i class="fa-solid fa-bell"></i>
+        </form>
+        <form class="d-flex">
+            <a class="nav-link mx-4" href="#" >My Dashboard</a>
+        </form>
+        <form class="d-flex">
+            <a class="nav-link mx-4" href="#" >English</a>
+        </form>
+        <form class="d-flex bg-danger">
+            <a class="nav-link mx-4" href="#" >Back</a>
+        </form>
+      </div>
+    </div>
+</div>
+   
+  <!-- Content end -->
+
+          {% block main %}
+          {% endblock main %}
     </div>
 </div>
 
+<!-- footer start -->
 
+
+
+<!-- footer end -->
+
+<!-- JS here -->
+        <!-- chartjs -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="{% static 'frenchise/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="{% static 'frenchise/js/vendor/jquery-1.12.4.min.js' %}"></script>
+        <script src="{% static 'frenchise/js/popper.min.js' %}"></script>
+        <script src="{% static 'frenchise/js/bootstrap.min.js' %}"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="{% static 'frenchise/js/jquery.slicknav.min.js' %}"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="{% static 'frenchise/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'frenchise/js/slick.min.js' %}"></script>
+		<!-- One Page, Animated-HeadLin -->
+        <script src="{% static 'frenchise/js/wow.min.js' %}"></script>
+		<script src="{% static 'frenchise/js/animated.headline.js' %}"></script>
+        <script src="{% static 'frenchise/js/jquery.magnific-popup.js' %}"></script>
+
+		<!-- Nice-select, sticky -->
+        <script src="{% static 'frenchise/js/jquery.nice-select.min.js' %}"></script>
+		<script src="{% static 'frenchise/js/jquery.sticky.js' %}"></script>
+        
+        <!-- contact js -->
+        <script src="{% static 'frenchise/js/contact.js' %}"></script>
+        <script src="{% static 'frenchise/js/jquery.form.js' %}"></script>
+        <script src="{% static 'frenchise/js/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'frenchise/js/mail-script.js' %}"></script>
+        <script src="{% static 'frenchise/js/jquery.ajaxchimp.min.js' %}"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="{% static 'frenchise/js/plugins.js' %}"></script>
+        <script src="{% static 'frenchise/js/main.js' %}"></script>
+        {% block chart %}{% endblock chart %}
+       
     <!-- font awsome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
