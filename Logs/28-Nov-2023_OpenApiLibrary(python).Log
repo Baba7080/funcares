@@ -1,0 +1,62 @@
+2023-11-28 22:13:41             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-11-28 22:13:45             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-11-28 22:14:40             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-11-28 22:14:40             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-28 22:14:43             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-11-28 22:14:43             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-11-28 22:55:01             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-11-28 22:55:01             FAILED             MOFSLOPENAPI.py             GetPublicIPAddressHTTPConnectionPool(host='checkip.dyndns.org', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002CA7E825C50>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2023-11-28 22:55:01             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-11-28 22:55:21             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-11-28 22:55:21             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-28 22:55:21             FAILED             MOFSLOPENAPI.py             Network connection is unavailable
+2023-11-28 22:55:21             FAILED             MOFSLOPENAPI.py             'NoneType' object is not subscriptable
+2023-11-28 22:55:21             FAILED             MOFSLOPENAPI.py             login_Error while sending the webRequest
+2023-11-28 22:55:21             FAILED             MOFSLOPENAPI.py             Login Request failed
+2023-11-28 22:56:25             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-11-28 22:56:25             FAILED             MOFSLOPENAPI.py             GetPublicIPAddressHTTPConnectionPool(host='checkip.dyndns.org', port=80): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002942B1C5BD0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2023-11-28 22:56:25             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-11-28 22:56:43             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-11-28 22:56:43             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-28 22:56:43             FAILED             MOFSLOPENAPI.py             Network connection is unavailable
+2023-11-28 22:56:43             FAILED             MOFSLOPENAPI.py             'NoneType' object is not subscriptable
+2023-11-28 22:56:43             FAILED             MOFSLOPENAPI.py             login_Error while sending the webRequest
+2023-11-28 22:56:43             FAILED             MOFSLOPENAPI.py             Login Request failed
+2023-11-28 22:57:25             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-11-28 22:57:26             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-11-28 22:57:34             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-11-28 22:57:34             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-28 22:57:35             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-11-28 22:57:36             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-11-28 23:00:31             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-11-28 23:00:53             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-11-28 23:00:53             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-11-28 23:00:53             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-28 23:00:54             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-11-28 23:00:54             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-11-28 23:03:57             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-11-28 23:03:59             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-11-28 23:04:10             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-11-28 23:04:12             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-11-28 23:04:17             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-11-28 23:04:17             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-28 23:04:18             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-11-28 23:04:18             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-11-28 23:07:26             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-11-28 23:07:27             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-11-28 23:07:38             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-11-28 23:07:38             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-28 23:07:40             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-11-28 23:07:40             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-11-28 23:12:08             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-11-28 23:12:19             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-11-28 23:12:26             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-11-28 23:12:26             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-28 23:12:27             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-11-28 23:12:27             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-11-28 23:29:07             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-11-28 23:29:08             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-11-28 23:29:38             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-11-28 23:29:38             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-28 23:29:40             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-11-28 23:29:40             SUCCESS             MOFSLOPENAPI.py             Login sucessfully

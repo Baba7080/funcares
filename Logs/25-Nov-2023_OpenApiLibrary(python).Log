@@ -1,0 +1,66 @@
+2023-11-25 00:00:43             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-11-25 00:01:26             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-11-25 00:01:26             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-11-25 00:01:26             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-25 00:01:28             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-11-25 00:01:28             ERROR             MOFSLOPENAPI.py             Vendor Info Tag is Invalid In Header Parameter
+2023-11-25 00:01:28             SUCCESS             MOFSLOPENAPI.py             Initilaize verifyotp request send
+2023-11-25 00:01:28             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-25 00:01:29             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-11-25 00:01:29             SUCCESS             MOFSLOPENAPI.py             verifyotp request sent Successfully
+2023-11-25 00:01:29             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2023-11-25 00:01:29             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-25 00:01:30             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-11-25 00:01:30             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2023-11-25 00:02:09             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-11-25 00:02:31             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-11-25 00:02:31             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-11-25 00:02:31             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-25 00:02:33             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-11-25 00:02:33             ERROR             MOFSLOPENAPI.py             Vendor Info Tag is Invalid In Header Parameter
+2023-11-25 00:02:33             SUCCESS             MOFSLOPENAPI.py             Initilaize verifyotp request send
+2023-11-25 00:02:33             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-25 00:02:34             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-11-25 00:02:34             SUCCESS             MOFSLOPENAPI.py             verifyotp request sent Successfully
+2023-11-25 00:02:34             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2023-11-25 00:02:34             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-25 00:02:35             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-11-25 00:02:35             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2023-11-25 00:24:35             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-11-25 00:24:35             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-11-25 00:24:35             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-11-25 00:24:35             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-25 00:24:37             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-11-25 00:24:37             ERROR             MOFSLOPENAPI.py             Vendor Info Tag is Invalid In Header Parameter
+2023-11-25 00:24:37             SUCCESS             MOFSLOPENAPI.py             Initilaize verifyotp request send
+2023-11-25 00:24:37             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-25 00:24:38             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-11-25 00:24:38             SUCCESS             MOFSLOPENAPI.py             verifyotp request sent Successfully
+2023-11-25 00:24:38             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2023-11-25 00:24:38             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-25 00:24:39             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-11-25 00:24:39             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2023-11-25 00:37:25             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-11-25 00:37:27             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-11-25 00:37:35             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-11-25 00:37:35             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-25 00:37:36             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-11-25 00:37:36             ERROR             MOFSLOPENAPI.py             Vendor Info Tag is Invalid In Header Parameter
+2023-11-25 00:39:33             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-11-25 00:39:35             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-11-25 00:39:47             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-11-25 00:39:47             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-25 00:39:48             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-11-25 00:39:48             ERROR             MOFSLOPENAPI.py             Two Factor Authentication Failed
+2023-11-25 00:40:38             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-11-25 00:40:40             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-11-25 00:40:44             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-11-25 00:40:44             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-25 00:40:45             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-11-25 00:40:45             ERROR             MOFSLOPENAPI.py             Two Factor Authentication Failed
+2023-11-25 00:41:04             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-11-25 00:41:05             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-11-25 00:41:13             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-11-25 00:41:13             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-11-25 00:41:15             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-11-25 00:41:15             ERROR             MOFSLOPENAPI.py             Two Factor Authentication Failed

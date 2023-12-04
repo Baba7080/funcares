@@ -8,16 +8,18 @@ from django.conf.urls.static import static
 urlpatterns = [
 
     path('mosl-home/', scrape_website, name= 'mosl_home'),
-
+    path('mofsllogin/',mofslloginfun,name='mofsllogin'),
     # MOSL - Pages Urls
     path('MOSL-index/', mosl_index, name= 'mosl_index'),
-
+    path('MOSL-tradebook/', tradebook, name= 'tradebook'),
+    path('MOSL-detailpage/<str:code>', getltpbycode, name= 'detailpage'),
+    path('MOSL-NSE-BSE-alldata/', NSE_BSE_data, name= 'MOSL_NSE_BSE_alldata'),
 #MOSL - Authentication
     path('MOSL-login/', mosl_login, name= 'mosl_login'),
     path('MOSL-logout/', mosl_logout, name= 'mosl_logout'),
 
 # MOSL - Order
-    path('MOSL-order-placed/', mosl_place_odr, name= 'placed_order'),
+    # path('MOSL-order-placed/', mosl_place/_odr, name= 'placed_order'),
     path('MOSL-modify-order/', mosl_modify_order, name= 'Modify_order'),
     path('MOSL-cancel-order/', mosl_cancel_order, name= 'cancel_order'),
     path('MOSL-OrderBook/', mosl_order_book, name= 'orderbook'),

@@ -1,0 +1,1246 @@
+{% extends 'market/market_base.html' %}
+{% load static %}
+{% block title %} mosl-home {% endblock title %}
+
+{% block main %}
+<!-- <div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        Enter the OTP
+        <input placeholder="Enter the OTP" type="number" class="form-control" name="otp">
+        <input class="btn btn-primary" type="submit" value="Submit">
+
+    </form>
+
+
+
+</div> -->
+
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57GKC3W"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+<form action="/" method="post"><input name="__RequestVerificationToken" type="hidden" value="NQRpRG7XHnMCOITX5Gq3eKW8XhkpKXC7nzU66DJNmcTEPzPCMJ51fh-WSHJMNBCLKK0X6iXsXoSj99lFgZxt-n6PcRId-f57S3Z8-14kDZ41"></form>
+
+
+    <!-- Header Start -->
+    <header class="oc-header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="menu-wrap">
+                    <div class="logo-block">
+                        <a href="https://www.motilaloswal.com" class="logo clearfix">
+                            <img src="/images/motilal-logo.jpeg" alt="" title="">
+                        </a>
+                    </div>
+                    <div class="nav-block">
+                        <div class="bottom-nav d-flex align-items-center justify-content-end justify-md-content-between">
+                            <ul class="contact-link flex-shrink-0">
+                                <li class="contact-num-li">
+                                    <span class="icons"><img src="/images/get-in-touch.svg" alt="" title=""></span>
+                                    <span class="lbl">Call &amp; Trade </span>
+                                    <a href="tel:022 6212-6661" class="login-link">
+                                        <img src="/images/get-in-touch.svg" alt="" title=""><span class="num">022 6212-6661 / 022 4054-8451</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    <!--Header End -->
+    <div id="AlertModal" class="modal fade modal894" role="dialog" data-show="true" data-backdrop="static" data-keyboard="false" style="margin: 0px; top: -6%; left: calc(50% - 170px); width: 340px; padding: 17px!important; z-index: 11112!important;">
+        <div class="modal-dialog modal-lg" style="border:1px solid #eb6400;border-radius:10px !important;">
+            <div class="modal-content modal-content__order-forms order-forms" style="padding:30px;">
+                <div class="modal-body p-0">
+                    <div class="order-forms-headline--company-index no-space p-0">
+                        <div class="col-xs-12 col-md-12 p-0">
+                            <div class="col-xs-12 col-md-12 p-0">
+                                <label class="tab-ccontent--label p-0" id="lblAlertMessage"></label>
+                                <br>
+                                <div class="p-0 col-md-12 text-center">
+                                    <label id="btnAlertMessage" class="btn btn-primary" onclick="return HideAlert();" style="padding:10px 20px;margin:10px 0px 0px !important;"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-container">
+        <div class="leftSide">
+            <section class="section-spac equity-express-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 express-wrapper  order-2 order-lg-1">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <img src="/images/equity-express.svg" class="express-icon">
+                                <div class="equity-wrapper">
+                                    <h1 class="text-transform-upper font-josefinSans-bold ">think <span class="orange-text">equity</span></h1>
+                                    <h2 class="text-transform-upper font-josefinSans-bold ">think <span class="orange-text">motilal oswal</span></h2>
+                                    <p class="font16 font-default-opensans text-transform-upper">IN volatile stock markets. buy right sit tight</p>
+                                </div>
+                            </div>
+                            <div class="d-sm-flex align-items-sm-center justify-content-sm-between mt40">
+                                <div class="col-lg-3 text-center">
+                                    <figure>
+                                        <img src="/images/trophy.svg">
+                                        <p class="font14 font-default-josefinSans orange-text mt20">Best broking business of the year 2018</p>
+                                        <p class="font14 font-default-opensans">Moneycontrol</p>
+                                    </figure>
+                                </div>
+                                <div class="col-lg-3 text-center">
+                                    <figure>
+                                        <img src="/images/trophy.svg">
+                                        <p class="font14 font-default-josefinSans orange-text mt20">6-time winner of best performing equity broker</p>
+                                        <p class="font14 font-default-opensans">UTI-CNBC TV18</p>
+                                    </figure>
+                                </div>
+                                <div class="col-lg-3 text-center">
+                                    <figure>
+                                        <img src="/images/trophy.svg">
+                                        <p class="font14 font-default-josefinSans orange-text mt20">Broking house of the year (west)</p>
+                                        <p class="font14 font-default-opensans">MCX awards 2019</p>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center mt50">
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 order-1 order-lg-2 d-none d-lg-block fixed-t" id="conpopup">
+                            <div class="contact-form-panel d-md-flex justify-content-md-center loginpage-main">
+                                <div class="mobilex-icon" onclick="iconX()">
+                                    <img src="/images/modal-close.svg" class="cursor-pointer">
+                                </div>
+                                <div class="open-acc-wrapper">
+                                    <div class="signup-wrapper" style="display: none;">
+                                        <div class="dropdown-wrapper">
+                                            <h5 class="font16 font-opensans-bold text-center text-transform-upper">login to trade <a href="javascript:void(0);" id="pinkAssistInfoLogin" style="cursor:pointer" onclick="return OpenPinkAssist('Login');"> <img src="/assets/images/pinkassitinfo.svg" style="height:21px;width:21px" alt="" title=""> </a></h5>
+                                            
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" style="text-transform: uppercase ;" maxlength="30" onkeypress="return isValidClientCode(event);" placeholder="Mobile No / Email Id / Client Code" id="LoginId" autocomplete="new-password">
+                                            </div>
+                                            <div class="form-group password-group">
+                                                <input type="password" maxlength="15" class="form-control password" placeholder="Password" id="MainPassword" autocomplete="new-password">
+                                                <i class="eye-icon show" onclick="showPassword(event)"></i>
+                                            </div>
+                                            <div class="align-items-center d-flex justify-content-center">
+                                                <div class="radio-item" onclick="UserTypeSelection(this);">
+                                                    <input type="radio" id="rdoRetailUsr" class="rdoUserType" checked="" name="ritem">
+                                                    <label for="ritema" style="cursor:pointer">Retail User</label>
+                                                </div>
+
+                                                <div class="radio-item" onclick="UserTypeSelection(this);" style="cursor:pointer">
+                                                    <input type="radio" id="rdoInstUsr" class="rdoUserType" name="ritem">
+                                                    <label for="ritemb" style="cursor:pointer">Institutional User</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="mt20 d-flex justify-content-center align-items-center">
+                                                <button class="btn btn-secondory" id="btnLoginInv" onclick="return validateLogin('investor');">MO investor <span class="orangearrow-icon"></span></button>
+                                                <button class="btn btn-secondory" style="display:none" id="btnMOTrader" onclick="return validateLogin('trader');">MO trader <span class="orangearrow-icon"></span></button>
+                                            </div>
+                                            <div class="mt30 d-flex justify-content-between align-items-center">
+                                                <a href="javascript:void(0)" class="font14 font-default-opensans orange-text" onclick="document.getElementById('loginId').value = '';document.getElementById('EnterOTPLoginBack').setAttribute('onclick','genPassword()');genPassword()" id="btnGeneratePassword">Set New Password  </a>
+                                                <a href="javascript:void(0)" class="font14 font-default-opensans orange-text" onclick="EventsForClaverTab('GetCustomerID', 'Web_get_customerid','Customer ID'); window.open('https://www.motilaloswal.com/UCID/frmGetUCIDEmailer.aspx','_blank')">Get Customer ID</a>
+                                                
+
+                                            </div>
+                                            <div class="lr-divlogin mt10">
+                                                <div class="mt20 justify-content-start align-items-center">
+                                                    <p class="font14 font-default-opensans mr-2">Are you a partner?</p>
+                                                    <!--a href="javascript:void(0)" class="font14 font-default-opensans orange-text login-here" onclick="loginHere()"> Login here </a-->
+                                                    <a href="javascript:void(0)" class="font14 font-default-opensans orange-text login-here" onclick="EventsForClaverTab('Partner','Web_Partnerlogin', 'Partner Login'); window.open('https://www.motilaloswal.com/sub-broker.aspx#222/','_blank')"> Login here </a>
+                                                </div>
+                                                <div class="mt20 justify-content-start align-items-center">
+                                                    <p class="font14 font-default-opensans mr-2">Are you a Guest?</p>
+                                                    <a href="javascript:void(0)" class="font14 font-default-opensans orange-text" onclick="EventsForClaverTab('Guest','Web_Guestlogin', 'Guest Login'); guestlogin('Login')"> Login<span> /</span></a>
+                                                    <a href="javascript:void(0)" class="font14 font-default-opensans orange-text" onclick="EventsForClaverTab('Guest','Web_Guestlogin', 'Guest SignUp'); guestlogin('SignUp')">Sign Up</a>
+                                                </div>
+                                            </div>
+                                            <div class="clearboth-n"></div>
+                                            
+                                        </div>
+                                        <div class="safety-wrapper">
+                                            <div class="d-flex justify-content-between align-items-center mb5">
+                                                <p class="font12 font-opensans-semibold">Safety Tips:</p>
+                                                <img src="/images/verified.png">
+                                            </div>
+                                            <div>
+                                                <ul class="bullet-asterisk-list">
+                                                    <li class="font12 font-default-opensans text-left">Don't save your Password </li>
+                                                    <li class="font12 font-default-opensans text-left">Don't share your login credentials with anyone </li>
+                                                    <li class="font12 font-default-opensans text-left">Logout the application before closing</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="signup-2faotp-wrapper" style="display: block;">
+                                        <div class="dropdown-wrapper">
+                                            
+                                            <a href="javascript:void(0)" class="back-to-link pull-left"><img src="/images/right-arrow-outline.svg" onclick="loginback()"></a>
+                                            
+
+                                            <h5 class="font16 font-opensans-bold text-center text-transform-upper">OTP AUTHENTICATION<a href="javascript:void(0);" id="pinkAssistInfoLogin" style="cursor:pointer" onclick="return OpenPinkAssist('Login');"> <img src="/assets/images/pinkassitinfo.svg" style="height:21px;width:21px" alt="" title=""> </a></h5>
+                                            <label id="lbl2FAOTPMessage" class="font14 font-default-opensans mr-2" style="text-align: center; font-size: 12px; color: gray;width:100%">You will receive an OTP on your registered mobile number &amp; email,<br> Enter and verify to continue</label>
+
+                                            
+                                            <div class="form-group password-group">
+                                                <form method="POST">
+                                                    {% csrf_token %}
+                                                    Enter the OTP
+                                                    <input placeholder="Enter the OTP" type="number" class="form-control" name="otp">
+                                                    <input class="btn btn-primary" type="submit" value="Submit">
+                                            
+                                                </form>
+                                                    <a href="javascript:void(0)" onclick="Resend2FAOTP()" style="float:right;display:none;" class="font14 font-default-opensans orange-text" id="btn2FAResendOTP">Resend OTP </a>
+                                                </div>
+                                            </div>
+                                            
+
+
+                                            
+
+                                            <div class="mt20 d-flex justify-content-center align-items-center">
+                                                <button class="btn btn-secondory" id="btnVerify2FAOTP" onclick="return validateLogin2FAOTP();">MO investor <span class="orangearrow-icon"></span></button>
+                                                <button class="btn btn-secondory disabled" id="btnMOTrader2" style="display:none" onclick="validateLoginMOTrader(0);">MO trader <span class="orangearrow-icon"></span></button>
+                                            </div>
+                                            <div class="mt30 d-flex justify-content-between align-items-center">
+                                                <a href="javascript:void(0)" class="font14 font-default-opensans orange-text" onclick="document.getElementById('loginId').value = '';document.getElementById('EnterOTPLoginBack').setAttribute('onclick','genPassword()');genPassword()" id="btnGeneratePassword">Set New Password  </a>
+                                                <a href="javascript:void(0)" class="font14 font-default-opensans orange-text" onclick="EventsForClaverTab('GetCustomerID', 'Web_get_customerid','Customer ID');window.open('https://www.motilaloswal.com/UCID/frmGetUCIDEmailer.aspx','_blank')">Get Customer ID</a>
+                                                
+
+                                            </div>
+                                            <div class="lr-divlogin mt10">
+                                                <div class="mt20 justify-content-start align-items-center">
+                                                    <p class="font14 font-default-opensans mr-2">Are you a partner?</p>
+                                                    <!--a href="javascript:void(0)" class="font14 font-default-opensans orange-text login-here" onclick="loginHere()"> Login here </a-->
+                                                    <a href="javascript:void(0)" class="font14 font-default-opensans orange-text login-here" onclick="EventsForClaverTab('Partner','Web_Partnerlogin', 'Partner Login'); window.open('https://www.motilaloswal.com/sub-broker.aspx#222/','_blank')"> Login here </a>
+                                                </div>
+                                                <div class="mt20 justify-content-start align-items-center">
+                                                    <p class="font14 font-default-opensans mr-2">Are you a Guest?</p>
+                                                    <a href="javascript:void(0)" class="font14 font-default-opensans orange-text" onclick="EventsForClaverTab('Guest','Web_Guestlogin', 'Guest Login'); guestlogin('Login')"> Login<span> /</span></a>
+                                                    <a href="javascript:void(0)" class="font14 font-default-opensans orange-text" onclick="EventsForClaverTab('Guest','Web_Guestlogin', 'Guest SignUp'); guestlogin('SignUp')">Sign Up</a>
+                                                </div>
+                                            </div>
+                                            <div class="clearboth-n"></div>
+                                            
+                                        </div>
+                                        <div class="safety-wrapper">
+                                            <div class="d-flex justify-content-between align-items-center mb5">
+                                                <p class="font12 font-opensans-semibold">Safety Tips:</p>
+                                                <img src="/images/verified.png">
+                                            </div>
+                                            <div>
+                                                <ul class="bullet-asterisk-list">
+                                                    <li class="font12 font-default-opensans text-left">Don't save your Password </li>
+                                                    <li class="font12 font-default-opensans text-left">Don't share your login credentials with anyone </li>
+                                                    <li class="font12 font-default-opensans text-left">Logout the application before closing</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="signup-2fapandob-wrapper" style="display:none;">
+                                        <div class="dropdown-wrapper">
+                                            
+                                            <a href="javascript:void(0)" class="back-to-link pull-left"><img src="/images/right-arrow-outline.svg" onclick="loginback()"></a>
+
+                                            <h5 class="font16 font-opensans-bold text-center text-transform-upper">AUTHENTICATION<a href="javascript:void(0);" id="pinkAssistInfoLogin" style="cursor:pointer" onclick="return OpenPinkAssist('Login');"> <img src="/assets/images/pinkassitinfo.svg" style="height:21px;width:21px" alt="" title=""> </a></h5>
+                                            <label id="lbl2FAOTPMessage" class="font14 font-default-opensans mr-2" style="        text-align: center;
+        font-size: 12px;
+        color: gray;
+        width: 100%
+">Authenticate yourself by providing PAN or DOB,<br> Enter and verify to continue</label>
+
+                                            
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" style="text-transform: uppercase ;" maxlength="10" placeholder="PAN/DOB" id="Login2FAPanDOB" onkeyup="return createPancardFormat(event,this)">
+
+                                                
+                                            </div>
+                                            <div class="mt10 d-flex justify-content-center align-items-center" style="display:none !important;">
+                                                
+
+                                            </div>
+
+
+                                            
+
+                                            <div class="mt20 d-flex justify-content-center align-items-center">
+                                                <button class="btn btn-secondory mr-4" id="btnVerify2FAPanDob" onclick="return validateLogin2FAPanDOB();">MO investor <span class="orangearrow-icon"></span></button>
+                                                <button class="btn btn-secondory disabled" id="btnMOTrader3" style="display:none" onclick="validateLoginMOTrader(1);">MO trader <span class="orangearrow-icon"></span></button>
+                                            </div>
+                                            <div class="mt30 d-flex justify-content-between align-items-center">
+                                                <a href="javascript:void(0)" class="font14 font-default-opensans orange-text" onclick="document.getElementById('loginId').value = '';document.getElementById('EnterOTPLoginBack').setAttribute('onclick','genPassword()');genPassword()" id="btnGeneratePassword">Set New Password  </a>
+                                                <a href="javascript:void(0)" class="font14 font-default-opensans orange-text" onclick="EventsForClaverTab('GetCustomerID', 'Web_get_customerid','Customer ID'); window.open('https://www.motilaloswal.com/UCID/frmGetUCIDEmailer.aspx','_blank')">Get Customer ID</a>
+                                                
+
+                                            </div>
+                                            <div class="lr-divlogin mt10">
+                                                <div class="mt20 justify-content-start align-items-center">
+                                                    <p class="font14 font-default-opensans mr-2">Are you a partner?</p>
+                                                    <!--a href="javascript:void(0)" class="font14 font-default-opensans orange-text login-here" onclick="loginHere()"> Login here </a-->
+                                                    <a href="javascript:void(0)" class="font14 font-default-opensans orange-text login-here" onclick="EventsForClaverTab('Partner','Web_Partnerlogin', 'Partner Login'); window.open('https://www.motilaloswal.com/sub-broker.aspx#222/','_blank')"> Login here </a>
+                                                </div>
+                                                <div class="mt20 justify-content-start align-items-center">
+                                                    <p class="font14 font-default-opensans mr-2">Are you a Guest?</p>
+                                                    <a href="javascript:void(0)" class="font14 font-default-opensans orange-text" onclick="EventsForClaverTab('Guest', 'Web_Guestlogin','Guest Login'); guestlogin('Login')"> Login<span> /</span></a>
+                                                    <a href="javascript:void(0)" class="font14 font-default-opensans orange-text" onclick="EventsForClaverTab('Guest', 'Web_Guestlogin','Guest SignUp'); guestlogin('SignUp')">Sign Up</a>
+                                                </div>
+                                            </div>
+                                            <div class="clearboth-n"></div>
+                                            
+                                        </div>
+                                        <div class="safety-wrapper">
+                                            <div class="d-flex justify-content-between align-items-center mb5">
+                                                <p class="font12 font-opensans-semibold">Safety Tips:</p>
+                                                <img src="/images/verified.png">
+                                            </div>
+                                            <div>
+                                                <ul class="bullet-asterisk-list">
+                                                    <li class="font12 font-default-opensans text-left">Don't save your Password </li>
+                                                    <li class="font12 font-default-opensans text-left">Don't share your login credentials with anyone </li>
+                                                    <li class="font12 font-default-opensans text-left">Logout the application before closing</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="login-wrapper" style="display: none;">
+                                        <div class="dropdown-wrapper">
+                                            <div class="text-center mb20">
+                                                <a href="javascript:void(0)" class="back-to-link pull-left"><img src="/images/right-arrow-outline.svg" onclick="loginback()"></a>
+                                                <h5 class="font16 font-opensans-bold text-center text-transform-upper">Partner Portal Login</h5>
+
+                                            </div>
+                                            <form>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Login ID" id="partnerLoginId">
+                                                </div>
+                                                <div class="form-group password-group">
+                                                    <input type="password" maxlength="15" class="form-control password" placeholder="Password" id="PartnerPassword">
+                                                    <i class="eye-icon show" onclick="showPassword(event)"></i>
+                                                </div>
+                                                <div class="mt20 text-center">
+                                                    <button class="btn btn-primary">MO investor <span class="whitearrow"></span></button>
+                                                </div>
+                                            </form>
+                                            <div class=" text-center mt30">
+                                                <a href="javascript:void(0)" class="font14 font-default-opensans orange-text"> Forgot Password? </a>
+                                            </div>
+                                            <div class="mt10 mb10 d-flex justify-content-center align-items-center">
+                                                <p class="font14 font-default-opensans mr-2"> Not a Sub-Broker yet?</p>
+                                                <a href="javascript:void(0)" class="font14 font-default-opensans orange-text">Register now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="guest-wrapper" style="display: none;">
+                                        <div class="dropdown-wrapper">
+                                            <div class="text-center mb20">
+                                                <a href="javascript:void(0)" class="back-to-link pull-left"><img src="/images/right-arrow-outline.svg" onclick="loginback()"></a>
+                                                <h5 class="font16 font-opensans-bold text-center text-transform-upper guesttexth5">Guest Login</h5>
+                                            </div>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <ul class="open-acc-list">
+                                                    <li><a href="javascript:void(0);" class="font14 font-default-opensans orange-text" onclick="guestloginT(this);EventsForClaverTab('Guest','Web_Guestlogin','Guest Login')" id="logincl">Login</a></li>
+                                                    <li><a href="javascript:void(0);" class="font14 font-default-opensans orange-text" onclick="guestsignupT(this);EventsForClaverTab('Guest','Web_Guestlogin','Guest Sign Up')" id="signupcl">Sign Up</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mt30 guestlogin-t" id="guestLogin">
+                                                <form>
+                                                    <div class="form-group mobile-num">
+                                                        <input type="number" class="form-control" placeholder="Enter Mobile Number" onkeypress="return validateMobileNumber(event,this);" maxlength="10" id="guestMobileNo">
+                                                        <span class="country-code">91+ <span class="verticla-bar">|</span></span>
+                                                    </div>
+                                                    <div class="form-group password-group">
+                                                        <input type="password" class="form-control password" maxlength="6" placeholder="Password/OTP" id="guestPassword">
+                                                        <i class="eye-icon show" onclick="showPassword(event)"></i>
+                                                    </div>
+                                                    <div class="mt20 text-center">
+                                                        <button class="btn btn-primary" onclick="return GuestLogin()">Login <span class="whitearrow"></span></button>
+                                                    </div>
+                                                </form>
+                                                <!-- <div class=" text-center mt30">
+                                                    <a href="javascript:void(0)" class="font14 font-default-opensans orange-text"> Forgot Password? </a>
+                                                </div> -->
+                                                <!-- <div class="mt10 mb10 d-flex justify-content-center align-items-center">
+                                                    <p class="font14 font-default-opensans mr-2"> Not a Sub-Broker yet?</p>
+                                                    <a href="javascript:void(0)" class="font14 font-default-opensans orange-text">Register now</a>
+                                                </div> -->
+                                            </div>
+                                            <div class="mt30 guestsignup-t" id="gustSignUp">
+                                                <form>
+                                                    
+                                                    <div class="form-group mobile-num">
+                                                        <input type="number" class="form-control" placeholder="Enter Mobile Number" onkeypress="return validateMobileNumber(event,this);" id="guestSignUpMobileNumber">
+                                                        <span class="country-code">91+ <span class="verticla-bar">|</span></span>
+                                                    </div>
+                                                    
+                                                    <div class="mt20 text-center">
+                                                        <button class="btn btn-primary" onclick="return GuestSignUp();">Submit <span class="whitearrow"></span></button>
+                                                    </div>
+                                                </form>
+                                                <!-- <div class=" text-center mt30">
+                                                    <a href="javascript:void(0)" class="font14 font-default-opensans orange-text"> Forgot Password? </a>
+                                                </div> -->
+                                                <!-- <div class="mt10 mb10 d-flex justify-content-center align-items-center">
+                                                    <p class="font14 font-default-opensans mr-2"> Not a Sub-Broker yet?</p>
+                                                    <a href="javascript:void(0)" class="font14 font-default-opensans orange-text">Register now</a>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Generate password-->
+                                    
+                                    <!--Generate password-->
+
+                                    <div class="generatePass-wrapper" id="generatePass" style="display:none">
+                                        <div class="dropdown-wrapper">
+                                            <div class="text-center mb20">
+                                                <a href="javascript:void(0)" class="back-to-link pull-left"><img src="/images/right-arrow-outline.svg" onclick="loginback()"></a>
+                                                <h5 class="font16 font-opensans-bold text-center text-transform-upper">Generate otp</h5>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" style="text-transform: uppercase ;" maxlength="30" onkeypress="return isValidClientCode(event);" placeholder="Mobile No / Email ID / Client Code" id="loginId">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" style="text-transform: uppercase ;" maxlength="10" onkeyup="return createPanDOBGenerate(event, this)" onkeypress="CustomNumbersallowedOnly(event,this);" placeholder="PAN / DOB" id="txt_ForgotPanDOB"> 
+                                            </div>
+
+                                            <div class="mt20 text-center">
+                                                <button class="btn btn-primary" onclick="SendOTP();">SEND OTP <span class=""></span></button>
+                                                <br>
+                                            </div>
+                                            <br>
+                                            <div class="mt20 text-center" id="msgDiv" style="font-size:smaller; color:red"></div>
+                                        </div>
+                                    </div>
+                                    <div class="enter-otp-wrapper" id="enterOTP" style="display:none">
+                                        <div class="dropdown-wrapper">
+                                            <a href="javascript:void(0)" class="back-to-link pull-left"><img src="/images/right-arrow-outline.svg" onclick="genPassword()" id="EnterOTPLoginBack"></a>
+
+                                            <h5 class="font16 font-opensans-bold text-center text-transform-upper">Enter OTP</h5>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" style="text-transform: uppercase ;" maxlength="30" onkeypress="return isValidClientCode(event);" placeholder="Mobile No / Email ID / Client Code" id="EnterOTPLoginId" autocomplete="new-otp" disabled="">
+                                            </div>
+                                            <div class="form-group password-group">
+                                                <input type="password" maxlength="15" class="form-control password" placeholder="Please Enter OTP" id="GenPassOTP" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57" autocomplete="new-otp"> 
+                                                <i class="eye-icon show" onclick="showPassword(event)"></i>
+                                            </div>
+                                            <label id="lblOTPMessage" class="font14 font-default-opensans mr-2" style="text-align: center; font-size: 11px; color: gray;"></label>
+
+                                            <div class="mt20 d-flex justify-content-center align-items-center">
+                                                <button class="btn btn-primary" id="btnValidateOTP" onclick="return validateGenPasswordOTP();">PROCEED </button>
+                                            </div>
+                                            <div class="mt20 d-flex justify-content-center align-items-center">
+                                                <a href="javascript:void(0)" class="font14 font-default-opensans orange-text" id="btnGeneratePasswordResendOTP">Resend OTP </a>
+                                            </div>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <span class="font14 font-default-opensans gray-text" id="ResendOTPCounter"></span>
+                                            </div>
+
+                                            <div class="clearboth-n"></div>
+                                        </div>
+                                        <div class="safety-wrapper">
+                                            <div class="d-flex justify-content-between align-items-center mb5">
+                                                <p class="font12 font-opensans-semibold">Safety Tips:</p>
+                                                <img src="/images/verified.png">
+                                            </div>
+                                            <div>
+                                                <ul class="bullet-asterisk-list">
+                                                    <li class="font12 font-default-opensans text-left">Don't save your Password </li>
+                                                    <li class="font12 font-default-opensans text-left">Don't share your login credentials with anyone </li>
+                                                    <li class="font12 font-default-opensans text-left">Logout the application before closing</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Change Force Pass Section-->
+                                    <div class="changePass-wrapper" id="forcePass" style="display:none">
+                                        <div class="dropdown-wrapper">
+                                            <div class="text-center mb20">
+                                                <a href="javascript:void(0)" class="back-to-link pull-left"><img src="/images/right-arrow-outline.svg" onclick="loginback()"></a>
+                                                <h5 class="font16 font-opensans-bold text-center text-transform-upper guesttexth5">Change Force Password</h5>
+                                            </div>
+
+                                            <div class="mt30 guestlogin-t" id="guestLogin">
+
+
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="LOGIN ID/EMAIL ID/MOBILE NUMBER" id="ClientId">
+                                                </div>
+                                                <div class="form-group password-group">
+                                                    <input type="password" maxlength="15" class="form-control password" placeholder="Old Password" id="OldPass">
+                                                    <i class="eye-icon show" onclick="showPassword(event)"></i>
+                                                </div>
+                                                <div class="form-group password-group">
+                                                    <input type="password" maxlength="15" class="form-control password" placeholder="New Password" id="NewPass">
+                                                    <i class="eye-icon show" onclick="showPassword(event)"></i>
+                                                </div>
+                                                <div class="form-group password-group">
+                                                    <input type="password" maxlength="15" class="form-control password" placeholder="Confirm Password" id="ConfirmPass">
+                                                    <i class="eye-icon show" onclick="showPassword(event)"></i>
+                                                </div>
+                                                <div class="mt20 text-center">
+                                                    <button class="btn btn-primary" onclick="changeForcePassw()">Submit <span class="whitearrow"></span></button>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!--Normal Change PAssword-->
+                                    <div class="normalChangePass-wrapper" id="" style="display:none">
+                                        <div class="dropdown-wrapper">
+                                            <div class="text-center mb20">
+                                                <a href="javascript:void(0)" class="back-to-link pull-left"><img src="/images/right-arrow-outline.svg" onclick="loginback()"></a>
+                                                
+
+                                                <a href="javascript:void(0)" onclick="" class="orange-text font-opensans-semibold text-captalize" data-toggle="modal" data-target="#ledgerViewAll">Change Password</a>
+
+                                            </div>
+
+                                            <div class="mt30 guestlogin-t" id="guestLogin">
+
+                                                <div class="form-group password-group">
+                                                    <input type="tel" class="form-control disabled" readonly="" placeholder="Client Code" id="clientCodeFP">
+                                                </div>
+                                                <div class="form-group password-group">
+                                                    <input type="password" maxlength="15" class="form-control password" placeholder="Old Password/OTP" id="OldPassN">
+                                                    <i class="eye-icon show" onclick="showPassword(event)"></i>
+                                                </div>
+                                                <div class="form-group password-group">
+                                                    <input type="password" maxlength="15" class="form-control password" placeholder="New Password" id="NewPassN">
+                                                    <i class="eye-icon show" onclick="showPassword(event)"></i>
+                                                </div>
+                                                <div class="form-group password-group">
+                                                    <input type="password" maxlength="15" class="form-control password" placeholder="Confirm Password" id="ConfirmPassN">
+                                                    <i class="eye-icon show" onclick="showPassword(event)"></i>
+                                                </div>
+                                                <div class="mt20 text-center">
+                                                    <button class="btn btn-primary" onclick="changePassword()">Submit <span class="whitearrow"></span></button>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <!--SETUP NEW PASSWORD USING OTP-->
+                                    <div class="set-new-pass-wrapper" id="setNewPass" style="display:none">
+                                        <div class="dropdown-wrapper">
+                                            <div class="text-center mb20">
+                                                <a href="javascript:void(0)" class="back-to-link pull-left"><img src="/images/right-arrow-outline.svg" onclick="loginback()"></a>
+                                                <h5 class="font16 font-opensans-bold text-center text-transform-upper guesttexth5">Change Password</h5>
+                                            </div>
+                                            <div class="mt30 guestlogin-t" id="guestLogin">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="MOBILE NUMBER / EMAIL ID / CLIENT CODE" id="setNewPassClientId" disabled="">
+                                                </div>
+                                                <div class="form-group password-group">
+                                                    <input type="password" maxlength="15" class="form-control password" placeholder="New Password" id="setNewPassPwd">
+                                                    <i class="eye-icon show" onclick="showPassword(event)"></i>
+                                                </div>
+                                                <div class="form-group password-group">
+                                                    <input type="password" maxlength="15" class="form-control password" placeholder="Confirm Password" id="setNewPassConfirmPwd">
+                                                    <i class="eye-icon show" onclick="showPassword(event)"></i>
+                                                </div>
+                                                <div class="mt20 text-center">
+                                                    <button class="btn btn-primary" onclick="ChangeOTPValidatedPassword()">Submit <span class="whitearrow"></span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="resume-application-wrapper">
+                                    <div class="text-center mb30">
+                                        <a href="javascript:void(0)" class="back-to-link pull-left"><img src="/images/right-arrow-outline.svg" onclick="accountback(this)"></a>
+                                        <h5 class="font16 font-opensans-bold text-center text-transform-upper mt-4">Resume application</h5>
+                                    </div>
+                                    <form>
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" placeholder="Registered Mobile No.">
+                                        </div>
+                                        <div class="mt30 text-center">
+                                            <button class="btn btn-primary"> <span class="overlay"></span>Proceed <span class="whitearrow"></span></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-spac ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-8">
+                            <div class="top-title">
+                                <h2 class="title text-center text-md-left">WHY OPEN A DEMAT &amp; TRADING ACCOUNT WITH MOTILAL OSWAL?</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="row justify-content-between align-items-center">
+                                <div class="col-lg-3 col-md-4 text-center text-md-left">
+                                    <div class="mb30">
+                                        <img src="/images/demat1.svg" class="mb-4">
+                                        <p class="font16">1 Million+ happy clients</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 text-center text-md-left">
+                                    <div class="mb30">
+                                        <img src="/images/demat2.svg" class="mb-4">
+                                        <p class="font16">High tech 4-star apps for traders &amp; investors</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 text-center text-md-left">
+                                    <div class="mb30">
+                                        <img src="/images/demat3.svg" class="mb-4">
+                                        <p class="font16">30+ years of research expertise</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-between align-items-center">
+                                <div class="col-lg-3 col-md-4 text-center text-md-left">
+                                    <div class="mb30">
+                                        <img src="/images/demat4.svg" class="mb-4">
+                                        <p class="font16">Personal advisor / advisory for customers</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 text-center text-md-left">
+                                    <div class="mb30">
+                                        <img src="/images/demat5.svg" class="mb-4">
+                                        <p class="font16">Customized Investment plans with one click investment</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-4 text-center text-md-left">
+                                    <div class="mb30">
+                                        <img src="/images/demat6.svg" class="mb-4">
+                                        <p class="font16">Wide choice of asset classes to invest in</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-spac demat-account-section">
+                <div class="bg-banner">
+                    <div class="overlay-images"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="top-title">
+                                    <h2 class="title">HOW TO OPEN A DEMAT ACCOUNT</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="white-card text-center">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="">
+                                                <img src="/images/basic-details.svg" class="mb-3">
+                                                <p class="font16">Fill in your basic personal details</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="proofs-wrapper">
+                                                <img src="/images/upload-proofs.svg" class="mb-3">
+                                                <p class="font16">Upload your proofs and documents required</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="">
+                                                <img src="/images/post-verification.svg" class="mb-3">
+                                                <p class="font16">Account activated post verification</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Customer review section -START -->
+            <section class="customer-review section-spac">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="customer-review-wrapper">
+                                <div class="top-title">
+                                    <h2>What our customers say</h2>
+                                    <p class="cat hidden-xs">Reviews, comments from MO's customers and community</p>
+                                </div>
+                            </div>
+                            <div class="customer-review-carou">
+                                <div class="customer-review-carousel owl-carousel owl-loaded owl-drag">
+                                    
+                                    
+                                <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 804px;"><div class="owl-item active" style="width: 372px; margin-right: 30px;"><div class="customer-review-card">
+                                        <div class="customer-review-card-wrapper">
+                                            <div class="customer-review-identity">
+                                                
+                                                <div class="customer-review-stars-container">
+                                                    <span>Surendar Sharma</span>
+                                                    <div class="rating" style="margin-top:-8px;margin-bottom:2px">
+                                                        <a href="javascript:void(0);" class="star"><img class="customer-review-star" src="/images/star-icon.svg" title="" alt=""></a>
+                                                        <a href="javascript:void(0);" class="star"><img class="customer-review-star" src="/images/star-icon.svg" title="" alt=""></a>
+                                                        <a href="javascript:void(0);" class="star"><img class="customer-review-star" src="/images/star-icon.svg" title="" alt=""></a>
+                                                        <a href="javascript:void(0);" class="star"><img class="customer-review-star" src="/images/star-icon.svg" title="" alt=""></a>
+                                                        <a href="javascript:void(0);" class="star"><img class="customer-review-star" src="/images/star-icon.svg" title="" alt=""></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="customer-review-container">
+                                                <h4 class="customer-review-title">MO Investor App</h4>
+                                                <p class="customer-review-description">The new price alert feature is good and so is the User Interface.Indeed, the best app to invest in mutual funds.</p>
+                                            </div>
+                                        </div>
+                                    </div></div><div class="owl-item active" style="width: 372px; margin-right: 30px;"><div class="customer-review-card">
+                                        <div class="customer-review-card-wrapper">
+                                            <div class="customer-review-identity">
+                                                
+                                                <div class="customer-review-stars-container">
+                                                    <span>Rakesh Kumar</span>
+                                                    <div class="rating" style="margin-top:-8px;margin-bottom:2px">
+                                                        <a href="javascript:void(0);" class="star"><img class="customer-review-star" src="/images/star-icon.svg" title="" alt=""></a>
+                                                        <a href="javascript:void(0);" class="star"><img class="customer-review-star" src="/images/star-icon.svg" title="" alt=""></a>
+                                                        <a href="javascript:void(0);" class="star"><img class="customer-review-star" src="/images/star-icon.svg" title="" alt=""></a>
+                                                        <a href="javascript:void(0);" class="star"><img class="customer-review-star" src="/images/star-icon.svg" title="" alt=""></a>
+                                                        <a href="javascript:void(0);" class="star"><img class="customer-review-star" src="/images/star-icon.svg" title="" alt=""></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="customer-review-container">
+                                                <h4 class="customer-review-title">MO Investor App</h4>
+                                                <p class="customer-review-description">If you are a rookie in trading and want to know more about Invesment. I personally recommend you to download it.</p>
+                                            </div>
+                                        </div>
+                                    </div></div></div></div><div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev disabled"><span class="left-icon"></span></button><button type="button" role="presentation" class="owl-next disabled"><span class="right-icon"></span></button></div><div class="owl-dots disabled"><button role="button" class="owl-dot active"><span></span></button></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- Customer review section -END -->
+            <!-- FAQ Section -->
+            <section class="section-spac">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="top-title text-center">
+                                <h2 class="title text-center">FAQ</h2>
+                            </div>
+                            <div class="accordion accordian-style panel-group" id="accordionExample">
+                                <div class="card shadow-active">
+                                    <div class="card-header" id="heading1">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapseOne">
+                                            How do I open my DEMAT account?
+                                            <i class="collapse-plus"></i>
+                                        </button>
+                                    </div>
+                                    <div id="collapse1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            Opening a DEMAT Account with Motilal Oswal is easy and instant. All you have to do is keep your personal documents handy (Bank statement, PAN Card, AADHAR card, Photograph, Signature on White Paper). Sign-up with your Aadhar registered mobile number, enter the details and esign. It's that easy only with Motilal Oswal.
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="heading2">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapseTwo">
+                                            Why are we having a common platform for commodity and equity?
+                                            <i class="collapse-plus"></i>
+                                        </button>
+                                    </div>
+                                    <div id="collapse2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            While investing in any commodity or equity options, it is necessary that investors/traders keep a track of the price movement. If any investor or trader has to look for prices of these investment options on two different platforms, it will become a hassle for the investor and s/he may lose out on the opportunity to invest at the right time. Thus, to keep the investors right on track, we have a common platform for both.
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="heading3">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapseThree">
+                                            Which platforms can be used to make transactions?
+                                            <i class="collapse-plus"></i>
+                                        </button>
+                                    </div>
+                                    <div id="collapse3" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            To buy or sell any equity or any form of commodity, you are required to have a Demat and a Trading Account. With MO Investor and MO Trader, Motilal Oswal brings to you the convenience of trading and investing instantly through online mode such as UPI, Net Banking, etc.
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="heading4">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapseThree">
+                                            What is an After Market Order (AMO)?
+                                            <i class="collapse-plus"></i>
+                                        </button>
+                                    </div>
+                                    <div id="collapse4" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            After Market Order (AMO) is a type of market order that is placed by an investor after the regular market session is closed. AMO orders are placed on the exchanged at the opening of the next market session. The timing to place an AMO is between 5:00 PM to 9:00 AM for NSE
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="heading5">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapseThree">
+                                            Where can one view equity and commodity account information?
+                                            <i class="collapse-plus"></i>
+                                        </button>
+                                    </div>
+                                    <div id="collapse5" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            To view your holding statement on MO Investor - Log in to the app, click on the Menu button &gt;&gt; Go to            Reports section &gt;&gt; Click on Holding
+                                            <br>
+                                            To view your holding statement on MO Trader - Log in to the app &gt;&gt; Click on the 'Trading Reports' at the        bottom of the screen.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="heading6">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapseThree">
+                                            What are the different PMS products offered by Motilal Oswal?
+                                            <i class="collapse-plus"></i>
+                                        </button>
+                                    </div>
+                                    <div id="collapse6" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            Motilal Oswal offers different types of Portfolio Management Services such as - Discretionary PMS, Active      PMS, Passive PMS and Non-discretionary PMS. To get detailed information on these types of investments, go       to <br> <a href="https://www.motilaloswal.com/IG/pms/what-are-the-types-of-portfolio-management-services"> This Link ! </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="heading7">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapseThree">
+                                            Who can open a PMS account with Motilal Oswal?
+                                            <i class="collapse-plus"></i>
+                                        </button>
+                                    </div>
+                                    <div id="collapse7" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            Investors with high-risk-taking capacity who can invest a minimum amount of Rs 50 Lakhs are eligible to open a PMS account with Motilal Oswal.
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- FAQ Section -->
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 popupmy-o">
+                    <div class="text-center d-none d-md-block d-lg-none w-100">
+                        <button class="btn btn-primary w-100 demat-account-btn" data-toggle="modal" data-target="#dematAccount">
+                            <span class="overlay"></span>Login <span class="whitearrow"></span>
+                        </button>
+                    </div>
+                    <div class="text-center d-block d-md-none w-100">
+                        <a href="javascript:void(0)" class="btn btn-primary w-100 demat-account-btn" onclick="popuplogin()">
+                            <span class="overlay"></span>Login <span class="whitearrow"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Ready to invest -START -->
+        <section class="invest-with-wrapper d-none d-lg-block">
+            <div class="custom-container" style="  margin: 100px;">
+                <h2 class="section-title">Ready to invest with us?</h2>
+                <p class="desc">Share your Name and Mobile Number with us and get started.</p>
+                <div class="form-wrap">
+                    <ul class="clearfix">
+                        <li>
+                            <input type="text" value="" class="form-control" placeholder="Enter Full Name" id="inname" onkeypress="return validateLetters(event)">
+                        </li>
+                        <li>
+                            <input type="text" value="" class="form-control" placeholder="Enter Mobile Number" id="inmobno" maxlength="10" onkeypress="return validateMobileNumber(event,this);">
+                            <span class="country-code">+91 <span class="verticla-bar">|</span></span>
+                        </li>
+                        <li>
+                            <div class="btn-wrap ">
+                                <button class="btn btn-primary" onclick="LoadPageEModification();">
+                                    <span class="overlay"></span>Open Account <span class="whitearrow"></span>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <br>
+                <p class=" font-default-opensans " style="font-size:12px">Note:By submitting your details, you are authorising us to call you or send promotional communication even though you may be</p>
+                <p class=" font-default-opensans" style="font-size:12px"> registered under DND </p>
+            </div>
+        </section>
+        <!-- Ready to invest -END -->
+    </div>
+
+    <!-- Footer Start -->
+    <footer class="oc-footer">
+        <div class="footer-nav-wrap">
+            <div class="container">
+                <div class="nav-wrap">
+                    <ul class="ocf-list">
+                        <li><a href="javascript:void(0);" class="link-item" onclick="window.open('https://www.motilaloswal.com/campaign/RegistrationOffers/page242/disclaimer-new.html')">Disclaimer</a></li>
+                        <li><a href="javascript:void(0);" class="link-item" onclick="window.open('https://www.motilaloswal.com/campaign/RegistrationOffers/page242/terms-and-conditions-cb1.html ')">Terms &amp; Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <!-- Page Overlay start -->
+    <div class="body-overlay" id="popup-ologin"></div>
+    <!-- Page overlay End -->
+    <!-- Login Modal -->
+    <div id="dematAccount" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content login-modal">
+                <div class="modal-body p-0">
+                    <img src="/images/modal-close.svg" class="modal-close cursor-pointer" data-dismiss="modal">
+                    <div class="row">
+                        <div class="col-md-12 ">
+                            <div class="d-md-flex justify-content-md-center">
+                                <div class="open-acc-wrapper">
+                                    <div class="signup-wrapper">
+                                        <div class="dropdown-wrapper">
+                                            <h5 class="font16 font-opensans-bold text-center text-transform-upper">
+                                                login to trade
+                                            </h5>
+                                            <form autocomplete="off">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" maxlength="30" placeholder="Client Code / Mobile Number / Email Id" id="loginid">
+                                                </div>
+                                                <div class="form-group password-group">
+                                                    <input type="password" maxlength="15" class="form-control password" placeholder="Password" id="Password">
+                                                    <i class="eye-icon show" onclick="showPassword(event)"></i>
+                                                </div>
+                                                <div class="mt20 d-flex justify-content-center align-items-center">
+                                                    <button class="btn btn-secondory mr-4" onclick="validateLogin();">MO investor <span class="orangearrow-icon"></span></button>
+                                                    <button class="btn btn-secondory" onclick="window.open('http://power.motilaloswal.com/MOSL/userMaster/login','_blank')">MO trader <span class="orangearrow-icon"></span></button>
+                                                </div>
+                                                <div class="mt30 d-flex justify-content-between align-items-center">
+                                                    <a href="javascript:void(0)" class="font14 font-default-opensans orange-text">Generate Password</a>
+                                                    <a href="javascript:void(0)" class="font14 font-default-opensans orange-text" onclick="window.open('https://www.motilaloswal.com/UCID/frmGetUCIDEmailer.aspx','_blank')">Get UCID</a>
+                                                </div>
+                                                <div class="lr-divlogin mt10">
+                                                    <div class="mt20 justify-content-start align-items-center">
+                                                        <p class="font14 font-default-opensans mr-2">Are you a partner?</p>
+                                                        <a href="javascript:void(0)" class="font14 font-default-opensans orange-text login-here" onclick="EventsForClaverTab('Partner','Web_Partnerlogin', 'Partner Login');loginHere()"> Login here </a>
+                                                    </div>
+                                                    <div class="mt20 justify-content-start align-items-center">
+                                                        <p class="font14 font-default-opensans mr-2">Are you a Guest?</p>
+                                                        <a href="javascript:void(0)" class="font14 font-default-opensans orange-text" onclick="guestlogin()"> Login / Sign Up</a>
+                                                    </div>
+                                                </div>
+                                                <div class="clearboth-n"></div>
+                                            </form>
+                                        </div>
+                                        <div class="safety-wrapper">
+                                            <div class="d-flex justify-content-between align-items-center mb5">
+                                                <p class="font12 font-opensans-semibold">Safety Tips:</p>
+                                                <img src="/images/verified.png">
+                                            </div>
+                                            <div>
+                                                <ul class="bullet-asterisk-list">
+                                                    <li class="font12 font-default-opensans text-left">Don't save your Password </li>
+                                                    <li class="font12 font-default-opensans text-left">Don't share your login credentials with anyone </li>
+                                                    <li class="font12 font-default-opensans text-left">Logout the application before closing</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="login-wrapper">
+                                        <div class="dropdown-wrapper">
+                                            <div class="text-center mb20">
+                                                <a href="javascript:void(0)" class="back-to-link pull-left"><img src="/images/right-arrow-outline.svg" onclick="loginback()"></a>
+                                                <h5 class="font16 font-opensans-bold text-center text-transform-upper">Partner Portal Login</h5>
+                                            </div>
+                                            <form>
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Login ID" id="loginidPartner">
+                                                </div>
+                                                <div class="form-group password-group">
+                                                    <input type="password" maxlength="15" class="form-control password" placeholder="Password" id="enterpasswordPartner">
+                                                    <i class="eye-icon show" onclick="showPassword(event)"></i>
+                                                </div>
+                                                <div class="mt20 text-center">
+                                                    <button class="btn btn-primary">MO investor <span class="whitearrow"></span></button>
+                                                </div>
+                                            </form>
+                                            <div class=" text-center mt30">
+                                                <a href="javascript:void(0)" class="font14 font-default-opensans orange-text"> Forgot Password? </a>
+                                            </div>
+                                            <div class="mt10 mb10 d-flex justify-content-center align-items-center">
+                                                <p class="font14 font-default-opensans mr-2"> Not a Sub-Broker yet?</p>
+                                                <a href="javascript:void(0)" class="font14 font-default-opensans orange-text">Register now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="guest-wrapper">
+                                        <div class="dropdown-wrapper">
+                                            <div class="text-center mb20">
+                                                <a href="javascript:void(0)" class="back-to-link pull-left"><img src="/images/right-arrow-outline.svg" onclick="loginback()"></a>
+                                                <h5 class="font16 font-opensans-bold text-center text-transform-upper guesttexth5">Guest Login</h5>
+                                            </div>
+                                            <div class="d-flex justify-content-center align-items-center">
+                                                <ul class="open-acc-list">
+                                                    <li><a href="javascript:void(0);" class="font14 font-default-opensans orange-text" onclick="guestloginT(this);EventsForClaverTab('Guest','Web_Guestlogin','Guest Login')" id="logincl">Login</a></li>
+                                                    <li><a href="javascript:void(0);" class="font14 font-default-opensans orange-text" onclick="guestsignupT(this);EventsForClaverTab('Guest','Web_Guestlogin','Guest Sign Up')" id="signupcl">Sign Up</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="mt30 guestlogin-t">
+                                                <form autocomplete="off">
+                                                    <div class="form-group mobile-num">
+                                                        <input type="number" class="form-control" placeholder="Enter Mobile Number">
+                                                        <span class="country-code">91+ <span class="verticla-bar">|</span></span>
+                                                    </div>
+                                                    <div class="form-group password-group">
+                                                        <input type="password" maxlength="15" class="form-control password" placeholder="Password" id="enterpassword">
+                                                        <i class="eye-icon show" onclick="showPassword(event)"></i>
+                                                    </div>
+                                                    <div class="mt20 text-center">
+                                                        <button class="btn btn-primary">Log <span class="whitearrow"></span></button>
+                                                    </div>
+                                                </form>
+                                                <!-- <div class=" text-center mt30">
+                                                    <a href="javascript:void(0)" class="font14 font-default-opensans orange-text"> Forgot Password? </a>
+                                                </div> -->
+                                                <!-- <div class="mt10 mb10 d-flex justify-content-center align-items-center">
+                                                    <p class="font14 font-default-opensans mr-2"> Not a Sub-Broker yet?</p>
+                                                    <a href="javascript:void(0)" class="font14 font-default-opensans orange-text">Register now</a>
+                                                </div> -->
+                                            </div>
+
+                                            <!--      generate paassword    -->
+                                            <div id="generatePass">
+
+                                            </div>
+
+                                            <div class="mt30 guestsignup-t">
+                                                <form autocomplete="off">
+                                                    <div class="form-group mt-2">
+                                                        <input type="text" class="form-control" placeholder="Enter Full Name">
+                                                    </div>
+                                                    <div class="form-group mobile-num">
+                                                        <input type="number" class="form-control" placeholder="Enter Mobile Number">
+                                                        <span class="country-code">91+ <span class="verticla-bar">|</span></span>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="select-con">
+                                                            <select class="select-wrap select2-hidden-accessible" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                                                <option data-select2-id="3">City</option>
+                                                            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="2" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-5vbc-container"><span class="select2-selection__rendered" id="select2-5vbc-container" role="textbox" aria-readonly="true" title="City">City</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="mt20 text-center">
+                                                        <button class="btn btn-primary">Submit <span class="whitearrow"></span></button>
+                                                    </div>
+                                                </form>
+                                                <!-- <div class=" text-center mt30">
+                                                    <a href="javascript:void(0)" class="font14 font-default-opensans orange-text"> Forgot Password? </a>
+                                                </div> -->
+                                                <!-- <div class="mt10 mb10 d-flex justify-content-center align-items-center">
+                                                    <p class="font14 font-default-opensans mr-2"> Not a Sub-Broker yet?</p>
+                                                    <a href="javascript:void(0)" class="font14 font-default-opensans orange-text">Register now</a>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="resume-application-wrapper">
+                                    <div class="text-center mb30">
+                                        <a href="javascript:void(0)" class="back-to-link pull-left"><img src="/images/right-arrow-outline.svg" onclick="accountback(this)"></a>
+                                        <h5 class="font16 font-opensans-bold text-center text-transform-upper mt-4">Resume application</h5>
+                                    </div>
+                                    <form>
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" placeholder="Registered Mobile No.">
+                                        </div>
+                                        <div class="mt30 text-center">
+                                            <button class="btn btn-primary"> <span class="overlay"></span>Proceed <span class="whitearrow"></span></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div id="modelPinkAssest" class="modal modal6  fade " role="dialog" data-show="true">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content modal-content__order-forms order-forms">
+                <img src="/images/modal-close.svg" class="modal-close cursor-pointer mt-2 mr-3" data-dismiss="modal" data-backdrop="false">
+                <div class="modal-body p-0 mt-4">
+                    <div class="modal-content">
+                        <span><img src="/images/Login-Assist.png" id="pinkAssistImg"></span>
+                        <label id="lblPageName" style="display:none"></label>
+                        <label id="sipModalName" style="display:none"></label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <input type="button" id="btnRedirect" title="Add" style="display:none" value="Redirect Client" onclick="return LoadPage('Home', 'Test')">
+
+    <input type="button" id="btnRedirectMOTrader" title="Add" style="display:none" value="Redirect Client" onclick="return LoadPage('Home', 'Test')">
+    <div id="divMainContentPlaceHolder"></div>
+    
+
+<input type="hidden" id="hdnOrderRequest" value="">
+<input type="hidden" id="hdnDeeplinkSource" value="">
+<input type="hidden" id="hdnDeeplinkParam" value="">
+<input type="hidden" id="hdnDeeplinkAllowed" value="">
+<div id="sunsetHandling" class="modal modal894 fade" role="dialog" data-show="true" style="z-index: 99999" data-backdrop="static">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content padding40">
+            <div class="modal-body p-0">
+                <div class="" style="text-align:center">
+                    <h5 style="font-weight: 700" class="title-black font16">IMPORTANT UPDATE</h5>
+                </div>
+                <section class="advice-wrapper tabs-show-now mt-3" id="">
+                    <div class="common-tabs-wrap ipo-statistics">
+                        <div class="tab-content" id="" style="text-align:center">
+                            <div class="num-list font14">
+                                <p class="" style="line-height: 1.5;">
+                                    Your trustworthy trading platform is getting shifted to <span style="font-weight: 700">MO Investor web</span>, Post the shift, Power Web platform will be discontinued.
+                                    Use the same login credentials to use MO Investor and continue trading with us
+                                </p>
+                            </div>
+                            <div class="mt-3">
+                                <div class="tab-ccontent--checkbox-wrap tab-ccontent--checkbox-hidden mb-2" id="dvDNDRiskDisc">
+                                    <div class="tab-ccontent--edit-icon-table" id="">
+                                    </div>
+                                    <p class="tab-ccontent--checkbox-text gray-text" id="pRiskDiscText" style="font-size:13px !important"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="btn-wrap mt20 mb10 text-center">
+                    <a href="#" class="btn btn-primary" id="btnLogRiskDisc" onclick="loginToInvestor();" style="text-transform:unset !important">
+                        <span class="overlay"></span>Login to MO Investor
+                    </a>
+                </div>
+                <div style="text-align:center">
+                    <a style="text-decoration: none;" id="traderURL" href="#" class="orange-text font10" onclick="continueWithTrader();">
+                        Continue with MO Trader
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    (function (l, e, a, p) {
+        if (window.Sprig) return;
+        window.Sprig = function () { S._queue.push(arguments) }
+        var S = window.Sprig; S.appId = a; S._queue = []; window.UserLeap = S;
+        a = l.createElement('script');
+        a.async = 1; a.src = e + '?id=' + S.appId;
+        p = l.getElementsByTagName('script')[0];
+        p.parentNode.insertBefore(a, p);
+    })(document, 'https://cdn.sprig.com/shim.js', 'iBFEj7Pybu3y');
+
+</script>
+
+<!-- Start of Blitz client code snippet -->
+<script type="text/javascript">
+    var exports = { __esModule: true };
+    window._blitzQueue = window._blitzQueue || [];
+    function blitz() {
+        _blitzQueue.push(arguments);
+    }
+    (function () {
+        var a = document.createElement('script');
+        a.type = 'text/javascript';
+        a.async = !0;
+        a.src = 'https://cdn.blitzllama.com/js/blitz.js';
+        var b = document.getElementsByTagName('script')[0];
+        b.parentNode.insertBefore(a, b);
+    })();
+    blitz('init', "key_BYSK04g7ZRcmF2Q");
+
+</script>
+<!-- End of Blitz client code snippet --><iframe height="0" width="0" style="display: none; visibility: hidden;" src="https://10453243.fls.doubleclick.net/activityi;src=10453243;type=invmedia;cat=motil0;ord=4859268465192;auiddc=247422927.1698776759;ps=1;pcor=1341576106;gtm=45He3bt0v813484424;gcd=11l1l1l1l1;dma=0;uaa=x86;uab=64;uafvl=Google%2520Chrome%3B119.0.6045.200%7CChromium%3B119.0.6045.200%7CNot%253FA_Brand%3B24.0.0.0;uamb=0;uam=;uap=Windows;uapv=10.0.0;uaw=0;epver=2;~oref=https%3A%2F%2Finvest.motilaloswal.com%2F?"></iframe><iframe allow="join-ad-interest-group" data-tagging-id="DC-10453243/invmedia/motil0+standard" data-load-time="1701623065323" height="0" width="0" style="display: none; visibility: hidden;" src="https://td.doubleclick.net/td/fls/rul/activityi;fledge=1;src=10453243;type=invmedia;cat=motil0;ord=4859268465192;auiddc=247422927.1698776759;ps=1;pcor=1341576106;gtm=45He3bt0v813484424;gcd=11l1l1l1l1;dma=0;uaa=x86;uab=64;uafvl=Google%2520Chrome%3B119.0.6045.200%7CChromium%3B119.0.6045.200%7CNot%253FA_Brand%3B24.0.0.0;uamb=0;uam=;uap=Windows;uapv=10.0.0;uaw=0;epver=2;~oref=https%3A%2F%2Finvest.motilaloswal.com%2F?"></iframe><iframe height="0" width="0" style="display: none; visibility: hidden;" src="https://10453243.fls.doubleclick.net/activityi;src=10453243;type=invmedia;cat=refer0;ord=1866590028022;auiddc=247422927.1698776759;ps=1;pcor=1305378063;gtm=45He3bt0v813484424;gcd=11l1l1l1l1;dma=0;uaa=x86;uab=64;uafvl=Google%2520Chrome%3B119.0.6045.200%7CChromium%3B119.0.6045.200%7CNot%253FA_Brand%3B24.0.0.0;uamb=0;uam=;uap=Windows;uapv=10.0.0;uaw=0;epver=2;~oref=https%3A%2F%2Finvest.motilaloswal.com%2F?"></iframe><iframe allow="join-ad-interest-group" data-tagging-id="DC-10453243/invmedia/refer0+standard" data-load-time="1701623065359" height="0" width="0" style="display: none; visibility: hidden;" src="https://td.doubleclick.net/td/fls/rul/activityi;fledge=1;src=10453243;type=invmedia;cat=refer0;ord=1866590028022;auiddc=247422927.1698776759;ps=1;pcor=1305378063;gtm=45He3bt0v813484424;gcd=11l1l1l1l1;dma=0;uaa=x86;uab=64;uafvl=Google%2520Chrome%3B119.0.6045.200%7CChromium%3B119.0.6045.200%7CNot%253FA_Brand%3B24.0.0.0;uamb=0;uam=;uap=Windows;uapv=10.0.0;uaw=0;epver=2;~oref=https%3A%2F%2Finvest.motilaloswal.com%2F?"></iframe><iframe height="0" width="0" style="display: none; visibility: hidden;" src="https://11751740.fls.doubleclick.net/activityi;src=11751740;type=count0;cat=motil00e;ord=1;num=856520685192;auiddc=247422927.1698776759;ps=1;pcor=1243037889;gtm=45He3bt0v813484424;gcd=11l1l1l1l1;dma=0;uaa=x86;uab=64;uafvl=Google%2520Chrome%3B119.0.6045.200%7CChromium%3B119.0.6045.200%7CNot%253FA_Brand%3B24.0.0.0;uamb=0;uam=;uap=Windows;uapv=10.0.0;uaw=0;epver=2;~oref=https%3A%2F%2Finvest.motilaloswal.com%2F?"></iframe><iframe allow="join-ad-interest-group" data-tagging-id="DC-11751740/count0/motil00e+unique" data-load-time="1701623065400" height="0" width="0" style="display: none; visibility: hidden;" src="https://td.doubleclick.net/td/fls/rul/activityi;fledge=1;src=11751740;type=count0;cat=motil00e;ord=1;num=856520685192;auiddc=247422927.1698776759;ps=1;pcor=1243037889;gtm=45He3bt0v813484424;gcd=11l1l1l1l1;dma=0;uaa=x86;uab=64;uafvl=Google%2520Chrome%3B119.0.6045.200%7CChromium%3B119.0.6045.200%7CNot%253FA_Brand%3B24.0.0.0;uamb=0;uam=;uap=Windows;uapv=10.0.0;uaw=0;epver=2;~oref=https%3A%2F%2Finvest.motilaloswal.com%2F?"></iframe><iframe allow="join-ad-interest-group" data-tagging-id="AW-10991142284" data-load-time="1701623065424" height="0" width="0" style="display: none; visibility: hidden;" src="https://td.doubleclick.net/td/rul/10991142284?random=1701623065412&amp;cv=11&amp;fst=1701623065412&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45He3bt0v813484424&amp;gcd=11l1l1l1l1&amp;dma=0&amp;u_w=1366&amp;u_h=768&amp;url=https%3A%2F%2Finvest.motilaloswal.com%2F&amp;ref=https%3A%2F%2Finvest.motilaloswal.com%2FHome%2FAfterSessionTimeOut&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Login%20to%20Trade%20Online&amp;auid=247422927.1698776759&amp;fledge=1&amp;uaa=x86&amp;uab=64&amp;uafvl=Google%2520Chrome%3B119.0.6045.200%7CChromium%3B119.0.6045.200%7CNot%253FA_Brand%3B24.0.0.0&amp;uamb=0&amp;uap=Windows&amp;uapv=10.0.0&amp;uaw=0"></iframe><iframe allow="join-ad-interest-group" data-tagging-id="AW-11128437206" data-load-time="1701623065437" height="0" width="0" style="display: none; visibility: hidden;" src="https://td.doubleclick.net/td/rul/11128437206?random=1701623065434&amp;cv=11&amp;fst=1701623065434&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45He3bt0v813484424&amp;gcd=11l1l1l1l1&amp;dma=0&amp;u_w=1366&amp;u_h=768&amp;url=https%3A%2F%2Finvest.motilaloswal.com%2F&amp;ref=https%3A%2F%2Finvest.motilaloswal.com%2FHome%2FAfterSessionTimeOut&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Login%20to%20Trade%20Online&amp;auid=247422927.1698776759&amp;fledge=1&amp;uaa=x86&amp;uab=64&amp;uafvl=Google%2520Chrome%3B119.0.6045.200%7CChromium%3B119.0.6045.200%7CNot%253FA_Brand%3B24.0.0.0&amp;uamb=0&amp;uap=Windows&amp;uapv=10.0.0&amp;uaw=0"></iframe>
+
+
+
+
+
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","469464626895952");fbq("init","295701311466398");fbq("init","167733398577247");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=469464626895952&amp;ev=PageView&amp;noscript=1">
+<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=295701311466398&amp;ev=PageView&amp;noscript=1">
+  <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=167733398577247&amp;ev=PageView&amp;noscript=1">
+
+</noscript>
+<script type="text/javascript" id="" src="//cdnt.netcoresmartech.com/smartechclient.js"></script><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","587932169675427");fbq("track","PageView");</script>
+<noscript></noscript>
+</div>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","529564502593205");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=529564502593205&amp;ev=PageView&amp;noscript=1"></noscript>
+
+<iframe allow="join-ad-interest-group" data-tagging-id="AW-948325163" data-load-time="1701623071468" height="0" width="0" style="display: none; visibility: hidden;" src="https://td.doubleclick.net/td/rul/948325163?random=1701623071465&amp;cv=11&amp;fst=1701623071465&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45He3bt0v813484424&amp;gcd=11l1l1l1l1&amp;dma=0&amp;u_w=1366&amp;u_h=768&amp;url=https%3A%2F%2Finvest.motilaloswal.com%2F&amp;ref=https%3A%2F%2Finvest.motilaloswal.com%2FHome%2FAfterSessionTimeOut&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Login%20to%20Trade%20Online&amp;auid=247422927.1698776759&amp;fledge=1&amp;uaa=x86&amp;uab=64&amp;uafvl=Google%2520Chrome%3B119.0.6045.200%7CChromium%3B119.0.6045.200%7CNot%253FA_Brand%3B24.0.0.0&amp;uamb=0&amp;uap=Windows&amp;uapv=10.0.0&amp;uaw=0"></iframe><iframe allow="join-ad-interest-group" data-tagging-id="AW-378583264" data-load-time="1701623071481" height="0" width="0" style="display: none; visibility: hidden;" src="https://td.doubleclick.net/td/rul/378583264?random=1701623071478&amp;cv=11&amp;fst=1701623071478&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45He3bt0v813484424&amp;gcd=11l1l1l1l1&amp;dma=0&amp;u_w=1366&amp;u_h=768&amp;url=https%3A%2F%2Finvest.motilaloswal.com%2F&amp;ref=https%3A%2F%2Finvest.motilaloswal.com%2FHome%2FAfterSessionTimeOut&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Login%20to%20Trade%20Online&amp;auid=247422927.1698776759&amp;fledge=1&amp;uaa=x86&amp;uab=64&amp;uafvl=Google%2520Chrome%3B119.0.6045.200%7CChromium%3B119.0.6045.200%7CNot%253FA_Brand%3B24.0.0.0&amp;uamb=0&amp;uap=Windows&amp;uapv=10.0.0&amp;uaw=0"></iframe><script type="text/javascript" id="">smartech("create","ADGMOT35CHFLVDHBJNIG50K96BR4ERB17S8K6KS5QTO996N3L0SG");smartech("register","c2363c7e3c4c7beef71b7e0dd42ab3bc");smartech("identify",google_tag_manager["rm"]["13484424"](3));</script>
+<script type="text/javascript" id="" src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+
+
+
+<script type="text/javascript" id="">var firebaseConfig={apiKey:"AIzaSyA21mGyC3n24nmXh_uKWA5XQMq7GCT3Yig",authDomain:"motilaloswalsite.firebaseapp.com",databaseURL:"https://motilaloswalsite.firebaseio.com",projectId:"motilaloswalsite",storageBucket:"motilaloswalsite.appspot.com",messagingSenderId:"162436312286",appId:"1:162436312286:web:3676bab08ae34f3ad2a64f"};firebase.initializeApp(firebaseConfig);</script></body>
+
+{% endblock main %}

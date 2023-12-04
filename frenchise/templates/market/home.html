@@ -68,14 +68,16 @@
                                             <!-- <td></td> -->
                                             <td class="td-scriptName cursor-pointer " title="Nifty 50"
                                                 style="width:35px !important;">
-                                                <p class="text-transform-upper" style="width:auto;"
-                                                    onclick="LoadPageWithParam('Home', 'GetQuoteIndex', '26000|0|Web_Indian_Indices_Constituents|Indian_Indices'); PushDataToCleverTapForScrips('Web_Get_Quote', 'Indian Indices', 'Nifty 50', 'Web_Home');">
-                                                    Nifty 50
-                                                </p>
+                                                <a href="">
+                                                    <p class="text-transform-upper" style="width:auto;"
+                                                       onclick="LoadPageWithParam('Home', 'GetQuoteIndex', '26000|0|Web_Indian_Indices_Constituents|Indian_Indices'); PushDataToCleverTapForScrips('Web_Get_Quote', 'Indian Indices', 'Nifty 50', 'Web_Home');">
+                                                        <a href="{% url 'detailpage' alldata.nifty50 %}">Nifty 50</a>
+                                                    </p>
+                                                </a>
                                             </td>
 
                                             <td style="text-align:right">
-                                                <span id="026000">19,765.20</span><span
+                                                <span id="026000"> {{alldata.close}}</span><span
                                                     class="green-arrow-vsmall align-self-center ml-1 AllScripsarrow_026000"></span><span
                                                     class="green-text text-nowrap ml-0 font11" id="026000CPer"
                                                     style="color: rgb(94, 183, 59);">89.75 (0.46%)</span>
@@ -98,12 +100,13 @@
                                                 style="width:35px !important;">
                                                 <p class="text-transform-upper" style="width:auto;"
                                                     onclick="LoadPageWithParam('Home', 'GetQuoteIndex', '26012|0|Web_Indian_Indices_Constituents|Indian_Indices'); PushDataToCleverTapForScrips('Web_Get_Quote', 'Indian Indices', 'Nifty 100', 'Web_Home');">
-                                                    Nifty 100
+                                                    <a href="{% url 'detailpage' alldata.nifty100 %}">Nifty100</a>
+                                                   
                                                 </p>
                                             </td>
 
                                             <td style="text-align:right">
-                                                <span id="026012">19,785.85</span><span
+                                                <span id="026012"> {{alldata.nifty100.close}}</span><span
                                                     class="green-arrow-vsmall align-self-center ml-1 AllScripsarrow_026012"></span><span
                                                     class="green-text text-nowrap ml-0 font11" id="026012CPer"
                                                     style="color: rgb(94, 183, 59);">87.45 (0.44%)</span>
@@ -122,20 +125,14 @@
                                         </tr>
                                         <tr class="">
                                             <!-- <td></td> -->
-                                            <td class="td-scriptName cursor-pointer " title="Sensex"
+                                            <td class="td-scriptName cursor-pointer " title="Nifty 100"
                                                 style="width:35px !important;">
                                                 <p class="text-transform-upper" style="width:auto;"
-                                                    onclick="LoadPageWithParam('Home', 'GetQuoteIndex', '999901|1|Web_Indian_Indices_Constituents|Indian_Indices'); PushDataToCleverTapForScrips('Web_Get_Quote', 'Indian Indices', 'Sensex', 'Web_Home');">
-                                                    Sensex
+                                                    onclick="LoadPageWithParam('Home', 'GetQuoteIndex', '26012|0|Web_Indian_Indices_Constituents|Indian_Indices'); PushDataToCleverTapForScrips('Web_Get_Quote', 'Indian Indices', 'Nifty 100', 'Web_Home');">
+                                                    <a href="{% url 'detailpage' alldata.sensex %}">Sensex</a>
+                                                   
                                                 </p>
                                             </td>
-
-
-
-
-
-
-
 
                                             <td style="text-align:right">
                                                 <span id="1999901">65,982.48</span><span
@@ -157,19 +154,14 @@
                                         </tr>
                                         <tr class="">
                                             <!-- <td></td> -->
-                                            <td class="td-scriptName cursor-pointer " title="Nifty 200"
+                                            <td class="td-scriptName cursor-pointer " title="Nifty 100"
                                                 style="width:35px !important;">
                                                 <p class="text-transform-upper" style="width:auto;"
-                                                    onclick="LoadPageWithParam('Home', 'GetQuoteIndex', '26065|0|Web_Indian_Indices_Constituents|Indian_Indices'); PushDataToCleverTapForScrips('Web_Get_Quote', 'Indian Indices', 'Nifty 200', 'Web_Home');">
-                                                    Nifty 200
+                                                    onclick="LoadPageWithParam('Home', 'GetQuoteIndex', '26012|0|Web_Indian_Indices_Constituents|Indian_Indices'); PushDataToCleverTapForScrips('Web_Get_Quote', 'Indian Indices', 'Nifty 100', 'Web_Home');">
+                                                    <a href="{% url 'detailpage' alldata.nifty200 %}">Nifty200</a>
+                                                   
                                                 </p>
                                             </td>
-
-
-
-
-
-
 
 
                                             <td style="text-align:right">
@@ -346,7 +338,7 @@
                                                     <p class=" text-transform-upper"
                                                         style="word-break: break-all;width:90%!important;"
                                                         onclick="LoadPageWithParam('Home', 'GetQuoteIndex', '26061|0|Web_Sector_Indices_Constituents|Sector_Indices'); PushDataToCleverTapForSectorScrips('Web_Get_Quote', 'Sector Indices', 'NIFTY AUTO', 'Web_Home');">
-                                                        NIFTY AUTO</p>
+                                                        <a href="{% url 'detailpage' alldata.niftyauto %}">NIFTY AUTO</a></p>
 
                                                 </td>
 
@@ -387,7 +379,7 @@
                                                     <p class=" text-transform-upper"
                                                         style="word-break: break-all;width:90%!important;"
                                                         onclick="LoadPageWithParam('Home', 'GetQuoteIndex', '26009|0|Web_Sector_Indices_Constituents|Sector_Indices'); PushDataToCleverTapForSectorScrips('Web_Get_Quote', 'Sector Indices', 'NIFTY BANK', 'Web_Home');">
-                                                        NIFTY BANK</p>
+                                                        <a href="{% url 'detailpage' alldata.niftybank %}">NIFTY BANK</a></p>
 
                                                 </td>
 
@@ -428,7 +420,7 @@
                                                     <p class=" text-transform-upper"
                                                         style="word-break: break-all;width:90%!important;"
                                                         onclick="LoadPageWithParam('Home', 'GetQuoteIndex', '26055|0|Web_Sector_Indices_Constituents|Sector_Indices'); PushDataToCleverTapForSectorScrips('Web_Get_Quote', 'Sector Indices', 'NIFTY FMCG', 'Web_Home');">
-                                                        NIFTY FMCG</p>
+                                                        <a href="{% url 'detailpage' alldata.niftyfmcg %}">NIFTY FMCG</a></p>
 
                                                 </td>
 
@@ -469,7 +461,7 @@
                                                     <p class=" text-transform-upper"
                                                         style="word-break: break-all;width:90%!important;"
                                                         onclick="LoadPageWithParam('Home', 'GetQuoteIndex', '26057|0|Web_Sector_Indices_Constituents|Sector_Indices'); PushDataToCleverTapForSectorScrips('Web_Get_Quote', 'Sector Indices', 'NIFTY PHARMA', 'Web_Home');">
-                                                        NIFTY PHARMA</p>
+                                                        <a href="{% url 'detailpage' alldata.niftypharma %}">NIFTY PHARMA</a></p>
 
                                                 </td>
 
@@ -3412,3 +3404,6 @@
 
 
 {% endblock main %}
+{% block javascriptstag %}
+<script src="{% static 'market/js/market.js' %}"></script>
+{% endblock javascriptstag %}
