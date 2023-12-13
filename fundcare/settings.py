@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'channels',
+    'market.apps.MarketConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -47,8 +48,13 @@ INSTALLED_APPS = [
     'corsheaders',
     'storages',
     'crispy_bootstrap4',
+    'celery',
+    'django_celery_results',
+    'django_celery_beat'
 
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -80,7 +86,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'fundcare.wsgi.application'
+# WSGI_APPLICATION = 'fundcare.wsgi.application'
+ASGI_APPLICATION = 'fundcare.asgi.application'
 
 
 # Database

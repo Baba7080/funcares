@@ -3405,5 +3405,43 @@
 
 {% endblock main %}
 {% block javascriptstag %}
+<!-- Your HTML template -->
+
+<script></script>
+<script>
+    alert('start')
+    const socket = new WebSocket('wss://openapi.motilaloswal.com/ws');
+
+    // Connection openedgit 
+    socket.addEventListener('open', function (event) {
+        console.log('WebSocket is open now.');
+        var clie = "{{mani.clientcode}}"
+        var apik = "{{mani.api}}"
+        var authtoken = "{{mani.token}}"
+        alert(clie)
+        alert(apik)
+        alert(authtoken)
+        
+        // Send data to the server after the connection is open
+        const data = {
+            "clientid": clie,
+            "authtoken": authtoken,
+            "apikey": apik
+        };
+
+        socket.send(JSON.stringify(data));
+    });
+
+    // Listen for messages
+    socket.addEventListener('message', function (event) {
+        console.log('WebSocket message received:', event.data);
+    });
+
+    // Connection closed
+    socket.addEventListener('close', function (event) {
+        console.log('WebSocket closed:', event);
+    });
+</script>
+
 <script src="{% static 'market/js/market.js' %}"></script>
 {% endblock javascriptstag %}

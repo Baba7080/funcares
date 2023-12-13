@@ -18,9 +18,16 @@ import hashlib
 import json
 from bs4 import BeautifulSoup
 from PythonSDK.MOFSLOPENAPI import *
+from PythonSDK.websocket import *
+from .routing import *
+from .consumers import ChartConsumer
 # Create your views here.
 # import matplotlib.pyplot as plt
 from io import BytesIO
+import asyncio
+import websockets
+
+
 
 # Create your views here.
 def scrape_website(request):
@@ -1005,7 +1012,7 @@ def NSE_BSE_data(request):
         "browsername": "Chrome",
         "browserversion": "105.0"
     }
-    print(headers)
+    # print(headers)
     data = {
         "clientcode": clientcode,  # In case of dealer else not required
         "exchangename": "NSE"
@@ -1020,20 +1027,20 @@ def NSE_BSE_data(request):
     # with open(file_path, 'w') as json_file:
     #     json.dump(response, json_file)
     #     print("done in example ")
-    print(response_nse)
-    print(response_nse.text)
-    print("json")
-    print(response_nse.json())
+    # print(response_nse)
+    # print(response_nse.text)
+    # print("json")
+    # print(response_nse.json())
     NIFTY = ""
     NIFTY_FIFTY = ""
     NIFTY_bank = ""
     NIFTY_twohundred =""
     NIFTY_hundred =""
-    print("done")
+    # print("done")
     res =  response_nse.json()
-    print(res['data'])
+    # print(res['data'])
     responce_data = res['data']
-    print("parsed one")
+    # print("parsed one")
     
     for dt in responce_data:
         # print(dt["indexcode"])
@@ -1062,7 +1069,7 @@ def NSE_BSE_data(request):
             NIFTY_pharma = dt["indexcode"]
 
 
-    print(type(NIFTY))
+    # print(type(NIFTY))
     context = {
         "nifty50":NIFTY_FIFTY,
         "nifty100":NIFTY_hundred,
@@ -1078,11 +1085,11 @@ def NSE_BSE_data(request):
         "scripcode":NIFTY_FIFTY
     }
     get_ltp = Mofsl.GetLtp(NSEData)
-    print(get_ltp)
+    # print(get_ltp)
     context1 = BSEDATA(request)
-    print("bse return ")
-    print(context1)
-    print("N"+str(NIFTY_FIFTY))
+    # print("bse return ")
+    # print(context1)
+    # print("N"+str(NIFTY_FIFTY))
     context = {
         "nifty50":"N"+str(NIFTY_FIFTY),
         "nifty100":"N"+str(NIFTY_hundred),
@@ -1093,15 +1100,64 @@ def NSE_BSE_data(request):
         "niftypharma":"N"+str(NIFTY_pharma),
         "sensex":"B"+str(context1['sensex'])
     }
+    # url_web = "wss://openapi.motilaloswal.com/"
+    
+    # redirect('web_conn')
+    daata = {
+    "clientid": clientcode,
+    "authtoken": loginmofsl["AuthToken"],
+    "apikey": ApiKey
+    }
+    manish = {'clientcode':clientcode,'api':ApiKey,'token':loginmofsl['AuthToken']}
+    print("daataa")
+    print(daata)
+    # res = request.get(url_web, json=daata, headers=headers)
+    print("daataa")
+    print(daata)
 
-    print(context)
-    return render(request, 'market/home.html',{'alldata':context})
+    # view_data = ChartConsumer()
+    # vie = view_data.connect()
+    # print(vie)
+
+    # async with websockets.connect(url_web) as websocket:
+    #     await websocket.send(json.dumps(daata))
+    #     response = await websocket.recv()
+
+    print("res data")
+    # print(response)
+    print("res data")
+    # print(res)
+    # web_con = Mofsl.Websocket2_connect()
+    # print("web_connection")
+    # print(web_con)
+    
+
+    # get_conn = ChartConsumer.connect()
+    # print(get_conn)
+
+    # triggerwebhook = tradingchart(request,loginmofsl["AuthToken"])
+
+    # print(triggerwebhook)
+
+    # for ct in triggerwebhook:
+    #     if 
+    # print(context)
+    return render(request, 'market/home.html',{'alldata':context, 'mani':manish})
 
 
     # print(NIFTY_FIFTY)
     # print(NIFTY_hundred)
     # print(NIFTY_twohundred)
     # print(NIFTY_bank)
+def returningdatamofsl(request):
+    print("in return")
+    daata = {
+    "clientid": clientcode,
+    "authtoken": loginmofsl["AuthToken"],
+    "apikey": ApiKey
+    }
+
+    return daata
 def loginmofsl(request):
     ApiKey = "MHohVro9A0A1Q2Sw"
     userid = "EBOM907310"
@@ -1143,7 +1199,9 @@ def getltpbycode(request,code):
     }
     print(LTPData)
     get_ltp = Mofsl.GetLtp(LTPData)
-    
+
+
+
     if get_ltp['status'] =="SUCCESS":
         detailLtpData = get_ltp['data']
 
@@ -1336,7 +1394,58 @@ def stocksInfo(request):
     for stock in stock_list:
         stock_detail = get_quote_table(stock)
         stock_details.update({stock:stock_detail})
-    return render(request, 'stocks/selectedstocks.html', {'stock_details':stock_details})
+        
+def tradingchart(request,authtoken):
+    # print(loginmofsl["AuthToken"])
+    print("in trading ")
+
+ 
+
+    headers = {
+        "Accept": "application/json",
+        "User-Agent": "MOSL/V.1.1.0",
+        "Authorization": authtoken,
+        "ApiKey": "MHohVro9A0A1Q2Sw",
+        "ClientLocalIp": "1.2.3.4",
+        "ClientPublicIp": "1.2.3.4",
+        "MacAddress": "00:00:00:00:00:00",
+        "SourceId": "WEB",
+        "vendorinfo": "T0240",
+        "osname": "Windows 10",
+        "osversion": "10.0.19041",
+        "devicemodel": "AHV",
+        'manufacturer': 'LENOVO',
+        "installedappid": "AppID",
+        "browsername": "Chrome",
+        "browserversion": "105.0"
+    }
+    print(headers)
+
+    url = "	https://openapi.motilaloswal.com/webhook"
+    data = {
+    "clientid": clientcode,
+    "authtoken":authtoken ,
+    "apikey": ApiKey
+    }
+    print(data)
+    response_trade_webhook = requests.post(url, json=data, headers=headers)
+    tradewebhook = Mofsl.TradeWebhook(userid)   
+    print("trade webhook by id")
+    print(tradewebhook)
+    print(response_trade_webhook)
+    print(response_trade_webhook.text)
+    print("json")
+    print(response_trade_webhook.json())
+   
+    print("done")
+    res =  response_trade_webhook.json()
+    print(res)
+    print("parsed one")
+    return res
+
+
+    # return render(request, 'market/home.html')
+
 
 
 

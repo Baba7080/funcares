@@ -20,6 +20,7 @@ application = ProtocolTypeRouter({
     'websocket': SessionMiddlewareStack(
         URLRouter(
             market.routing.websocket_urlpatterns
+           
         )
     )
 })

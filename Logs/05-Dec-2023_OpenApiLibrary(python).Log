@@ -1,0 +1,20 @@
+2023-12-05 22:43:57             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-05 22:44:00             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-05 22:44:47             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-05 22:44:48             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-05 22:45:08             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-12-05 22:45:08             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-05 22:45:12             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-05 22:45:12             ERROR             MOFSLOPENAPI.py             Method Not Allowed
+2023-12-05 22:48:07             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-05 22:48:08             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-05 22:48:13             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-12-05 22:48:13             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-05 22:48:15             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-05 22:48:15             ERROR             MOFSLOPENAPI.py             Method Not Allowed
+2023-12-05 22:50:33             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-05 22:50:34             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-05 22:50:40             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-12-05 22:50:40             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-05 22:50:42             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-05 22:50:42             ERROR             MOFSLOPENAPI.py             Method Not Allowed

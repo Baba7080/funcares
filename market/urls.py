@@ -6,7 +6,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-
+    path('tradingwebhook/', tradingchart, name='trading_webhook'),
     path('mosl-home/', scrape_website, name= 'mosl_home'),
     path('mofsllogin/',mofslloginfun,name='mofsllogin'),
     # MOSL - Pages Urls

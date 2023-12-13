@@ -2170,6 +2170,7 @@ class MOFSLOPENAPI(object):
             print("Error in Base_Url")
 
         # websocket.enableTrace(True)
+        print("websocket connection established")
         self.ws2 = websocket.WebSocketApp(l_TradeStatus_connect_URL, 
                                      on_open=self.__TradeStatus_on_open,
                                      on_message=self.__TradeStatus_on_message,
