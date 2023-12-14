@@ -1,0 +1,21 @@
+2023-12-14 16:39:30             SUCCESS             MOFSLOPENAPI.py             TCPBroadcast_connect Connection Open
+2023-12-14 16:47:05             SUCCESS             MOFSLOPENAPI.py             TCPBroadcast_connect Connection Open
+2023-12-14 16:49:18             SUCCESS             MOFSLOPENAPI.py             TCPBroadcast_connect Connection Open
+2023-12-14 16:51:53             SUCCESS             MOFSLOPENAPI.py             TCPBroadcast_connect Connection Open
+2023-12-14 17:16:54             FAILED             MOFSLOPENAPI.py             TCPBroadcast_connect Connection FAILED
+2023-12-14 17:16:54             SUCCESS             MOFSLOPENAPI.py             TCPBroadcast_connect Connection Retry
+2023-12-14 17:16:55             FAILED             MOFSLOPENAPI.py             TCPBroadcast_connect Connection FAILED
+2023-12-14 17:16:55             SUCCESS             MOFSLOPENAPI.py             TCPBroadcast_connect Connection Retry
+2023-12-14 17:16:56             FAILED             MOFSLOPENAPI.py             TCPBroadcast_connect Connection FAILED
+2023-12-14 17:16:56             SUCCESS             MOFSLOPENAPI.py             TCPBroadcast_connect Connection Retry
+2023-12-14 17:16:57             FAILED             MOFSLOPENAPI.py             TCPBroadcast_connect Connection FAILED
+2023-12-14 17:16:57             SUCCESS             MOFSLOPENAPI.py             TCPBroadcast_connect Connection Retry
+2023-12-14 17:16:58             FAILED             MOFSLOPENAPI.py             TCPBroadcast_connect Connection FAILED
+2023-12-14 17:16:58             SUCCESS             MOFSLOPENAPI.py             TCPBroadcast_connect Connection Retry
+2023-12-14 17:16:59             FAILED             MOFSLOPENAPI.py             TCPBroadcast_connect Connection FAILED Even after Retry
+2023-12-14 17:17:29             FAILED             MOFSLOPENAPI.py             TCPBroadcast_connect Connection FAILED Even after Retry
+2023-12-14 17:17:59             FAILED             MOFSLOPENAPI.py             TCPBroadcast_connect Connection FAILED Even after Retry
+2023-12-14 17:18:29             FAILED             MOFSLOPENAPI.py             TCPBroadcast_connect Connection FAILED Even after Retry
+2023-12-14 17:18:59             FAILED             MOFSLOPENAPI.py             TCPBroadcast_connect Connection FAILED Even after Retry
+2023-12-14 17:19:29             FAILED             MOFSLOPENAPI.py             TCPBroadcast_connect Connection FAILED Even after Retry
+2023-12-14 17:19:59             FAILED             MOFSLOPENAPI.py             TCPBroadcast_connect Connection FAILED Even after Retry

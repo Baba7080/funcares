@@ -1,0 +1,508 @@
+2023-12-14 16:39:32             SUCCESS             MOFSLOPENAPI.py             TCPBroadcast Connection Opened
+2023-12-14 16:39:48             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:39:48             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:39:48             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:39:48             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:40:02             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:40:02             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:40:02             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:40:02             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:47:05             SUCCESS             MOFSLOPENAPI.py             TCPBroadcast Connection Opened
+2023-12-14 16:47:22             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:47:22             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:47:22             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:47:22             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:47:36             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:47:36             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:47:36             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:47:36             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:47:50             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:47:50             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:47:50             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:47:50             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:48:04             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:48:04             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:48:04             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:48:04             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:48:18             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:48:18             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:48:18             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:48:18             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:48:32             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:48:32             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:48:32             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:48:32             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:48:47             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:48:47             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:48:47             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:48:47             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:49:00             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:49:00             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:49:00             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:49:00             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:49:14             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:49:14             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:49:15             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:49:15             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:49:18             SUCCESS             MOFSLOPENAPI.py             TCPBroadcast Connection Opened
+2023-12-14 16:49:28             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:49:28             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:49:28             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:49:28             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:49:36             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:49:36             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:49:36             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:49:36             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:49:43             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:49:43             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:49:43             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:49:43             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:49:50             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:49:50             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:49:50             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:49:50             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:49:56             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:49:56             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:49:56             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:49:56             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:50:04             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:50:04             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:50:04             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:50:04             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:50:10             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:50:10             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:50:10             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:50:10             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:50:18             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:50:18             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:50:18             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:50:18             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:50:24             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:50:24             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:50:24             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:50:24             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:50:32             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:50:32             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:50:32             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:50:32             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:50:39             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:50:39             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:50:39             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:50:39             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:51:53             SUCCESS             MOFSLOPENAPI.py             TCPBroadcast Connection Opened
+2023-12-14 16:52:14             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:52:14             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:52:14             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:52:14             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:52:28             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:52:28             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:52:28             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:52:28             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:52:42             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:52:42             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:52:42             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:52:43             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:52:56             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:52:56             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:52:56             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:52:56             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:53:10             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:53:10             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:53:10             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:53:10             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:53:24             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:53:24             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:53:24             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:53:24             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:53:39             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:53:39             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:53:39             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:53:39             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:53:52             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:53:52             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:53:52             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:53:52             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:54:07             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:54:07             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:54:07             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:54:07             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:54:21             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:54:21             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:54:21             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:54:21             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:54:34             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:54:34             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:54:34             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:54:35             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:54:49             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:54:49             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:54:49             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:54:49             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:55:03             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:55:03             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:55:03             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:55:03             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:55:18             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:55:18             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:55:18             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:55:18             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:55:31             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:55:31             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:55:31             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:55:31             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:55:45             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:55:45             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:55:45             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:55:45             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:55:58             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:55:58             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:55:58             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:55:58             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:56:12             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:56:12             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:56:12             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:56:12             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:56:27             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:56:27             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:56:27             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:56:27             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:56:40             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:56:40             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:56:40             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:56:40             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:56:54             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:56:54             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:56:54             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:56:54             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:57:09             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:57:09             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:57:09             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:57:09             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:57:22             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:57:22             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:57:22             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:57:22             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:57:36             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:57:36             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:57:36             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:57:36             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:57:51             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:57:51             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:57:51             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:57:51             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:58:04             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:58:04             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:58:04             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:58:04             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:58:18             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:58:18             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:58:18             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:58:18             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:58:32             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:58:32             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:58:32             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:58:32             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:58:46             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:58:46             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:58:46             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:58:46             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:59:00             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:59:00             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:59:00             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:59:00             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:59:14             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:59:14             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:59:14             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:59:14             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:59:28             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:59:28             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:59:28             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:59:28             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:59:42             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:59:42             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:59:42             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:59:42             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:59:57             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:59:57             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 16:59:57             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 16:59:57             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:00:10             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:00:10             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:00:10             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:00:10             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:00:24             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:00:24             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:00:24             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:00:24             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:00:38             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:00:38             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:00:38             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:00:38             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:00:53             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:00:53             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:00:53             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:00:53             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:01:06             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:01:06             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:01:06             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:01:06             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:01:20             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:01:21             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:01:21             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:01:21             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:01:34             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:01:34             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:01:34             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:01:34             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:01:49             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:01:49             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:01:49             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:01:49             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:02:03             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:02:03             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:02:03             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:02:03             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:02:17             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:02:17             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:02:17             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:02:17             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:02:31             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:02:31             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:02:31             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:02:31             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:02:44             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:02:44             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:02:44             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:02:44             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:02:58             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:02:58             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:02:58             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:02:58             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:03:12             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:03:12             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:03:12             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:03:12             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:03:26             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:03:26             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:03:26             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:03:26             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:03:40             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:03:40             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:03:40             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:03:40             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:03:54             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:03:55             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:03:55             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:03:55             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:04:08             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:04:08             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:04:08             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:04:08             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:04:22             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:04:22             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:04:22             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:04:22             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:04:36             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:04:36             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:04:36             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:04:36             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:04:50             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:04:50             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:04:50             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:04:50             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:05:05             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:05:05             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:05:05             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:05:05             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:05:19             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:05:19             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:05:19             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:05:19             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:05:32             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:05:32             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:05:32             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:05:32             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:05:47             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:05:47             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:05:47             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:05:47             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:06:00             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:06:00             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:06:00             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:06:00             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:06:15             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:06:15             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:06:15             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:06:15             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:06:29             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:06:29             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:06:29             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:06:29             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:06:43             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:06:43             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:06:43             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:06:43             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:06:57             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:06:57             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:06:57             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:06:57             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:07:10             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:07:10             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:07:11             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:07:11             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:07:25             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:07:25             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:07:25             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:07:25             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:07:38             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:07:38             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:07:38             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:07:38             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:07:53             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:07:53             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:07:53             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:07:53             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:08:07             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:08:07             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:08:07             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:08:07             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:08:21             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:08:21             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:08:21             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:08:21             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:08:34             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:08:34             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:08:34             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:08:34             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:08:48             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:08:48             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:08:48             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:08:48             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:09:03             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:09:03             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:09:03             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:09:03             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:09:17             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:09:17             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:09:17             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:09:17             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:09:31             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:09:31             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:09:31             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:09:31             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:09:44             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:09:44             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:09:44             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:09:44             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:09:58             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:09:58             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:09:58             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:09:58             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:10:13             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:10:13             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:10:13             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:10:13             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:10:27             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:10:27             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:10:27             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:10:27             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:10:40             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:10:40             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:10:40             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:10:40             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:10:55             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:10:55             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:10:55             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:10:55             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:11:09             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:11:09             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:11:09             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:11:09             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:11:23             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:11:23             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:11:23             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:11:23             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:11:37             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:11:37             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:11:37             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:11:37             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:11:51             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:11:51             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:11:51             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:11:51             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:12:04             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:12:04             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:12:04             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:12:05             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:12:19             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:12:19             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:12:19             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:12:19             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:12:33             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:12:33             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:12:33             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:12:33             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:12:47             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:12:47             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:12:47             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:12:47             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:13:00             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:13:01             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:13:01             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:13:01             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:13:15             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:13:15             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:13:15             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:13:15             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:13:29             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:13:29             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:13:29             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:13:29             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:13:43             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:13:43             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:13:43             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:13:43             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:13:57             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:13:57             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:13:57             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:13:57             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:14:11             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:14:11             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:14:11             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:14:11             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:14:25             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:14:25             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:14:25             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:14:25             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:14:39             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:14:39             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:14:39             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:14:39             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:14:53             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:14:53             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:14:53             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:14:53             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:15:07             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:15:07             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:15:07             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:15:07             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:15:21             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:15:21             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:15:21             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:15:21             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:15:35             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:15:35             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:15:35             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:15:35             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:15:49             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:15:49             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:15:49             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:15:49             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:16:03             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:16:03             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:16:03             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:16:03             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:16:17             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:16:17             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent
+2023-12-14 17:16:17             SUCCESS             MOFSLOPENAPI.py             Heartbeat request received
+2023-12-14 17:16:17             SUCCESS             MOFSLOPENAPI.py             TCPHeartbeat response packet  b'1\x00\x00' sent

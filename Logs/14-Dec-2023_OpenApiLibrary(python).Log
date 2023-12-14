@@ -2,3 +2,241 @@
 2023-12-14 00:20:47             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
 2023-12-14 00:20:49             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
 2023-12-14 00:20:49             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2023-12-14 01:09:03             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 01:09:05             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 01:09:36             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 01:09:37             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 01:09:37             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-12-14 01:09:37             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 01:09:42             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 01:09:42             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-12-14 01:09:43             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2023-12-14 01:09:43             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 01:09:43             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 01:09:43             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2023-12-14 01:47:41             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 01:47:42             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 01:48:54             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 01:48:56             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 01:48:56             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-12-14 01:48:56             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 01:48:57             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 01:48:57             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-12-14 01:48:57             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2023-12-14 01:48:57             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 01:48:57             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 01:48:58             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2023-12-14 01:48:58             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2023-12-14 01:48:58             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 01:48:59             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 01:48:59             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2023-12-14 01:51:08             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 01:51:09             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 01:51:44             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 01:51:45             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 01:51:45             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-12-14 01:51:48             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 01:51:52             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 01:51:52             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-12-14 01:53:46             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 01:53:48             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 01:54:12             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 01:54:13             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 01:54:13             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-12-14 01:54:13             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 01:54:13             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 01:54:13             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-12-14 01:54:13             SUCCESS             MOFSLOPENAPI.py             Initilaize GetPosition request send
+2023-12-14 01:54:13             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 01:54:15             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 01:54:15             SUCCESS             MOFSLOPENAPI.py             GetPosition request sent Successfully
+2023-12-14 01:54:15             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2023-12-14 01:54:15             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 01:54:16             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 01:54:16             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2023-12-14 14:59:48             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 14:59:49             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 15:00:27             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 15:00:29             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 15:00:29             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-12-14 15:00:29             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 15:00:29             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 15:00:29             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-12-14 15:00:29             SUCCESS             MOFSLOPENAPI.py             Initilaize GetPosition request send
+2023-12-14 15:00:29             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 15:00:30             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 15:00:30             SUCCESS             MOFSLOPENAPI.py             GetPosition request sent Successfully
+2023-12-14 15:00:30             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2023-12-14 15:00:30             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 15:00:31             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 15:00:31             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2023-12-14 15:19:06             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 15:19:08             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 15:20:36             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 15:20:37             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 15:21:10             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 15:21:11             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 15:21:11             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-12-14 15:21:11             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 15:21:11             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 15:21:11             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-12-14 15:25:04             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 15:25:05             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 15:25:40             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 15:25:41             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 15:25:41             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-12-14 15:25:41             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 15:25:41             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 15:25:41             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-12-14 15:25:42             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2023-12-14 15:25:42             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 15:25:43             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 15:25:43             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2023-12-14 15:25:43             SUCCESS             MOFSLOPENAPI.py             Initilaize GetPosition request send
+2023-12-14 15:25:43             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 15:25:44             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 15:25:44             SUCCESS             MOFSLOPENAPI.py             GetPosition request sent Successfully
+2023-12-14 16:06:45             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 16:06:47             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 16:07:10             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 16:07:13             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 16:07:13             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-12-14 16:07:13             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:07:13             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:07:13             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-12-14 16:07:14             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2023-12-14 16:07:14             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:07:14             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:07:14             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2023-12-14 16:07:16             SUCCESS             MOFSLOPENAPI.py             Initilaize GetPosition request send
+2023-12-14 16:07:16             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:07:16             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:07:16             SUCCESS             MOFSLOPENAPI.py             GetPosition request sent Successfully
+2023-12-14 16:08:43             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 16:08:45             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 16:09:00             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 16:09:01             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 16:09:01             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-12-14 16:09:01             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:09:02             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:09:02             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-12-14 16:09:02             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2023-12-14 16:09:02             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:09:03             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:09:03             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2023-12-14 16:09:04             SUCCESS             MOFSLOPENAPI.py             Initilaize GetPosition request send
+2023-12-14 16:09:04             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:09:05             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:09:06             SUCCESS             MOFSLOPENAPI.py             GetPosition request sent Successfully
+2023-12-14 16:09:48             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 16:09:49             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 16:10:06             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 16:10:08             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 16:10:08             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-12-14 16:10:08             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:10:09             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:10:09             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-12-14 16:10:09             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2023-12-14 16:10:09             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:10:10             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:10:10             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2023-12-14 16:10:11             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2023-12-14 16:10:11             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:10:11             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:10:11             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2023-12-14 16:10:35             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 16:10:37             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 16:10:52             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 16:10:54             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 16:10:54             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-12-14 16:10:54             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:10:54             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:10:54             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-12-14 16:10:55             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2023-12-14 16:10:55             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:10:55             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:10:55             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2023-12-14 16:10:56             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2023-12-14 16:10:56             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:10:57             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:10:57             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2023-12-14 16:12:50             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 16:12:51             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 16:13:30             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 16:13:31             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 16:13:31             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-12-14 16:13:31             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:13:32             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:13:32             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-12-14 16:13:33             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2023-12-14 16:13:33             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:13:33             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:13:33             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2023-12-14 16:13:34             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2023-12-14 16:13:34             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:13:35             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:13:35             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2023-12-14 16:17:00             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 16:17:01             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 16:17:16             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 16:17:18             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 16:17:18             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-12-14 16:17:18             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:17:18             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:17:18             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-12-14 16:17:18             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2023-12-14 16:17:18             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:17:19             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:17:19             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2023-12-14 16:17:20             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2023-12-14 16:17:20             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:17:21             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:17:21             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2023-12-14 16:38:22             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 16:38:23             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 16:39:25             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 16:39:27             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 16:39:27             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-12-14 16:39:27             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:39:28             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:39:28             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-12-14 16:39:28             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2023-12-14 16:39:28             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:39:29             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:39:29             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2023-12-14 16:46:38             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 16:46:40             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 16:47:00             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 16:47:01             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 16:47:01             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-12-14 16:47:01             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:47:02             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:47:02             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-12-14 16:47:03             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2023-12-14 16:47:03             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:47:05             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:47:05             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2023-12-14 16:48:47             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 16:48:49             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 16:49:15             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 16:49:16             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 16:49:16             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-12-14 16:49:16             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:49:16             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:49:16             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-12-14 16:49:17             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2023-12-14 16:49:17             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:49:17             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:49:17             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2023-12-14 16:51:02             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 16:51:04             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 16:51:43             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2023-12-14 16:51:49             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2023-12-14 16:51:49             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2023-12-14 16:51:49             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:51:52             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:51:52             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2023-12-14 16:51:52             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2023-12-14 16:51:52             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2023-12-14 16:51:53             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2023-12-14 16:51:53             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully

@@ -968,30 +968,7 @@ def stock_chart(request, symbol):
 
 def NSE_BSE_data(request):
     print("in nse bse")
-    # ApiKey = "MHohVro9A0A1Q2Sw"
-    # userid = "EBOM907310"
-    # password = "@Massy512"
-    # Two_FA = "05/01/2000"
-    # vendorinfo = "EBOM907310"
-    clientcode = "EBOM907310"
-    # SourceID = "Desktop"
-    # browsername = "chrome"
-    # browserversion = "104"
 
-    # # Base URL for MOFSL API
-    # Base_Url = "https://openapi.motilaloswal.com"
-    # # Initialize MOFSL API
-    # Mofsl = MOFSLOPENAPI(ApiKey, Base_Url, clientcode, SourceID, browsername, browserversion)
-
-    # # Login to MOFSL
-    # print("Logging in...")
-    # print("Logging in...")
-    # totp = input("Enter Input: ")
-    # loginmofsl = Mofsl.login(userid, password, Two_FA, totp,vendorinfo)
-    # print("mzdcxv")
-    # print(loginmofsl)
-
-    # print(loginmofsl["AuthToken"])
     url = "https://openapi.motilaloswal.com/rest/report/v1/getindexdatabyexchangename"
 
     headers = {
@@ -1036,11 +1013,12 @@ def NSE_BSE_data(request):
     NIFTY_bank = ""
     NIFTY_twohundred =""
     NIFTY_hundred =""
-    # print("done")
+    print("done")
     res =  response_nse.json()
-    # print(res['data'])
+    print(res['data'])
     responce_data = res['data']
     # print("parsed one")
+    scripc = ""
     
     for dt in responce_data:
         # print(dt["indexcode"])
@@ -1049,6 +1027,7 @@ def NSE_BSE_data(request):
         #         print(i)
         if dt["indexname"] == "Nifty 50":
             NIFTY_FIFTY = dt["indexcode"]
+            scripc = dt['indexcode']
 
         if dt["indexname"] == "Nifty 100":
             NIFTY_hundred = dt["indexcode"]
@@ -1104,16 +1083,20 @@ def NSE_BSE_data(request):
     
     # redirect('web_conn')
     daata = {
-    "clientid": clientcode,
-    "authtoken": loginmofsl["AuthToken"],
-    "apikey": ApiKey
+        "clientid": clientcode,
+        "authtoken": loginmofsl["AuthToken"],
+        "apikey": ApiKey
     }
     manish = {'clientcode':clientcode,'api':ApiKey,'token':loginmofsl['AuthToken']}
     print("daataa")
     print(daata)
     # res = request.get(url_web, json=daata, headers=headers)
-    print("daataa")
-    print(daata)
+    tcpconnect = Mofsl.TCPBroadcast_connect()
+    print("tcp connection")
+    print(tcpconnect)
+    tcpcall = Mofsl.__TCPBroadcast_on_open()
+    print("open")
+    print(tcpcall)
 
     # view_data = ChartConsumer()
     # vie = view_data.connect()
@@ -1126,6 +1109,43 @@ def NSE_BSE_data(request):
     print("res data")
     # print(response)
     print("res data")
+    url_place = "https://openapi.motilaloswal.com/rest/trans/v1/placeorder"
+
+    place_order_request = {
+        "clientcode":clientcode,
+        "exchange":"NSE",
+        "symboltoken":1660,
+        "buyorsell":"BUY",
+        "ordertype":"LIMIT",
+        "producttype":"DELIVERY",
+        "orderduration":"DAY",
+        "price":235.5,
+        "triggerprice":0,
+        "quantityinlot":2,
+        "disclosedquantity":0,
+        "amoorder":"N",
+        "algoid":"",
+        "goodtilldate":"",
+        "tag":" ", 
+        "participantcode": ""
+    }
+    respo_place = requests.post(url_place, json=place_order_request, headers=headers)
+    print("response place order")
+    print(respo_place)
+    print(respo_place.text)
+    current_date_time = datetime.now()
+
+    # Format the current date and time
+    formatted_current_date_time = current_date_time.strftime('%d-%b-%Y %H:%M:%S')
+    OrderBookInfo = {
+        "clientcode":clientcode,
+        "dateandtime":formatted_current_date_time
+    }
+    print("order book")
+    print(OrderBookInfo)
+    orderbook = Mofsl.GetOrderBook(OrderBookInfo)
+    print("responce order book ")
+    print(orderbook)
     # print(res)
     # web_con = Mofsl.Websocket2_connect()
     # print("web_connection")
@@ -1324,10 +1344,10 @@ def BSEDATA(request):
     SENSEX = ""
     res1 =  response.json()
     print("responce bse")
-    print(res1)
+    # print(res1)
     responce_bse = res1['data']
     print("data")
-    print(responce_bse)
+    # print(responce_bse)
     SENSEX =""
     for st in responce_bse:
         if st["indexname"] == "SENSEX":
