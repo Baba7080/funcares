@@ -21602,12 +21602,12 @@ code {
   display: none;
 }
 
-#doughnutChart-legend ul,
+/* #doughnutChart-legend ul,
 #doughnutChartPurple-legend ul,
 #doughnutChartPurple-dark-legend ul {
   margin-bottom: 0;
-}
-#doughnutChart-legend ul li,
+} */
+/* #doughnutChart-legend ul li, */
 #doughnutChartPurple-legend ul li,
 #doughnutChartPurple-dark-legend ul li {
   list-style: none;
@@ -21616,7 +21616,7 @@ code {
   display: inline-block;
   margin-left: 1rem;
 }
-#doughnutChart-legend ul li span,
+/* #doughnutChart-legend ul li span, */
 #doughnutChartPurple-legend ul li span,
 #doughnutChartPurple-dark-legend ul li span {
   width: 10px;

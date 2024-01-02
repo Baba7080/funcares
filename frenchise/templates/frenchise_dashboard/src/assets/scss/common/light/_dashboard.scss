@@ -52,7 +52,7 @@
     display: none;
   }
 }
-#doughnutChart-legend,
+{% comment %} #doughnutChart-legend,
 #doughnutChartPurple-legend,
 #doughnutChartPurple-dark-legend {
   ul {
@@ -72,7 +72,7 @@
         }
     }
   }
-}
+} {% endcomment %}
 #doughnutChartAnalytic-legend {
   ul {
     margin-bottom: 0;

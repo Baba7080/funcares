@@ -21604,9 +21604,9 @@ code {
 
 #doughnutChart-legend ul,
 #doughnutChartPurple-legend ul,
-#doughnutChartPurple-dark-legend ul {
+{% comment %} #doughnutChartPurple-dark-legend ul {
   margin-bottom: 0;
-}
+} {% endcomment %}
 #doughnutChart-legend ul li,
 #doughnutChartPurple-legend ul li,
 #doughnutChartPurple-dark-legend ul li {

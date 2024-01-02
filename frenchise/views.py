@@ -15,6 +15,8 @@ from companystaff.models import *
 # from .filters import frenchise_filter
 from datetime import datetime
 import re
+from django.db.models import Sum
+
 from decimal import Decimal
 
 # Create your views here.
@@ -27,6 +29,40 @@ def empdas(request):
     return render(request, 'employe_dashboard/template/loan_form.html' )
 
 def admindas(request):
+    user_login  = request.user
+    if user_login.is_superuser:
+        total_loan_completed = Loan.objects.filter(status='Completed').count()
+        print(total_loan_completed)
+        total_loan_pending = Loan.objects.filter(status='In Progress').count()
+        total_Insurance_completed = Insurance.objects.filter(status='Completed').count()
+        total_Insurance_pending = Insurance.objects.filter(status='In Progress').count()
+        total_mutual_completed = Mutual_Fund.objects.filter(status='Completed').count()
+        total_mutual_pending = Mutual_Fund.objects.filter(status='In Progress').count()
+        total_demate_completed = Demat_Account.objects.filter(status='Completed').count()
+        total_demate_pending = Demat_Account.objects.filter(status='In Progress').count()
+        total = total_loan_completed + total_Insurance_completed + total_mutual_completed + total_demate_completed
+        total_pending = total_loan_pending + total_Insurance_pending + total_mutual_pending + total_demate_pending
+
+        # 
+
+        total_revenue = Revenue.objects.aggregate(total_amount=Sum('amount'))['total_amount'] or 0.0
+        print(total_revenue)
+        total_data = {
+            'loan_completed':total_loan_completed,
+            'loan_pending':total_loan_pending,
+            'insurance_completed':total_Insurance_completed,
+            'insurance_pending':total_Insurance_pending,
+            'mutual_completed':total_mutual_completed,
+            'mutual_pending':total_mutual_pending,
+            'demate_completed':total_demate_completed,
+            'demate_pending':total_demate_pending,
+            'total_sale': total,
+            'total_pending':total_pending,
+            'total_revenue_distributed':total_revenue
+        }
+        print(total_data)
+        return render(request, 'admin_dashboard/template/admin_home.html',{'total_data':total_data} )
+
     return render(request, 'admin_dashboard/template/admin_home.html' )
 
 def index(request):
@@ -375,9 +411,16 @@ def dashboard(request):
     if check:
         f_register = frenchise_register_model.objects.filter(user=request.user)
         e_register = frenchise_employee_register_model.objects.filter(user=request.user)
-        total_revenue = Revenue.objects.get(user=request.user)
-        print("Total Revenue", total_revenue.amount)
-        total_earning = total_revenue.amount
+        try:
+            total_revenue = Revenue.objects.get(user=request.user)
+            print("Total Revenue", total_revenue.amount)
+            total_earning = total_revenue.amount
+        except Revenue.DoesNotExist:
+            # Handle the case where no record is found for the user
+            total_revenue = None
+            total_earning = 0.0
+
+        # total_revenue = Revenue.objects.get(user=request.user)
         # for i in total_revenue:
         #     print(i.amount)
 
@@ -509,7 +552,7 @@ def dashboard(request):
             all_data.append(data_dict)
         print(all_data)
         print("ljhjhjhg")
-        return render(request, 'frenchise_dashboard/template/frenchise_dash.html', {'data_all':all_data})
+        return render(request, 'frenchise_dashboard/template/frenchise_dash.html', {'data_all':all_data[0]})
     else:
         print("jhkjh")
         emp_register = frenchise_employee_register_model.objects.filter(username=n)
@@ -982,7 +1025,7 @@ def apply_insurance(request):
         formatted_date = current_date.strftime('%Y-%m-%d')
         print(formatted_date)
         print([name,emails,amount,type,number])
-        createloan = Loan.objects.create(user=users,clientName=name,type=type,PAN=pan,number=number,amount=amount,email=emails,creation=formatted_date)
+        createloan = Insurance.objects.create(user=users,clientName=name,type=type,PAN=pan,number=number,amount=amount,email=emails,creation=formatted_date)
         
         return render(request,'frenchise_dashboard/template/insurance_form.html')
 
@@ -1005,7 +1048,7 @@ def apply_mf(request):
         formatted_date = current_date.strftime('%Y-%m-%d')
         print(formatted_date)
         print([name,emails,amount,type,number])
-        createloan = Loan.objects.create(user=users,clientName=name,type=type,PAN=pan,number=number,amount=amount,email=emails,creation=formatted_date)
+        createloan = Mutual_Fund.objects.create(user=users,clientName=name,type=type,PAN=pan,number=number,amount=amount,email=emails,creation=formatted_date)
         
         return render(request,'frenchise_dashboard/template/mf_form.html')
 
@@ -1028,7 +1071,7 @@ def apply_da(request):
         formatted_date = current_date.strftime('%Y-%m-%d')
         print(formatted_date)
         print([name,emails,amount,type,number])
-        createloan = Loan.objects.create(user=users,clientName=name,type=type,PAN=pan,number=number,amount=amount,email=emails,creation=formatted_date)
+        createloan = Demat_Account.objects.create(user=users,clientName=name,type=type,PAN=pan,number=number,amount=amount,email=emails,creation=formatted_date)
         
         return render(request,'frenchise_dashboard/template/da_form.html')
 

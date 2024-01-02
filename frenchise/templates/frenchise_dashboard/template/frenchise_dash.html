@@ -42,42 +42,42 @@
                   <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview">
                     <div class="row">
                       <div class="col-sm-12">
-                        {% for ad in data_all %}
+                        {% comment %} {% for ad in data_all %} {% endcomment %}
                   
                         <div class="statistics-details d-flex align-items-center justify-content-between">
                           <div>
                             <p class="statistics-title">Loan</p>
-                            <h3 class="rate-percentage">{{ad.total_loan_completed}}/{{ad.count_L}}</h3>
+                            <h3 class="rate-percentage">{{data_all.total_loan_completed}}/{{data_all.count_L}}</h3>
                             <p class="text-danger d-flex"><i class="mdi mdi-menu-down"></i><span>-0.5%</span></p>
                           </div>
                           <div>
                             <p class="statistics-title">Insurance</p>
-                            <h3 class="rate-percentage">{{ad.total_insurance_completed}}/{{ad.count_Insur}}</h3>
+                            <h3 class="rate-percentage">{{data_all.total_insurance_completed}}/{{data_all.count_Insur}}</h3>
                             <p class="text-success d-flex"><i class="mdi mdi-menu-up"></i><span>+0.1%</span></p>
                           </div>
                           <div>
                             <p class="statistics-title">Mutual Fund</p>
-                            <h3 class="rate-percentage">{{ad.total_mutual_completed}}/{{ad.count_mf}}</h3>
+                            <h3 class="rate-percentage">{{data_all.total_mutual_completed}}/{{data_all.count_mf}}</h3>
                             <p class="text-danger d-flex"><i class="mdi mdi-menu-down"></i><span>68.8</span></p>
                           </div>
                           <div class="d-none d-md-block">
                             <p class="statistics-title">Demat</p>
-                            <h3 class="rate-percentage">{{ad.total_da_completed}}/{{ad.count_da}}</h3>
+                            <h3 class="rate-percentage">{{data_all.total_da_completed}}/{{data_all.count_da}}</h3>
                             <p class="text-success d-flex"><i class="mdi mdi-menu-down"></i><span>+0.8%</span></p>
                           </div>
                           <div class="d-none d-md-block">
                             <p class="statistics-title">Total Sales</p>
-                            <h3 class="rate-percentage">{{ad.total_sales}}/{{ad.total_submit}}</h3>
+                            <h3 class="rate-percentage">{{data_all.total_sales}}/{{data_all.total_submit}}</h3>
                             <p class="text-danger d-flex"><i class="mdi mdi-menu-down"></i><span>68.8</span></p>
                           </div>
                           <div class="d-none d-md-block">
                             <p class="statistics-title">Revenue</p>
-                            <h3 class="rate-percentage">₹{{ad.total_earning}}</h3>
+                            <h3 class="rate-percentage">₹{{data_all.total_earning}}</h3>
                             <p class="text-success d-flex"><i class="mdi mdi-menu-down"></i><span>+0.8%</span></p>
                           </div>
                         </div>
                      
-                        {% endfor %}
+                        {% comment %} {% endfor %} {% endcomment %}
                       </div>
                     </div>
 
@@ -185,13 +185,13 @@
                      
                             <div class="d-sm-flex align-items-center mt-1 justify-content-between">
                               <div class="d-sm-flex align-items-center mt-4 justify-content-between">
-                                <h2 class="me-2 fw-bold">₹5220</h2>
+                                <h2 class="me-2 fw-bold">₹{{data_all.total_earning}}</h2>
                                 <h4 class="me-2">INR</h4>
                                 <h4 class="text-success">(+1.37%)</h4>
                               </div>
            
                               <div class="me-3">
-                                <div id="marketingOverview-legend"></div>
+                                <div id="marketingOverview-legend1"></div>
                               </div>
                             </div>
                             <div class="chartjs-bar-wrapper mt-3">
@@ -305,10 +305,10 @@
 
   // Total Leads Generated
      var total_data = [];
-    {% for ad in data_all %}
-        total_data.push({{ad.total_submit}});
-        total_data.push({{ad.total_sales}});    
-    {% endfor %}
+    
+        total_data.push({{data_all.total_sales}});
+        total_data.push({{data_all.total_submit}});    
+    
   
   var ctx5 = $("#Total-Forms-Pie").get(0).getContext("2d");
   var myChart5 = new Chart(ctx5, {
@@ -340,12 +340,12 @@
   
   // individual leads generated
   var indiidual_data = [];
-  {% for bd in data_all %}
-    indiidual_data.push({{bd.total_loan}});
-    indiidual_data.push({{bd.total_insurance}});
-    indiidual_data.push({{bd.total_da}});
-    indiidual_data.push({{bd.total_mf}});
-  {% endfor %}
+
+    indiidual_data.push({{data_all.total_loan}});
+    indiidual_data.push({{data_all.total_insurance}});
+    indiidual_data.push({{data_all.total_da}});
+    indiidual_data.push({{data_all.total_mf}});
+
   
   
   var ctx6 = $("#Total-forms-completed-individual").get(0).getContext("2d");
