@@ -1,0 +1,75 @@
+{% extends 'admin_dashboard/template/admin_base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+
+{% block home-page %}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Edit Franchise</h4>
+        <p class="card-description">
+            Edit Franchise
+        </p>
+        <form action="" method="post" novalidate="'shadow p-3 p-md-5">
+            {% csrf_token %}
+            
+          <div class="form-group">
+            <label for="status" class="form-label">Status</label>
+            <select class="form-select" name="status" id="status" required>
+                {% if userdata.is_active %}
+                <option value="active">Active</option>
+                <option value="deactivate">Deactivate</option>
+                {% else %}
+                <option value="deactivate">Deactivate</option>
+                <option value="active">Active</option>
+                {% endif %}
+          </div>
+          <div class="form-group">
+            <label for="employee_id">Employee Name</label>
+            <input type="text" name="name" class="form-control" value="{{profileDta.frenchise_name}}" placeholder="Enter Your Employee Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Frenchise Code</label>
+            <input type="email" name="code" class="form-control" value="{{profileDta.Code}}" placeholder="Enter Your Email" required>
+          </div>
+          <div class="form-group">
+            <label for="username">Date Of Birth</label>
+            <input type="text" name="dob" class="form-control" value="{{profileDta.DOB}}" placeholder="Enter Your Username" required>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" name="city" class="form-control" value="{{profileDta.city}}" placeholder="Enter Your city" >
+            </div>
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" name="state" class="form-control" value="{{profileDta.state}}" placeholder="Enter Your state" >
+            </div>
+            <div class="form-group">
+                <label for="number">Number</label>
+                <input type="text" name="number" class="form-control" value="{{profileDta.number}}" placeholder="Enter Your state" >
+            </div>
+            <div class="form-group">
+                <label for="education">Education</label>
+                <input type="text" name="education" class="form-control" value="{{profileDta.Education}}" placeholder="Enter Your state" >
+            </div>
+            <div class="form-group">
+                <label for="Occupation">Occupation</label>
+                <input type="text" name="Occupation" class="form-control" value="{{profileDta.Occupation}}" placeholder="Enter Your Occupation" >
+            </div>
+            <div class="form-group">
+                <label for="Address_Type">Address Type</label>
+                <input type="text" name="address" class="form-control" value="{{profileDta.Address_Type}}" placeholder="Enter Your Address" >
+            </div>
+            <input type="hidden" value="{{profileDta.id}}" name="profileid">
+            <input type="hidden" value="{{userdata.id}}" name="userdataid">
+          <button type="submit" class="btn btn-primary mr-2">Submit</button>
+          <button class="btn btn-light"><a href="{% url 'dashboard' %}">Go Back</a></button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
+{% endblock home-page %}

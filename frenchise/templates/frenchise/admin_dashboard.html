@@ -46,9 +46,9 @@
             <li><a href="{% url 'f_overview' %}">Franchise Dashboard</a></li>
             <li><a href="{% url 'employee' %}">Employee</a></li>
             <li><a href="{% url 'loans' %}">Loans</a></li>
-           <li><a href="#services">Services</a></li>
+           <!-- <li><a href="#services">Services</a></li>
            <li><a href="#contact">Contact</a></li>
-           <li><a href="#followme">Follow me</a></li>
+           <li><a href="#followme">Follow me</a></li> -->
            </ul>
        </nav>
        <br>
@@ -64,7 +64,7 @@
                         <div class="card-body"> 
                           <div class="row">
                             <div class="col-lg-8">
-                              <input type="text" class="form-control" placeholder="Enter Email Number Pan" name="Search">
+                              <input type="text" class="form-control" placeholder="Enter: Email / Number / Pan" name="Search">
                             </div>
                             <div class="col-lg-2"></div>
                             <input type="submit" value="Submit" class="btn btn-primary">
@@ -100,10 +100,10 @@
 
 
 
-                                                    <div class="row">
+                                                    <!-- <div class="row">
                                                         <div class="col-lg-6">
-                                                            <!-- USER DATA-->
-                                                            <div class="card">
+                                                             USER DATA-->
+                                                            <!-- <div class="card">
                                                                 <div class="card-body">
 
                                                                     <div class="user-data m-b-30">
@@ -271,13 +271,13 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
+                                                            </div> -->
                                                             <!-- END USER DATA-->
-                                                        </div>
+                                                        <!-- </div> -->
 
-                                                            <div class="col-lg-6">
+                                                            <!-- <div class="col-lg-6"> -->
                                                                 <!-- TOP CAMPAIGN-->
-                                                                <div class="top-campaign">
+                                                                <!-- <div class="top-campaign">
                                                                     <h3 class="title-3 m-b-30">top campaigns</h3>
                                                                     <div class="table-responsive">
                                                                         <table class="table table-top-campaign">
@@ -333,9 +333,9 @@
                                                                             </tbody>
                                                                         </table>
                                                                     </div>
-                                                                </div>
+                                                                </div> -->
                                                                 <!--  END TOP CAMPAIGN-->
-                                                            </div>
+                                                            <!-- </div> -->
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
@@ -359,8 +359,8 @@
                                                                             <th>Username</th>
                                                                             <th>Email</th>
                                                                             <th>Active Status</th>
-                                                                            <th>status</th>
-                                                                            <th>Edit Frenchise</th>
+                                                                            <!-- <th>status</th> -->
+                                                                            <!-- <th>Edit Frenchise</th> -->
                                                                             <th></th>
                                                                         </tr>
                                                                     </thead>
@@ -368,8 +368,8 @@
                                                                         {% for ad in usersWithout %}
                                                                         <tr class="tr-shadow">
                                                             
-                                                                            <th scope="row">{{ forloop.counter }}</th>
-                                                                            <td><a href="{% url 'alldata' frenchid=ad.id %}" class="text-danger">{{ ad.username }}</a></td>
+                                                                            <th scope="row">{{forloop.counter}}</th>
+                                                                            <td><a href="{% url 'alldata' frenchid=ad.id %}" class="text-danger">{{ad.username}}</a></td>
                                                     
                                                                             <td>{{ad.email}}</td>
                                                                             <td>{{ad.is_active}}</td>
@@ -384,9 +384,10 @@
                                                                                 <td><a type="button" href="{% url 'editfrenchise' frenchid=ad.id %}" class="btn btn-danger">Edit</a></td>
 
                                                                                 <td>
-                                                                                    <div class="table-data-feature">
+                                                                                    <!-- <div class="table-data-feature">
+                                                                                        <a><i class="zmdi zmdi-mail-send"></i></a>
                                                                                         <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                                                                            <i class="zmdi zmdi-mail-send"></i>
+                                                                                            
                                                                                         </button>
                                                                                         <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                                                                             <i class="zmdi zmdi-edit"></i>
@@ -397,7 +398,7 @@
                                                                                         <button class="item" data-toggle="tooltip" data-placement="top" title="More">
                                                                                             <i class="zmdi zmdi-more"></i>
                                                                                         </button>
-                                                                                    </div>
+                                                                                    </div> -->
                                                                                 </td>
                                                                         </tr>
                                                                         {% endfor %}

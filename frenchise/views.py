@@ -21,6 +21,14 @@ from decimal import Decimal
 # import matplotlib.pyplot as plt
 from io import BytesIO
 import base64
+
+
+def empdas(request):
+    return render(request, 'employe_dashboard/template/loan_form.html' )
+
+def admindas(request):
+    return render(request, 'admin_dashboard/template/admin_home.html' )
+
 def index(request):
     return render(request, 'frenchise/index.html' )
 
@@ -225,7 +233,7 @@ def employee_view(request):
     else:
         # If the request method is not POST, render the employee application form
         emp_form = Employee_application_form()
-        return render(request, 'frenchise/employeregistration.html', {'emp_form': emp_form})
+        return render(request, 'frenchise_dashboard/template/emp_register.html', {'emp_form': emp_form})
     
 
 #frenchise status True or False
@@ -271,11 +279,25 @@ def all_frenchise_employe_view(request,frenchid):
             loandata = Loan.objects.filter(user=usrnme)
             count_loan = loandata.count()
             print(count_loan)
+            loan_completed = Loan.objects.filter(user=usrnme)
+            count_loan_completed = loan_completed.count()
 
             insurance_data = Insurance.objects.filter(user=usrnme)
             count_insurance = insurance_data.count()
+            Insurance_completed = Insurance.objects.filter(user=usrnme)
+            count_Insurance_completed = Insurance_completed.count()
 
-            total_sales = count_loan + count_insurance
+            mutualfunddata = Mutual_Fund.objects.filter(user=usrnme)
+            count_mf = mutualfunddata.count()
+            mf_completed = Mutual_Fund.objects.filter(user=usrnme)
+            count_mf_completed = mf_completed.count()
+
+            dematdata = Demat_Account.objects.filter(user=usrnme)
+            count_demat = dematdata.count()
+            demat_completed = Demat_Account.objects.filter(user=usrnme)
+            count_demat_completed = demat_completed.count()
+
+            total_sales = count_loan + count_insurance + count_mf + count_demat
 
             data_dict = {
                 'id': data.id,
@@ -284,10 +306,17 @@ def all_frenchise_employe_view(request,frenchid):
                 'email': data.email,
                 'total':total_sales,
                 'loan':count_loan,
-                'insurance':count_insurance
+                'insurance':count_insurance,
+                'mutualfund': count_mf,
+                "demat": count_demat,
+                "loan_completed": count_loan_completed,
+                "insurance_completed": count_Insurance_completed,
+                "mutualfund_completed": count_mf_completed,
+                "demat_completed": count_demat_completed,
+                "total_sales": total_sales
             }
             all_data.append(data_dict)
-        return render(request, 'frenchise/all_frenchise_employee_dashboard.html', {'e_data': all_data})
+        return render(request, 'admin_dashboard/template/emp_register_by_frenchise.html', {'e_data': all_data})
 
 def employee_data_chart(request):
     # Sample employee data (replace with your actual data)
@@ -339,7 +368,7 @@ def dashboard(request):
     if loginUser.is_superuser:
         allUser = User.objects.all()
         users_without_emp = User.objects.exclude(username__endswith='_emp')
-        return render(request,'frenchise/admin_dashboard.html',{'usersWithout':users_without_emp})
+        return render(request,'admin_dashboard/template/all_frenchise.html',{'usersWithout':users_without_emp})
         # print(users_without_emp)
         # for i in users_without_emp:
         #     print(i)
@@ -347,9 +376,146 @@ def dashboard(request):
         f_register = frenchise_register_model.objects.filter(user=request.user)
         e_register = frenchise_employee_register_model.objects.filter(user=request.user)
         total_revenue = Revenue.objects.get(user=request.user)
+        print("Total Revenue", total_revenue.amount)
+        total_earning = total_revenue.amount
+        # for i in total_revenue:
+        #     print(i.amount)
 
         all_data = []
         for data in e_register:
+            u = data.user
+            usernames = data.username
+            userdataemp = User.objects.filter(username=usernames)
+            # print
+            for i in userdataemp:
+                usrnme = i.id
+
+            current_date = datetime.now()
+            current_year = current_date.year
+            current_month = current_date.month
+            current_day = current_date.day
+
+            formatted_date = current_date.strftime('%Y-%m-%d')
+            print(formatted_date)
+            # loan data fiilter model
+            loandataActive = Loan.objects.filter(user=usrnme,status='Active')
+            loandata = Loan.objects.filter(user=usrnme)
+            loancount = loandata.count()
+            loandataInprogress = Loan.objects.filter(user=usrnme,status='In Progesss')
+            loandataCompleted = Loan.objects.filter(user=usrnme,status='Completed')
+            loandataRejected = Loan.objects.filter(user=usrnme,status='Rejected')
+            count_loan_active = loandataActive.count()
+            count_loan_InProgress = loandataInprogress.count()
+            count_loan_completed = loandataCompleted.count()
+            count_loan_rejected = loandataRejected.count()
+            # loan data fiilter model
+
+            InsurancedataActive = Insurance.objects.filter(user=usrnme,status='Active')
+            Insurancedata = Insurance.objects.filter(user=usrnme)
+            insurancecount = Insurancedata.count()
+            InsurancedataInprogress = Insurance.objects.filter(user=usrnme,status='In Progesss')
+            InsurancedataCompleted = Insurance.objects.filter(user=usrnme,status='Completed')
+            InsurancedataRejected = Insurance.objects.filter(user=usrnme,status='Rejected')
+            count_Insurance_active = InsurancedataActive.count()
+            count_Insurance_InProgress = InsurancedataInprogress.count()
+            count_Insurance_completed = InsurancedataCompleted.count()
+            count_Insurance_rejected = InsurancedataRejected.count()
+
+            Mutual_FunddataActive = Mutual_Fund.objects.filter(user=usrnme,status='Active')
+            Mutual_Funddata = Mutual_Fund.objects.filter(user=usrnme)
+            mutualfundcount = Mutual_Funddata.count()
+            Mutual_FunddataInprogress = Mutual_Fund.objects.filter(user=usrnme,status='In Progesss')
+            Mutual_FunddataCompleted = Mutual_Fund.objects.filter(user=usrnme,status='Completed')
+            Mutual_FunddataRejected = Mutual_Fund.objects.filter(user=usrnme,status='Rejected')
+            count_Mutual_Fund_active = Mutual_FunddataActive.count()
+            count_Mutual_Fund_InProgress = Mutual_FunddataInprogress.count()
+            count_Mutual_Fund_completed = Mutual_FunddataCompleted.count()
+            count_Mutual_Fund_rejected = Mutual_FunddataRejected.count()
+
+            Demat_AccountdataActive = Demat_Account.objects.filter(user=usrnme,status='Active')
+            Demat_Accountdata = Demat_Account.objects.filter(user=usrnme)
+            Demat_AccountdataInprogress = Demat_Account.objects.filter(user=usrnme,status='In Progesss')
+            Demat_AccountdataCompleted = Demat_Account.objects.filter(user=usrnme,status='Completed')
+            Demat_AccountdataRejected = Demat_Account.objects.filter(user=usrnme,status='Rejected')
+            count_Demat_Account_active = Demat_AccountdataActive.count()
+            count_Demat_Account_count = Demat_Accountdata.count()
+            count_Demat_Account_InProgress = Demat_AccountdataInprogress.count()
+            count_Demat_Account_completed = Demat_AccountdataCompleted.count()
+            count_Demat_Account_rejected = Demat_AccountdataRejected.count()
+            
+            total_sales =  count_loan_completed + count_Insurance_completed + count_Mutual_Fund_completed + count_Demat_Account_completed
+            print("upper loan")
+
+            total_loan = loancount
+            total_mf= mutualfundcount
+            total_insurance = insurancecount
+            total_da= count_Demat_Account_count
+
+            count_L = count_loan_active + count_loan_InProgress
+            count_Insur = count_Insurance_active + count_Insurance_InProgress
+            count_mf = count_Mutual_Fund_active + count_Mutual_Fund_InProgress
+            count_da = count_Demat_Account_active + count_Demat_Account_InProgress
+
+            total_submit = total_loan + total_mf + total_insurance + total_da
+            # count_total_active_and_progress = count_loan_active + count_loan_InProgress + count_Insurance_active +count_Insurance_InProgress + count_Mutual_Fund_active + count_Mutual_Fund_InProgress + count_Demat_Account_active + count_Demat_Account_InProgress
+            # count_loan_insurance_mf_da_completed = count_loan_completed + count_Insurance_completed + count_Mutual_Fund_completed + count_Demat_Account_completed
+
+            # total_revenue = count_Mutual_Fund_completed+count_Insurance_completed+count_loan_completed+count_Demat_Account_completed
+
+        
+
+            data_dict = {
+                'id': data.id,
+                'total_sales':total_sales,
+
+                'total_loan':total_loan,
+                "count_loan_active": count_loan_active,
+                "count_loan_progress":count_loan_InProgress,
+                "count_loan rejected": count_loan_rejected,
+                'total_loan_completed':count_loan_completed,
+
+                
+                'total_insurance':total_insurance,
+                "count_insurance_active": count_Insurance_active,
+                "count_insurance_progress":count_Insurance_InProgress,
+                "count_insurance rejected": count_Insurance_rejected,
+                'total_insurance_completed':count_Insurance_completed,
+
+                'total_mf': total_mf,
+                'total_insurance':total_insurance,
+                "count_mf_active": count_Mutual_Fund_active,
+                "count_mf_progress":count_Mutual_Fund_InProgress,
+                "count_mf rejected": count_Mutual_Fund_rejected,
+                'total_mutual_completed':count_Mutual_Fund_completed,
+
+                'total_da':total_da,
+                "count_da_active": count_Demat_Account_active,
+                "count_da_progress":count_Demat_Account_InProgress,
+                "count_da rejected": count_Demat_Account_rejected,
+                'total_da_completed':count_Demat_Account_completed,
+
+                "count_L": count_L,
+                "count_Insur":count_Insur,
+                "count_mf": count_mf,
+                "count_da": count_da,
+                
+           
+                # "count_total_active_and_progress": count_total_active_and_progress,
+                # "count_loan_insurance_mf_da_completed": count_loan_insurance_mf_da_completed,
+                'total_submit':total_submit,
+                "total_earning": total_earning,
+
+            }
+            all_data.append(data_dict)
+        print(all_data)
+        print("ljhjhjhg")
+        return render(request, 'frenchise_dashboard/template/frenchise_dash.html', {'data_all':all_data})
+    else:
+        print("jhkjh")
+        emp_register = frenchise_employee_register_model.objects.filter(username=n)
+
+        emp_all_data = []
+        for data in emp_register:
             u = data.user
             usernames = data.username
             userdataemp = User.objects.filter(username=usernames)
@@ -434,16 +600,14 @@ def dashboard(request):
                 'total_mutual_completed':count_Mutual_Fund_completed,
                 'total_loan_completed':count_loan_completed,
                 'total_insurance_completed':count_Insurance_completed,
-                'total_submit':total_submit
+                'total_submit':total_submit,
+                # "total_earning": total_earning
             }
-            all_data.append(data_dict)
-        print(all_data)
-        print("ljhjhjhg")
-        return render(request, 'frenchise/frenchise_overview.html', {'data_all':all_data,'revenue':total_revenue})
-    else:
-        print("jhkjh")
-        e_register = frenchise_employee_register_model.objects.filter(username=n)
-        return render(request, 'frenchise/employesales.html', {'e_register': e_register})
+            emp_all_data.append(data_dict)
+        print("employee application data", emp_all_data)
+        print("empalldatahdfkj")
+        return render(request, 'employe_dashboard/template/employe_dash.html', {'e_all_data': emp_all_data})
+    
 @login_required
 def editfrenchise(request,frenchid):
     users = request.user
@@ -480,7 +644,7 @@ def editfrenchise(request,frenchid):
         # try:
         getIduser = User.objects.get(id=userid)
         getidProfile = ProfileFrenchise.objects.get(user=getIduser)
-        return render(request,'frenchise/editfrenchise.html',{'userdata':getIduser,'profileDta':getidProfile})
+        return render(request,'admin_dashboard/template/edit_frenchise.html',{'userdata':getIduser,'profileDta':getidProfile})
         # print(status)
     if users.is_superuser:
         
@@ -504,7 +668,7 @@ def editfrenchise(request,frenchid):
         if getidProfile:
             print(getidProfile)
             print(getidProfile)
-            return render(request,'frenchise/editfrenchise.html',{'userdata':getIduser,'profileDta':getidProfile})
+            return render(request,'admin_dashboard/template/edit_frenchise.html',{'userdata':getIduser,'profileDta':getidProfile})
 
             # The ProfileFrenchise object exists and can be used here.
         else:
@@ -579,7 +743,7 @@ def employee_dashboard_view(request):
                     emp_data.append(data_emp)
 
                 print(emp_data)
-                return render(request, 'frenchise/employee_dashboard.html',{'em_data':emp_data})
+                return render(request, 'frenchise/employee_overview.html',{'em_data':emp_data})
             else:
                 return render(request,'frenchise/404.html')
 
@@ -588,7 +752,7 @@ def employee_dashboard_view(request):
     else:
         print("lgjjkhjgflkhjflkh")
         employedata = frenchise_employee_register_model.objects.filter(user = request.user)
-        print(employedata)
+        print("employedata" ,employedata)
         emp_data = []
         for i in employedata:
             loanuser = User.objects.get(username=i.username)
@@ -602,7 +766,7 @@ def employee_dashboard_view(request):
             Dematdatacompleted = Demat_Account.objects.filter(user=loanuser,status='Completed')
             total_sale = loandata.count()+Insurancedata.count()+Mutualdata.count()+Dematdata.count()
             print("---------")
-            print(loandata)
+            print("loandata", loandata)
             data_emp = {
                 'Name':i.name,
                 'id':i.id,
@@ -620,8 +784,111 @@ def employee_dashboard_view(request):
             }
             emp_data.append(data_emp)
 
-        print(emp_data)
-        return render(request, 'frenchise/employee_dashboard.html',{'em_data':emp_data})
+        print("empdata", emp_data)
+        return render(request, 'frenchise/employee_overview.html',{'emp_data':emp_data})
+    
+def date_filter(request):
+    loginUser = request.user.username
+    print(loginUser)
+    if request.method == 'POST':
+        if '_emp' not in loginUser:
+            name = request.POST.get('search')
+            print(name)
+            print(type(name))
+            email_pattern = r'^[\w\.-]+@[\w\.-]+$'
+            if re.match(email_pattern, name):
+                employedata = frenchise_employee_register_model.objects.filter(user = request.user,email=name)
+
+                print('email')
+
+            if name.isnumeric():
+                employedata = frenchise_employee_register_model.objects.filter(user = request.user,number=name)
+
+                print('The name contains only numbers.')
+            if name.isalpha():
+                print('name')
+                employedata = frenchise_employee_register_model.objects.filter(user = request.user,name=name)
+
+            # employedata = frenchise_employee_register_model.objects.filter(user = request.user)
+            print(employedata)
+            if employedata:
+                emp_data = []
+                for i in employedata:
+                    loanuser = User.objects.get(username=i.username)
+                    loandata = Loan.objects.filter(user=loanuser)
+                    loandatacompleted = Loan.objects.filter(user=loanuser,status='Completed')
+                    Insurancedata = Insurance.objects.filter(user=loanuser)
+                    Insurancedatacompleted = Insurance.objects.filter(user=loanuser,status='Completed')
+                    Mutualdata = Mutual_Fund.objects.filter(user=loanuser)
+                    Mutualdatacompleted = Mutual_Fund.objects.filter(user=loanuser,status='Completed')
+                    Dematdata = Demat_Account.objects.filter(user=loanuser)
+                    Dematdatacompleted = Demat_Account.objects.filter(user=loanuser,status='Completed')
+                    total_sale = loandata.count()+Insurancedata.count()+Mutualdata.count()+Dematdata.count()
+                    print("---------")
+                    print(loandata)
+                    data_emp = {
+                        'Name':i.name,
+                        'id':i.id,
+                        'email':i.email,
+                        'username':i.username,
+                        'total_sale':total_sale,
+                        'total_loan':loandata.count(),
+                        'total_loan_completed':loandatacompleted.count(),
+                        'total_insurance':Insurancedata.count(),
+                        'total_insurance_completed':Insurancedatacompleted.count(),
+                        'total_mutual':Mutualdata.count(),
+                        'total_mutual_completed':Mutualdatacompleted.count(),
+                        'total_demat':Dematdata.count(),
+                        'total_demat_completed':Dematdatacompleted.count(),
+                    }
+                    emp_data.append(data_emp)
+
+                print(emp_data)
+                return render(request, 'frenchise/employee_overview.html',{'em_data':emp_data})
+            else:
+                return render(request,'frenchise/404.html')
+
+    if '_emp' in loginUser:
+        return render(request,'frenchise/404.html')
+    else:
+        print("lgjjkhjgflkhjflkh")
+        employedata = frenchise_employee_register_model.objects.filter(user = request.user)
+        print("employedata" ,employedata)
+        emp_data = []
+        for i in employedata:
+            loanuser = User.objects.get(username=i.username)
+            loandata = Loan.objects.filter(user=loanuser)
+            loandatacompleted = Loan.objects.filter(user=loanuser,status='Completed')
+            Insurancedata = Insurance.objects.filter(user=loanuser)
+            Insurancedatacompleted = Insurance.objects.filter(user=loanuser,status='Completed')
+            Mutualdata = Mutual_Fund.objects.filter(user=loanuser)
+            Mutualdatacompleted = Mutual_Fund.objects.filter(user=loanuser,status='Completed')
+            Dematdata = Demat_Account.objects.filter(user=loanuser)
+            Dematdatacompleted = Demat_Account.objects.filter(user=loanuser,status='Completed')
+            total_sale = loandata.count()+Insurancedata.count()+Mutualdata.count()+Dematdata.count()
+            print("---------")
+            print("loandata", loandata)
+            data_emp = {
+                'Name':i.name,
+                'id':i.id,
+                'email':i.email,
+                'username':i.username,
+                'total_sale':total_sale,
+                'total_loan':loandata.count(),
+                'total_loan_completed':loandatacompleted.count(),
+                'total_insurance':Insurancedata.count(),
+                'total_insurance_completed':Insurancedatacompleted.count(),
+                'total_mutual':Mutualdata.count(),
+                'total_mutual_completed':Mutualdatacompleted.count(),
+                'total_demat':Dematdata.count(),
+                'total_demat_completed':Dematdatacompleted.count(),
+            }
+            emp_data.append(data_emp)
+
+        print("empdata", emp_data)
+        return render(request, 'frenchise/employee_overview.html',{'emp_data':emp_data})
+
+
 
 
 @login_required
@@ -694,13 +961,170 @@ def appllyloan(request):
         print([name,emails,amount,type,number])
         createloan = Loan.objects.create(user=users,clientName=name,type=type,PAN=pan,number=number,amount=amount,email=emails,creation=formatted_date)
         
-        return render(request,'frenchise/apply_loan.html')
+        return render(request,'frenchise_dashboard/template/loan_form.html')
 
-    return render(request,'frenchise/apply_loan.html')
+    return render(request,'frenchise_dashboard/template/loan_form.html')
+
+def apply_insurance(request):
+    if request.method == 'POST':
+        users = request.user
+        name = request.POST.get('name')
+        emails = request.POST.get('email')
+        amount = request.POST.get('amount')
+        type = request.POST.get('type')
+        number = request.POST.get('number')
+        pan = request.POST.get('pan')
+        current_date = datetime.now()
+        current_year = current_date.year
+        current_month = current_date.month
+        current_day = current_date.day
+
+        formatted_date = current_date.strftime('%Y-%m-%d')
+        print(formatted_date)
+        print([name,emails,amount,type,number])
+        createloan = Loan.objects.create(user=users,clientName=name,type=type,PAN=pan,number=number,amount=amount,email=emails,creation=formatted_date)
+        
+        return render(request,'frenchise_dashboard/template/insurance_form.html')
+
+    return render(request,'frenchise_dashboard/template/insurance_form.html')
+
+def apply_mf(request):
+    if request.method == 'POST':
+        users = request.user
+        name = request.POST.get('name')
+        emails = request.POST.get('email')
+        amount = request.POST.get('amount')
+        type = request.POST.get('type')
+        number = request.POST.get('number')
+        pan = request.POST.get('pan')
+        current_date = datetime.now()
+        current_year = current_date.year
+        current_month = current_date.month
+        current_day = current_date.day
+
+        formatted_date = current_date.strftime('%Y-%m-%d')
+        print(formatted_date)
+        print([name,emails,amount,type,number])
+        createloan = Loan.objects.create(user=users,clientName=name,type=type,PAN=pan,number=number,amount=amount,email=emails,creation=formatted_date)
+        
+        return render(request,'frenchise_dashboard/template/mf_form.html')
+
+    return render(request,'frenchise_dashboard/template/mf_form.html')
+
+def apply_da(request):
+    if request.method == 'POST':
+        users = request.user
+        name = request.POST.get('name')
+        emails = request.POST.get('email')
+        amount = request.POST.get('amount')
+        type = request.POST.get('type')
+        number = request.POST.get('number')
+        pan = request.POST.get('pan')
+        current_date = datetime.now()
+        current_year = current_date.year
+        current_month = current_date.month
+        current_day = current_date.day
+
+        formatted_date = current_date.strftime('%Y-%m-%d')
+        print(formatted_date)
+        print([name,emails,amount,type,number])
+        createloan = Loan.objects.create(user=users,clientName=name,type=type,PAN=pan,number=number,amount=amount,email=emails,creation=formatted_date)
+        
+        return render(request,'frenchise_dashboard/template/da_form.html')
+
+    return render(request,'frenchise_dashboard/template/da_form.html')
 
 #Employee overview 
 def employee_overview_view(request):
-    return render(request, 'frenchise/employee_overview.html')
+    if request.method == 'GET':
+        loginUser = request.user
+        # fromdate = str(request.POST.get('from'))
+        # todate = str(request.POST.get('to'))
+        # print([fromdate,todate])
+        employedata = frenchise_employee_register_model.objects.filter(user=loginUser)
+
+        
+        print(employedata)
+        if employedata:
+            # if loginUser.username:
+            #     employeedet = employedata.filter(username=loginUser.username)
+            #     print("employeedata", employeedet)    
+
+            emp_data = []
+            for i in employedata:
+                loanuser = User.objects.get(username=i.username)
+                loandata = Loan.objects.filter(user=loanuser)
+                loandatacompleted = Loan.objects.filter(user=loanuser,status='Completed')
+                Insurancedata = Insurance.objects.filter(user=loanuser)
+                Insurancedatacompleted = Insurance.objects.filter(user=loanuser,status='Completed')
+                Mutualdata = Mutual_Fund.objects.filter(user=loanuser)
+                Mutualdatacompleted = Mutual_Fund.objects.filter(user=loanuser,status='Completed')
+                Dematdata = Demat_Account.objects.filter(user=loanuser)
+                Dematdatacompleted = Demat_Account.objects.filter(user=loanuser,status='Completed')
+                total_sale = loandata.count()+Insurancedata.count()+Mutualdata.count()+Dematdata.count()
+                print("---------")
+                print(loandata)
+                data_emp = {
+                    'Name':i.name,
+                    'id':i.id,
+                    'email':i.email,
+                    'username':i.username,
+                    'total_sale':total_sale,
+                    'total_loan':loandata.count(),
+                    'total_loan_completed':loandatacompleted.count(),
+                    'total_insurance':Insurancedata.count(),
+                    'total_insurance_completed':Insurancedatacompleted.count(),
+                    'total_mutual':Mutualdata.count(),
+                    'total_mutual_completed':Mutualdatacompleted.count(),
+                    'total_demat':Dematdata.count(),
+                    'total_demat_completed':Dematdatacompleted.count(),
+                }
+                emp_data.append(data_emp)
+
+            print(emp_data)
+            return render(request, 'frenchise_dashboard/template/emp_list.html',{'em_data':emp_data})
+        else:
+            return render(request,'frenchise/404.html')
+
+
+    else:
+        print("lgjjkhjgflkhjflkh")
+        employedata = frenchise_employee_register_model.objects.filter(user = request.user)
+        print("employedata" ,employedata)
+        emp_data = []
+        for i in employedata:
+            loanuser = User.objects.get(username=i.username)
+            loandata = Loan.objects.filter(user=loanuser)
+            loandatacompleted = Loan.objects.filter(user=loanuser,status='Completed')
+            Insurancedata = Insurance.objects.filter(user=loanuser)
+            Insurancedatacompleted = Insurance.objects.filter(user=loanuser,status='Completed')
+            Mutualdata = Mutual_Fund.objects.filter(user=loanuser)
+            Mutualdatacompleted = Mutual_Fund.objects.filter(user=loanuser,status='Completed')
+            Dematdata = Demat_Account.objects.filter(user=loanuser)
+            Dematdatacompleted = Demat_Account.objects.filter(user=loanuser,status='Completed')
+            total_sale = loandata.count()+Insurancedata.count()+Mutualdata.count()+Dematdata.count()
+            print("---------")
+            print("loandata", loandata)
+            data_emp = {
+                'Name':i.name,
+                'id':i.id,
+                'email':i.email,
+                'username':i.username,
+                'total_sale':total_sale,
+                'total_loan':loandata.count(),
+                'total_loan_completed':loandatacompleted.count(),
+                'total_insurance':Insurancedata.count(),
+                'total_insurance_completed':Insurancedatacompleted.count(),
+                'total_mutual':Mutualdata.count(),
+                'total_mutual_completed':Mutualdatacompleted.count(),
+                'total_demat':Dematdata.count(),
+                'total_demat_completed':Dematdatacompleted.count(),
+            }
+            emp_data.append(data_emp)
+
+        print("empdata", emp_data)
+        return render(request, 'frenchise_dashboard/template/emp_list.html',{'emp_data':emp_data})
+    # return render(request, 'frenchise/employee_overview.html')
 
 # Admin Overview frenchise and employee data
 @login_required
@@ -775,7 +1199,7 @@ def loan(request):
             }
             appdata.append(dataprepare)
         print(appdata)
-        return render(request,'frenchise/loandatarender.html',{'loandata':appdata})
+        return render(request,'admin_dashboard/template/loans.html',{'loandata':appdata})
 
 
 def editsection(request,ad_id,ad_type):
@@ -845,7 +1269,7 @@ def editsection(request,ad_id,ad_type):
     if loginUser.is_superuser:
         if ad_type == 'Loan':
             dataEdit = Loan.objects.get(id=ad_id)
-            return render(request,'frenchise/Editloan.html',{'ad_data':dataEdit,'type':'Loan'})
+            return render(request,'admin_dashboard/template/edit_loan.html',{'ad_data':dataEdit,'type':'Loan'})
             print('in loan')
         if ad_type == 'Insurance':
             dataEdit = Insurance.objects.get(id=ad_id)

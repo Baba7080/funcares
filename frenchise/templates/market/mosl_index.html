@@ -1,0 +1,342 @@
+{% extends 'market/mosl_base.html' %}
+{% load static %}
+{% block title %} mosl-index {% endblock title %}
+
+{% block main %}
+
+
+  <!-- Card -->
+
+  <div class="container-fluid mx-0">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card bg-success">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-user-plus" style="font-size: 3rem;"></i>
+                        <!-- <small class="ml-2 align-items-right" style="font-size: 3rem;">4</small> -->
+                    </div>
+                    <div class="mt-3">
+                        <h5>New Customer(s) Joined in Last One Month</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card bg-danger">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-6 mt3">
+                            <h4>RMS Follow-up</h4>
+                            <h5>0%</h5>
+                            <small class="mt-2">Follow-up Updated</small>
+                        </div>
+                        <div class="col-lg-6">
+                            <i class="fas fa-user" style="font-size: 3rem;"></i>
+                            <i class="fas fa-indian-rupee-sign ml-3" style="font-size: 3rem;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div class="card bg-info">
+                <div class="card-body">
+                    <i class="fas fa-cake-candles" style="font-size: 3rem;"></i>
+                </div>
+                <div class="mt-3">
+                    <h5>Clients are celebrating their Birthday's today</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!-- card end -->
+
+  <h5>{{response_load}}</h5>
+  
+    <!-- STATISTIC CHART-->
+    <section class="statistic-chart">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <!-- CHART-->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="statistic-chart-1">
+                                    <h3 class="title-3 m-b-30 "><i class="fa fa-link"></i>Banned Scrips</h3>
+                                    
+                                    <table class="table table-borderless table-striped table-earning">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Price</th>
+                                          
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>ASIANPAINT</td>
+                                                <td>3098.55</td>
+                                                
+                                            </tr>
+                                        </tbody>
+                                        <tbody>
+                                            <tr>
+                                                <td>HCLTECH</td>
+                                                <td>1260.15</td>
+                                                
+                                            </tr>
+                                        </tbody>
+                                        <tbody>
+                                            <tr>
+                                                <td>MRF</td>
+                                                <td>108240.00</td>
+                                                
+                                            </tr>
+                                        </tbody>
+                                        <tbody>
+                                            <tr>
+                                                <td>AXISBANK</td>
+                                                <td>1029.95</td>
+                                                
+                                            </tr>
+                                        </tbody>
+                                        <tbody>
+                                            <tr>
+                                                <td>HDFCBANK</td>
+                                                <td>1500.00</td>
+                                            </tr>
+                                        </tbody>
+                                       
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- END CHART-->
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <!-- TOP CAMPAIGN-->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="top-campaign">
+                                <h3 class="title-3 m-b-30"><i class="fa-solid fa-chart-line"></i>Today Gainer</h3>
+                                <div class="table-responsive">
+                                    <table class="table table-top-campaign">
+                                        <tbody>
+                                            <tr>
+                                                <td>TCS</td>
+                                                <td>2492.55</td>
+                                            </tr>
+                                            <tr>
+                                                <td>HDFCBANK</td>
+                                                <td>1500.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>INFY</td>
+                                                <td>1388.20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>GRASIM</td>
+                                                <td>1946.10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>CIPLA</td>
+                                                <td>1243.95</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END TOP CAMPAIGN-->
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <!-- TOP CAMPAIGN-->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="top-campaign">
+                                <h3 class="title-3 m-b-30"><i class="fa-solid fa-chart-gantt"></i>Today LOOSERS</h3>
+                                <div class="table-responsive">
+                                    <table class="table table-top-campaign">
+                                        <tbody>
+                                            <tr>
+                                                <td>YESBANK</td>
+                                                <td>18.40</td>
+                                            </tr>
+                                            <tr>
+                                                <td>HINDZINC</td>
+                                                <td>303.95</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ZOMATO</td>
+                                                <td>123.23</td>
+                                            </tr>
+                                            <tr>
+                                                <td>JSL</td>
+                                                <td>483.15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>SAIL</td>
+                                                <td>89.50</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END TOP CAMPAIGN-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END STATISTIC CHART-->
+
+
+    <!-- news -->
+
+    <section class="statistic-chart">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <!-- CHART-->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="statistic-chart-1">
+                                    <h3 class="title-3 m-b-30 "><i class="fa fa-link"></i>Banned Scrips</h3>
+                                    
+                                    <table class="table table-borderless table-striped table-earning">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Price</th>
+                                          
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>ASIANPAINT</td>
+                                                <td>3098.55</td>
+                                                
+                                            </tr>
+                                        </tbody>
+                                        <tbody>
+                                            <tr>
+                                                <td>HCLTECH</td>
+                                                <td>1260.15</td>
+                                                
+                                            </tr>
+                                        </tbody>
+                                        <tbody>
+                                            <tr>
+                                                <td>MRF</td>
+                                                <td>108240.00</td>
+                                                
+                                            </tr>
+                                        </tbody>
+                                        <tbody>
+                                            <tr>
+                                                <td>AXISBANK</td>
+                                                <td>1029.95</td>
+                                                
+                                            </tr>
+                                        </tbody>
+                                        <tbody>
+                                            <tr>
+                                                <td>HDFCBANK</td>
+                                                <td>1500.00</td>
+                                            </tr>
+                                        </tbody>
+                                       
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- END CHART-->
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <!-- TOP CAMPAIGN-->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="top-campaign">
+                                <h3 class="title-3 m-b-30"><i class="fa-solid fa-chart-line"></i>Today Gainer</h3>
+                                <div class="table-responsive">
+                                    <table class="table table-top-campaign">
+                                        <tbody>
+                                            <tr>
+                                                <td>TCS</td>
+                                                <td>2492.55</td>
+                                            </tr>
+                                            <tr>
+                                                <td>HDFCBANK</td>
+                                                <td>1500.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>INFY</td>
+                                                <td>1388.20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>GRASIM</td>
+                                                <td>1946.10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>CIPLA</td>
+                                                <td>1243.95</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END TOP CAMPAIGN-->
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <!-- TOP CAMPAIGN-->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="top-campaign">
+                                <h3 class="title-3 m-b-30"><i class="fa-solid fa-chart-gantt"></i>Today LOOSERS</h3>
+                                <div class="table-responsive">
+                                    <table class="table table-top-campaign">
+                                        <tbody>
+                                            <tr>
+                                                <td>YESBANK</td>
+                                                <td>18.40</td>
+                                            </tr>
+                                            <tr>
+                                                <td>HINDZINC</td>
+                                                <td>303.95</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ZOMATO</td>
+                                                <td>123.23</td>
+                                            </tr>
+                                            <tr>
+                                                <td>JSL</td>
+                                                <td>483.15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>SAIL</td>
+                                                <td>89.50</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END TOP CAMPAIGN-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- news end -->
+
+{% endblock main %}

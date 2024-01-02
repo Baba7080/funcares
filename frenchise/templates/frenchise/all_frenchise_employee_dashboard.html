@@ -20,11 +20,12 @@
             <div class="sidebar-brand">
                 <a href="{% url 'home' %}">Home</a></div></div>
             
-            <li><a href="{% url 'admin_frenchise' %}">Franchise</a></li>
-            <li><a href="#about">Employee</a></li>
+                <li><a href="{% url 'f_overview' %}">Franchise Dashboard</a></li>
+                
+                <li><a href="{% url 'employee' %}">Employee Form</a></li>
             
             <div class="dropdown">
-                <li><a href="#about">Loans</a></li>
+                <li><a href="{% url 'loans' %}"> All Loans</a></li>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
                   <li><a class="dropdown-item" href="#">Personal Loan</a></li>
                   <li><a class="dropdown-item" href="#">Home Loan</a></li>
@@ -32,11 +33,15 @@
                 </ul>
               </div>
            </li>
-           <li><a href="#services">Services</a></li>
+           <!-- <li><a href="#services">Services</a></li>
            <li><a href="#contact">Contact</a></li>
-           <li><a href="#followme">Follow me</a></li>
+           <li><a href="#followme">Follow me</a></li> -->
            </ul>
        </nav>
+     
+    
+    
+
              <!-- /#sidebar-wrapper -->
      
              <!-- Page Content -->
@@ -74,7 +79,7 @@
                                                             
                                                             <th>Email</th>
                                                             <th>Username</th>
-                                                            <th style="width:25%">Tottal Sales</th>
+                                                            <th style="width:25%">Total Sales</th>
                                                             <th>Insurance</th>
                                                             <th>Loan</th>
                                                           </tr>

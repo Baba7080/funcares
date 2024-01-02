@@ -1,0 +1,438 @@
+{% extends 'frenchise_dashboard/template/frenchise_base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+
+{% block main-page %}
+
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="home-tab">
+                <div class="d-sm-flex align-items-center justify-content-between border-bottom">
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab"
+                        aria-controls="overview" aria-selected="true">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#audiences" role="tab"
+                        aria-selected="false">Audiences</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#demographics" role="tab"
+                        aria-selected="false">Demographics</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link border-0" id="more-tab" data-bs-toggle="tab" href="#more" role="tab"
+                        aria-selected="false">More</a>
+                    </li>
+                  </ul>
+                  <div>
+                    <div class="btn-wrapper">
+                      <a href="#" class="btn btn-otline-dark align-items-center"><i class="icon-share"></i> Share</a>
+                      <a href="#" class="btn btn-otline-dark"><i class="icon-printer"></i> Print</a>
+                      <a href="#" class="btn btn-primary text-white me-0"><i class="icon-download"></i> Export</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-content tab-content-basic">
+                  <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        {% for ad in data_all %}
+                  
+                        <div class="statistics-details d-flex align-items-center justify-content-between">
+                          <div>
+                            <p class="statistics-title">Loan</p>
+                            <h3 class="rate-percentage">{{ad.total_loan_completed}}/{{ad.count_L}}</h3>
+                            <p class="text-danger d-flex"><i class="mdi mdi-menu-down"></i><span>-0.5%</span></p>
+                          </div>
+                          <div>
+                            <p class="statistics-title">Insurance</p>
+                            <h3 class="rate-percentage">{{ad.total_insurance_completed}}/{{ad.count_Insur}}</h3>
+                            <p class="text-success d-flex"><i class="mdi mdi-menu-up"></i><span>+0.1%</span></p>
+                          </div>
+                          <div>
+                            <p class="statistics-title">Mutual Fund</p>
+                            <h3 class="rate-percentage">{{ad.total_mutual_completed}}/{{ad.count_mf}}</h3>
+                            <p class="text-danger d-flex"><i class="mdi mdi-menu-down"></i><span>68.8</span></p>
+                          </div>
+                          <div class="d-none d-md-block">
+                            <p class="statistics-title">Demat</p>
+                            <h3 class="rate-percentage">{{ad.total_da_completed}}/{{ad.count_da}}</h3>
+                            <p class="text-success d-flex"><i class="mdi mdi-menu-down"></i><span>+0.8%</span></p>
+                          </div>
+                          <div class="d-none d-md-block">
+                            <p class="statistics-title">Total Sales</p>
+                            <h3 class="rate-percentage">{{ad.total_sales}}/{{ad.total_submit}}</h3>
+                            <p class="text-danger d-flex"><i class="mdi mdi-menu-down"></i><span>68.8</span></p>
+                          </div>
+                          <div class="d-none d-md-block">
+                            <p class="statistics-title">Revenue</p>
+                            <h3 class="rate-percentage">₹{{ad.total_earning}}</h3>
+                            <p class="text-success d-flex"><i class="mdi mdi-menu-down"></i><span>+0.8%</span></p>
+                          </div>
+                        </div>
+                     
+                        {% endfor %}
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-4 grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body">
+                            <h4 class="card-title">Total Forms</h4>
+                            <canvas id="Total-Forms-Pie"></canvas>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body">
+                            <h4 class="card-title">Forms Completed</h4>
+                            <canvas id="Total-forms-completed-individual"></canvas>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-lg-4 grid-margin stretch-card">
+                        <div class="card card-rounded">
+                          <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                              <h4 class="card-title card-title-dash">Activities</h4>
+                              <p class="mb-0">20 finished, 5 remaining</p>
+                            </div>
+                            <ul class="bullet-line-list">
+                              <li>
+                                <div class="d-flex justify-content-between">
+                                  <div><span class="text-light-green">Ben Tossell</span> assign you a task</div>
+                                  <p>Just now</p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-flex justify-content-between">
+                                  <div><span class="text-light-green">Oliver Noah</span> assign you a task</div>
+                                  <p>1h</p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-flex justify-content-between">
+                                  <div><span class="text-light-green">Jack William</span> assign you a task</div>
+                                  <p>1h</p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-flex justify-content-between">
+                                  <div><span class="text-light-green">Leo Lucas</span> assign you a task</div>
+                                  <p>1h</p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-flex justify-content-between">
+                                  <div><span class="text-light-green">Thomas Henry</span> assign you a task</div>
+                                  <p>1h</p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-flex justify-content-between">
+                                  <div><span class="text-light-green">Ben Tossell</span> assign you a task</div>
+                                  <p>1h</p>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-flex justify-content-between">
+                                  <div><span class="text-light-green">Ben Tossell</span> assign you a task</div>
+                                  <p>1h</p>
+                                </div>
+                              </li>
+                            </ul>
+                            <div class="list align-items-center pt-3">
+                              <div class="wrapper w-100">
+                                <p class="mb-0">
+                                  <a href="#" class="fw-bold text-primary">Show all <i
+                                      class="mdi mdi-arrow-right ms-2"></i></a>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-8 grid-margin stretch-card">
+                        <div class="card card-rounded">
+                          <div class="card-body">
+                            <div class="d-sm-flex justify-content-between align-items-start">
+                              <div>
+                                <h4 class="card-title card-title-dash">Revenue</h4>
+                                <p class="card-subtitle card-subtitle-dash">You can see 12 year data</p>
+                              </div>
+                              <div>
+                                <div class="dropdown">
+                                  <button class="btn btn-light dropdown-toggle toggle-dark btn-lg mb-0 me-0"
+                                    type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">Monthly</button>
+                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                    <h6 class="dropdown-header">Monthly</h6>
+                                    <a class="dropdown-item" href="#">Yearly</a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                     
+                            <div class="d-sm-flex align-items-center mt-1 justify-content-between">
+                              <div class="d-sm-flex align-items-center mt-4 justify-content-between">
+                                <h2 class="me-2 fw-bold">₹5220</h2>
+                                <h4 class="me-2">INR</h4>
+                                <h4 class="text-success">(+1.37%)</h4>
+                              </div>
+           
+                              <div class="me-3">
+                                <div id="marketingOverview-legend"></div>
+                              </div>
+                            </div>
+                            <div class="chartjs-bar-wrapper mt-3">
+                              <canvas id="marketingOverview"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 grid-margin stretch-card">
+                        <div class="card card-rounded">
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-lg-12">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                  <h4 class="card-title card-title-dash">Type By Amount</h4>
+                                </div>
+                                <div>
+                                  <canvas class="my-auto" id="doughnutChart"></canvas>
+                                </div>
+                                <div id="doughnutChart-legend" class="mt-5 text-center"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="col-lg-6 grid-margin stretch-card">
+                        <div class="card">
+                          <div class="card-body">
+                            <h4 class="card-title">Doughnut chart</h4>
+                            <canvas id="salse-revenue"></canvas>
+                          </div>
+                        </div>
+                      </div> -->
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-12 d-flex flex-column">
+                        <div class="row flex-grow">
+                          <div class="col-12 grid-margin stretch-card">
+                            <div class="card card-rounded">
+                              <div class="card-body">
+                                <div class="d-sm-flex justify-content-between align-items-start">
+                                  <div>
+                                    <h4 class="card-title card-title-dash">Market Overview</h4>
+                                    <h5 class="card-title card-title-dash">Nifty50</h5>
+                                    <p class="card-subtitle card-subtitle-dash">Lorem ipsum dolor sit amet consectetur
+                                      adipisicing elit</p>
+                                  </div>
+                                  <div>
+                                    <div class="dropdown">
+                                      <button class="btn btn-light dropdown-toggle toggle-dark btn-lg mb-0 me-0"
+                                        type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false"> This month </button>
+                                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                        <h6 class="dropdown-header">Settings</h6>
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Separated link</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="d-sm-flex align-items-center mt-1 justify-content-between">
+                                  <div class="d-sm-flex align-items-center mt-4 justify-content-between">
+                                    <h2 class="me-2 fw-bold">20531.00</h2>
+                                    <h4 class="me-2">USD</h4>
+                                    <h4 class="text-success">(+1.37%)</h4>
+                                  </div>
+                                  <div class="me-3">
+                                    <div id="marketingOverview-legend"></div>
+                                  </div>
+                                </div>
+                                <div class="chartjs-bar-wrapper mt-3">
+                                  <canvas id="marketingOverview"></canvas>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+  <div class="d-sm-flex justify-content-center justify-content-sm-between">
+    <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Premium <a
+        href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash.</span>
+    <span class="float-none float-sm-end d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
+  </div>
+</footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+
+
+
+{% endblock main-page %}
+
+{% block frenchisechartjs %}
+<script>
+
+
+  // Total Leads Generated
+     var total_data = [];
+    {% for ad in data_all %}
+        total_data.push({{ad.total_submit}});
+        total_data.push({{ad.total_sales}});    
+    {% endfor %}
+  
+  var ctx5 = $("#Total-Forms-Pie").get(0).getContext("2d");
+  var myChart5 = new Chart(ctx5, {
+    type: "pie",
+    data: {
+      labels: ["Completed", "Pending"],
+      datasets: [{
+        label: "Leads",
+        backgroundColor: [
+          "rgba(75, 192, 192, 0.2)",
+          "rgba(255, 99, 132, 0.2)"
+        ],
+        borderColor: [
+          'rgba(75, 192, 192, 1)',
+          'rgba(255,99,132,1)',
+
+        ],
+        data: total_data
+      }]
+    },
+    options: {
+      responsive: true,
+      title: {
+        display: true,
+        text: "Leads by Status"
+      }
+    }
+  });
+  
+  // individual leads generated
+  var indiidual_data = [];
+  {% for bd in data_all %}
+    indiidual_data.push({{bd.total_loan}});
+    indiidual_data.push({{bd.total_insurance}});
+    indiidual_data.push({{bd.total_da}});
+    indiidual_data.push({{bd.total_mf}});
+  {% endfor %}
+  
+  
+  var ctx6 = $("#Total-forms-completed-individual").get(0).getContext("2d");
+      var myChart6 = new Chart(ctx6, {
+          type: "doughnut",
+          data: {
+              labels: ["Loans", "Insurance", "Demat Account", "Mutual Fund"],
+              datasets: [{
+                  backgroundColor: [
+                      "rgba(255, 99, 132, 0.2)",
+                      "rgba(54, 162, 235, 0.2)",
+                      "rgba(255, 206, 86, 0.2)",
+                      "rgba(75, 192, 192, 0.2)",
+                      // "rgba(235, 22, 22, .3)"
+                  ],
+                  borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                   
+                  ],
+                  data: indiidual_data
+              }]
+          },
+          options: {
+              responsive: true,
+              title: {
+              display: true,
+              text: "Leads by Status"
+              }
+          }
+      });
+  
+  
+  
+      var ctx2 = $("#salse-revenue").get(0).getContext("2d");
+     
+      var myChart2 = new Chart(ctx2, {
+          type: "line",
+          data: {
+              labels: ["2016", "2017", "2018", "2019", "2020", "2021", "2022"],
+              datasets: [{
+                      label: "Salse",
+                      data: [15, 30, 55, 45, 70, 65, 85],
+                      backgroundColor: "rgba(235, 22, 22, .7)",
+                      fill: true
+                  },
+                  {
+                      label: "Revenue",
+                      data: [99, 135, 170, 130, 190, 180, 270],
+                      backgroundColor: "rgba(235, 22, 22, .5)",
+                      fill: true
+                  }
+              ]
+              },
+          options: {
+              responsive: true
+          }
+      });
+      
+      var ctx1 = $("#worldwide-sales").get(0).getContext("2d");
+      var myChart1 = new Chart(ctx1, {
+          type: "bar",
+          data: {
+              labels: ["2016", "2017", "2018", "2019", "2020", "2021", "2022"],
+              datasets: [{
+                      label: "USA",
+                      data: [15, 30, 55, 65, 60, 80, 95],
+                      backgroundColor: "rgba(235, 22, 22, .7)"
+                  },
+                  {
+                      label: "UK",
+                      data: [8, 35, 40, 60, 70, 55, 75],
+                      backgroundColor: "rgba(235, 22, 22, .5)"
+                  },
+                  {
+                      label: "AU",
+                      data: [12, 25, 45, 55, 65, 70, 60],
+                      backgroundColor: "rgba(235, 22, 22, .3)"
+                  }
+              ]
+              },
+          options: {
+              responsive: true
+          }
+      });
+  </script>
+
+{% endblock frenchisechartjs %}

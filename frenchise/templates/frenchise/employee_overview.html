@@ -13,30 +13,20 @@
         <div class="overlay"></div>
          
              <!-- Sidebar -->
-         <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
-          <ul class="nav sidebar-nav">
-            <div class="sidebar-header">
-            <div class="sidebar-brand">
-                <a href="{% url 'e_overview' %}">Dashboard</a></div></div>
-            
-            <!-- <li><a href="{% url 'dashboard' %}">Franchise Dashboard</a></li> -->
-            
-            <li><a href="{% url 'appllyinsurance' %}">Apply for Loans</a></li>
-            
-            <div class="dropdown">
-                <li><a href="{% url 'appllyloan' %}">Apply for Insurance</a></li>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                  <li><a class="dropdown-item" href="#">Personal Loan</a></li>
-                  <li><a class="dropdown-item" href="#">Home Loan</a></li>
-                  <li><a class="dropdown-item" href="#">Business Loan</a></li>
-                </ul>
-              </div>
-           </li>
-           <li><a href="#services">Services</a></li>
-           <li><a href="#contact">Contact</a></li>
-           <li><a href="#followme">Follow me</a></li>
-           </ul>
-       </nav>
+             <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
+                <ul class="nav sidebar-nav">
+                  <div class="sidebar-header">
+                  <div class="sidebar-brand">
+                      <a href="{% url 'home' %}">Home</a></div></div>
+                  
+                  <!-- <li><a href="{% url 'f_overview' %}">Franchise Dashboard</a></li> -->
+                  <li><a href="{% url 'employee' %}">Employee</a></li>
+                  <li><a href="{% url 'apply_loan' %}">Apply for Loans</a></li>
+                 <!-- <li><a href="#services">Services</a></li>
+                 <li><a href="#contact">Contact</a></li>
+                 <li><a href="#followme">Follow me</a></li> -->
+                 </ul>
+             </nav>
              <!-- /#sidebar-wrapper -->
      
              <!-- Page Content -->
@@ -54,19 +44,26 @@
                         <!-- Center the form -->
                         <div class="col-lg-2">
                             <div class="row">
-                                <form method="post" action="" align-items-center d-flex>
+                             
+                                <form method="post" action="{% url 'emp_get_detail' %}" align-items-center d-flex>
                                     {% csrf_token %}
-
-                                    <div class="form-group">
-                                        <label for="from">From</label>
-                                        <input type="date" name="from" class="form-control form-control-sm">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="to">To</label>
-                                        <input type="date" name="to" class="form-control form-control-sm">
-                                    </div>
-                                    <input type="submit" class="btn btn-primary px-4" value="Save Changes">
+                                    <div class="form-group d-flex flex-row">
+                                        <div class="p-2">
+                                            <label for="from">From</label>
+                                            <input type="date" name="from" class="form-control form-control-sm">
+                                        </div>
+                                        <div class="p-2">
+                                            <label for="to">To</label>
+                                            <input type="date" name="to" class="form-control form-control-sm">
+                                        </div>
+                                        <div class="">
+                                            <input type="submit" class="btn btn-primary btn-sm  px-2" value="submit">
+                                        </div>
+                                      </div>
+                                   
+                                    
                                 </form>
+                              
                             </div>
                         </div>
     
@@ -77,96 +74,71 @@
                  <!-- leads details card -->
                  <div class="container">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="stat-widget-five">
-                                        <div class="stat-icon dib flat-color-1">
-                                            <i class="pe-7s-cash"></i>
-                                        </div>
-                                        <div class="stat-content">
-                                            <div class="text-left dib">
-                                                <div class="stat-text"><span class="count">50</span></div>
-                                                <div class="stat-heading">Total Employee</div>
-                                            </div>
-                                        </div>
+                        
+                        <table id="mytable" class="table">
+                            <thead>
+                           
+                              <tr>
+                                <th><input type="checkbox" id="checkall" /></th>
+                                <th>Name</th>  
+                                <th>Email</th>
+                                <th>Username</th>
+                                
+                                <th>Loan</th>
+                                <th>Insurance</th>
+                                <th>Mutual Fund</th>
+                                <th>Demat</th>
+                                <th style="width:25%">Total Sales</th>
+                                
+                              </tr>
+                            </thead>
+                            <tbody>
+                                {% for ad in em_data %}
+                              <tr>
+                                <td><input type="checkbox" class="checkthis" /></td>
+                                <td>{{ad.Name}}</td>
+                                
+                                <td>{{ad.email}}</td>
+                                <td>{{ad.username}}</td>
+                                <td>{{ad.total_loan}}/0{{total_loan_completed}}</td>
+                                <td>{{ad.total_insurance}}/0{{total_insurance_completed}}</td>
+                                <td>{{ad.total_mutual}}/0{{total_mutual_completed}}</td>
+                                <td>{{ad.total_demat}}/0{{total_demat_completed}}</td>
+                                <td>{{ad.total_sale}}</td>
+                                {% comment %} <td> {% endcomment %}
+                                    {% comment %} <div class="progress">
+                                        <div style="width: 60%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="red progress-bar">
+                                        <span>60%</span>
+                                       </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="stat-widget-five">
-                                        <div class="stat-icon dib flat-color-2">
-                                            <i class="pe-7s-cart"></i>
-                                        </div>
-                                        <div class="stat-content">
-                                            <div class="text-left dib">
-                                                <div class="stat-text"><span class="count">3435</span></div>
-                                                <div class="stat-heading">Loans</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="stat-widget-five">
-                                        <div class="stat-icon dib flat-color-3">
-                                            <i class="pe-7s-browser"></i>
-                                        </div>
-                                        <div class="stat-content">
-                                            <div class="text-left dib">
-                                                <div class="stat-text"><span class="count">349</span></div>
-                                                <div class="stat-heading">Insurance</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="stat-widget-five">
-                                        <div class="stat-icon dib flat-color-4">
-                                            <i class="pe-7s-users"></i>
-                                        </div>
-                                        <div class="stat-content">
-                                            <div class="text-left dib">
-                                                <div class="stat-text"><span class="count">2986</span></div>
-                                                <div class="stat-heading">Mutual Fund</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                </td>
+                                <td><span class="label label-info">Pending</span></td> {% endcomment %}
+                              </tr>
+                              {% endfor %}
+                              
+            
+                            </tbody>
+                        </table>
+                     
                     </div>
                 </div>
         <!-- lead details end -->
 
         <!-- lead charts start -->
 
-                <div class="container-fluid">
+                <!-- <div class="container-fluid">
                     <div class="page-content">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="card">
-                                    <div class="card-body">
+                                    <div class="card-body"> -->
 
                                         <!-- RECENT REPORT-->
-                                        <div class="recent-report3 m-b-40">
+                                        <!-- <div class="recent-report3 m-b-40">
                                             <div class="title-wrap">
-                                                <h3 class="title-3 text-center">Generating Leads</h3>
+                                                <h3 class="title-3 text-center">Generating Leads</h3> -->
                                                 <!-- <div class="filters m-b-55 d-flex"> -->
-                                                    <div class="rs-select2--dark rs-select2--md m-r-10 rs-select2--border mx-2">
+                                                    <!-- <div class="rs-select2--dark rs-select2--md m-r-10 rs-select2--border mx-2"> -->
                                                         <!-- <select class="js-select2" name="property">
                                                             <option selected="selected">Products Sales</option>
                                                             <option value="">Personal Loans</option>
@@ -176,38 +148,38 @@
                                                             <option value="">Insurance</option>
                                                         </select> -->
                                                         <!-- <div class="dropDownSelect2"></div> -->
-                                                    </div>
-                                                    <div class="rs-select2--dark rs-select2--sm rs-select2--border">
+                                                    <!-- </div>
+                                                    <div class="rs-select2--dark rs-select2--sm rs-select2--border"> -->
                                                         <!-- <select class="js-select2 au-select-dark" name="time">
                                                             <option selected="selected">All Time</option>
                                                             <option value="">By Month</option>
                                                             <option value="">By Day</option>
                                                         </select>
                                                         <div class="dropDownSelect2"></div> -->
-                                                    </div>
+                                                    <!-- </div> -->
                                                 <!-- </div> -->
-                                                <div class="chart-info-wrap">
+                                                <!-- <div class="chart-info-wrap">
                                                     
-                                                    <canvas id="myChart1" style="width:100%;max-width:700px"></canvas>
+                                                    <canvas id="myChart1" style="width:100%;max-width:700px"></canvas> -->
                                                    
 
                                                     
-                                                </div>
+                                                <!-- </div>
                                             </div>
                                             
-                                            
-                                        </div>
+                                             -->
+                                        <!-- </div> -->
                                         <!-- END RECENT REPORT-->
-                                    </div>
+                                    <!-- </div>
                                 </div>
                                   
-                            </div>
-                            <div class="col-lg-6">
+                            </div> -->
+                            <!-- <div class="col-lg-6">
                                 <div class="card">
-                                    <div class="card-body">
+                                    <div class="card-body"> -->
                                 <!-- CHART PERCENT-->
-                                        <div class="chart-percent-6 m-b-40">
-                                            <h3 class="title-3 m-b-25 text-center">Success Leads</h3>
+                                        <!-- <div class="chart-percent-6 m-b-40">
+                                            <h3 class="title-3 m-b-25 text-center">Success Leads</h3> -->
                                             <!-- <div class="chart-note m-b-5">
                                                 <span class="dot dot--blue"></span>
                                                 <span>products</span>
@@ -216,24 +188,24 @@
                                                 <span class="dot dot--red"></span>
                                                 <span>services</span>
                                             </div> -->
-                                            <div class="chart-wrap m-t-60">
+                                            <!-- <div class="chart-wrap m-t-60">
                                                 <canvas id="myChart2" style="width:100%;max-width:700px"></canvas>
                                             </div>
-                                        </div>
+                                        </div> -->
                                 <!-- END CHART PERCENT-->
-                                    </div>
+                                    <!-- </div>
                                 </div>
                             </div>
                               
                         </div>
                     </div>
-                </div>
+                </div> -->
 
         <!-- lead charts end -->
 
     <!-- monthly growth Bar Charts start -->
 
-        <div class="container-fluid">
+        <!-- <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card">
@@ -241,9 +213,9 @@
                             <h3 class="title-3 text-center">Annual Growth</h3>
                             <div class="row">
                                 <div class="col-lg-8">
-                                    <div class="card-body">
+                                    <div class="card-body"> -->
                                         <!-- <canvas id="TrafficChart"></canvas>   -->
-                                        <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+                                        <!-- <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
@@ -275,22 +247,22 @@
                                             <div class="progress mb-2" style="height: 5px;">
                                                 <div class="progress-bar bg-flat-color-4" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
-                                        </div>
-                                    </div> <!-- /.card-body -->
-                                </div>
-                            </div> <!-- /.row -->
-                            <div class="card-body">
+                                        </div> -->
+                                    <!-- </div> /.card-body -->
+                                <!-- </div> -->
+                            <!-- </div> /.row -->
+                            <!-- <div class="card-body">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- monthly growth Bar Charts start -->
 
         <!--  Charts start -->
 
-        <div class="container-fluid">
+        <!-- <div class="container-fluid">
             <div class="row">
                 <div class="card-body">
                     <h3 class="title-3 text-center">Annual Growth</h3>
@@ -298,35 +270,35 @@
                             
                             <div class="col-lg-4">
                                 <div class="card">
-                                    <div class="card-body">
-                                        <!-- <canvas id="TrafficChart"></canvas>   -->
+                                    <div class="card-body"> -->
+                                        <!-- <canvas id="TrafficChart"></canvas>  
                                         <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <div class="card">
-                                    <div class="card-body">
+                                    <div class="card-body"> -->
                                         <!-- <canvas id="TrafficChart"></canvas>   -->
-                                        <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+                                        <!-- <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-4">
                                 <div class="card">
-                                    <div class="card-body">
+                                    <div class="card-body"> -->
                                         <!-- <canvas id="TrafficChart"></canvas>   -->
-                                        <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+                                        <!-- <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
                                     </div>
                                 </div>
-                            </div>
-                        </div> <!-- /.row -->
+                            </div> -->
+                        <!-- </div> /.row -->
                     
-                    </div>
+                    <!-- </div>
                 </div>
                    
             </div>
-        </div>
+        </div> -->
 
     
                 <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">

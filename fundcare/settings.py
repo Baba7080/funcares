@@ -33,6 +33,8 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'channels',
+    'market.apps.MarketConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -46,8 +48,13 @@ INSTALLED_APPS = [
     'corsheaders',
     'storages',
     'crispy_bootstrap4',
+    'celery',
+    'django_celery_results',
+    'django_celery_beat'
 
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -79,7 +86,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'fundcare.wsgi.application'
+# WSGI_APPLICATION = 'fundcare.wsgi.application'
+ASGI_APPLICATION = 'fundcare.asgi.application'
 
 
 # Database
@@ -150,24 +158,45 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL ='/media/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static/"),
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static/"),
+# ]
 
 # S3 Bucket
 
-AWS_ACCESS_KEY_ID = "AKIATUKOIRDACVWFMEDE"
-AWS_SECRET_ACCESS_KEY = "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"
-AWS_STORAGE_BUCKET_NAME = "fundcarebucket1"
+# AWS_ACCESS_KEY_ID = "AKIATUKOIRDACVWFMEDE"
+# AWS_SECRET_ACCESS_KEY = "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"
+# AWS_STORAGE_BUCKET_NAME = "fundcarebucket1"
 
-# AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+# # AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
-# Set static and media URLs
-STATIC_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/staticfiles/'
-MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/media/'
+# # Set static and media URLs
+# STATIC_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/staticfiles/'
+# MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com/media/'
 
-AWS_LOCATION = 'staticfiles/'
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# AWS_LOCATION = 'staticfiles/'
+# AWS_S3_FILE_OVERWRITE = False
+# AWS_DEFAULT_ACL = None
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
+# Celery Settings
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'Asia/Kolkata'
+CELERY_RESULT_BACKEND = 'django-db'
+
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+
+
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("localhost", 6379)],
+        },
+    },
+}

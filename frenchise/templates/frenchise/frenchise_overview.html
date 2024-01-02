@@ -1,24 +1,7 @@
 {% extends 'frenchise/frenchise_base.html' %}
 {% load static %}
 {% block title %} Home {% endblock title %}
-{% block graphcss %}
-<style>
-    /* Define the dark theme styles */
-        /* Dark Theme Styles */
-    body.dark {
-        background-color: #333;
-        color: #fff;
-    }
-    
-    /* Light Theme Styles */
-    body.light {
-        background-color: #fff;
-        color: #333;
-    }
-      
 
-</style>
-{% endblock graphcss %}
 {% block dash-page %}
 
 
@@ -64,7 +47,7 @@
                     <i class="fa fa-chart-pie fa-3x text-primary"></i>
                     <div class="ms-3">
                         <p class="mb-2">Total Revenue</p>
-                        <h6 class="mb-0">${{revenue.amount}}</h6>
+                        <h6 class="mb-0">{{ad.total_earning}}</h6>
                     </div>
                 </div>
             </div>
@@ -124,7 +107,7 @@
     <!-- Chart End -->
 
     <!-- Total Sales-->
-    <div class="container-fluid pt-4 px-4">
+    <!-- <div class="container-fluid pt-4 px-4">
         <div class="row g-4">
             <div class="col-sm-12 col-md-6 col-xl-4">
                 <div class="h-100 bg-secondary rounded p-4">
@@ -268,12 +251,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Widget End -->
 
 
     <!-- Recent Sales Start -->
-    <div class="container-fluid pt-4 px-4">
+    <!-- <div class="container-fluid pt-4 px-4">
         <div class="bg-secondary text-center rounded p-4">
             <div class="d-flex align-items-center justify-content-between mb-4">
                 <h6 class="mb-0">Recent Salse</h6>
@@ -342,12 +325,12 @@
                 </table>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Recent Sales End -->
 
 
     <!-- Widgets Start -->
-    <div class="container-fluid pt-4 px-4">
+    <!-- <div class="container-fluid pt-4 px-4">
         <div class="row g-4">
             <div class="col-sm-12 col-md-6 col-xl-4">
                 <div class="h-100 bg-secondary rounded p-4">
@@ -464,7 +447,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Widgets End -->
 
 
@@ -491,7 +474,7 @@
 
 {% block javascripttags %}
 
-  
+
 <script>
 
 
@@ -563,7 +546,7 @@ var ctx6 = $("#do-chart").get(0).getContext("2d");
 
 
     var ctx2 = $("#salse-revenue").get(0).getContext("2d");
-    {% comment %} alert("kjhfksjd") {% endcomment %}
+   
     var myChart2 = new Chart(ctx2, {
         type: "line",
         data: {

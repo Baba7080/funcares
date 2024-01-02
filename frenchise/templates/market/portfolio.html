@@ -1,0 +1,138 @@
+{% extends 'market/market_base.html' %}
+{% load static %}
+{% block title %} mosl-home {% endblock title %}
+
+{% block main %}
+
+<section class="mb30 recommendation-tab-wrap">
+    <div class="container" id="divReadyMadeSolution">
+<style type="text/css">
+.green-text {
+color: #5eb73b !important;
+}
+
+.red-text {
+color: #d53b23 !important;
+}
+</style>
+<script type="text/javascript">
+function GetInvestedBasketDetails(id, isInvested) {
+debugger;
+var request = {
+    id: id,
+    fromPortfolio: 1
+};
+var token = $('[name=__RequestVerificationToken]').val();
+var data = EncryptData(JSON.stringify(request));
+var url = "/Home/BasketDetails";
+if (isInvested == 1)
+    url = "/Home/InvestedBasket";
+$.ajax({
+    type: "POST",
+    url: url,
+    data: JSON.stringify(data),
+    async: false,
+    contentType: 'application/json; charset=utf-8',
+    headers: { '__RequestVerificationToken': token },
+    dataType: "html",
+    success: function (response) {
+        VerifyJSONForAjaxReq(response);
+        $('#divMainContentPlaceHolder').empty();
+        $('#divMainContentPlaceHolder').html(response);
+        $("#AddFund").hide();
+    },
+    error: function (xhr, textStatus, errorThrown) {
+        alert("Error Occurred Details page");
+    }
+});
+}
+</script>
+<section class="section-spac">
+<div class="">
+<div class="container">
+    <div class="top-tile text-center mt20">
+        <h5 class="title-black title-width-bar"><span>readymade basket for you</span></h5>
+    </div>
+</div>
+<div style="text-align: right;margin-bottom: 10px;">
+    <a id="viewAllLink" onclick="LoadPage('Home','Basket')" class="font-opensans-semibold font12 orange-text cursor-pointer">View All</a>
+</div>
+<div class="recommended-fd-ul-wrapper">
+    <div class="row">
+            <div class="col-12 col-lg-6 col-xl-4 col-sm-6">
+                <div class="block border-block portfolio">
+                    <div class="recommended-fd-top-block portfolio-idea d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center">
+                        <p class="recommended-fd-title">First Step Bluechip</p>
+                    </div>
+                    <div class="recommended-fd-center-block">
+                        <ul class="d-flex justify-content-between flex-wrap label-list-items portfolio">
+                            <li>
+                                <label class="font-default-opensans">Min Investment</label>
+                                <p class="font-opensans-semibold">2,964</p>
+                            </li>
+                            <li>
+                                <label class="font-default-opensans">Returns(Since Launch)</label>
+                                <p class="font-opensans-semibold green-text">71.77%</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="recommended-fd-btn">
+                        <a href="javascript:void(0)" onclick="GetInvestedBasketDetails(1831,0)" class="btn btn-secondory">invest now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 col-xl-4 col-sm-6">
+                <div class="block border-block portfolio">
+                    <div class="recommended-fd-top-block portfolio-idea d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center">
+                        <p class="recommended-fd-title">Defence 2022</p>
+                    </div>
+                    <div class="recommended-fd-center-block">
+                        <ul class="d-flex justify-content-between flex-wrap label-list-items portfolio">
+                            <li>
+                                <label class="font-default-opensans">Min Investment</label>
+                                <p class="font-opensans-semibold">9,415</p>
+                            </li>
+                            <li>
+                                <label class="font-default-opensans">Returns(Since Launch)</label>
+                                <p class="font-opensans-semibold green-text">46.9%</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="recommended-fd-btn">
+                        <a href="javascript:void(0)" onclick="GetInvestedBasketDetails(1981,0)" class="btn btn-secondory">invest now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 col-xl-4 col-sm-6">
+                <div class="block border-block portfolio">
+                    <div class="recommended-fd-top-block portfolio-idea d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center">
+                        <p class="recommended-fd-title">Real Estate</p>
+                    </div>
+                    <div class="recommended-fd-center-block">
+                        <ul class="d-flex justify-content-between flex-wrap label-list-items portfolio">
+                            <li>
+                                <label class="font-default-opensans">Min Investment</label>
+                                <p class="font-opensans-semibold">10,027</p>
+                            </li>
+                            <li>
+                                <label class="font-default-opensans">Returns(Since Launch)</label>
+                                <p class="font-opensans-semibold green-text">48.56%</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="recommended-fd-btn">
+                        <a href="javascript:void(0)" onclick="GetInvestedBasketDetails(1681,0)" class="btn btn-secondory">invest now</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+</div>
+</section>
+<input type="hidden" id="hdnportfolioDay0Desc2" value="Check our expert-curated baskets designed especially for you!">
+<input type="hidden" id="hdnportfolioDay0Desc1" value="Why wait when you can start investing in our readymade stock baskets?">
+<input type="hidden" id="hdnportfolioDay0Desc1InvestNow" value="Start investing NOW">
+</div>
+</section>
+
+{% endblock main %}
