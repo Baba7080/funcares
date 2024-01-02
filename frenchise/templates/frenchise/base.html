@@ -11,38 +11,38 @@
 		<link rel="shortcut icon" type="image/x-icon" href="{% static 'frenchise/img/favicon.ico'%}">
 
 		<!-- CSS here -->
-            <link rel="stylesheet" href="{% static 'frenchise/css/bootstrap.min.css' %}">
-            <link rel="stylesheet" href="{% static 'frenchise/css/owl.carousel.min.css' %}">
-            <link rel="stylesheet" href="{% static 'frenchise/css/slicknav.css' %}" >
-            <link rel="stylesheet" href="{% static 'frenchise/css/flaticon.css' %}">
-            <link rel="stylesheet" href="{% static 'frenchise/css/animate.min.css' %}">
-            <link rel="stylesheet" href="{% static 'frenchise/css/magnific-popup.css' %}">
-            <link rel="stylesheet" href="{% static 'frenchise/css/fontawesome-all.min.css' %}">
-            <link rel="stylesheet" href="{% static 'frenchise/css/themify-icons.css' %}">
+            <link rel="stylesheet" href="{% static 'frenchisehome/css/bootstrap.min.css' %}">
+            <link rel="stylesheet" href="{% static 'frenchisehome/css/owl.carousel.min.css' %}">
+            <link rel="stylesheet" href="{% static 'frenchisehome/css/slicknav.css' %}" >
+            <link rel="stylesheet" href="{% static 'frenchisehome/css/flaticon.css' %}">
+            <link rel="stylesheet" href="{% static 'frenchisehome/css/animate.min.css' %}">
+            <link rel="stylesheet" href="{% static 'frenchisehome/css/magnific-popup.css' %}">
+            <link rel="stylesheet" href="{% static 'frenchisehome/css/fontawesome-all.min.css' %}">
+            <link rel="stylesheet" href="{% static 'frenchisehome/css/themify-icons.css' %}">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-            <link rel="stylesheet" href="{% static 'frenchise/css/slick.css' %}">
-            <link rel="stylesheet" href="{% static 'frenchise/css/nice-select.css' %}">
-            <link rel="stylesheet" href="{% static 'frenchise/css/style.css' %}">
+            <link rel="stylesheet" href="{% static 'frenchisehome/css/slick.css' %}">
+            <link rel="stylesheet" href="{% static 'frenchisehome/css/nice-select.css' %}">
+            <link rel="stylesheet" href="{% static 'frenchisehome/css/style.css' %}">
     <!-- FontAwesome 5 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">  
 
-    <!-- LInk tag dashboard--
+    <!-- LInk tag dashboard-->
 
  </head>
 
    <body>
 <!-- Preloader Start -->
-<div id="preloader-active">
+<!-- <div id="preloader-active">
     <div class="preloader d-flex align-items-center justify-content-center">
         <div class="preloader-inner position-relative">
             <div class="preloader-circle"></div>
-            <div class="preloader-img pere-text">
+            <div class="preloader-img pere-text"> -->
                 
                 <!-- <img src="{% static 'frenchise/img/logo/logo.png' %}" alt=""> -->
-            </div>
+            <!-- </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Preloader Start -->
 <header>
     <!-- Header Start -->
@@ -53,7 +53,7 @@
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-1">
                             <div class="logo ">
-                                <a href="{% url 'home' %}"><h1>FUNDCARE</h1></a>
+                                <a href="{% url 'home' %}"><img src="{% static 'admin_dashboard/images/fundcareslogo.jpg' %}" alt="logo" style="height: auto; width: 200px;"></a>
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-10">
@@ -73,6 +73,7 @@
                                             </ul>
                                         </li>
                                         <li><a href="{% url 'contact' %}">Contact</a></li>
+                                        <!-- <li><a href="{% url 'mofsllogin' %}">Market</a></li> -->
                                         {% if request.user.is_authenticated %}
                                             <li><a href="#">{{ request.user.username|capfirst }}</a>
                                                 <ul class="submenu">
@@ -119,9 +120,9 @@
 <div class="container">
 {% block Loan-page %} {% endblock Loan-page %}
 </div>
-
-    <footer class="mt-5">
         <!-- Footer Start-->
+    <footer class="mt-5">
+
         <div class="footer-area">
             <div class="container-fluid">
                <div class="footer-top footer-padding">
@@ -131,7 +132,7 @@
                                 <div class="single-footer-caption mb-30">
                                     <!-- logo -->
                                     <div class="footer-logo">
-                                        <h1><a href="{% url 'home' %}" class="btn-secondary">Fundcare</a></h1>
+                                       <a href="{% url 'home' %}" class="btn-secondary"><img src="{% static 'admin_dashboard/images/fundcareslogo.jpg' %}"></a>
                                     </div>
                                     <ul>
                                         <li><a href="#">About</a></li>
@@ -216,36 +217,36 @@
         <!-- chartjs -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 		<!-- All JS Custom Plugins Link Here here -->
-        <script src="{% static 'frenchise/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+        <script src="{% static 'frenchisehome/js/vendor/modernizr-3.5.0.min.js' %}"></script>
 		<!-- Jquery, Popper, Bootstrap -->
-		<script src="{% static 'frenchise/js/vendor/jquery-1.12.4.min.js' %}"></script>
-        <script src="{% static 'frenchise/js/popper.min.js' %}"></script>
-        <script src="{% static 'frenchise/js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'frenchisehome/js/vendor/jquery-1.12.4.min.js' %}"></script>
+        <script src="{% static 'frenchisehome/js/popper.min.js' %}"></script>
+        <script src="{% static 'frenchisehome/js/bootstrap.min.js' %}"></script>
 	    <!-- Jquery Mobile Menu -->
-        <script src="{% static 'frenchise/js/jquery.slicknav.min.js' %}"></script>
+        <script src="{% static 'frenchisehome/js/jquery.slicknav.min.js' %}"></script>
 
 		<!-- Jquery Slick , Owl-Carousel Plugins -->
-        <script src="{% static 'frenchise/js/owl.carousel.min.js' %}"></script>
-        <script src="{% static 'frenchise/js/slick.min.js' %}"></script>
+        <script src="{% static 'frenchisehome/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'frenchisehome/js/slick.min.js' %}"></script>
 		<!-- One Page, Animated-HeadLin -->
-        <script src="{% static 'frenchise/js/wow.min.js' %}"></script>
-		<script src="{% static 'frenchise/js/animated.headline.js' %}"></script>
-        <script src="{% static 'frenchise/js/jquery.magnific-popup.js' %}"></script>
+        <script src="{% static 'frenchisehome/js/wow.min.js' %}"></script>
+		<script src="{% static 'frenchisehome/js/animated.headline.js' %}"></script>
+        <script src="{% static 'frenchisehome/js/jquery.magnific-popup.js' %}"></script>
 
 		<!-- Nice-select, sticky -->
-        <script src="{% static 'frenchise/js/jquery.nice-select.min.js' %}"></script>
-		<script src="{% static 'frenchise/js/jquery.sticky.js' %}"></script>
+        <script src="{% static 'frenchisehome/js/jquery.nice-select.min.js' %}"></script>
+		<script src="{% static 'frenchisehome/js/jquery.sticky.js' %}"></script>
         
         <!-- contact js -->
-        <script src="{% static 'frenchise/js/contact.js' %}"></script>
-        <script src="{% static 'frenchise/js/jquery.form.js' %}"></script>
-        <script src="{% static 'frenchise/js/jquery.validate.min.js' %}"></script>
-        <script src="{% static 'frenchise/js/mail-script.js' %}"></script>
-        <script src="{% static 'frenchise/js/jquery.ajaxchimp.min.js' %}"></script>
+        <script src="{% static 'frenchisehome/js/contact.js' %}"></script>
+        <script src="{% static 'frenchisehome/js/jquery.form.js' %}"></script>
+        <script src="{% static 'frenchisehome/js/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'frenchisehome/js/mail-script.js' %}"></script>
+        <script src="{% static 'frenchisehome/js/jquery.ajaxchimp.min.js' %}"></script>
         
 		<!-- Jquery Plugins, main Jquery -->	
-        <script src="{% static 'frenchise/js/plugins.js' %}"></script>
-        <script src="{% static 'frenchise/js/main.js' %}"></script>
+        <script src="{% static 'frenchisehome/js/plugins.js' %}"></script>
+        <script src="{% static 'frenchisehome/js/main.js' %}"></script>
         <!-- font awsome -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
         

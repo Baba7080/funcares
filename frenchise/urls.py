@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from .views import *
+from .tests import *
 from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -10,6 +11,9 @@ from .forms import LoginForm,  MyPasswordChangeForm, MyPasswordResetForm, MySetP
 
 
 urlpatterns = [
+
+    path('admin_dash', admindas, name='admin_dash'),
+    path('emp_dash', empdas, name='emp_dash'),
     
     path('', index, name='home'),
     path('about/', about_view, name= 'about'),
@@ -47,9 +51,12 @@ urlpatterns = [
     path('edit-emp-dashboard/', edit_employee_dashboard_view, name= 'edit_e_dashboard'),
     path('f-overview/', frenchise_overview_view, name= 'f_overview'),
     path('emp-overview/', employee_overview_view, name= 'e_overview'),
+    path('emp-get-detail/', get_emp_data, name= 'emp_get_detail'),
 
     path('employee_data_chart/', employee_data_chart, name='employee_data_chart'),
     # path('employee_data_chart/', employee_data_chart, name='employee_data_chart'),
+
+    
 
 
 
@@ -73,7 +80,9 @@ urlpatterns = [
 
     path('appllyloan',appllyloan,name='appllyloan'),
     path('loans',loan,name='loans'),
-    path('appllyinsurance',appllyloan,name='appllyinsurance'),
+    path('appllyinsurance',apply_insurance,name='appllyinsurance'),
+    path('applymf',apply_mf,name='applymf'),
+    path('applyda',apply_da,name='applyda'),
     path('editfrenchise/<int:frenchid>',editfrenchise,name='editfrenchise'),
     path('editloan/<int:ad_id>/<str:ad_type>/', editsection, name='editloan')
 

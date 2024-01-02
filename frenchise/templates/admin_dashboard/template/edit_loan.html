@@ -1,0 +1,82 @@
+{% extends 'admin_dashboard/template/admin_base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+
+{% block home-page %}
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Edit Loan</h4>
+                        <p class="card-description">
+                            Edit Loan
+                        </p>
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <!-- Name -->
+                            <input type="hidden" value="{{type}}" name="istype">
+                            <input type="hidden" value="{{ad_data.id}}" name="ad_id">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" name="name" placeholder="Enter your name" value="{{ad_data.clientName}}" required>
+                            </div>
+                            <!-- Amount -->
+                            <div class="mb-3">
+                                <label for="amount" class="form-label">Amount</label>
+                                <input type="text" class="form-control" name="amount" value={{ad_data.amount}} placeholder="Enter the amount" required>
+                            </div>
+                            <!-- Type -->
+                            <div class="mb-3">
+                                <label for="type" class="form-label">Type</label>
+                                <select class="form-select"  name="type" required>
+                                    <option value="{{ad_data.type}}" disabled selected>{{ad_data.type}}</option>
+                                    {% comment %} <option value="Personal Loan">Personal Loan</option>
+                                    <option value="Home Loan">Home Loan</option>
+                                    <option value="Auto Loan">Auto Loan</option>
+                                    <option value="Business Loan">Business Loan</option>
+                                    <option value="Education Loan">Education Loan</option> {% endcomment %}
+                                    <!-- Add more loan types as needed -->
+                                </select>
+                            </div>
+                            
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" name="email" value="{{ad_data.email}}" placeholder="Enter your email" required>
+                            </div>
+                            <!-- Number -->
+                            <div class="mb-3">
+                                <label for="number" class="form-label">Number</label>
+                                <input type="text" class="form-control" name="number" value="{{ad_data.number}}" placeholder="Enter your number" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="number" class="form-label">PAN</label>
+                                <input type="text" class="form-control" name="pan" placeholder="Enter your User PAN" value="{{ad_data.PAN}}" required maxlength="16">
+                            </div>
+                            <div class="mb-5">
+                                <label for="status" class="form-label">Status</label>
+                                <select class="form-select" name="status" required>
+                                    <option value="{{ ad_data.status }}" disabled selected>{{ ad_data.status }}</option>
+                                    <option value="In Progress">In Progress</option>
+                                    <option value="Completed">Completed</option>
+                                    <option value="Rejected">Rejected</option>
+                                    <option value="Active">Active</option>
+                                    <!-- Add more status options as needed -->
+                                </select>
+                            </div>
+                            
+                            
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button class="btn btn-light"><a href="{% url 'dashboard' %}">Go Back</a></button>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock home-page %}

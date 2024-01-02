@@ -1,0 +1,111 @@
+{% extends 'frenchise_dashboard/template/frenchise_base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+
+{% block main-page %}
+
+         <!-- partial -->
+         <div class="main-panel">
+            <div class="content-wrapper">
+              <div class="row">
+                <div class="col-lg-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                                         <!-- calender -->
+
+                 <div class="container-fluid">
+                    <div class="row justify-content-center align-items-center d-flex"> 
+                        <!-- Center the form -->
+                        <div class="col-lg-2">
+                            <div class="row">
+                             
+                                <form method="post" action="{% url 'emp_get_detail' %}" align-items-center d-flex>
+                                    {% csrf_token %}
+                                    <div class="form-group d-flex flex-row">
+                                        <div class="p-2">
+                                            <label for="from">From</label>
+                                            <input type="date" name="from" class="form-control form-control-sm">
+                                        </div>
+                                        <div class="p-2">
+                                            <label for="to">To</label>
+                                            <input type="date" name="to" class="form-control form-control-sm">
+                                        </div>
+                                        <div class="mt-4">
+                                            <input type="submit" class="btn btn-primary btn-sm  px-2" value="submit">
+                                        </div>
+                                      </div>
+                                   
+                                    
+                                </form>
+                              
+                            </div>
+                        </div>
+    
+                 </div>
+                 
+                 <!-- calender -->
+                      <h4 class="card-title">Employe</h4>
+                      <p class="card-description">
+                        <!-- Add class <code>.table</code> -->
+                      </p>
+                      <div class="table-responsive">
+                        <table class="table">
+                          <thead>
+                            <tr>
+                                <th><input type="checkbox" id="checkall" /></th>
+                                <th>Name</th>  
+                                <th>Email</th>
+                                <th>Username</th>
+                                
+                                <th>Loan</th>
+                                <th>Insurance</th>
+                                <th>Mutual Fund</th>
+                                <th>Demat</th>
+                                <th style="width:25%">Total Sales</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {% for ad in em_data %}
+                            <tr>
+                                <td><input type="checkbox" class="checkthis" /></td>
+                                <td>{{ad.Name}}</td>
+                                
+                                <td>{{ad.email}}</td>
+                                <td>{{ad.username}}</td>
+                                <td>{{ad.total_loan}}/0{{total_loan_completed}}</td>
+                                <td>{{ad.total_insurance}}/0{{total_insurance_completed}}</td>
+                                <td>{{ad.total_mutual}}/0{{total_mutual_completed}}</td>
+                                <td>{{ad.total_demat}}/0{{total_demat_completed}}</td>
+                                <td>{{ad.total_sale}}</td>
+                                {% comment %} <td> {% endcomment %}
+                                    {% comment %} <div class="progress">
+                                        <div style="width: 60%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="red progress-bar">
+                                        <span>60%</span>
+                                       </div>
+                                    </div>
+                                </td>
+                                <td><span class="label label-info">Pending</span></td> {% endcomment %}
+                              </tr>
+                              {% endfor %}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:../../partials/_footer.html -->
+            <footer class="footer">
+            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Fundcares<a
+                    href="" target="_blank">Fundcares</a> Fundcares</span>
+                <span class="float-none float-sm-end d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
+            </div>
+    </footer>
+            <!-- partial -->
+          </div>
+          <!-- main-panel ends -->
+
+{% endblock main-page %}

@@ -1,0 +1,2354 @@
+{% extends 'market/market_base.html' %}
+{% load static %}
+{% block title %} mosl-home {% endblock title %}
+
+{% block main %}
+
+<div class="main-container without-breadcrumb">
+    <div class="container">
+        <div class="top-tile text-center mt20 mb20">
+            <h5 class="title-black title-width-bar"><span>what would you like to do?</span></h5>
+        </div>
+    </div>
+    <section class="section-spac">
+        <div class="container">
+            <div class="mx-auto col-md-7">
+                <div class="invest-search-wrap text-center">
+                    <div class="search-research-wrap simplebar-offset" style="position: relative;display:inline-block;right:0px;bottom:0px;width:80%;" id="MFsearchBar">
+                        <div class="addon-wrap search-addon-common simplebar-content-wrapper" style="display:flex;">
+                            <input type="text" value="" maxlength="60" id="mfHomeSearchTxt" autocomplete="off" class="form-control" placeholder="Search for any scheme/fund house." onblur="PushDataToCleverTapMFSearch();">
+                            <a href="javascript:void(0);" class="addvancefilter" style="margin-left: -5%;height: 15px;margin-top: 9px;" onclick="showFilterMFSearch();">
+                                <img src="/Images/filter.svg" style="height: 15px;margin-bottom: 4px;">
+                            </a>
+                            <span class="cleartext" id="clearSearchTxt" style="margin-right:4%">Clear</span>
+                            <span class="search-icon">
+                                <img src="/images/orange-search-icon.svg" alt="" class="img-fluid">
+                            </span>
+                            <span class="search-icon" style="display:none">
+                                <img src="/Images/light" alt="" class="img-fluid">
+                            </span>
+                        </div>
+                        <div class="search-list-wrap  common-search-list-wrap" id="searchBarMFHome" data-simplebar="init" style="margin-left:0px;">
+                            <div class="simplebar-wrapper" style="margin: -5px -15px 0px;">
+                                <div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask">
+                                    <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                                        <div class="simplebar-content-wrapper simplebar-offset" style="height: 100%;">
+                                            <div class="custom-table-wrapper" style="padding: 5px 15px 0px;height: 100%;overflow:hidden scroll" id="searchResultDIV">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="simplebar-placeholder" style="width: 0px; height: 0px;"></div>
+                            </div>
+                            <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+                                <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
+                            </div>
+                            <div class="simplebar-track simplebar-vertical" style="visibility: hidden;">
+                                <div class="simplebar-scrollbar" style="height: 0px; display: none;"></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div>
+                    <ul id="defaultCheckedFilter" style="display:none;">
+                        <li style="margin-bottom:10px;">
+                            <div class="edit-icon-table checkbox-label-with-text">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="checkbox">
+                                    <span class="lbl">
+                                        <span style="margin-left: 1px;" id="showTxt"></span>
+                                        <img src="/Images/modal-close.svg" onclick="RemoveFilter(this);" id="closeFilter" style="margin-bottom: 4px;height: 10px;width: 10px;margin-left: 5px;">
+                                    </span>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul id="defaultCheckedRatingFilter" style="display:none;">
+                        <li style="margin-bottom:10px;">
+                            <div class="edit-icon-table checkbox-label-with-text">
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="checkbox">
+                                    <span class="lbl">
+                                        <span style="margin-left: 1px;font-size: 14.5px;" id="showRatingTxt"></span>
+                                        <p class="icon star-rating-icon" style="margin-bottom: 4px;"></p>
+                                        <img src="/Images/modal-close.svg" onclick="RemoveFilter(this);" id="closeRatingFilter" style="margin-bottom: 4px;height: 10px;width: 10px;margin-left: 5px;">
+                                    </span>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="">
+                    <ul style="">
+                        <li class="top-create-new addvancefilter" style="">
+                            <div class="hidden-manage-data p-1" style="width:auto;">
+                                <div class="filter-block">
+                                    <ul id="showCheckedFilter"></ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tabs-right-list ">
+            <div class="search-list-wrap  common-search-list-wrap hidden-manage-data" id="divFilerMF" data-simplebar="init" style="margin-top: 15%;width: 35%;margin-left: 37%;">
+                <div class="simplebar-wrapper" style="margin: -5px -15px 0px;">
+                    <div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask">
+                        <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                            <div class="simplebar-content-wrapper" style="">
+                                <div class="simplebar-content" style="" id="">
+                                    <ul>
+                                        <li class="top-create-new addvancefilter">
+                                            <div class="hidden-manage-data p-4 " id="" style="">
+                                                <div style="text-align:right">
+                                                    <a class="orange-text font-opensans-semibold font14" onclick="return resetFilter();" style="cursor:pointer">Reset</a>
+                                                </div>
+                                                <div class="filter-block">
+                                                    <p class="filter-title">Scheme Type</p>
+                                                    <ul>
+                                                        <li>
+                                                            <div class="edit-icon-table checkbox-label-with-text">
+                                                                <label class="checkbox-container">
+                                                                    <input type="checkbox" name="checkbox" id="chkEquityMF_Filter" data-filtertype="schemetype" data-filter="Equity" class="mf_Filter" onclick="Filter();">
+                                                                    <span class="lbl">Equity</span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="edit-icon-table checkbox-label-with-text">
+                                                                <label class="checkbox-container">
+                                                                    <input type="checkbox" name="checkbox" id="chkDebtMF_Filter" data-filtertype="schemetype" data-filter="Debt" class="mf_Filter" onclick="Filter();">
+                                                                    <span class="lbl">Debt</span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="edit-icon-table checkbox-label-with-text">
+                                                                <label class="checkbox-container">
+                                                                    <input type="checkbox" name="checkbox" id="chkHybridMF_Filter" data-filtertype="schemetype" data-filter="Hybrid" class="mf_Filter" onclick="Filter();">
+                                                                    <span class="lbl">Hybrid</span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="edit-icon-table checkbox-label-with-text">
+                                                                <label class="checkbox-container">
+                                                                    <input type="checkbox" name="checkbox" id="chkELSSMF_Filter" data-filtertype="schemetype" data-filter="ELSS" class="mf_Filter" onclick="Filter();">
+                                                                    <span class="lbl">ELSS</span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="edit-icon-table checkbox-label-with-text">
+                                                                <label class="checkbox-container">
+                                                                    <input type="checkbox" name="checkbox" id="chkOthersMF_Filter" data-filtertype="schemetype" data-filter="Others" class="mf_Filter" onclick="Filter();">
+                                                                    <span class="lbl">Others</span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="filter-block">
+                                                    <p class="filter-title">Fund Type</p>
+                                                    <ul>
+                                                        <li>
+                                                            <div class="edit-icon-table checkbox-label-with-text">
+                                                                <label class="checkbox-container">
+                                                                    <input type="checkbox" name="checkbox" id="chkGrowthMF_Filter" data-filtertype="fundtype" data-filter="Growth" class="mf_Filter" onclick="Filter();">
+                                                                    <span class="lbl">Growth</span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="edit-icon-table checkbox-label-with-text">
+                                                                <label class="checkbox-container">
+                                                                    <input type="checkbox" name="checkbox" id="chkDividendPayoutMF_Filter" data-filtertype="fundtype" data-filter="Dividend Payout" class="mf_Filter" onclick="Filter();">
+                                                                    <span class="lbl">Dividend Payout</span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="edit-icon-table checkbox-label-with-text">
+                                                                <label class="checkbox-container">
+                                                                    <input type="checkbox" name="checkbox" id="chkDividendReinvestMF_Filter" data-filtertype="fundtype" data-filter="Dividend Reinvestment" class="mf_Filter" onclick="Filter();">
+                                                                    <span class="lbl">Dividend Reinvestment</span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="filter-block">
+                                                    <p class="filter-title">Rating</p>
+                                                    <ul>
+                                                        <li>
+                                                            <div class="edit-icon-table checkbox-label-with-text">
+                                                                <label class="checkbox-container">
+                                                                    <input type="checkbox" name="checkbox" id="chkOneRating" data-filtertype="rating" data-filter="1" class="mf_Filter" onclick="Filter();">
+                                                                    <span class="lbl">
+                                                                        <span style="margin-left: 1px;font-size: 14.5px;">1</span>
+                                                                        <p class="icon star-rating-icon" style="margin-bottom: 4px;"></p>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="edit-icon-table checkbox-label-with-text">
+                                                                <label class="checkbox-container">
+                                                                    <input type="checkbox" name="checkbox" id="chkTwoRating" data-filtertype="rating" data-filter="2" class="mf_Filter" onclick="Filter();">
+                                                                    <span class="lbl">
+                                                                        <span style="margin-left: 1px;font-size: 14.5px;">2</span>
+                                                                        <p class="icon star-rating-icon" style="margin-bottom: 4px;"></p>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="edit-icon-table checkbox-label-with-text">
+                                                                <label class="checkbox-container">
+                                                                    <input type="checkbox" name="checkbox" id="chkThreeRating" data-filtertype="rating" data-filter="3" class="mf_Filter" onclick="Filter();">
+                                                                    <span class="lbl">
+                                                                        <span style="margin-left: 1px;font-size: 14.5px;">3</span>
+                                                                        <p class="icon star-rating-icon" style="margin-bottom: 4px;"></p>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="edit-icon-table checkbox-label-with-text">
+                                                                <label class="checkbox-container">
+                                                                    <input type="checkbox" name="checkbox" id="chkFourRating" data-filtertype="rating" data-filter="4" class="mf_Filter" onclick="Filter();">
+                                                                    <span class="lbl">
+                                                                        <span style="margin-left: 1px;font-size: 14.5px;">4</span>
+                                                                        <p class="icon star-rating-icon" style="margin-bottom: 4px;"></p>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="edit-icon-table checkbox-label-with-text">
+                                                                <label class="checkbox-container">
+                                                                    <input type="checkbox" name="checkbox" id="chkFiveRating" data-filtertype="rating" data-filter="5" class="mf_Filter" onclick="Filter();">
+                                                                    <span class="lbl">
+                                                                        <span style="margin-left: 1px;font-size: 14.5px;">5</span>
+                                                                        <p class="icon star-rating-icon" style="margin-bottom: 4px;"></p>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div style="text-align:right">
+                                                    <a class="orange-text font-opensans-semibold font14" href="#" onclick="return doneFilter();">Done</a>
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="simplebar-placeholder" style="width: auto; height: 353px;"></div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Explore By Theme -->
+    <section class="section-spac tabs-show-now mb-3" id="fr">
+        <div class="container">
+            <div class="recommendation-tab-wrap mutual-fund">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h6 class="title text-capitalize font-opensans-semibold mb-2">Theme Based Mutual Funds</h6>
+                    <a id="viewAllLink" href="javascript:void(0);" class="font-opensans-semibold font12 orange-text">View All</a>
+                    
+                </div>
+                <div class="common-tabs-wrap">
+                    <div id="BaseThemList"> <ul class="nav nav-tabs  justify-content-between align-items-center mb15"><li class="nav-item" style="margin-top:-10px"><a class="nav-link py-0 active" data-toggle="tab" href="#" onclick="GetExploreByThemeData(10)" data-tab="10"><div class="d-flex"><div class="tab-img flex-shrink-0"><img src="https://invest.motilaloswal.com/investorimages/IndexFund.png" alt="" width="26" height="32"></div> <p class="font-opensans-semibold font14 black-text" style="margin-top:10px;margin-left:15px">Index Funds</p></div></a></li><li class="nav-item" style="margin-top:-10px"><a class="nav-link py-0" data-toggle="tab" href="#" onclick="GetExploreByThemeData(1)" data-tab="1"><div class="d-flex"><div class="tab-img flex-shrink-0"><img src="https://invest.motilaloswal.com/investorimages/FundWithBestReturns.png" alt="" width="26" height="32"></div> <p class="font-opensans-semibold font14 black-text" style="margin-top:10px;margin-left:15px">High Returns</p></div></a></li><li class="nav-item" style="margin-top:-10px"><a class="nav-link py-0" data-toggle="tab" href="#" onclick="GetExploreByThemeData(2)" data-tab="2"><div class="d-flex"><div class="tab-img flex-shrink-0"><img src="https://invest.motilaloswal.com/investorimages/TopRated.png" alt="" width="26" height="32"></div> <p class="font-opensans-semibold font14 black-text" style="margin-top:10px;margin-left:15px">Top Rated Funds</p></div></a></li><li class="nav-item" style="margin-top:-10px"><a class="nav-link py-0" data-toggle="tab" href="#" onclick="GetExploreByThemeData(3)" data-tab="3"><div class="d-flex"><div class="tab-img flex-shrink-0"><img src="https://invest.motilaloswal.com/investorimages/EquityFunds.png" alt="" width="26" height="32"></div> <p class="font-opensans-semibold font14 black-text" style="margin-top:10px;margin-left:15px">Equity Funds</p></div></a></li><li class="nav-item" style="margin-top:-10px"><a class="nav-link py-0" data-toggle="tab" href="#" onclick="GetExploreByThemeData(4)" data-tab="4"><div class="d-flex"><div class="tab-img flex-shrink-0"><img src="https://invest.motilaloswal.com/investorimages/TaxSaverFunds.png" alt="" width="26" height="32"></div> <p class="font-opensans-semibold font14 black-text" style="margin-top:10px;margin-left:15px">Tax Saver Funds</p></div></a></li><li class="nav-item" style="margin-top:-10px"><a class="nav-link py-0" data-toggle="tab" href="#" onclick="GetExploreByThemeData(5)" data-tab="5"><div class="d-flex"><div class="tab-img flex-shrink-0"><img src="https://invest.motilaloswal.com/investorimages/BetterThanFds.png" alt="" width="26" height="32"></div> <p class="font-opensans-semibold font14 black-text" style="margin-top:10px;margin-left:15px">Better Than FD's</p></div></a></li><li class="nav-item" style="margin-top:-10px"><a class="nav-link py-0" data-toggle="tab" href="#" onclick="GetExploreByThemeData(6)" data-tab="6"><div class="d-flex"><div class="tab-img flex-shrink-0"><img src="https://invest.motilaloswal.com/investorimages/TopAmcs.png" alt="" width="26" height="32"></div> <p class="font-opensans-semibold font14 black-text" style="margin-top:10px;margin-left:15px">Top Hybrid Funds</p></div></a></li></ul></div>
+                    <div class="tab-content" id="dvThemeBaseCards">
+                        <div class=""><div class="row" id="dvthemebase">
+
+
+                    <div class="col-lg-3">
+                        <div class="card-wrap">
+                            <div class="px-3 pt-3" style="height: 80px;">
+                                <p class="font-default-opensans font12 orange-text mb-1">Equity</p>
+                                <p class="showQuote" onclick="ShowQuote('INF109K01IF1','ICICI1615-GR','0','ICICI Prudential Nifty Next 50 Index Fund - Growth')" style="height: 75px;">
+                                    <a href="javascript:void(0)" class="font-opensans-semibold font16 black-text">
+                                        ICICI Prudential Nifty Next 50 Index Fund - Growth
+                                    </a>
+                                    <label id="schemacode" hidden="hidden">ICICI1615-GR</label>
+                                    <label id="schemaISIN" hidden="hidden">INF109K01IF1</label>
+                                    <label id="rating" hidden="hidden">1</label>
+                                </p>
+                            </div>
+                            <div class="bottom-text">
+                                <div class="d-flex justify-content-between pb-3">
+                                    <div>
+                                        <span class="label-text">NAV</span>
+                                        <span class="value-text">46.11</span>
+                                            <span class="indices-glimpse--status">
+                                                <img src="../Images/big-green-arrow.svg" class="vertical-baseline indices-glimpse--status-img">
+                                            </span>
+                                            <span class="indices-glimpse--percent">0.43 (0.94%)</span>
+                                    </div>
+                                    <div>
+                                        <span class="label-text" style="text-align:left">Risk</span>
+                                        <span class="value-text">High</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between pb-3">
+                                    <div>
+                                        <span class="label-text">1 Yr</span>
+                                        <span class="value-text">25.58%</span>
+                                    </div>
+                                    <div>
+                                        <span class="label-text">3 Yr</span>
+                                        <span class="value-text">17.72%</span>
+                                    </div>
+                                    <div>
+                                        <span class="label-text">5 Yr</span>
+                                        <span class="value-text">13.45%</span>
+                                    </div>
+                                </div>
+
+                                
+
+
+                            <div class="recommended-fd-btn" style="width: auto;">
+                                    <button class="btn btn-secondory" onclick="OpenLumpsum('lumpsum_ICICI1615-GR'); MFWebMFordertrigger_Home('10', 'ICICI Prudential Nifty Next 50 Index Fund - Growth', 'Equity', 'lumpsum','')" style="width: 110px;margin-left: 25px;" id="lumpsum_ICICI1615-GR" data-schemecode="ICICI1615-GR" data-schemename="ICICI Prudential Nifty Next 50 Index Fund - Growth" data-isin="INF109K01IF1" data-fundtype="0" data-token="1378" data-nav="46.11" data-navchange="0.43" data-navchangeper="0.94" data-navdate="">
+                                        Lumpsum
+                                    </button>
+                                                                    <button class="btn btn-secondory" onclick="OpenSIP('sip_ICICI1615-GR'); MFWebMFordertrigger_Home('10', 'ICICI Prudential Nifty Next 50 Index Fund - Growth', 'Equity', 'SIP','')" style="width: 110px;margin-left: 10px;" id="sip_ICICI1615-GR" data-schemecode="ICICI1615-GR" data-schemename="ICICI Prudential Nifty Next 50 Index Fund - Growth" data-isin="INF109K01IF1" data-fundtype="0" data-token="1378" data-nav="46.11" data-navchange="0.43" data-navchangeper="0.94" data-navdate="">
+                                        SIP
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card-wrap">
+                            <div class="px-3 pt-3" style="height: 80px;">
+                                <p class="font-default-opensans font12 orange-text mb-1">Equity</p>
+                                <p class="showQuote" onclick="ShowQuote('INF247L01908','MOMIGP-GR','0','Motilal Oswal Nifty Midcap 150 Index Fund - Growth')" style="height: 75px;">
+                                    <a href="javascript:void(0)" class="font-opensans-semibold font16 black-text">
+                                        Motilal Oswal Nifty Midcap 150 Index Fund - Growth
+                                    </a>
+                                    <label id="schemacode" hidden="hidden">MOMIGP-GR</label>
+                                    <label id="schemaISIN" hidden="hidden">INF247L01908</label>
+                                    <label id="rating" hidden="hidden">3</label>
+                                </p>
+                            </div>
+                            <div class="bottom-text">
+                                <div class="d-flex justify-content-between pb-3">
+                                    <div>
+                                        <span class="label-text">NAV</span>
+                                        <span class="value-text">29.21</span>
+                                            <span class="indices-glimpse--status">
+                                                <img src="../Images/big-green-arrow.svg" class="vertical-baseline indices-glimpse--status-img">
+                                            </span>
+                                            <span class="indices-glimpse--percent">0.16 (0.56%)</span>
+                                    </div>
+                                    <div>
+                                        <span class="label-text" style="text-align:left">Risk</span>
+                                        <span class="value-text">High</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between pb-3">
+                                    <div>
+                                        <span class="label-text">1 Yr</span>
+                                        <span class="value-text">43.47%</span>
+                                    </div>
+                                    <div>
+                                        <span class="label-text">3 Yr</span>
+                                        <span class="value-text">28.95%</span>
+                                    </div>
+                                    <div>
+                                        <span class="label-text">5 Yr</span>
+                                        <span class="value-text">0.00%</span>
+                                    </div>
+                                </div>
+
+                                
+
+
+                            <div class="recommended-fd-btn" style="width: auto;">
+                                    <button class="btn btn-secondory" onclick="OpenLumpsum('lumpsum_MOMIGP-GR'); MFWebMFordertrigger_Home('10', 'Motilal Oswal Nifty Midcap 150 Index Fund - Growth', 'Equity', 'lumpsum','')" style="width: 110px;margin-left: 25px;" id="lumpsum_MOMIGP-GR" data-schemecode="MOMIGP-GR" data-schemename="Motilal Oswal Nifty Midcap 150 Index Fund - Growth" data-isin="INF247L01908" data-fundtype="0" data-token="33588" data-nav="29.21" data-navchange="0.16" data-navchangeper="0.56" data-navdate="">
+                                        Lumpsum
+                                    </button>
+                                                                    <button class="btn btn-secondory" onclick="OpenSIP('sip_MOMIGP-GR'); MFWebMFordertrigger_Home('10', 'Motilal Oswal Nifty Midcap 150 Index Fund - Growth', 'Equity', 'SIP','')" style="width: 110px;margin-left: 10px;" id="sip_MOMIGP-GR" data-schemecode="MOMIGP-GR" data-schemename="Motilal Oswal Nifty Midcap 150 Index Fund - Growth" data-isin="INF247L01908" data-fundtype="0" data-token="33588" data-nav="29.21" data-navchange="0.16" data-navchangeper="0.56" data-navdate="">
+                                        SIP
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card-wrap">
+                            <div class="px-3 pt-3" style="height: 80px;">
+                                <p class="font-default-opensans font12 orange-text mb-1">Equity</p>
+                                <p class="showQuote" onclick="ShowQuote('INF247L01924','MOSIGP-GR','0','Motilal Oswal Nifty Smallcap 250 Index Fund - Growth')" style="height: 75px;">
+                                    <a href="javascript:void(0)" class="font-opensans-semibold font16 black-text">
+                                        Motilal Oswal Nifty Smallcap 250 Index Fund - Growth
+                                    </a>
+                                    <label id="schemacode" hidden="hidden">MOSIGP-GR</label>
+                                    <label id="schemaISIN" hidden="hidden">INF247L01924</label>
+                                    <label id="rating" hidden="hidden">1</label>
+                                </p>
+                            </div>
+                            <div class="bottom-text">
+                                <div class="d-flex justify-content-between pb-3">
+                                    <div>
+                                        <span class="label-text">NAV</span>
+                                        <span class="value-text">29.93</span>
+                                            <span class="indices-glimpse--status">
+                                                <img src="../Images/big-green-arrow.svg" class="vertical-baseline indices-glimpse--status-img">
+                                            </span>
+                                            <span class="indices-glimpse--percent">0.09 (0.29%)</span>
+                                    </div>
+                                    <div>
+                                        <span class="label-text" style="text-align:left">Risk</span>
+                                        <span class="value-text">High</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between pb-3">
+                                    <div>
+                                        <span class="label-text">1 Yr</span>
+                                        <span class="value-text">48.52%</span>
+                                    </div>
+                                    <div>
+                                        <span class="label-text">3 Yr</span>
+                                        <span class="value-text">31.66%</span>
+                                    </div>
+                                    <div>
+                                        <span class="label-text">5 Yr</span>
+                                        <span class="value-text">0.00%</span>
+                                    </div>
+                                </div>
+
+                                
+
+
+                            <div class="recommended-fd-btn" style="width: auto;">
+                                    <button class="btn btn-secondory" onclick="OpenLumpsum('lumpsum_MOSIGP-GR'); MFWebMFordertrigger_Home('10', 'Motilal Oswal Nifty Smallcap 250 Index Fund - Growth', 'Equity', 'lumpsum','')" style="width: 110px;margin-left: 25px;" id="lumpsum_MOSIGP-GR" data-schemecode="MOSIGP-GR" data-schemename="Motilal Oswal Nifty Smallcap 250 Index Fund - Growth" data-isin="INF247L01924" data-fundtype="0" data-token="33590" data-nav="29.93" data-navchange="0.09" data-navchangeper="0.29" data-navdate="">
+                                        Lumpsum
+                                    </button>
+                                                                    <button class="btn btn-secondory" onclick="OpenSIP('sip_MOSIGP-GR'); MFWebMFordertrigger_Home('10', 'Motilal Oswal Nifty Smallcap 250 Index Fund - Growth', 'Equity', 'SIP','')" style="width: 110px;margin-left: 10px;" id="sip_MOSIGP-GR" data-schemecode="MOSIGP-GR" data-schemename="Motilal Oswal Nifty Smallcap 250 Index Fund - Growth" data-isin="INF247L01924" data-fundtype="0" data-token="33590" data-nav="29.93" data-navchange="0.09" data-navchangeper="0.29" data-navdate="">
+                                        SIP
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card-wrap">
+                            <div class="px-3 pt-3" style="height: 80px;">
+                                <p class="font-default-opensans font12 orange-text mb-1">Equity</p>
+                                <p class="showQuote" onclick="ShowQuote('INF247L01940','MONTGP-GR','0','Motilal Oswal Nifty 500 Index Fund - Growth')" style="height: 75px;">
+                                    <a href="javascript:void(0)" class="font-opensans-semibold font16 black-text">
+                                        Motilal Oswal Nifty 500 Index Fund - Growth
+                                    </a>
+                                    <label id="schemacode" hidden="hidden">MONTGP-GR</label>
+                                    <label id="schemaISIN" hidden="hidden">INF247L01940</label>
+                                    <label id="rating" hidden="hidden">3</label>
+                                </p>
+                            </div>
+                            <div class="bottom-text">
+                                <div class="d-flex justify-content-between pb-3">
+                                    <div>
+                                        <span class="label-text">NAV</span>
+                                        <span class="value-text">21.33</span>
+                                            <span class="indices-glimpse--status">
+                                                <img src="../Images/big-green-arrow.svg" class="vertical-baseline indices-glimpse--status-img">
+                                            </span>
+                                            <span class="indices-glimpse--percent">0.10 (0.48%)</span>
+                                    </div>
+                                    <div>
+                                        <span class="label-text" style="text-align:left">Risk</span>
+                                        <span class="value-text">High</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between pb-3">
+                                    <div>
+                                        <span class="label-text">1 Yr</span>
+                                        <span class="value-text">25.08%</span>
+                                    </div>
+                                    <div>
+                                        <span class="label-text">3 Yr</span>
+                                        <span class="value-text">19.01%</span>
+                                    </div>
+                                    <div>
+                                        <span class="label-text">5 Yr</span>
+                                        <span class="value-text">0.00%</span>
+                                    </div>
+                                </div>
+
+                                
+
+
+                            <div class="recommended-fd-btn" style="width: auto;">
+                                    <button class="btn btn-secondory" onclick="OpenLumpsum('lumpsum_MONTGP-GR'); MFWebMFordertrigger_Home('10', 'Motilal Oswal Nifty 500 Index Fund - Growth', 'Equity', 'lumpsum','')" style="width: 110px;margin-left: 25px;" id="lumpsum_MONTGP-GR" data-schemecode="MONTGP-GR" data-schemename="Motilal Oswal Nifty 500 Index Fund - Growth" data-isin="INF247L01940" data-fundtype="0" data-token="33584" data-nav="21.33" data-navchange="0.10" data-navchangeper="0.48" data-navdate="">
+                                        Lumpsum
+                                    </button>
+                                                                    <button class="btn btn-secondory" onclick="OpenSIP('sip_MONTGP-GR'); MFWebMFordertrigger_Home('10', 'Motilal Oswal Nifty 500 Index Fund - Growth', 'Equity', 'SIP','')" style="width: 110px;margin-left: 10px;" id="sip_MONTGP-GR" data-schemecode="MONTGP-GR" data-schemename="Motilal Oswal Nifty 500 Index Fund - Growth" data-isin="INF247L01940" data-fundtype="0" data-token="33584" data-nav="21.33" data-navchange="0.10" data-navchangeper="0.48" data-navdate="">
+                                        SIP
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+<script>
+
+    function OpenLumpsum(id) {
+
+        var type = $("#" + id).data("schemename");
+
+        //try {
+        //    // Particular event function for netcore integration - Vishal
+        //    //alert(type);
+        //    smartech('dispatch', 'MF_Lumpsum_OrderForm', {
+        //        'scheme_name': type,
+        //        'redirection_source': 'Home'
+        //    });
+        //}
+        //catch (err) {
+        //    console.log('Smarttech not initiated in MF_Lumpsum_OrderForm');
+        //    createNetcoreLog('MF_Lumpsum_OrderForm');
+        //}
+        
+        if (isGuestUser() == 1) { return false; }
+        $("#dvLoader").show();
+        var randomNum = Math.floor(Math.random() * (1000 - 10) + 10);
+        var siplumpsumorder = {
+            randomNumber: randomNum,
+            isin: $("#" + id).data("isin"),
+            schemecode: $("#" + id).data("schemecode"),
+            schemename: $("#" + id).data("schemename"),
+            fundtype: $("#" + id).data("fundtype"),
+            token: $("#" + id).data("token"),
+            nav: $("#" + id).data("nav"),
+            navchange: $("#" + id).data("navchange"),
+            navchangeper: $("#" + id).data("navchangeper"),
+            navdate: $("#" + id).data("navdate"),
+            formtitle: "Lumpsum",
+            txnType: "FP"
+        };
+        $.post("/MutualFund/LUMPSUMForm", { sip_lumpsum_order: siplumpsumorder }, function (response) {
+            var orderformname = "OrderFormMutualFundLumpsum_" + randomNum
+            $("#lumpsumform").html(response);
+            $("#" + orderformname).modal("show");
+            $("#dvLoader").hide();
+        });
+    }
+
+    function OpenSIP(id) {
+
+        var type = $("#" + id).data("schemename");
+        //try {
+        //    // Particular event function for netcore integration - Vishal
+        //    smartech('dispatch', 'MF_SIP_OrderForm', {
+        //        'scheme_name': type,
+        //        'redirection_source': 'Home'
+        //    });
+        //}
+        //catch (err) {
+        //    console.log('Smarttech not initiated in MF_SIP_OrderForm');
+        //    createNetcoreLog('MF_SIP_OrderForm');
+        //}
+        
+        if (isGuestUser() == 1) { return false; }
+        $("#dvLoader").show();
+        var randomNum = Math.floor(Math.random() * (1000 - 10) + 10);
+        var siplumpsumorder = {
+            randomNumber: randomNum,
+            isin: $("#" + id).data("isin"),
+            schemecode: $("#" + id).data("schemecode"),
+            schemename: $("#" + id).data("schemename"),
+            fundtype: $("#" + id).data("fundtype"),
+            token: $("#" + id).data("token"),
+            nav: $("#" + id).data("nav"),
+            navchange: $("#" + id).data("navchange"),
+            navchangeper: $("#" + id).data("navchangeper"),
+            navdate: $("#" + id).data("navdate"),
+            txnType: "SIP",
+        };
+        $.post("/MutualFund/SIPForm", { sip_lumpsum_order: siplumpsumorder }, function (response) {
+            var orderformname = "OrderFormMutualFundSip_" + randomNum
+            $("#sipform").html(response);
+            $("#" + orderformname).modal("show");
+            $("#dvLoader").hide();
+        });
+    }
+
+    //$(".scannerSIP").click(function () {
+    //    
+    //    $("#dvLoader").show();
+    //    var randomNum = Math.floor(Math.random() * (1000 - 10) + 10);
+    //    var siplumpsumorder = {
+    //        randomNumber: randomNum,
+    //        isin: $("#" + $(this).attr('id')).data("isin"),
+    //        schemecode: $("#" + $(this).attr('id')).data("schemecode"),
+    //        schemename: $("#" + $(this).attr('id')).data("schemename"),
+    //        fundtype: $("#" + $(this).attr('id')).data("fundtype"),
+    //        token: $("#" + $(this).attr('id')).data("token"),
+    //        nav: $("#" + $(this).attr('id')).data("nav"),
+    //        navchange: $("#" + $(this).attr('id')).data("navchange"),
+    //        navchangeper: $("#" + $(this).attr('id')).data("navchangeper"),
+    //        navdate: $("#" + $(this).attr('id')).data("navdate"),
+    //        txnType: "SIP"
+    //    };
+    //    $.post("/MutualFund/SIPForm", { sip_lumpsum_order: siplumpsumorder }, function (response) {
+    //        var orderformname = "OrderFormMutualFundSip_" + randomNum
+    //        $("#sipform").html(response);
+    //        $("#" + orderformname).modal("show");
+    //        $("#dvLoader").hide();
+    //    });
+    //});
+
+    //$(".scannerLumpsum").click(function () {
+    //    
+    //    $("#dvLoader").show();
+    //    var randomNum = Math.floor(Math.random() * (1000 - 10) + 10);
+    //    var siplumpsumorder = {
+    //        randomNumber: randomNum,
+    //        isin: $("#" + $(this).attr('id')).data("isin"),
+    //        schemecode: $("#" + $(this).attr('id')).data("schemecode"),
+    //        schemename: $("#" + $(this).attr('id')).data("schemename"),
+    //        fundtype: $("#" + $(this).attr('id')).data("fundtype"),
+    //        token: $("#" + $(this).attr('id')).data("token"),
+    //        nav: $("#" + $(this).attr('id')).data("nav"),
+    //        navchange: $("#" + $(this).attr('id')).data("navchange"),
+    //        navchangeper: $("#" + $(this).attr('id')).data("navchangeper"),
+    //        navdate: $("#" + $(this).attr('id')).data("navdate"),
+    //        formtitle: "Lumpsum",
+    //        txnType: "FP"
+    //    };
+    //    $.post("/MutualFund/LUMPSUMForm", { sip_lumpsum_order: siplumpsumorder }, function (response) {
+    //        var orderformname = "OrderFormMutualFundLumpsum_" + randomNum
+    //        $("#lumpsumform").html(response);
+    //        $("#" + orderformname).modal("show");
+    //        $("#dvLoader").hide();
+    //    });
+    //});
+
+    function ShowQuote(isin, schemecode, fundtype, schemename) {
+        //try {
+        //    // Particular event function for netcore integration - Vishal
+        //    smartech('dispatch', 'MF_GetQuote', {
+        //        'scheme_name': schemename,
+        //        'redirection_source': 'Home'
+        //    });
+        //}
+        //catch (err) {
+        //    console.log('Smarttech not initiated in MF_GetQuote');
+        //    createNetcoreLog('MF_GetQuote');
+
+        try {
+            clevertap.event.push('Web_MF_Quote', {
+                'scheme_name': schemename,
+                "Date": new Date()
+            });
+        }
+        catch {
+            createNetcoreLog('Web_MF_Quote');
+        }
+
+        
+
+        $("#dvLoader").show();
+        var url = "/Home/GetQuoteMFPage";
+        var token = $('[name=__RequestVerificationToken]').val();
+        var data = EncryptData(('{schemeCode:"' + schemecode + '",isin:"' + isin + '",divFlag:"' + fundtype + '"}'));
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: JSON.stringify(data),
+            headers: { '__RequestVerificationToken': token },
+            contentType: 'application/json; charset=utf-8',
+            //data: {
+            //    'schemeCode': schemecode,
+            //    'isin': isin,
+            //    'divFlag': fundtype
+            //},
+            async: true,
+            success: function (html) {
+                $("#dvLoader").hide();
+                VerifyJSON(html);
+            },
+            error: function (html) {
+                $("#dvLoader").hide();
+                alert('Error');
+            }
+        });
+    }
+
+    $(".showMFQuote").click(function () {
+        
+        $("#dvLoader").show();
+        var isin = $("#" + $(this).attr('id')).data("mainisin");
+        var schemecode = $("#" + $(this).attr('id')).data("mainschemecode");
+        var fundtype = $("#" + $(this).attr('id')).data("mainfundtype");
+        var url = "/Home/GetQuoteMFPage";
+        var token = $('[name=__RequestVerificationToken]').val();
+
+        var data = EncryptData(('{schemeCode:"' + schemecode + '",isin:"' + isin + '",divFlag:"' + fundtype + '"}'));
+
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            //data: {
+            //    'schemeCode': schemecode,
+            //    'isin': isin,
+            //    'divFlag': fundtype
+            //},
+            data: JSON.stringify(data),
+            headers: { '__RequestVerificationToken': token },
+            contentType: 'application/json; charset=utf-8',
+            async: true,
+            success: function (html) {
+                $("#dvLoader").hide();
+                VerifyJSON(html);
+            },
+            error: function (html) {
+                $("#dvLoader").hide();
+                alert('Error');
+            }
+        });
+    });
+
+
+
+    //function MFCleverMFNFOordertrigger(tabname, schemename, schemetype, startdate, Eventname) {
+    //    try {
+    //        clevertap.event.push(Eventname, {
+    //            "FundCategories": tabname,
+    //            "TypeofFunds": schemename,
+    //            "Segment": schemetype,
+    //            "InvestmentType": startdate,
+    //            "Date": new Date()
+
+    //        });
+    //    }
+    //    catch {
+    //        createNetcoreLog(EventName);
+    //    }
+    //}
+
+    function MFWebMFordertrigger_Home(TypeofFunds, schemeName, schemeType, InvestmentType, SOURCENAME) {
+
+        try {
+            var fundtype = "";
+            if (TypeofFunds == "10") {
+                fundtype = "Index Funds";
+            }
+            if (TypeofFunds == "1") {
+                fundtype = "High Returns";
+            }
+            if (TypeofFunds == "2") {
+                fundtype = "Top Rated Funds";
+            }
+            if (TypeofFunds == "3") {
+                fundtype = "Equity Funds";
+            }
+            if (TypeofFunds == "4") {
+                fundtype = "Tax Saver Funds";
+            }
+            if (TypeofFunds == "5") {
+                fundtype = "Better Than FD's";
+            }
+            if (TypeofFunds == "6") {
+                fundtype = "Top Hybrid Funds";
+            }
+            if (TypeofFunds == "") {
+                fundtype = "Index Funds";
+            }
+
+            if (SOURCENAME == "") {
+                SOURCENAME = "Mutual Fund Page/Home Page";
+            }
+            
+            clevertap.event.push('Web_MF_order_trigger', {
+                "Source": SOURCENAME,
+                "MF Name": schemeName,
+                "Fund Categories": "Theme-Based MF",
+                "Type of Funds": fundtype,
+                "Segment": schemeType,
+                "Investment Type": InvestmentType,
+                "Date": new Date()
+            });
+        }
+        catch {
+            createNetcoreLog('Web_MF_order_trigger')
+        }
+    }
+</script></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Explore By Theme End -->
+
+    <div id="divNewFunds" class="section-spac tabs-show-now mb-3">
+
+
+
+<script>
+    function viewAllNFO() {
+        $.ajax({
+            type: "GET",
+            url: "/MutualFund/ViewAllNFO",
+            async: false,
+            contentType: 'application/json; charset=utf-8',
+            dataType: "html",
+            success: function (response) {
+                $("#dvLoader").hide();
+                VerifyJSON(response);
+             },
+            error: function (xhr, textStatus, errorThrown) {
+
+            }
+        });
+        return false;
+    }
+
+    function MFWebMFordertrigger_NEWFUNDOFFER(TypeofFunds, schemeName, schemeType, InvestmentType) {
+
+        try {
+            clevertap.event.push('Web_MF_order_trigger', {
+                "Source": "Mutual Fund Page",
+                "MF Name": schemeName,
+                "Fund Categories": "New Fund Offers",
+                "Type of Funds": TypeofFunds,
+                "Segment": schemeType,
+                "Investment Type": InvestmentType,
+                "Date": new Date()
+
+            });
+        }
+        catch {
+            createNetcoreLog('Web_MF_order_trigger')
+        }
+
+
+
+    }
+</script>
+            <div class="container">
+                <section class="mt40 mb40">
+                    <div class="row mb-2">
+                        <div class="col-lg-12">
+                            <div class="d-flex justify-content-between">
+                                <h6 class="font-opensans-semibold font16 black-text">New Fund Offers</h6>
+                                
+                                    <a href="javascript:void(0)" class="font-opensans-semibold font12 orange-text" onclick="viewAllNFO(); PushUserDataToCleverTapECS('Web_NFO_Viewall', 'EBOM907310', 'Web_MutualFund');">View All NFO's</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="row">
+
+                                        <div class="col-lg-3">
+                                            <div class="card-wrap">
+                                                <div class="px-3 pt-3" style="height:80px">
+                                                    <p class="font-default-opensans font12 orange-text mb-1">Debt</p>
+                                                    <p class="font-opensans-semibold font16 black-text">SBI FMP - Series 91 (90Days) (IDCW)</p>
+                                                </div>
+                                                <div class="bottom-text">
+                                                    <ul>
+                                                        <li>
+                                                            <span class="label-text">Start Date</span>
+                                                            <span class="value-text">26 Dec 2023</span>
+                                                        </li>
+                                                        <li style="text-align:right">
+                                                            <span class="label-text">End Date</span>
+                                                            <span class="value-text">28 Dec 2023</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label-text">Min. Investment</span>
+                                                            
+                                                            <span class="value-text"><i class="rupees-icon">₹</i>5,000</span>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="recommended-fd-btn">
+                                                        
+                                                        <button class="btn btn-secondory" onclick="OpenLumpsum('lumpsum_SB683D-DP'); MFWebMFordertrigger_NEWFUNDOFFER('1', 'SBI FMP - Series 91 (90Days) (IDCW)', 'Debt', 'lumpsum')" id="lumpsum_SB683D-DP" data-schemecode="SB683D-DP" data-schemename="SBI FMP - Series 91 (90Days) (IDCW)" data-isin="INF200KA15Z3" data-fundtype="1" data-token="45278" data-nav="0.00" data-navchange="0.00" data-navchangeper="0.00" data-navdate="0.00">
+                                                            Invest Now
+                                                        </button>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="card-wrap">
+                                                <div class="px-3 pt-3" style="height:80px">
+                                                    <p class="font-default-opensans font12 orange-text mb-1">Debt</p>
+                                                    <p class="font-opensans-semibold font16 black-text">SBI FMP - Series 91 (90Days) (G)</p>
+                                                </div>
+                                                <div class="bottom-text">
+                                                    <ul>
+                                                        <li>
+                                                            <span class="label-text">Start Date</span>
+                                                            <span class="value-text">26 Dec 2023</span>
+                                                        </li>
+                                                        <li style="text-align:right">
+                                                            <span class="label-text">End Date</span>
+                                                            <span class="value-text">28 Dec 2023</span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="label-text">Min. Investment</span>
+                                                            
+                                                            <span class="value-text"><i class="rupees-icon">₹</i>5,000</span>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="recommended-fd-btn">
+                                                        
+                                                        <button class="btn btn-secondory" onclick="OpenLumpsum('lumpsum_SB683G-GR'); MFWebMFordertrigger_NEWFUNDOFFER('0', 'SBI FMP - Series 91 (90Days) (G)', 'Debt', 'lumpsum')" id="lumpsum_SB683G-GR" data-schemecode="SB683G-GR" data-schemename="SBI FMP - Series 91 (90Days) (G)" data-isin="INF200KA14Z6" data-fundtype="0" data-token="45279" data-nav="0.00" data-navchange="0.00" data-navchangeper="0.00" data-navdate="0.00">
+                                                            Invest Now
+                                                        </button>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                        </div>
+                    </div>
+                </section>
+            </div>
+</div>
+    <!-- Advice Across Category added by satish on 10-06-2020 -->
+    <div id="adviceAcrossCategory" class="section-spac tabs-show-now mb-3">
+
+
+
+<script>
+    var defaultTab = 15;
+    function ShowDivMF(id) {
+        defaultTab = id;
+        $.ajax({
+            type: "GET",
+            url: "/Home/AdviceAcrossCategoryTab?id=" + id + "&from=card",
+            async: false,
+            contentType: 'application/json; charset=utf-8',
+            dataType: "html",
+            success: function (response) {
+                $("#TabDebt").html(response);
+            },
+            error: function (xhr, textStatus, errorThrown) {
+                alert("Error Occurred GetNewFunds");
+            }
+        });
+    }
+
+    function ViewAllBtn() {
+        LoadPageByID('Home', 'AdviceAcrossCategoryPart', "?id=" + defaultTab);
+    }
+
+
+
+
+    function MFCleverMFTap(eventName, Tab) {
+        try {
+            clevertap.event.push(eventName, {
+                "Tab": Tab,
+                "Date": new Date()
+            });
+        }
+        catch {
+            createNetcoreLog(EventName);
+        }
+    }
+
+
+    function MFCleverMFTap_ViewAll() {
+        try {
+            clevertap.event.push('Web_Advice_Across_Categories_viewall', {
+                "Clientcode":"EBOM907310",
+                "Date": new Date()
+            });
+        }
+        catch {
+            createNetcoreLog(EventName);
+        }
+    }
+
+
+</script>
+
+<!--section class="section-spac tabs-show-now mb-3" id="fr">
+    <div class="container">
+        <div class="recommendation-tab-wrap mutual-fund">
+            <div class="d-flex justify-content-between align-items-center">
+                <h6 class="title text-capitalize font-opensans-semibold mb-2">Advice Across Categories</h6>
+                <a id="viewAllLinkAdvice" href="javascript:void(0);" onclick="ViewAllBtn()"
+                   class="font-opensans-semibold font12 orange-text">View All</a>
+
+            </div>
+            <div class="common-tabs-wrap">
+                <div id="BaseThemList">
+                    <ul class="nav nav-tabs " >
+                        <li class="nav-item" style="margin-top:-10px">
+                            <a class="nav-link py-0 active" data-toggle="tab" href="#equity" data-tab="1" onclick="ShowDivMF(15)">
+                                <div class="d-flex">
+                                    <div class="tab-img flex-shrink-0"></div>
+                                    <p class="font-opensans-semibold font14 black-text" style="margin-top:10px;margin-left:15px">EQUITY</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item" style="margin-top:-10px">
+                            <a class="nav-link py-0" data-toggle="tab" href="#debt" data-tab="2" onclick="ShowDivMF(16)">
+                                <div class="d-flex">
+                                    <div class="tab-img flex-shrink-0"></div>
+                                    <p class="font-opensans-semibold font14 black-text" style="margin-top:10px;margin-left:15px">DEBT</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item" style="margin-top:-10px">
+                            <a class="nav-link py-0" data-toggle="tab" href="#hybrid" data-tab="3" onclick="ShowDivMF(17)">
+                                <div class="d-flex">
+                                    <div class="tab-img flex-shrink-0"></div>
+                                    <p class="font-opensans-semibold font14 black-text" style="margin-top:10px;margin-left:15px">HYBRID</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item" style="margin-top:-10px">
+                            <a class="nav-link py-0" data-toggle="tab" href="#elss" data-tab="4" onclick="ShowDivMF(18)">
+                                <div class="d-flex">
+                                    <div class="tab-img flex-shrink-0"></div>
+                                    <p class="font-opensans-semibold font14 black-text" style="margin-top:10px;margin-left:15px">ELSS</p>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div id="TabDebt">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section-->
+
+<section class="section20 recommendation-tab-wrap" id="fr">
+    <div class="container">
+        <h6 class="font-opensans-semibold font16 black-text">Advice Across Categories</h6>
+        <div class="common-tabs-wrap">
+            <div class="d-flex justify-content-between align-items-center mb15">
+                <ul class="nav nav-tabs ">
+                    <li class="nav-item">
+                        <a class="nav-link active toprecommend" href="#equity" data-tab="1" onclick="ShowDivMF(15);MFCleverMFTap('Web_Advice_Across_Categories_Tabclick','Equity')">Equity</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link toprecommend" data-toggle="tab" href="#debt" data-tab="2" onclick="ShowDivMF(16);MFCleverMFTap('Web_Advice_Across_Categories_Tabclick','Debt')">Debt</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link toprecommend" data-toggle="tab" href="#hybrid" data-tab="3" onclick="ShowDivMF(17);MFCleverMFTap('Web_Advice_Across_Categories_Tabclick','Hybrid')">Hybrid</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link toprecommend" data-toggle="tab" href="#elss" data-tab="4" onclick="ShowDivMF(18);MFCleverMFTap('Web_Advice_Across_Categories_Tabclick','ELSS')">ELSS</a>
+                    </li>
+                </ul>
+                <a href="javascript:void(0)" class="font-opensans-semibold font12 orange-text" onclick="ViewAllBtn();MFCleverMFTap_ViewAll()">View All</a>
+            </div>
+            <div class="tab-content" id="TabDebt">
+
+
+
+
+<div class="tab-content">
+    <div id="equityCard">
+        <div class="row" id="innerDiv">
+                <div class="col-lg-3">
+                    <div class="card-wrap">
+                        <div class="px-3 pt-3" style="height: 80px;">
+                            <p class="font-default-opensans font12 orange-text mb-1">Equity</p>
+                            <p class="showQuote" onclick="ShowQuote('INF205K011T7','RGSCGP-GR','0')" style="height: 75px;">
+                                <a href="javascript:void(0)" class="font-opensans-semibold font16 black-text">
+                                    Invesco India Small Cap Fund - Growth
+                                </a>
+                                <label id="schemacode" hidden="hidden">RGSCGP-GR</label>
+                                <label id="schemaISIN" hidden="hidden">INF205K011T7</label>
+
+                            </p>
+                        </div>
+                        <div class="bottom-text">
+                            <div class="d-flex justify-content-between pb-3">
+                                <div>
+                                    <span class="label-text">NAV</span>
+                                    <span class="value-text">31.00</span>
+                                        <span class="indices-glimpse--status">
+                                            <img src="../Images/big-green-arrow.svg" class="vertical-baseline indices-glimpse--status-img">
+                                        </span>
+                                        <span class="indices-glimpse--percent">0.01 (0.03%)</span>
+                                </div>
+                                <div>
+                                    <span class="label-text" style="text-align:left">Value Research</span>
+                                    <span class="value-text">
+                                        <div class="rating mt0" id="SchemeRating1">
+                                                    <p class="icon icon-star"></p>
+                                                    <p class="icon icon-star"></p>
+
+
+
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between pb-3">
+                                <div>
+                                    <span class="label-text">1 Yr</span>
+                                    <span class="value-text">45.75%</span>
+                                </div>
+                                <div>
+                                    <span class="label-text">3 Yr</span>
+                                    <span class="value-text">32.89%</span>
+                                </div>
+                                <div>
+                                    <span class="label-text">5 Yr</span>
+                                    <span class="value-text">24.90%</span>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="recommended-fd-btn" style="width: auto;">
+
+                                    <button class="btn btn-secondory" onclick="OpenLumpsum('lumpsum_RGSCGP-GR')" style="width: 110px;margin-left: 25px;" id="lumpsum_RGSCGP-GR" data-schemecode="RGSCGP-GR" data-schemename="Invesco India Small Cap Fund - Growth" data-isin="INF205K011T7" data-fundtype="0" data-token="29353" data-nav="31.00" data-navchange="0.01" data-navchangeper="0.03" data-navdate="" data-schemetype="Equity">
+                                        Lumpsum
+                                    </button>
+                                                                    <button class="btn btn-secondory" onclick="OpenSIP('sip_RGSCGP-GR')" style="width: 110px;margin-left: 10px;" id="sip_RGSCGP-GR" data-schemecode="RGSCGP-GR" data-schemename="Invesco India Small Cap Fund - Growth" data-isin="INF205K011T7" data-fundtype="0" data-token="29353" data-nav="31.00" data-navchange="0.01" data-navchangeper="0.03" data-navdate="" data-schemetype="Equity">
+                                        SIP
+                                    </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-wrap">
+                        <div class="px-3 pt-3" style="height: 80px;">
+                            <p class="font-default-opensans font12 orange-text mb-1">Equity</p>
+                            <p class="showQuote" onclick="ShowQuote('INF247L01411','FMGP-GR','0')" style="height: 75px;">
+                                <a href="javascript:void(0)" class="font-opensans-semibold font16 black-text">
+                                    Motilal Oswal Midcap Fund - Growth
+                                </a>
+                                <label id="schemacode" hidden="hidden">FMGP-GR</label>
+                                <label id="schemaISIN" hidden="hidden">INF247L01411</label>
+
+                            </p>
+                        </div>
+                        <div class="bottom-text">
+                            <div class="d-flex justify-content-between pb-3">
+                                <div>
+                                    <span class="label-text">NAV</span>
+                                    <span class="value-text">71.49</span>
+                                        <span class="indices-glimpse--status">
+                                            <img src="../Images/red-arrow.svg" class="vertical-baseline indices-glimpse--status-img">
+                                        </span>
+                                        <span class="red-text font11">-0.03 (-0.05%)</span>
+                                </div>
+                                <div>
+                                    <span class="label-text" style="text-align:left">Value Research</span>
+                                    <span class="value-text">
+                                        <div class="rating mt0" id="SchemeRating1">
+                                                    <p class="icon icon-star"></p>
+                                                    <p class="icon icon-star"></p>
+                                                    <p class="icon icon-star"></p>
+                                                    <p class="icon icon-star"></p>
+                                                    <p class="icon icon-star"></p>
+
+
+
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between pb-3">
+                                <div>
+                                    <span class="label-text">1 Yr</span>
+                                    <span class="value-text">44.02%</span>
+                                </div>
+                                <div>
+                                    <span class="label-text">3 Yr</span>
+                                    <span class="value-text">35.41%</span>
+                                </div>
+                                <div>
+                                    <span class="label-text">5 Yr</span>
+                                    <span class="value-text">24.67%</span>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="recommended-fd-btn" style="width: auto;">
+
+                                    <button class="btn btn-secondory" onclick="OpenLumpsum('lumpsum_FMGP-GR')" style="width: 110px;margin-left: 25px;" id="lumpsum_FMGP-GR" data-schemecode="FMGP-GR" data-schemename="Motilal Oswal Midcap Fund - Growth" data-isin="INF247L01411" data-fundtype="0" data-token="8137" data-nav="71.49" data-navchange="-0.03" data-navchangeper="-0.05" data-navdate="" data-schemetype="Equity">
+                                        Lumpsum
+                                    </button>
+                                                                    <button class="btn btn-secondory" onclick="OpenSIP('sip_FMGP-GR')" style="width: 110px;margin-left: 10px;" id="sip_FMGP-GR" data-schemecode="FMGP-GR" data-schemename="Motilal Oswal Midcap Fund - Growth" data-isin="INF247L01411" data-fundtype="0" data-token="8137" data-nav="71.49" data-navchange="-0.03" data-navchangeper="-0.05" data-navdate="" data-schemetype="Equity">
+                                        SIP
+                                    </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-wrap">
+                        <div class="px-3 pt-3" style="height: 80px;">
+                            <p class="font-default-opensans font12 orange-text mb-1">Equity</p>
+                            <p class="showQuote" onclick="ShowQuote('INF789F01810','UTIMIDCAP-GR','0')" style="height: 75px;">
+                                <a href="javascript:void(0)" class="font-opensans-semibold font16 black-text">
+                                    UTI Mid Cap Fund - Growth
+                                </a>
+                                <label id="schemacode" hidden="hidden">UTIMIDCAP-GR</label>
+                                <label id="schemaISIN" hidden="hidden">INF789F01810</label>
+
+                            </p>
+                        </div>
+                        <div class="bottom-text">
+                            <div class="d-flex justify-content-between pb-3">
+                                <div>
+                                    <span class="label-text">NAV</span>
+                                    <span class="value-text">243.49</span>
+                                        <span class="indices-glimpse--status">
+                                            <img src="../Images/big-green-arrow.svg" class="vertical-baseline indices-glimpse--status-img">
+                                        </span>
+                                        <span class="indices-glimpse--percent">0.65 (0.27%)</span>
+                                </div>
+                                <div>
+                                    <span class="label-text" style="text-align:left">Value Research</span>
+                                    <span class="value-text">
+                                        <div class="rating mt0" id="SchemeRating1">
+                                                    <p class="icon icon-star"></p>
+                                                    <p class="icon icon-star"></p>
+                                                    <p class="icon icon-star"></p>
+
+
+
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between pb-3">
+                                <div>
+                                    <span class="label-text">1 Yr</span>
+                                    <span class="value-text">30.23%</span>
+                                </div>
+                                <div>
+                                    <span class="label-text">3 Yr</span>
+                                    <span class="value-text">23.01%</span>
+                                </div>
+                                <div>
+                                    <span class="label-text">5 Yr</span>
+                                    <span class="value-text">19.77%</span>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="recommended-fd-btn" style="width: auto;">
+
+                                    <button class="btn btn-secondory" onclick="OpenLumpsum('lumpsum_UTIMIDCAP-GR')" style="width: 110px;margin-left: 25px;" id="lumpsum_UTIMIDCAP-GR" data-schemecode="UTIMIDCAP-GR" data-schemename="UTI Mid Cap Fund - Growth" data-isin="INF789F01810" data-fundtype="0" data-token="560" data-nav="243.49" data-navchange="0.65" data-navchangeper="0.27" data-navdate="" data-schemetype="Equity">
+                                        Lumpsum
+                                    </button>
+                                                                    <button class="btn btn-secondory" onclick="OpenSIP('sip_UTIMIDCAP-GR')" style="width: 110px;margin-left: 10px;" id="sip_UTIMIDCAP-GR" data-schemecode="UTIMIDCAP-GR" data-schemename="UTI Mid Cap Fund - Growth" data-isin="INF789F01810" data-fundtype="0" data-token="560" data-nav="243.49" data-navchange="0.65" data-navchangeper="0.27" data-navdate="" data-schemetype="Equity">
+                                        SIP
+                                    </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="card-wrap">
+                        <div class="px-3 pt-3" style="height: 80px;">
+                            <p class="font-default-opensans font12 orange-text mb-1">Equity</p>
+                            <p class="showQuote" onclick="ShowQuote('INF179K01574','CORG','0')" style="height: 75px;">
+                                <a href="javascript:void(0)" class="font-opensans-semibold font16 black-text">
+                                    HDFC Focused 30 Fund - Growth
+                                </a>
+                                <label id="schemacode" hidden="hidden">CORG</label>
+                                <label id="schemaISIN" hidden="hidden">INF179K01574</label>
+
+                            </p>
+                        </div>
+                        <div class="bottom-text">
+                            <div class="d-flex justify-content-between pb-3">
+                                <div>
+                                    <span class="label-text">NAV</span>
+                                    <span class="value-text">171.91</span>
+                                        <span class="indices-glimpse--status">
+                                            <img src="../Images/big-green-arrow.svg" class="vertical-baseline indices-glimpse--status-img">
+                                        </span>
+                                        <span class="indices-glimpse--percent">1.17 (0.68%)</span>
+                                </div>
+                                <div>
+                                    <span class="label-text" style="text-align:left">Value Research</span>
+                                    <span class="value-text">
+                                        <div class="rating mt0" id="SchemeRating1">
+                                                    <p class="icon icon-star"></p>
+                                                    <p class="icon icon-star"></p>
+                                                    <p class="icon icon-star"></p>
+                                                    <p class="icon icon-star"></p>
+
+
+
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between pb-3">
+                                <div>
+                                    <span class="label-text">1 Yr</span>
+                                    <span class="value-text">28.91%</span>
+                                </div>
+                                <div>
+                                    <span class="label-text">3 Yr</span>
+                                    <span class="value-text">29.23%</span>
+                                </div>
+                                <div>
+                                    <span class="label-text">5 Yr</span>
+                                    <span class="value-text">18.40%</span>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="recommended-fd-btn" style="width: auto;">
+
+                                    <button class="btn btn-secondory" onclick="OpenLumpsum('lumpsum_CORG')" style="width: 110px;margin-left: 25px;" id="lumpsum_CORG" data-schemecode="CORG" data-schemename="HDFC Focused 30 Fund - Growth" data-isin="INF179K01574" data-fundtype="0" data-token="12" data-nav="171.91" data-navchange="1.17" data-navchangeper="0.68" data-navdate="" data-schemetype="Equity">
+                                        Lumpsum
+                                    </button>
+                                                                    <button class="btn btn-secondory" onclick="OpenSIP('sip_CORG')" style="width: 110px;margin-left: 10px;" id="sip_CORG" data-schemecode="CORG" data-schemename="HDFC Focused 30 Fund - Growth" data-isin="INF179K01574" data-fundtype="0" data-token="12" data-nav="171.91" data-navchange="1.17" data-navchangeper="0.68" data-navdate="" data-schemetype="Equity">
+                                        SIP
+                                    </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            <script>
+
+                function OpenLumpsum(id) {
+
+                    if (isGuestUser() == 1) { return false; }
+                    $("#dvLoader").show();
+                    var newschemeType = $("#" + id).data("schemeType")
+                    var randomNum = Math.floor(Math.random() * (1000 - 10) + 10);
+                    var siplumpsumorder = {
+                        randomNumber: randomNum,
+                        isin: $("#" + id).data("isin"),
+                        schemecode: $("#" + id).data("schemecode"),
+                        schemename: $("#" + id).data("schemename"),
+                        fundtype: $("#" + id).data("fundtype"),
+                        token: $("#" + id).data("token"),
+                        nav: $("#" + id).data("nav"),
+                        navchange: $("#" + id).data("navchange"),
+                        navchangeper: $("#" + id).data("navchangeper"),
+                        navdate: $("#" + id).data("navdate"),
+                        formtitle: "Lumpsum",
+                        txnType: "FP"
+                    };
+                    MFWebMForder_trigger_advce('15', schemeName, newschemeType, "Lumpsum")
+
+                    $.post("/MutualFund/LUMPSUMForm", { sip_lumpsum_order: siplumpsumorder }, function (response) {
+                        var orderformname = "OrderFormMutualFundLumpsum_" + randomNum
+                        $("#lumpsumform").html(response);
+                        $("#" + orderformname).modal("show");
+                        $("#dvLoader").hide();
+                    });
+                }
+
+                function OpenSIP(id) {
+
+                    if (isGuestUser() == 1) { return false; }
+                    $("#dvLoader").show();
+                    var newschemeType = $("#" + id).data("schemeType")
+                    var randomNum = Math.floor(Math.random() * (1000 - 10) + 10);
+                    var siplumpsumorder = {
+                        randomNumber: randomNum,
+                        isin: $("#" + id).data("isin"),
+                        schemecode: $("#" + id).data("schemecode"),
+                        schemename: $("#" + id).data("schemename"),
+                        fundtype: $("#" + id).data("fundtype"),
+                        token: $("#" + id).data("token"),
+                        nav: $("#" + id).data("nav"),
+                        navchange: $("#" + id).data("navchange"),
+                        navchangeper: $("#" + id).data("navchangeper"),
+                        navdate: $("#" + id).data("navdate"),
+                        txnType: "SIP",
+                    };
+
+                    MFWebMForder_trigger_advce('15', schemeName, newschemeType, "SIP")
+
+                    $.post("/MutualFund/SIPForm", { sip_lumpsum_order: siplumpsumorder }, function (response) {
+                        var orderformname = "OrderFormMutualFundSip_" + randomNum
+                        $("#sipform").html(response);
+                        $("#" + orderformname).modal("show");
+                        $("#dvLoader").hide();
+                    });
+                }
+
+                //$(".scannerSIP").click(function () {
+                //
+                //    $("#dvLoader").show();
+                //    var randomNum = Math.floor(Math.random() * (1000 - 10) + 10);
+                //    var siplumpsumorder = {
+                //        randomNumber: randomNum,
+                //        isin: $("#" + $(this).attr('id')).data("isin"),
+                //        schemecode: $("#" + $(this).attr('id')).data("schemecode"),
+                //        schemename: $("#" + $(this).attr('id')).data("schemename"),
+                //        fundtype: $("#" + $(this).attr('id')).data("fundtype"),
+                //        token: $("#" + $(this).attr('id')).data("token"),
+                //        nav: $("#" + $(this).attr('id')).data("nav"),
+                //        navchange: $("#" + $(this).attr('id')).data("navchange"),
+                //        navchangeper: $("#" + $(this).attr('id')).data("navchangeper"),
+                //        navdate: $("#" + $(this).attr('id')).data("navdate"),
+                //        txnType: "SIP"
+                //    };
+                //    $.post("/MutualFund/SIPForm", { sip_lumpsum_order: siplumpsumorder }, function (response) {
+                //        var orderformname = "OrderFormMutualFundSip_" + randomNum
+                //        $("#sipform").html(response);
+                //        $("#" + orderformname).modal("show");
+                //        $("#dvLoader").hide();
+                //    });
+                //});
+
+                //$(".scannerLumpsum").click(function () {
+                //
+                //    $("#dvLoader").show();
+                //    var randomNum = Math.floor(Math.random() * (1000 - 10) + 10);
+                //    var siplumpsumorder = {
+                //        randomNumber: randomNum,
+                //        isin: $("#" + $(this).attr('id')).data("isin"),
+                //        schemecode: $("#" + $(this).attr('id')).data("schemecode"),
+                //        schemename: $("#" + $(this).attr('id')).data("schemename"),
+                //        fundtype: $("#" + $(this).attr('id')).data("fundtype"),
+                //        token: $("#" + $(this).attr('id')).data("token"),
+                //        nav: $("#" + $(this).attr('id')).data("nav"),
+                //        navchange: $("#" + $(this).attr('id')).data("navchange"),
+                //        navchangeper: $("#" + $(this).attr('id')).data("navchangeper"),
+                //        navdate: $("#" + $(this).attr('id')).data("navdate"),
+                //        formtitle: "Lumpsum",
+                //        txnType: "FP"
+                //    };
+                //    $.post("/MutualFund/LUMPSUMForm", { sip_lumpsum_order: siplumpsumorder }, function (response) {
+                //        var orderformname = "OrderFormMutualFundLumpsum_" + randomNum
+                //        $("#lumpsumform").html(response);
+                //        $("#" + orderformname).modal("show");
+                //        $("#dvLoader").hide();
+                //    });
+                //});
+
+                function ShowQuote(isin, schemecode, fundtype) {
+                    $("#dvLoader").show();
+                    var url = "/Home/GetQuoteMFPage";
+                    var token = $('[name=__RequestVerificationToken]').val();
+                    var data = EncryptData(('{schemeCode:"' + schemecode + '",isin:"' + isin + '",divFlag:"' + fundtype + '"}'));
+
+                    $.ajax({
+                        type: "POST",
+                        url: url,
+                        data: JSON.stringify(data),
+                        headers: { '__RequestVerificationToken': token },
+                        contentType: 'application/json; charset=utf-8',
+                        //data: {
+                        //    'schemeCode': schemecode,
+                        //    'isin': isin,
+                        //    'divFlag': fundtype
+                        //},
+                        async: true,
+                        success: function (html) {
+                            $("#dvLoader").hide();
+                            VerifyJSON(html);
+                        },
+                        error: function (html) {
+                            $("#dvLoader").hide();
+                            alert('Error');
+                        }
+                    });
+                }
+
+                $(".showMFQuote").click(function () {
+
+                    $("#dvLoader").show();
+                    var isin = $("#" + $(this).attr('id')).data("mainisin");
+                    var schemecode = $("#" + $(this).attr('id')).data("mainschemecode");
+                    var fundtype = $("#" + $(this).attr('id')).data("mainfundtype");
+                    var url = "/Home/GetQuoteMFPage";
+                    var token = $('[name=__RequestVerificationToken]').val();
+
+                    var data = EncryptData(('{schemeCode:"' + schemecode + '",isin:"' + isin + '",divFlag:"' + fundtype + '"}'));
+
+
+                    $.ajax({
+                        type: "POST",
+                        url: url,
+                        //data: {
+                        //    'schemeCode': schemecode,
+                        //    'isin': isin,
+                        //    'divFlag': fundtype
+                        //},
+                        data: JSON.stringify(data),
+                        headers: { '__RequestVerificationToken': token },
+                        contentType: 'application/json; charset=utf-8',
+                        async: true,
+                        success: function (html) {
+                            $("#dvLoader").hide();
+                            VerifyJSON(html);
+                        },
+                        error: function (html) {
+                            $("#dvLoader").hide();
+                            alert('Error');
+                        }
+                    });
+                });
+
+
+
+                //$("#viewAllLinkAdvice").click(function () {
+                //    debugger
+                //    $.ajax({
+                //        type: "GET",
+                //        url: "/Home/AdviceAcrossCategoryPart",
+                //        //data: input,
+                //        async: false,
+                //        contentType: 'application/json; charset=utf-8',
+                //        // dataType: "json",
+                //        dataType: "html",
+                //        success: function (response) {
+                //            // $("#divAdviceAcross").html(response);
+                //            console.log("Response ", response)
+                //        },
+                //        error: function (xhr, textStatus, errorThrown) {
+                //            //
+                //            alert("Error Occurred GetNewFunds");
+                //        }
+
+                //    });
+                //});
+
+                function MFWebMForder_trigger_advce(TypeofFunds, schemeName, schemeType, InvestmentType) {
+
+                    try {
+
+                        var Fundtype = "";
+
+                        if (TypeofFunds == "15") {
+                            Fundtype = "Equity";
+                        }
+                        if (TypeofFunds == "16") {
+                            Fundtype = "Debt";
+                        }
+                        if (TypeofFunds == "17") {
+                            Fundtype = "Hybrid";
+                        }
+                        if (TypeofFunds == "18") {
+                            Fundtype = "ELSS";
+                        }
+                        if (TypeofFunds == "") {
+                            Fundtype = "Equity";
+                        }
+
+                        clevertap.event.push('Web_MF_order_trigger', {
+                            "Source": "Mutual Fund Page",
+                            "MF Name": schemeName,
+                            "Fund Categories": "Advice across categories",
+                            "Type of Funds": Fundtype,
+                            "Segment": schemeType,
+                            "Investment Type": InvestmentType,
+                            "Date": new Date()
+
+                        });
+                    }
+                    catch {
+                        createNetcoreLog('Web_MF_order_trigger')
+                    }
+
+
+
+                }
+        </script>
+        </div>
+    </div>
+
+
+</div>
+
+</div>
+        </div>
+    </div>
+</section>
+<script>
+    $(document).ready(function () {
+        ShowDivMF(15);
+    });
+</script></div>
+    <!-- curated portfolios -->
+
+    <section class="section-spac curated-port-sec mb-3 secCuratedPortfolio" style="display:none">
+        <div class="container">
+            <div class="top-title">
+                <h6 class="title text-capitalize font-opensans-semibold mb-2">curated portfolios</h6>
+            </div>
+            <div class="list-wrap">
+                <div class="row" id="curatedPortfolio">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- curated portfolios -->
+    <!--Stay secured-->
+    <section class="pt-4 pb-2 tax-save-sec">
+        <div class="container" id="mfBanner">
+
+
+<style>
+    .tax-save-sec .tax-wrapper {
+        height: 162px;
+        box-shadow: none;
+    }
+
+        .tax-save-sec .tax-wrapper::before {
+            display: none;
+        }
+</style>
+
+<script type="text/javascript">
+    function RediectToPage(deepLinkUrlOfBanner)
+    {
+        try {
+            clevertap.event.push('Web_Banner_Click', {
+                "Source": 'Mutual_Fund',
+                 "Client Code": 'EBOM907310',
+                "Date": new Date()
+            });
+        }
+        catch {
+            createNetcoreLog(EventName);
+        }
+
+        if (deepLinkUrlOfBanner == "") {
+                return;
+            }
+        if (deepLinkUrlOfBanner.length > 0 && deepLinkUrlOfBanner.includes("|")) {
+            var DLU = deepLinkUrlOfBanner.split("|");
+            if (DLU[2] == undefined)
+                LoadPage(DLU[0], DLU[1])
+            else if (DLU[2] != undefined)
+                openSipOrderForm(DLU[0], DLU[1], DLU[2]);
+            $(".modal-backdrop").remove();
+        }
+		else if (deepLinkUrlOfBanner.length > 0 && deepLinkUrlOfBanner.includes("(")) {
+		$("#btnMFBannerRedirect").removeAttr("onclick");
+		$("#btnMFBannerRedirect").attr("onclick",deepLinkUrlOfBanner)
+		$("#btnMFBannerRedirect").click();
+		$(".modal-backdrop").remove();
+		return false;
+		}
+        else if (deepLinkUrlOfBanner.length > 0) {
+            window.open(deepLinkUrlOfBanner);
+            $('a.modal-close').trigger('click');
+        }
+    }
+
+		function openSipOrderForm(ControlerName, ActionName, Parameter) {
+        var url = "/" + ControlerName + "/" + ActionName;
+        var parms = Parameter.split(",");
+        $("#RoadBannerId").modal('hide');
+        var randomNum = Math.floor(Math.random() * (1000 - 10) + 10);
+        var siplumpsumorder = {
+            randomNumber: randomNum,
+            isin: parms[0].trim(),
+            schemecode: parms[1].trim(),
+            schemename: parms[2].trim(),
+            fundtype: $("#fundCode").val(),
+            token: parms[3].trim(),
+            nav: "",// $("#" + $(this).attr('id')).data("nav"),
+            navchange: "",//$("#" + $(this).attr('id')).data("navchange"),
+            navchangeper: "",// $("#" + $(this).attr('id')).data("navchangeper"),
+            navdate: "",//$("#" + $(this).attr('id')).data("navdate"),
+            txnType: "SIP"
+        };
+        $.post(url, { sip_lumpsum_order: siplumpsumorder }, function (response) {
+            var orderformname = "OrderFormMutualFundSip_" + randomNum
+            $("#sipform").html(response);
+            $("#" + orderformname).modal("show");
+            $("#dvLoader").hide();
+        });
+    }
+</script>
+
+    <a href="javascript:RediectToPage('https://smallcases.motilaloswal.com/smallcase/SCET_0016?utm_source=mofsl&amp;utm_medium=inapp&amp;utm_campai')" style="display:contents">
+        <div class="tax-wrapper" style="background: url(https://invest.motilaloswal.com/InvestorImages/AdminUtility/InlineBanner/SMCS_web.png) no-repeat #fff; background-position: right top; background-size: contain;">
+            <div class="row" style="cursor:pointer">
+                <div class="col-xs-12 col-sm-8 col-md-8">
+                    <div class="block block-l p-4">
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+
+
+</div>
+    </section>
+    <!--Stay secured-->
+    <!-- top Recommendations -->
+    <section class="section20 recommendation-tab-wrap">
+        <div class="container">
+            <h6 class="font-opensans-semibold font16 black-text">Top Recommendations</h6>
+            <div class="common-tabs-wrap">
+                <div class="d-flex justify-content-between align-items-center mb15">
+                    <ul class="nav nav-tabs ">
+                        <li class="nav-item">
+                            <a class="nav-link active topRecos" data-tab="101" data-toggle="tab" href="#topsip" onclick="MFCleverMFTap('Web_Top_recommendations_Tabclick','SIP')">SIP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link topRecos" data-tab="102" data-toggle="tab" href="#toplumpsum" onclick="MFCleverMFTap('Web_Top_recommendations_Tabclick','Lumpsum')">Lumpsum</a>
+                        </li>
+                    </ul>
+                    <a href="javascript:void(0)" class="font-opensans-semibold font12 orange-text" onclick="MFCleverMFAllTap_rec()" id="topRecommendViewAll">View All</a>
+                </div>
+                <div class="tab-content" id="topRecommendation"><div id="topsip" class="tab-pane fade in active show">
+    <div class="row">
+
+                        <div class="col-lg-3">
+                            <div class="card-wrap">
+                                <div class="px-3 pt-3" style="height: 80px;">
+                                    <p class="font-default-opensans font12 orange-text mb-1">Equity</p>
+                                    <p class="" style="height: 75px;" onclick="ShowQuote('INF204K01HY3','RMFSCPGP-GR','0')">
+                                        <a href="javascript:void(0)" class="font-opensans-semibold font16 black-text">
+                                            Nippon India Small Cap Fund - Growth
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="bottom-text">
+                                    <div class="d-flex justify-content-between pb-3">
+                                        <div>
+                                            <span class="label-text">NAV</span>
+                                            <span class="value-text">137.05</span>
+                                            <span class="indices-glimpse--status">
+                                                <img src="../Images/big-green-arrow.svg" class="vertical-baseline indices-glimpse--status-img">
+                                            </span>
+                                            <span class="indices-glimpse--percent">0.46 (0.34%)</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">Risk</span>
+                                            <span class="value-text">High</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between pb-3">
+                                        <div>
+                                            <span class="label-text">1 Yr</span>
+                                            <span class="value-text">50.95%</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">3 Yr</span>
+                                            <span class="value-text">40.95%</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">5 Yr</span>
+                                            <span class="value-text">28.40%</span>
+                                        </div>
+                                    </div>
+                                    <div class="recommended-fd-btn">
+                                        <button class="btn btn-secondory startSIPTopRecommend" id="sip_RMFSCPGP-GR" data-schemecode="RMFSCPGP-GR" data-schemename="Nippon India Small Cap Fund - Growth" data-isin="INF204K01HY3" data-fundtype="0" data-token="1058" data-nav="137.05" data-navchange="0.46" data-navchangeper="0.34">
+                                            INVEST NOW
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card-wrap">
+                                <div class="px-3 pt-3" style="height: 80px;">
+                                    <p class="font-default-opensans font12 orange-text mb-1">Equity</p>
+                                    <p class="" style="height: 75px;" onclick="ShowQuote('INF205K011T7','RGSCGP-GR','0')">
+                                        <a href="javascript:void(0)" class="font-opensans-semibold font16 black-text">
+                                            Invesco India Small Cap Fund - Growth
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="bottom-text">
+                                    <div class="d-flex justify-content-between pb-3">
+                                        <div>
+                                            <span class="label-text">NAV</span>
+                                            <span class="value-text">31.00</span>
+                                            <span class="indices-glimpse--status">
+                                                <img src="../Images/big-green-arrow.svg" class="vertical-baseline indices-glimpse--status-img">
+                                            </span>
+                                            <span class="indices-glimpse--percent">0.01 (0.03%)</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">Risk</span>
+                                            <span class="value-text">High</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between pb-3">
+                                        <div>
+                                            <span class="label-text">1 Yr</span>
+                                            <span class="value-text">45.75%</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">3 Yr</span>
+                                            <span class="value-text">32.89%</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">5 Yr</span>
+                                            <span class="value-text">24.90%</span>
+                                        </div>
+                                    </div>
+                                    <div class="recommended-fd-btn">
+                                        <button class="btn btn-secondory startSIPTopRecommend" id="sip_RGSCGP-GR" data-schemecode="RGSCGP-GR" data-schemename="Invesco India Small Cap Fund - Growth" data-isin="INF205K011T7" data-fundtype="0" data-token="29353" data-nav="31.00" data-navchange="0.01" data-navchangeper="0.03">
+                                            INVEST NOW
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card-wrap">
+                                <div class="px-3 pt-3" style="height: 80px;">
+                                    <p class="font-default-opensans font12 orange-text mb-1">Equity</p>
+                                    <p class="" style="height: 75px;" onclick="ShowQuote('INF663L01DZ4','MOGP-GR','0')">
+                                        <a href="javascript:void(0)" class="font-opensans-semibold font16 black-text">
+                                            PGIM India Midcap Opportunities Fund - Growth
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="bottom-text">
+                                    <div class="d-flex justify-content-between pb-3">
+                                        <div>
+                                            <span class="label-text">NAV</span>
+                                            <span class="value-text">52.42</span>
+                                            <span class="indices-glimpse--status">
+                                                <img src="../Images/big-green-arrow.svg" class="vertical-baseline indices-glimpse--status-img">
+                                            </span>
+                                            <span class="indices-glimpse--percent">0.13 (0.25%)</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">Risk</span>
+                                            <span class="value-text">High</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between pb-3">
+                                        <div>
+                                            <span class="label-text">1 Yr</span>
+                                            <span class="value-text">21.01%</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">3 Yr</span>
+                                            <span class="value-text">25.63%</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">5 Yr</span>
+                                            <span class="value-text">24.78%</span>
+                                        </div>
+                                    </div>
+                                    <div class="recommended-fd-btn">
+                                        <button class="btn btn-secondory startSIPTopRecommend" id="sip_MOGP-GR" data-schemecode="MOGP-GR" data-schemename="PGIM India Midcap Opportunities Fund - Growth" data-isin="INF663L01DZ4" data-fundtype="0" data-token="6655" data-nav="52.42" data-navchange="0.13" data-navchangeper="0.25">
+                                            INVEST NOW
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card-wrap">
+                                <div class="px-3 pt-3" style="height: 80px;">
+                                    <p class="font-default-opensans font12 orange-text mb-1">Equity</p>
+                                    <p class="" style="height: 75px;" onclick="ShowQuote('INF789F01810','UTIMIDCAP-GR','0')">
+                                        <a href="javascript:void(0)" class="font-opensans-semibold font16 black-text">
+                                            UTI Mid Cap Fund - Growth
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="bottom-text">
+                                    <div class="d-flex justify-content-between pb-3">
+                                        <div>
+                                            <span class="label-text">NAV</span>
+                                            <span class="value-text">243.49</span>
+                                            <span class="indices-glimpse--status">
+                                                <img src="../Images/big-green-arrow.svg" class="vertical-baseline indices-glimpse--status-img">
+                                            </span>
+                                            <span class="indices-glimpse--percent">0.65 (0.27%)</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">Risk</span>
+                                            <span class="value-text">High</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between pb-3">
+                                        <div>
+                                            <span class="label-text">1 Yr</span>
+                                            <span class="value-text">30.23%</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">3 Yr</span>
+                                            <span class="value-text">23.01%</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">5 Yr</span>
+                                            <span class="value-text">19.77%</span>
+                                        </div>
+                                    </div>
+                                    <div class="recommended-fd-btn">
+                                        <button class="btn btn-secondory startSIPTopRecommend" id="sip_UTIMIDCAP-GR" data-schemecode="UTIMIDCAP-GR" data-schemename="UTI Mid Cap Fund - Growth" data-isin="INF789F01810" data-fundtype="0" data-token="560" data-nav="243.49" data-navchange="0.65" data-navchangeper="0.27">
+                                            INVEST NOW
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    </div>
+</div>
+<div id="toplumpsum" class="tab-pane fade">
+    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="card-wrap">
+                                <div class="px-3 pt-3" style="height: 80px;">
+                                    <p class="font-default-opensans font12 orange-text mb-1">Equity</p>
+                                    <p class="" style="height: 75px;" onclick="ShowQuote('INF247L01411','FMGP-GR','0')">
+                                        <a href="javascript:void(0)" class="font-opensans-semibold font16 black-text">
+                                            Motilal Oswal Midcap Fund - Growth
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="bottom-text">
+                                    <div class="d-flex justify-content-between pb-3">
+                                        <div>
+                                            <span class="label-text">NAV</span>
+                                            <span class="value-text">71.49</span>
+                                            <span class="indices-glimpse--status">
+                                                <img src="../Images/big-green-arrow.svg" class="vertical-baseline indices-glimpse--status-img">
+                                            </span>
+                                            <span class="indices-glimpse--percent">-0.03 (-0.05%)</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">Risk</span>
+                                            <span class="value-text">High</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between pb-3">
+                                        <div>
+                                            <span class="label-text">1 Yr</span>
+                                            <span class="value-text">44.02%</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">3 Yr</span>
+                                            <span class="value-text">35.41%</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">5 Yr</span>
+                                            <span class="value-text">24.67%</span>
+                                        </div>
+                                    </div>
+                                    <div class="recommended-fd-btn">
+                                        <button class="btn btn-secondory startLumpsumTopRecommend" id="lumpsum_FMGP-GR" data-schemecode="FMGP-GR" data-schemename="Motilal Oswal Midcap Fund - Growth" data-isin="INF247L01411" data-fundtype="0" data-token="8137" data-nav="71.49" data-navchange="-0.03" data-navchangeper="-0.05">
+                                            INVEST NOW
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card-wrap">
+                                <div class="px-3 pt-3" style="height: 80px;">
+                                    <p class="font-default-opensans font12 orange-text mb-1">Equity</p>
+                                    <p class="" style="height: 75px;" onclick="ShowQuote('INF174K01211','K104M-GR','0')">
+                                        <a href="javascript:void(0)" class="font-opensans-semibold font16 black-text">
+                                            Kotak Small Cap Fund - Growth
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="bottom-text">
+                                    <div class="d-flex justify-content-between pb-3">
+                                        <div>
+                                            <span class="label-text">NAV</span>
+                                            <span class="value-text">217.42</span>
+                                            <span class="indices-glimpse--status">
+                                                <img src="../Images/big-green-arrow.svg" class="vertical-baseline indices-glimpse--status-img">
+                                            </span>
+                                            <span class="indices-glimpse--percent">0.02 (0.01%)</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">Risk</span>
+                                            <span class="value-text">High</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between pb-3">
+                                        <div>
+                                            <span class="label-text">1 Yr</span>
+                                            <span class="value-text">35.45%</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">3 Yr</span>
+                                            <span class="value-text">31.33%</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">5 Yr</span>
+                                            <span class="value-text">26.12%</span>
+                                        </div>
+                                    </div>
+                                    <div class="recommended-fd-btn">
+                                        <button class="btn btn-secondory startLumpsumTopRecommend" id="lumpsum_K104M-GR" data-schemecode="K104M-GR" data-schemename="Kotak Small Cap Fund - Growth" data-isin="INF174K01211" data-fundtype="0" data-token="765" data-nav="217.42" data-navchange="0.02" data-navchangeper="0.01">
+                                            INVEST NOW
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card-wrap">
+                                <div class="px-3 pt-3" style="height: 80px;">
+                                    <p class="font-default-opensans font12 orange-text mb-1">Equity</p>
+                                    <p class="" style="height: 75px;" onclick="ShowQuote('INF194K01342','IDFC215-GR','0')">
+                                        <a href="javascript:void(0)" class="font-opensans-semibold font16 black-text">
+                                            Bandhan Sterling Value Fund - Growth
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="bottom-text">
+                                    <div class="d-flex justify-content-between pb-3">
+                                        <div>
+                                            <span class="label-text">NAV</span>
+                                            <span class="value-text">121.56</span>
+                                            <span class="indices-glimpse--status">
+                                                <img src="../Images/big-green-arrow.svg" class="vertical-baseline indices-glimpse--status-img">
+                                            </span>
+                                            <span class="indices-glimpse--percent">0.57 (0.47%)</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">Risk</span>
+                                            <span class="value-text">High</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between pb-3">
+                                        <div>
+                                            <span class="label-text">1 Yr</span>
+                                            <span class="value-text">32.85%</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">3 Yr</span>
+                                            <span class="value-text">31.06%</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">5 Yr</span>
+                                            <span class="value-text">19.41%</span>
+                                        </div>
+                                    </div>
+                                    <div class="recommended-fd-btn">
+                                        <button class="btn btn-secondory startLumpsumTopRecommend" id="lumpsum_IDFC215-GR" data-schemecode="IDFC215-GR" data-schemename="Bandhan Sterling Value Fund - Growth" data-isin="INF194K01342" data-fundtype="0" data-token="609" data-nav="121.56" data-navchange="0.57" data-navchangeper="0.47">
+                                            INVEST NOW
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="card-wrap">
+                                <div class="px-3 pt-3" style="height: 80px;">
+                                    <p class="font-default-opensans font12 orange-text mb-1">Equity</p>
+                                    <p class="" style="height: 75px;" onclick="ShowQuote('INF179K01608','02','0')">
+                                        <a href="javascript:void(0)" class="font-opensans-semibold font16 black-text">
+                                            HDFC Flexicap Fund - Growth
+                                        </a>
+                                    </p>
+                                </div>
+                                <div class="bottom-text">
+                                    <div class="d-flex justify-content-between pb-3">
+                                        <div>
+                                            <span class="label-text">NAV</span>
+                                            <span class="value-text">1491.33</span>
+                                            <span class="indices-glimpse--status">
+                                                <img src="../Images/big-green-arrow.svg" class="vertical-baseline indices-glimpse--status-img">
+                                            </span>
+                                            <span class="indices-glimpse--percent">12.22 (0.83%)</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">Risk</span>
+                                            <span class="value-text">High</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between pb-3">
+                                        <div>
+                                            <span class="label-text">1 Yr</span>
+                                            <span class="value-text">30.16%</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">3 Yr</span>
+                                            <span class="value-text">28.3%</span>
+                                        </div>
+                                        <div>
+                                            <span class="label-text">5 Yr</span>
+                                            <span class="value-text">19.19%</span>
+                                        </div>
+                                    </div>
+                                    <div class="recommended-fd-btn">
+                                        <button class="btn btn-secondory startLumpsumTopRecommend" id="lumpsum_02" data-schemecode="02" data-schemename="HDFC Flexicap Fund - Growth" data-isin="INF179K01608" data-fundtype="0" data-token="14" data-nav="1491.33" data-navchange="12.22" data-navchangeper="0.83">
+                                            INVEST NOW
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    </div>
+</div>
+
+<script>
+    $(".startSIPTopRecommend").click(function () {
+
+        if (isGuestUser() == 1) { return false; }
+       // $("#dvLoader").show();
+        var NewschemeType = $("#" + $(this).attr('id')).data("schemeType");
+        var randomNum = Math.floor(Math.random() * (1000 - 10) + 10);
+        var siplumpsumorder = {
+            randomNumber: randomNum,
+            isin: $("#" + $(this).attr('id')).data("isin"),
+            schemecode: $("#" + $(this).attr('id')).data("schemecode"),
+            schemename: $("#" + $(this).attr('id')).data("schemename"),
+            fundtype: $("#" + $(this).attr('id')).data("fundtype"),
+            token: $("#" + $(this).attr('id')).data("token"),
+            nav: $("#" + $(this).attr('id')).data("nav"),
+            navchange: $("#" + $(this).attr('id')).data("navchange"),
+            navchangeper: $("#" + $(this).attr('id')).data("navchangeper"),
+            navdate: $("#" + $(this).attr('id')).data("navdate"),
+            txnType: "SIP"
+        };
+        var Shecmaname = $("#" + $(this).attr('id')).data("schemename");
+        MFWebMFordertrigger_TopRecomd( "SIP", Shecmaname)
+
+        $.post("/MutualFund/SIPForm", { sip_lumpsum_order: siplumpsumorder }, function (response) {
+            var orderformname = "OrderFormMutualFundSip_" + randomNum
+            $("#sipform").html(response);
+            $("#" + orderformname).modal("show");
+          //  $("#dvLoader").hide();
+        });
+    });
+
+    $(".startLumpsumTopRecommend").click(function () {
+
+        if (isGuestUser() == 1) { return false; }
+       // $("#dvLoader").show();
+        var NewschemeType = $("#" + $(this).attr('id')).data("schemeType");
+        var randomNum = Math.floor(Math.random() * (1000 - 10) + 10);
+        var siplumpsumorder = {
+            randomNumber: randomNum,
+            isin: $("#" + $(this).attr('id')).data("isin"),
+            schemecode: $("#" + $(this).attr('id')).data("schemecode"),
+            schemename: $("#" + $(this).attr('id')).data("schemename"),
+            fundtype: $("#" + $(this).attr('id')).data("fundtype"),
+            token: $("#" + $(this).attr('id')).data("token"),
+            nav: $("#" + $(this).attr('id')).data("nav"),
+            navchange: $("#" + $(this).attr('id')).data("navchange"),
+            navchangeper: $("#" + $(this).attr('id')).data("navchangeper"),
+            navdate: $("#" + $(this).attr('id')).data("navdate"),
+            formtitle: "Lumpsum",
+            txnType: "FP"
+        };
+        var Shecmaname = $("#" + $(this).attr('id')).data("schemename");
+        MFWebMFordertrigger_TopRecomd("Lumpsum", Shecmaname)
+
+        $.post("/MutualFund/LUMPSUMForm", { sip_lumpsum_order: siplumpsumorder }, function (response) {
+            var orderformname = "OrderFormMutualFundLumpsum_" + randomNum
+            $("#lumpsumform").html(response);
+            $("#" + orderformname).modal("show");
+            //$("#dvLoader").hide();
+        });
+    });
+
+    function ShowQuote(isin, schemecode, fundtype) {
+       // $("#dvLoader").show();
+        var url = "/Home/GetQuoteMFPage";
+
+        var token = $('[name=__RequestVerificationToken]').val();
+        var data = EncryptData(('{schemeCode:"' + schemecode + '",isin:"' + isin + '",divFlag:"' + fundtype + '"}'));
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: JSON.stringify(data),
+            headers: { '__RequestVerificationToken': token },
+            contentType: 'application/json; charset=utf-8',
+            //data: {
+            //    'schemeCode': schemecode,
+            //    'isin': isin,
+            //    'divFlag': fundtype
+            //},
+            async: true,
+            success: function (html) {
+               // $("#dvLoader").hide();
+                VerifyJSON(html);
+            },
+            error: function (html) {
+               // $("#dvLoader").hide();
+                alert('Error');
+            }
+        });
+    }
+
+    function MFWebMFordertrigger_TopRecomd( InvestmentType, schemename) {
+
+        try {
+            clevertap.event.push('Web_MF_order_trigger', {
+                "Source": "MF Page",
+                "Fund Categories": "Top Recommendations",
+                "schemename": schemename,
+                "Investment Type": InvestmentType,
+                "Date": new Date()
+
+            });
+        }
+        catch {
+            createNetcoreLog('Web_MF_order_trigger')
+        }
+
+
+
+    }
+</script></div>
+            </div>
+        </div>
+    </section>
+    <!-- top Recommendations -->
+    <!-- Calculate your return section -->
+    <section class="section-spac banner-with-whitebg return-caculator-wrap pt-5 mt-4" id="rc">
+        <div class="bg-banner">
+            <div class="overlay-images" style="background: #FFF9F3  ; background-size: cover; ">
+            </div>
+            <div class="hight-speed-wrap">
+                <div class="custom-container">
+                    <div class="top-title">
+                        <h5 class="title-black title-width-bar" style="margin-bottom:30px"><span>ReturnS Calculator</span></h5>
+                    </div>
+
+                    <div class="content-bg ">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="block">
+                                    <div class="row form-element">
+                                        <div class="col-md-12">
+                                            <div class="switchAlign">
+                                                <span>Lumpsum</span>
+                                                <label class="switch">
+                                                    <input type="checkbox" id="chklumpsumOrSIP" onclick="CalculateReturn();">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                                <span>SIP</span>
+                                            </div>
+                                            <div class="search-research-wrap" style="position: relative;">
+                                                <div class="addon-wrap search-addon-common">
+                                                    <input type="text" value="" id="mfReturnCalSearchTxt" autocomplete="off" class="form-control" placeholder="Search for Schemes" style="height: 50px;padding-right: 60px;font-size:14px">
+                                                    <span class="cleartext" id="mfReturnCalSearchTxtClear" style="">Clear</span>
+                                                    <span class="search-icon">
+                                                        <img src="../Images/orange-search-icon.svg" alt="" class="img-fluid">
+                                                    </span>
+                                                    <input type="hidden" id="isin" value="INF247L01155">
+                                                    <input type="hidden" id="scripCode" value="MFGP-GR">
+                                                    <input type="hidden" id="fundCode" value="0">
+                                                    <input type="hidden" id="token" value="5478">
+                                                    <input type="hidden" id="schemeName" value="Motilal Oswal Focused Fund - Growth">
+                                                </div>
+
+                                                <div class="search-list-wrap  common-search-list-wrap" id="searchReturnCalBarMFHome" data-simplebar="init" style="width: 100%; top: 53px; display: none;">
+                                                    <div class="simplebar-wrapper" style="margin: -5px -15px 0px;">
+                                                        <div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask">
+                                                            <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                                                                <div class="simplebar-content-wrapper" style="height: 100%; overflow: hidden scroll;">
+                                                                    <div class="simplebar-content" style="padding: 5px 15px 0px;overflow: SCROLL;HEIGHT: 100%;" id="searchResultReturnCalDIV">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div><div class="simplebar-placeholder" style="width: 0px; height: 0px;"></div>
+                                                    </div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: hidden;"><div class="simplebar-scrollbar" style="height: 0px; display: none;"></div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <p class="control-label font-default-openSans mb10 font11">Amount (₹)</p>
+                                                <input id="txtamount" style="font-size:14px" placeholder="" class="form-control text-center font-opensans-semibold" value="50,000">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <p class="control-label mb10 font11 font-default-openSans">Horizon</p>
+                                                <div class="select-con">
+                                                    <select id="ddlHorizon" class="select2 select2-container select2-container--default font12" style="border-radius: 6px;height: 35px;z-index: 0 !important;border-color: #dedede;padding-left:5px">
+                                                        
+                                                    <option value="1M">1 Month</option><option value="3M">3 Month</option><option value="6M">6 Month</option><option value="1Y">1 Year</option><option value="3Y" selected="selected">3 Year</option><option value="5Y">5 Year</option></select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="grey-card-wrapper mt-1 border-0" style="display: block;" id="lblmsg">
+                                        <p class="font16 font-opensans-semibold text-center p-20">
+                                            If you have invested <i class="rupees-icon">₹</i> 
+                                            <span id="spanPreInvestmentAmt">50,000</span> for <span id="spanHorizon">3 Years</span>, it would have given you a return of
+                                            <span id="spanReturnPer" class="green-text">11.79</span>% and its value would have been <i class="rupees-icon">₹</i>
+                                            <span id="spanInvestmentAmt" class="green-text">69,849</span> against the invested value of <i class="rupees-icon">₹</i><span id="spanPrincipleAmt">50,000</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="block">
+                                    <div class="col-md-12 col-xs-12" style="margin-left:16%;display:none" id="dvChartValue">
+                                        <span class="chartBarValue" id="chartValue_0">52,600</span>
+                                        <span class="chartBarValue" id="chartValue_1">77,275</span>
+                                        <span class="chartBarValue" id="chartValue_2">75,325</span>
+                                        <span class="chartBarValue chartBarMaxColor" id="chartValue_3">69,849</span>
+                                    </div>
+                                    <div id="chartdiv" style="display: block; overflow: hidden; text-align: left;"><div class="amcharts-main-div" style="position: relative;"><div class="amcharts-chart-div" style="overflow: hidden; position: relative; text-align: left; width: 460px; height: 300px; padding: 0px;"><svg version="1.1" style="position: absolute; width: 460px; height: 300px; top: 0px; left: 0px;"><desc>JavaScript chart by amCharts 3.21.15</desc><g><path cs="100,100" d="M0.5,0.5 L459.5,0.5 L459.5,299.5 L0.5,299.5 Z" fill="#FFFFFF" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0"></path><path cs="100,100" d="M0.5,0.5 L424.5,0.5 L424.5,249.5 L0.5,249.5 L0.5,0.5 Z" fill="#FFFFFF" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0" transform="translate(15,20)"></path></g><g><g transform="translate(15,20)"></g><g transform="translate(15,20)" visibility="visible"><g><path cs="100,100" d="M0.5,249.5 L6.5,249.5" fill="none" stroke-width="0.2" stroke-opacity="1" stroke="#000000" transform="translate(-5,0)"></path></g><g><path cs="100,100" d="M0.5,208.5 L6.5,208.5" fill="none" stroke-width="0.2" stroke-opacity="1" stroke="#000000" transform="translate(-5,0)"></path></g><g><path cs="100,100" d="M0.5,166.5 L6.5,166.5" fill="none" stroke-width="0.2" stroke-opacity="1" stroke="#000000" transform="translate(-5,0)"></path></g><g><path cs="100,100" d="M0.5,125.5 L6.5,125.5" fill="none" stroke-width="0.2" stroke-opacity="1" stroke="#000000" transform="translate(-5,0)"></path></g><g><path cs="100,100" d="M0.5,83.5 L6.5,83.5" fill="none" stroke-width="0.2" stroke-opacity="1" stroke="#000000" transform="translate(-5,0)"></path></g><g><path cs="100,100" d="M0.5,42.5 L6.5,42.5" fill="none" stroke-width="0.2" stroke-opacity="1" stroke="#000000" transform="translate(-5,0)"></path></g><g><path cs="100,100" d="M0.5,0.5 L6.5,0.5" fill="none" stroke-width="0.2" stroke-opacity="1" stroke="#000000" transform="translate(-5,0)"></path></g></g></g><g transform="translate(15,20)" clip-path="url(#AmChartsEl-11)"><g visibility="hidden"></g></g><g></g><g></g><g></g><g><g transform="translate(15,20)"><g><g transform="translate(11,249)" aria-label=" FD 52,600"><path cs="100,100" d="M0.5,0.5 L0.5,-21.5 L85.5,-21.5 L85.5,0.5 L0.5,0.5 Z" fill="#fcae16" stroke="#FF6600" fill-opacity="0.8" stroke-width="1" stroke-opacity="0"></path></g><g transform="translate(117,249)" aria-label=" Nifty 77,275"><path cs="100,100" d="M0.5,0.5 L0.5,-225.5 L85.5,-225.5 L85.5,0.5 L0.5,0.5 Z" fill="#fcae16" stroke="#FF6600" fill-opacity="0.8" stroke-width="1" stroke-opacity="0"></path></g><g transform="translate(223,249)" aria-label=" Sensex 75,325"><path cs="100,100" d="M0.5,0.5 L0.5,-209.5 L85.5,-209.5 L85.5,0.5 L0.5,0.5 Z" fill="#fcae16" stroke="#FF6600" fill-opacity="0.8" stroke-width="1" stroke-opacity="0"></path></g><g transform="translate(329,249)" aria-label=" This Fund 69,849"><path cs="100,100" d="M0.5,0.5 L0.5,-164.5 L85.5,-164.5 L85.5,0.5 L0.5,0.5 Z" fill="#fcae16" stroke="#FF6600" fill-opacity="0.8" stroke-width="1" stroke-opacity="0"></path></g></g></g></g><g></g><g><g><path cs="100,100" d="M0.5,0.5 L424.5,0.5" fill="none" stroke-width="1" stroke-opacity="0.2" stroke="#000000" transform="translate(15,269)"></path></g><g><path cs="100,100" d="M0.5,0.5 L0.5,249.5" fill="none" stroke-width="0" stroke-opacity="1" stroke="#000000" transform="translate(15,20)" visibility="visible"></path></g></g><g><g transform="translate(15,20)" clip-path="url(#AmChartsEl-12)" style="pointer-events: none;"><path cs="100,100" d="M0.5,0.5 L0.5,0.5 L0.5,249.5" fill="none" stroke-width="1" stroke-opacity="0" stroke="#CC0000" visibility="hidden"></path><path cs="100,100" d="M0.5,0.5 L424.5,0.5 L424.5,0.5" fill="none" stroke-width="1" stroke="#CC0000" visibility="hidden"></path></g><clipPath id="AmChartsEl-12"><rect x="0" y="0" width="424" height="249" rx="0" ry="0" stroke-width="0"></rect></clipPath></g><g></g><g><g transform="translate(15,20)"><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" style="pointer-events: none;" transform="translate(53,220)"><tspan y="6" x="0">52,600</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" style="pointer-events: none;" transform="translate(159,15)"><tspan y="6" x="0">77,275</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" style="pointer-events: none;" transform="translate(265,31)"><tspan y="6" x="0">75,325</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" style="pointer-events: none;" transform="translate(371,77)"><tspan y="6" x="0">69,849</tspan></text></g></g><g><g></g></g><g><g transform="translate(15,20)" visibility="visible"><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(53,261.5)"><tspan y="6" x="0">FD</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(159,261.5)"><tspan y="6" x="0">Nifty</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(265,261.5)"><tspan y="6" x="0">Sensex</tspan></text><text y="6" fill="#000000" font-family="Verdana" font-size="11px" opacity="1" text-anchor="middle" transform="translate(371,261.5)"><tspan y="6" x="0">This Fund</tspan></text></g><g transform="translate(15,20)" visibility="visible"></g></g><g></g><g transform="translate(15,20)"></g><g></g><g></g><clipPath id="AmChartsEl-11"><rect x="-1" y="-1" width="426" height="251" rx="0" ry="0" stroke-width="0"></rect></clipPath></svg><a href="http://www.amcharts.com" title="JavaScript charts" style="position: absolute; text-decoration: none; color: rgb(0, 0, 0); font-family: Verdana; font-size: 11px; opacity: 0.7; display: block; left: 20px; top: 25px;">JS chart by amCharts</a></div></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-wrap text-center mt20">
+                            <button class="btn btn-primary startSIP_">
+                                <span class="overlay" style="border-left-width: 87.5px;"></span>invest in this fund <span class="whitearrow"></span>
+                            </button>
+                            <a href="javascript:void(0)" onclick="refreshChart();" class="item-link mitem-link" style="display:none;" id="linkRefresh">Refresh </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Calculate your return section -->
+
+</div>
+
+{% endblock main %}

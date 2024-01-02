@@ -1,0 +1,83 @@
+{% extends 'frenchise_dashboard/template/loan_base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+
+{% block home-page %}
+
+      <!-- partial -->
+      <div class="container mt-5">
+        <div class="container-fluid">
+          <div class="main-panel">
+            <div class="content-wrapper">
+              <div class="row">
+    
+                <div class="col-md-12 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">Registration Form</h4>
+              
+                      <form action="" method="post">
+                        {% csrf_token %}
+                        <!-- Name -->
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <!-- Amount -->
+                        <div class="mb-3">
+                            <label for="amount" class="form-label">Amount</label>
+                            <input type="text" class="form-control" name="amount" placeholder="Enter the amount" required>
+                        </div>
+                        <!-- Type -->
+                        <div class="mb-3">
+                            <label for="type" class="form-label">Type</label>
+                            <select class="form-select" name="type" required>
+                                <option value="" disabled selected>Select Insurance Type</option>
+                                <option value="Health insurance">Health insurance</option>
+                                <option value="Life insurance">Life insurance</option>
+                                <option value="Travel insurance">Travel insurance</option>
+                                <option value="Motor insurance">Motor insurance</option>
+                                <option value=">Home insurance">Home insurance</option>
+                                <option value="Retirement plans">Retirement plans</option>
+                                <!-- Add more loan types as needed -->
+                            </select>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <!-- Number -->
+                        <div class="mb-3">
+                            <label for="number" class="form-label">Number</label>
+                            <input type="text" class="form-control" name="number" placeholder="Enter your number" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="number" class="form-label">PAN</label>
+                            <input type="text" class="form-control" name="pan" placeholder="Enter your User PAN" required maxlength="16">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:../../partials/_footer.html -->
+            <footer class="footer">
+      <div class="d-sm-flex justify-content-center justify-content-sm-between">
+        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Fundcares<a
+            href="" target="_blank">Fundcares</a> Fundcares</span>
+        <span class="float-none float-sm-end d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
+      </div>
+    </footer>
+            <!-- partial -->
+          </div>
+        </div>
+      </div>
+     
+      <!-- main-panel ends -->
+
+{% endblock home-page %}

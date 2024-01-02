@@ -18,7 +18,7 @@
                         <p data-animation="fadeInLeft" data-delay=".2s">Achieve your financial goal</p>
                         <h1 data-animation="fadeInLeft" data-delay=".5s">Small Business Loans For Daily Expenses.</h1>
                         <!-- Hero Btn -->
-                        <a href="apply.html" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Apply for Loan</a>
+                        <a href="{% url 'apply_loan' %}" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Apply for Loan</a>
                     </div>
                     <div class="hero__img">
                         <img src="{% static 'frenchise/img/hero/hero_img.jpg' %}" alt="">
@@ -32,7 +32,7 @@
                         <p data-animation="fadeInLeft" data-delay=".2s">Achieve your financial goal</p>
                         <h1 data-animation="fadeInLeft" data-delay=".5s">Small Business Loans For Daily Expenses.</h1>
                         <!-- Hero Btn -->
-                        <a href="apply.html" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Apply for Loan</a>
+                        <a href="{% url 'apply_loan' %}" class="btn hero-btn" data-animation="fadeInLeft" data-delay=".8s">Apply for Loan</a>
                     </div>
                     <div class="hero__img">
                         <img src="{% static 'frenchise/img/hero/hero_img2.jpg' %}" alt="">
@@ -99,7 +99,7 @@
                         </div>
                         <p>we are working on developing a new type of loan that uses alternative data to assess borrowers' creditworthiness. This could help borrowers who have thin credit files or who have been turned down for traditional loans.</p>
                         <p>we are working on developing a tool that helps borrowers to track their loan payments and to identify ways to save money on interest.</p>
-                        <a href="apply.html" class="btn">Apply for Loan</a>
+                        <a href="{% url 'apply_loan' %}" class="btn">Apply for Loan</a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
@@ -267,7 +267,7 @@
                             <input type="text" placeholder="Return Amount">
                         </div>
                         <div class="search-form">
-                            <a href="apply.html">Apply for Loan</a>
+                            <a href="{% url 'apply_loan' %}">Apply for Loan</a>
                         </div>	
                     </form>	
                 </div>

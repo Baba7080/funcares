@@ -1,0 +1,59 @@
+{% extends 'frenchise_dashboard/template/frenchise_base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+
+{% block main-page %}
+
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+
+            <div class="col-md-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Employe Registration Form</h4>
+          
+                  <form action=""  method="post" novalidate class="shadow p-5">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Employee ID</label>
+                        <input type="text" name="employee_id" class="form-control" id="exampleFormControlInput1" placeholder="eg: 123456" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Employee email</label>
+                        <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="eg: example@gmail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Employee Username</label>
+                        <input type="text" name="username" class="form-control" id="exampleFormControlInput1" placeholder="eg: Rahul" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">Employee Name</label>
+                      <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="eg: Rahul Gupta" required>
+                  </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">Password</label>
+                      <input type="password" name="password" class="form-control" id="exampleFormControlInput1" placeholder="eg: Example@123" required>
+                  </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+  <div class="d-sm-flex justify-content-center justify-content-sm-between">
+    <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Fundcares<a
+        href="" target="_blank">Fundcares</a> Fundcares</span>
+    <span class="float-none float-sm-end d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
+  </div>
+</footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+
+{% endblock main-page %}
