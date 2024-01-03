@@ -1,1 +1,1 @@
-web: gunicorn fundcare.asgi
+web: daphne funcares.asgi:application
