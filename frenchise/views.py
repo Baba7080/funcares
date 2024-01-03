@@ -6,10 +6,10 @@ from django.views import View
 from django.contrib.auth.models import User
 from .models import *
 from .forms import FrenchiseRegistrationForm, frenchise_application_form, Employee_application_form
-from django.contrib.auth.decorators import login_required
+
 from fastapi.responses import RedirectResponse, HTMLResponse
 from django.core.mail import send_mail
-from django.contrib.auth.decorators import login_required
+
 from django.shortcuts import get_object_or_404
 from companystaff.models import *
 # from .filters import frenchise_filter
@@ -28,6 +28,7 @@ import base64
 def empdas(request):
     return render(request, 'employe_dashboard/template/loan_form.html' )
 
+@login_required
 def admindas(request):
     user_login  = request.user
     if user_login.is_superuser:
