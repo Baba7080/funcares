@@ -163,7 +163,9 @@ MEDIA_URL ='/media/'
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, "static/"),
 # ]
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://fundcares-c7d520d9678e.herokuapp.com/',
+]
 # S3 Bucket
 
 # AWS_ACCESS_KEY_ID = "AKIATUKOIRDACVWFMEDE"
