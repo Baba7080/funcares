@@ -1,1 +1,1 @@
-web: gunicorn fundcare.wsgi
+web: gunicorn fundcare.asgi
