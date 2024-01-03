@@ -146,12 +146,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = '/dashboard/'
 
-# CORS_ALLOWED_ORIGINS = [
- 
-#     "http://127.0.0.1:8000",
-# ]
+CORS_ALLOWED_ORIGINS = [
+    "https://fundcares-c7d520d9678e.herokuapp.com",
+    "http://127.0.0.1:8000",
+]
 
-CORS_ALLOWED_ORIGINS = ["*"]
+# CORS_ALLOWED_ORIGINS = ["*"]
 
 #Send Email
 EMAIL_HOST = 'smtp.gmail.com'

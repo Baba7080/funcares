@@ -6,7 +6,7 @@ from django.views import View
 from django.contrib.auth.models import User
 from .models import *
 from .forms import FrenchiseRegistrationForm, frenchise_application_form, Employee_application_form
-
+from django.views.decorators.csrf import csrf_exempt
 from fastapi.responses import RedirectResponse, HTMLResponse
 from django.core.mail import send_mail
 
@@ -28,6 +28,7 @@ import base64
 def empdas(request):
     return render(request, 'employe_dashboard/template/loan_form.html' )
 
+@csrf_exempt
 @login_required
 def admindas(request):
     user_login  = request.user
@@ -70,6 +71,8 @@ def index(request):
     return render(request, 'frenchise/index.html' )
 
 #admin Search
+@csrf_exempt
+@login_required
 def frenchise_search_view(request):
     if request.method == 'POST':
         search = request.POST.get('Search')
@@ -102,6 +105,8 @@ def frenchise_search_view(request):
         return HttpResponse("Internal server error", status=500)
 
 # Frenchise Registration
+@csrf_exempt
+@login_required
 def frenchise_registration_view(request):
     if request.method == 'POST':
 
@@ -154,6 +159,7 @@ def frenchise_registration_view(request):
 
 
 
+@csrf_exempt
 @login_required
 def frenchise_application_view(request):
     if request.method == 'POST':
@@ -203,7 +209,7 @@ def profile(request):
 
 
 
-
+@csrf_exempt
 @login_required
 def employee_view(request):
 
@@ -274,7 +280,8 @@ def employee_view(request):
     
 
 #frenchise status True or False
-
+@csrf_exempt
+@login_required
 def check_active_frenchise(request):
     if request.method == 'POST':
         active_user = request.POST.get('activeuser')
@@ -294,6 +301,7 @@ def check_active_frenchise(request):
         
         return render(request,'frenchise/admin_dashboard.html')
             
+@csrf_exempt
 @login_required
 def all_frenchise_employe_view(request,frenchid):
     loginUser = request.user
@@ -385,6 +393,7 @@ def employee_data_chart(request):
     return render(request, 'your_template.html', context)
 
 #dashboard
+@csrf_exempt
 @login_required
 def dashboard(request):
     loginUser = request.user
@@ -652,6 +661,7 @@ def dashboard(request):
         print("empalldatahdfkj")
         return render(request, 'employe_dashboard/template/employe_dash.html', {'e_all_data': emp_all_data})
     
+@csrf_exempt
 @login_required
 def editfrenchise(request,frenchid):
     users = request.user
@@ -728,6 +738,8 @@ def frenchise_confirmation(request):
 
 def employee_registration_view(request):
     return render(request, 'frenchise/employee.html')
+
+@csrf_exempt
 @login_required
 def employee_dashboard_view(request):
     # loginusers = request.user
@@ -831,6 +843,8 @@ def employee_dashboard_view(request):
         print("empdata", emp_data)
         return render(request, 'frenchise/employee_overview.html',{'emp_data':emp_data})
     
+@csrf_exempt
+@login_required
 def date_filter(request):
     loginUser = request.user.username
     print(loginUser)
@@ -935,6 +949,7 @@ def date_filter(request):
 
 
 
+@csrf_exempt
 @login_required
 def edit_employee_dashboard_view(request, empid):
     loginUser = request.user.username
@@ -985,6 +1000,7 @@ def frenchise_dashboard_admin_view(request):
 def frenchise_employee_admin_view(request):
     return render(request, 'frenchise/frenchise_employee_admin.html')
 
+@csrf_exempt
 @login_required
 def appllyloan(request):
     if request.method == 'POST':
@@ -1009,6 +1025,8 @@ def appllyloan(request):
 
     return render(request,'frenchise_dashboard/template/loan_form.html')
 
+@csrf_exempt
+@login_required
 def apply_insurance(request):
     if request.method == 'POST':
         users = request.user
@@ -1032,6 +1050,9 @@ def apply_insurance(request):
 
     return render(request,'frenchise_dashboard/template/insurance_form.html')
 
+
+@csrf_exempt
+@login_required
 def apply_mf(request):
     if request.method == 'POST':
         users = request.user
@@ -1055,6 +1076,9 @@ def apply_mf(request):
 
     return render(request,'frenchise_dashboard/template/mf_form.html')
 
+
+@csrf_exempt
+@login_required
 def apply_da(request):
     if request.method == 'POST':
         users = request.user
@@ -1079,6 +1103,8 @@ def apply_da(request):
     return render(request,'frenchise_dashboard/template/da_form.html')
 
 #Employee overview 
+@csrf_exempt
+@login_required
 def employee_overview_view(request):
     if request.method == 'GET':
         loginUser = request.user
@@ -1171,12 +1197,15 @@ def employee_overview_view(request):
     # return render(request, 'frenchise/employee_overview.html')
 
 # Admin Overview frenchise and employee data
+@csrf_exempt
 @login_required
 def frenchise_overview_view(request):
     loginUser = request.user
     if loginUser.is_superuser:
         return render(request, 'frenchise/frenchise_overview.html')
 
+@csrf_exempt
+@login_required
 def loan(request):
     loginUser = request.user
     if loginUser.is_superuser:
@@ -1245,7 +1274,8 @@ def loan(request):
         print(appdata)
         return render(request,'admin_dashboard/template/loans.html',{'loandata':appdata})
 
-
+@csrf_exempt
+@login_required
 def editsection(request,ad_id,ad_type):
     # print(ad_id,ad_type)
     loginUser = request.user
