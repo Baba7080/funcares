@@ -145,6 +145,7 @@ SECURE_SSL_REDIRECT = True
 
 CORS_ALLOWED_ORIGINS = [
     "https://fundcares-c7d520d9678e.herokuapp.com",
+    "https://fundcares-c7d520d9678e.herokuapp.com",
     "http://127.0.0.1:8000",
 ]
 
