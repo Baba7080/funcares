@@ -8,7 +8,7 @@ import socket
 import re, uuid
 import hashlib
 import platform
-import wmi
+# import wmi
 import geocoder
 
 import websocket
@@ -146,21 +146,21 @@ def GetLocalIPAddress():
         print(e)
         return "1.2.3.4"
 
-def GetPublicIPAddress():
-    try:        
-        public_ip = get('http://checkip.dyndns.org/').text
-        ipaddress=str(re.findall(r'[0-9]+(?:\.[0-9]+){3}',public_ip))
+# def GetPublicIPAddress():
+#     try:        
+#         public_ip = get('http://checkip.dyndns.org/').text
+#         ipaddress=str(re.findall(r'[0-9]+(?:\.[0-9]+){3}',public_ip))
 
-        finalipppp=ipaddress.replace("'","")
-        finalipppp=finalipppp.replace("[","")
-        finalipppp=finalipppp.replace("]","")
-        if not finalipppp:
-            finalipppp = "1.2.3.4"
-        return finalipppp
-    except Exception as e:
-        print(e)
-        WriteIntoLog("FAILED", "MOFSLOPENAPI.py", ("GetPublicIPAddress" + str(e)))
-        return "1.2.3.4"
+#         finalipppp=ipaddress.replace("'","")
+#         finalipppp=finalipppp.replace("[","")
+#         finalipppp=finalipppp.replace("]","")
+#         if not finalipppp:
+#             finalipppp = "1.2.3.4"
+#         return finalipppp
+#     except Exception as e:
+#         print(e)
+#         WriteIntoLog("FAILED", "MOFSLOPENAPI.py", ("GetPublicIPAddress" + str(e)))
+#         return "1.2.3.4"
 
 # print(GetLocalIPAddress())
 # print(GetPublicIPAddress())
@@ -168,9 +168,9 @@ def GetPublicIPAddress():
 
 # System Info
 
-c = wmi.WMI()   
-objsystem = c.Win32_ComputerSystem()[0]
-system = platform.uname()
+# c = wmi.WMI()   
+# objsystem = c.Win32_ComputerSystem()[0]
+# system = platform.uname()
 
 def GetOsName():
     try:        
