@@ -18,10 +18,10 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'fundcare.settings')
 
 application = ProtocolTypeRouter({
     'http':get_asgi_application(),
-    'websocket': SessionMiddlewareStack(
-        URLRouter(
-            market.routing.websocket_urlpatterns
+    # 'websocket': SessionMiddlewareStack(
+    #     URLRouter(
+    #         market.routing.websocket_urlpatterns
            
-        )
-    )
+    #     )
+    # )
 })

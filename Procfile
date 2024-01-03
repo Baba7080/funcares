@@ -1,1 +1,1 @@
-web: daphne funcares.asgi:application
+web: daphne funcares.asgi:application --port $PORT --bind 0.0.0.0 -v2
