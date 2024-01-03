@@ -11,7 +11,7 @@
 
 
 
-<form action="" method="post" novalidate class="shadow p-5">
+<form action="{% url 'register' %}" method="post" novalidate class="shadow p-5">
 {% csrf_token %}
 
 <section class="vh-100" style="background-color: #eee;">

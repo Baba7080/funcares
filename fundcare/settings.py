@@ -141,6 +141,7 @@ USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = '/dashboard/'
+SECURE_SSL_REDIRECT = True
 
 CORS_ALLOWED_ORIGINS = [
     "https://fundcares-c7d520d9678e.herokuapp.com",
