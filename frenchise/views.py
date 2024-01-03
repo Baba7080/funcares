@@ -106,7 +106,6 @@ def frenchise_search_view(request):
 
 # Frenchise Registration
 @csrf_exempt
-@login_required
 def frenchise_registration_view(request):
     if request.method == 'POST':
 
