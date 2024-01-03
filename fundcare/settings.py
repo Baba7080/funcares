@@ -164,7 +164,7 @@ MEDIA_URL ='/media/'
 #     os.path.join(BASE_DIR, "static/"),
 # ]
 CSRF_TRUSTED_ORIGINS = [
-    'https://fundcares-c7d520d9678e.herokuapp.com/',
+    'https://fundcares-c7d520d9678e.herokuapp.com'
 ]
 # S3 Bucket
 
