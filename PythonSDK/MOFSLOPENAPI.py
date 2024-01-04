@@ -8,7 +8,7 @@ import socket
 import re, uuid
 import hashlib
 import platform
-import wmi
+# import wmi
 import geocoder
 
 import websocket
