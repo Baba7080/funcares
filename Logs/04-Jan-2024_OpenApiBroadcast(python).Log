@@ -1,0 +1,6 @@
+2024-01-04 12:23:00             SUCCESS             MOFSLOPENAPI.py             Broadcast Connection Opened
+2024-01-04 12:23:01             SUCCESS             MOFSLOPENAPI.py             Login Packet Sent
+2024-01-04 12:23:01             SUCCESS             MOFSLOPENAPI.py             Script 532540 Register Packet Sent
+2024-01-04 12:23:01             ERROR             MOFSLOPENAPI.py             list.remove(x): x not in list
+2024-01-04 12:25:14             ERROR             MOFSLOPENAPI.py             Connection to remote host was lost.
+2024-01-04 12:25:14             ERROR             MOFSLOPENAPI.py             can't create new thread at interpreter shutdown
