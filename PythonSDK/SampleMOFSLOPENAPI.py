@@ -245,9 +245,10 @@ def Broadcast_on_open(ws1):
     # Index BSE, NSES
     # Mofsl.IndexRegister("NSE")
     
-    Mofsl.IndexRegister("BSE")
+    # Mofsl.IndexRegister("BSE")
    
-    # Mofsl.IndexUnregister("NSE")
+    Mofsl.IndexUnregister("NSE")
+    
     # Mofsl.IndexUnregister("BSE")
 
     # Broadcast Logout
