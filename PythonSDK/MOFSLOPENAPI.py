@@ -170,11 +170,11 @@ def GetPublicIPAddress():
 
 # c = wmi.WMI()   
 # objsystem = c.Win32_ComputerSystem()[0]
-# system = platform.uname()
+system = platform.uname()
     
 # external code 
-system = platform.uname()
-print("System Info:", system)
+# system = platform.uname()
+# print("System Info:", system)
 
 def GetOsName():
     try:        

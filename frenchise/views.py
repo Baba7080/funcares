@@ -25,6 +25,9 @@ from io import BytesIO
 import base64
 
 
+def Marketdas(request):
+    return render(request, 'market_dashboard/template/market_dash.html' )
+
 def empdas(request):
     return render(request, 'employe_dashboard/template/loan_form.html' )
 

@@ -12,6 +12,7 @@ from .forms import LoginForm,  MyPasswordChangeForm, MyPasswordResetForm, MySetP
 
 urlpatterns = [
 
+    path('mar_dash', Marketdas, name='mar_dash'),
     path('admin_dash', admindas, name='admin_dash'),
     path('emp_dash', empdas, name='emp_dash'),
     
