@@ -14,6 +14,7 @@
   <!-- plugin css for this page -->
   <!-- End plugin css for this page -->
   <!-- inject:css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'admin_dashboard/css/vertical-layout-light/style.css' %}">
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
@@ -29,8 +30,12 @@
           <a class="navbar-brand brand-logo" href="{% url 'home' %}"><img src="{% static 'admin_dashboard/images/fundcareslogo.jpg' %}" alt="logo"/></a>
           <a class="navbar-brand brand-logo-mini" href="{% url 'home' %}"><img src="{% static 'admin_dashboard/images/fundcareslogo.jpg' %}" alt="logo"/></a>
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-            <span class="typcn typcn-th-menu"> </span>
+            <span class="typcn typcn-th-menu"></span>
           </button>
+
+          <!-- <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+            <span class="icon-menu"></span>
+          </button> -->
         </div>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
@@ -413,7 +418,7 @@
             </div> -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="{% url 'insurance_data' %}" aria-expanded="false" aria-controls="charts">
+            <a class="nav-link" href="{% url 'insurance_data' %}" aria-expanded="false" aria-controls="charts">
               <i class="typcn typcn-chart-pie-outline menu-icon"></i>
               <span class="menu-title">Insurance</span>
               <!-- <i class="menu-arrow"></i> -->
@@ -425,7 +430,7 @@
             </div> -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="{% url 'demat_data' %}" aria-expanded="false" aria-controls="tables">
+            <a class="nav-link" href="{% url 'demat_data' %}" aria-expanded="false" aria-controls="tables">
               <i class="typcn typcn-th-small-outline menu-icon"></i>
               <span class="menu-title">Demat Account</span>
               <!-- <i class="menu-arrow"></i> -->
@@ -437,7 +442,7 @@
             </div> -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="{% url 'mutualfund_data' %}" aria-expanded="false" aria-controls="icons">
+            <a class="nav-link" href="{% url 'mutualfund_data' %}" aria-expanded="false" aria-controls="icons">
               <i class="typcn typcn-compass menu-icon"></i>
               <span class="menu-title">Mutual Fund</span>
               <!-- <i class="menu-arrow"></i> -->
@@ -490,7 +495,7 @@
 
   <!-- base:js -->
   {% block dashboardchartjs %}{% endblock dashboardchartjs %}
-  <!-- <script src="{% static 'admin_dashboard/vendors/js/vendor.bundle.base.js' %}"></script> -->
+  <script src="{% static 'admin_dashboard/vendors/js/vendor.bundle.base.js' %}"></script>
   <!-- endinject -->
   <!-- Plugin js for this page-->
   <script src="{% static 'admin_dashboard/vendors/chart.js/Chart.min.js' %}"></script>
@@ -501,8 +506,9 @@
   <script src="{% static 'admin_dashboard/js/template.js' %}"></script>
   <script src="{% static 'admin_dashboard/js/settings.js' %}"></script>
   <script src="{% static 'admin_dashboard/js/todolist.js' %}"></script>
-  
-  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
   <script src="{% static 'admin_dashboard/js/dashboard.js' %}"></script>
