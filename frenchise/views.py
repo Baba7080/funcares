@@ -25,6 +25,9 @@ from io import BytesIO
 import base64
 
 
+def Marketdas(request):
+    return render(request, 'market_dashboard/template/market_dash.html' )
+
 def empdas(request):
     return render(request, 'employe_dashboard/template/loan_form.html' )
 
@@ -756,6 +759,7 @@ def employee_dashboard_view(request):
                 print('email')
 
             if name.isnumeric():
+                
                 employedata = frenchise_employee_register_model.objects.filter(user = request.user,number=name)
 
                 print('The name contains only numbers.')
@@ -1205,13 +1209,10 @@ def frenchise_overview_view(request):
 
 @csrf_exempt
 @login_required
-def loan(request):
+def loan_data(request):
     loginUser = request.user
     if loginUser.is_superuser:
         loandata = Loan.objects.exclude(status='Completed')
-        Insurancedata = Insurance.objects.exclude(status='Completed')
-        Dematdata = Demat_Account.objects.exclude(status='Completed')
-        Mutualdata = Mutual_Fund.objects.exclude(status='Completed')
         print(loandata)
         appdata = []
         for i in loandata:
@@ -1228,6 +1229,15 @@ def loan(request):
                 'typeof':'Loan'
             }
             appdata.append(dataprepare)
+
+        return render(request,'admin_dashboard/template/loan_data.html',{'loandata':appdata})
+
+@login_required
+def insurance_data(request):
+    loginUser = request.user
+    if loginUser.is_superuser:
+        Insurancedata = Insurance.objects.exclude(status='Completed')
+        appdata = []
         for i in Insurancedata:
             dataprepare = {
                 'id': i.id,
@@ -1242,20 +1252,15 @@ def loan(request):
                 'typeof':'Insurance'
             }
             appdata.append(dataprepare)
-        for i in Mutualdata:
-            dataprepare = {
-                'id': i.id,
-                'type':i.type,
-                'name':i.clientName,
-                'status':i.status,
-                'creation':i.creation,
-                'email':i.email,
-                'amount':i.amount,
-                'number':i.number,
-                'PAN':i.PAN,
-                'typeof':'Mutual'
-            }
-            appdata.append(dataprepare)
+
+        return render(request,'admin_dashboard/template/insurance_data.html',{'loandata':appdata})
+
+def demat_data(request):
+    loginUser = request.user
+    if loginUser.is_superuser:
+
+        Dematdata = Demat_Account.objects.exclude(status='Completed')
+        appdata = []
         for i in Dematdata:
             dataprepare = {
                 'id': i.id,
@@ -1271,7 +1276,32 @@ def loan(request):
             }
             appdata.append(dataprepare)
         print(appdata)
-        return render(request,'admin_dashboard/template/loans.html',{'loandata':appdata})
+        return render(request,'admin_dashboard/template/demat_data.html',{'loandata':appdata})
+
+def mutualfund_data(request):
+    loginUser = request.user
+    if loginUser.is_superuser:
+
+        Mutualdata = Mutual_Fund.objects.exclude(status='Completed')
+
+        appdata = []
+        for i in Mutualdata:
+            dataprepare = {
+                'id': i.id,
+                'type':i.type,
+                'name':i.clientName,
+                'status':i.status,
+                'creation':i.creation,
+                'email':i.email,
+                'amount':i.amount,
+                'number':i.number,
+                'PAN':i.PAN,
+                'typeof':'Mutual'
+            }
+            appdata.append(dataprepare)
+
+        return render(request,'admin_dashboard/template/mutualfund_data.html',{'loandata':appdata})
+
 
 @csrf_exempt
 @login_required

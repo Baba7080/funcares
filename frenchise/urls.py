@@ -12,6 +12,7 @@ from .forms import LoginForm,  MyPasswordChangeForm, MyPasswordResetForm, MySetP
 
 urlpatterns = [
 
+    path('mar_dash', Marketdas, name='mar_dash'),
     path('admin_dash', admindas, name='admin_dash'),
     path('emp_dash', empdas, name='emp_dash'),
     
@@ -79,7 +80,10 @@ urlpatterns = [
         ,name='password_reset_complete'),
 
     path('appllyloan',appllyloan,name='appllyloan'),
-    path('loans',loan,name='loans'),
+    path('loans',loan_data,name='loans'),
+    path('insurance_data',insurance_data,name='insurance_data'),
+    path('demat_data',demat_data,name='demat_data'),
+    path('mutualfund_data',mutualfund_data,name='mutualfund_data'),
     path('appllyinsurance',apply_insurance,name='appllyinsurance'),
     path('applymf',apply_mf,name='applymf'),
     path('applyda',apply_da,name='applyda'),

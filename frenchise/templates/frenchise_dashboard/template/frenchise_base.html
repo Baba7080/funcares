@@ -6,7 +6,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Star Admin2 </title>
+  <title>Franchise | {% block title %}  {% endblock title %}</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="{% static 'frenchise_dashboard/assets/vendors/feather/feather.css' %}">
   <link rel="stylesheet" href="{% static 'frenchise_dashboard/assets/vendors/mdi/css/materialdesignicons.min.css' %}">
@@ -41,7 +41,7 @@
         <img src="{% static 'admin_dashboard/images/fundcareslogo.jpg' %}" alt="logo" />
       </a>
       <a class="navbar-brand brand-logo-mini" href="../index.html">
-        <img src="../assets/images/logo-mini.svg" alt="logo" />
+        <img src="{% static 'admin_dashboard/images/fundcareslogo.jpg' %}" alt="logo" />
       </a>
     </div>
   </div>
