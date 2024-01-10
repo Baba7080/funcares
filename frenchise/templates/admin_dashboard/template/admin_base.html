@@ -6,7 +6,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Admin Dashboard</title>
+  <title>Admin | {% block title %}  {% endblock title %}</title>
   <!-- base:css -->
   <link rel="stylesheet" href="{% static 'admin_dashboard/vendors/typicons/typicons.css' %}">
   <link rel="stylesheet" href="{% static 'admin_dashboard/vendors/css/vendor.bundle.base.css' %}">
@@ -27,7 +27,7 @@
       <div class="navbar-brand-wrapper d-flex justify-content-center">
         <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
           <a class="navbar-brand brand-logo" href="{% url 'home' %}"><img src="{% static 'admin_dashboard/images/fundcareslogo.jpg' %}" alt="logo"/></a>
-          <!-- <a class="navbar-brand brand-logo-mini" href="{% url 'home' %}"><img src="{% static 'admin_dashboard/images/fundcareslogo.jpg' %}" alt="logo"/></a> -->
+          <a class="navbar-brand brand-logo-mini" href="{% url 'home' %}"><img src="{% static 'admin_dashboard/images/fundcareslogo.jpg' %}" alt="logo"/></a>
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
             <span class="typcn typcn-th-menu"> </span>
           </button>
@@ -53,9 +53,9 @@
               </a>
             </div>
           </li>
-          <li class="nav-item nav-user-status dropdown">
+          <!-- <li class="nav-item nav-user-status dropdown">
               <p class="mb-0">Last login was 23 hours ago.</p>
-          </li>
+          </li> -->
         </ul>
         <ul class="navbar-nav navbar-nav-right">
           <li class="nav-item nav-date dropdown">
@@ -413,7 +413,7 @@
             </div> -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+            <a class="nav-link" data-toggle="collapse" href="{% url 'insurance_data' %}" aria-expanded="false" aria-controls="charts">
               <i class="typcn typcn-chart-pie-outline menu-icon"></i>
               <span class="menu-title">Insurance</span>
               <!-- <i class="menu-arrow"></i> -->
@@ -425,7 +425,7 @@
             </div> -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+            <a class="nav-link" data-toggle="collapse" href="{% url 'demat_data' %}" aria-expanded="false" aria-controls="tables">
               <i class="typcn typcn-th-small-outline menu-icon"></i>
               <span class="menu-title">Demat Account</span>
               <!-- <i class="menu-arrow"></i> -->
@@ -437,7 +437,7 @@
             </div> -->
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+            <a class="nav-link" data-toggle="collapse" href="{% url 'mutualfund_data' %}" aria-expanded="false" aria-controls="icons">
               <i class="typcn typcn-compass menu-icon"></i>
               <span class="menu-title">Mutual Fund</span>
               <!-- <i class="menu-arrow"></i> -->
