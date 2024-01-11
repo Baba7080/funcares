@@ -942,8 +942,8 @@ def mofslloginfun(request):
         if loginmofsl['status'] == 'SUCCESS':
             return redirect('MOSL_NSE_BSE_alldata')
         else:
-            return (request,'market/loginmofsl.html')
-    return render(request,'market/loginmofsl.html')
+            return (request,'market_dashboard/template/market_login.html')
+    return render(request,'market_dashboard/template/market_login.html')
     # Login to MOFSL
     print("Logging in...")
     print("Logging in...")
@@ -1164,7 +1164,7 @@ def NSE_BSE_data(request):
     # for ct in triggerwebhook:
     #     if 
     # print(context)
-    return render(request, 'market/home.html',{'alldata':context, 'mani':manish})
+    return render(request, 'market_dashboard/template/market_dash.html',{'alldata':context, 'mani':manish})
 
 
     # print(NIFTY_FIFTY)

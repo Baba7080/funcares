@@ -8,7 +8,7 @@ import socket
 import re, uuid
 import hashlib
 import platform
-# import wmi
+import wmi
 import geocoder
 
 import websocket
@@ -168,8 +168,8 @@ def GetPublicIPAddress():
 
 # System Info
 
-# c = wmi.WMI()   
-# objsystem = c.Win32_ComputerSystem()[0]
+c = wmi.WMI()   
+objsystem = c.Win32_ComputerSystem()[0]
 system = platform.uname()
     
 # external code 
