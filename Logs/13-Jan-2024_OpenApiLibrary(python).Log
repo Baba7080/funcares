@@ -1,0 +1,483 @@
+2024-01-13 00:02:51             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:02:52             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:02:53             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:03:08             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:03:09             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:03:10             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:03:10             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 00:03:10             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:03:11             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:03:11             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 00:03:12             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 00:03:12             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:03:14             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:03:14             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 00:03:17             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 00:03:17             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:03:18             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:03:18             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 00:04:56             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 00:04:56             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:04:57             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:04:57             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 00:04:59             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 00:04:59             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:05:01             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:05:01             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 00:05:37             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 00:05:37             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:05:39             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:05:39             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 00:05:41             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 00:05:41             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:05:43             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:05:43             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 00:06:04             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 00:06:04             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:06:05             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:06:05             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 00:06:08             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 00:06:08             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:06:09             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:06:09             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 00:07:51             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 00:07:51             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:07:52             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:07:52             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 00:07:55             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 00:07:55             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:07:56             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:07:56             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 00:08:02             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 00:08:02             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:08:03             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:08:03             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 00:08:06             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 00:08:06             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:08:07             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:08:07             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 00:08:10             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 00:08:10             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:08:12             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:08:12             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 00:08:14             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 00:08:14             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:08:16             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:08:16             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 00:12:39             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:12:40             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:12:40             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:12:46             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:12:47             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:12:48             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:12:48             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 00:12:48             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:12:49             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:12:49             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 00:12:50             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 00:12:51             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:12:52             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:12:52             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 00:12:54             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 00:12:54             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:12:56             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:12:56             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 00:20:53             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:20:54             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:20:54             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:21:04             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:21:05             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:21:06             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:21:06             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 00:21:06             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:21:07             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:21:07             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 00:21:08             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 00:21:08             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:21:10             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:21:10             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 00:21:12             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 00:21:12             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:21:14             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:21:14             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 00:35:59             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:36:00             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:36:00             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:36:09             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:36:10             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:36:10             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:36:10             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 00:36:10             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:36:11             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:36:11             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 00:36:13             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 00:36:13             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:36:14             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:36:14             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 00:36:17             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 00:36:17             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:36:19             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:36:19             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 00:37:26             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:37:27             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:37:28             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:37:38             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:37:39             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:37:39             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:37:39             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 00:37:39             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:37:41             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:37:41             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 00:37:42             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 00:37:42             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:37:43             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:37:43             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 00:37:46             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 00:37:46             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:37:48             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:37:48             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 00:38:24             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:38:25             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:38:25             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:38:35             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:38:36             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:38:36             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:38:36             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 00:38:36             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:38:38             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:38:38             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 00:38:40             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 00:38:40             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:38:41             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:38:41             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 00:38:44             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 00:38:44             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:38:45             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:38:45             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 00:41:03             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:41:04             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:41:04             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:41:13             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:41:13             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:41:14             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:41:14             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 00:41:14             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:41:15             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:41:15             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 00:41:16             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 00:41:16             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:41:17             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:41:17             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 00:41:20             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 00:41:20             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:41:21             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:41:21             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 00:43:35             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:43:36             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:43:36             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:43:47             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:43:48             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:43:48             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:43:48             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 00:43:48             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:43:50             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:43:50             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 00:43:51             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 00:43:51             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:43:52             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:43:52             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 00:43:54             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 00:43:54             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:43:56             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:43:56             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 00:47:24             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:47:25             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:47:26             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:47:35             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:47:36             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:47:37             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:47:37             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 00:47:37             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:47:38             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:47:38             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 00:47:40             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 00:47:40             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:47:41             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:47:41             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 00:47:43             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 00:47:44             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:47:45             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:47:45             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 00:48:13             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:48:14             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:48:14             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:48:19             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:48:20             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:48:20             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:48:20             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 00:48:20             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:48:22             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:48:22             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 00:48:23             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 00:48:23             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:48:24             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:48:24             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 00:48:27             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 00:48:27             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:48:28             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:48:28             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 00:49:43             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:49:43             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:49:44             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:49:52             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 00:49:54             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 00:49:54             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 00:49:54             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 00:49:54             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:49:55             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:49:55             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 00:49:57             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 00:49:57             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:49:58             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:49:58             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 00:50:00             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 00:50:00             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 00:50:01             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 00:50:01             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 01:02:14             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 01:02:15             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 01:02:15             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 01:02:22             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 01:02:22             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 01:02:23             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 01:02:23             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 01:02:23             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 01:02:24             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 01:02:24             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 01:02:25             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 01:02:25             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 01:02:27             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 01:02:27             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 01:02:29             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 01:02:29             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 01:02:31             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 01:02:31             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 01:05:48             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 01:05:49             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 01:05:49             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 01:05:54             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 01:05:55             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 01:05:55             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 01:05:55             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 01:05:55             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 01:05:56             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 01:05:56             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 01:05:58             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 01:05:58             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 01:05:59             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 01:05:59             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 01:06:02             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 01:06:02             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 01:06:03             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 01:06:03             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 01:11:02             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 01:11:03             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 01:11:04             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 01:11:23             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 01:11:24             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 01:11:24             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 01:11:24             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 01:11:24             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 01:11:26             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 01:11:26             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 01:11:27             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 01:11:27             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 01:11:28             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 01:11:28             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 01:11:31             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 01:11:31             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 01:11:33             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 01:11:33             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 11:04:37             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 11:04:39             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 11:04:40             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 11:05:08             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 11:05:14             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 11:05:14             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 11:05:14             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 11:05:14             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 11:05:16             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 11:05:16             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 11:05:18             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 11:05:18             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 11:05:19             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 11:05:19             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 11:05:23             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 11:05:23             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 11:05:24             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 11:05:24             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 12:15:51             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 12:15:52             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 12:15:53             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 12:16:01             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 12:16:03             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 12:16:04             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 12:16:04             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 12:16:04             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 12:16:05             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 12:16:05             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 12:16:06             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 12:16:06             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 12:16:07             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 12:16:08             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 12:16:10             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 12:16:10             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 12:16:11             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 12:16:11             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 12:16:55             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 12:16:55             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 12:16:57             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 12:16:57             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 12:16:59             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 12:16:59             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 12:17:01             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 12:17:01             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 12:25:13             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 12:25:13             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 12:25:14             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 12:25:14             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 12:25:17             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 12:25:17             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 12:25:18             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 12:25:18             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 22:36:40             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 22:36:44             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 22:36:45             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 22:37:06             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 22:37:07             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 22:37:08             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 22:37:08             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 22:37:08             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 22:37:11             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 22:37:12             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 22:37:12             ERROR             MOFSLOPENAPI.py             Invalid TOTP Value | Please Provide Correct TOTP
+2024-01-13 22:37:14             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 22:37:14             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 22:37:14             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 22:37:15             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 22:37:17             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 22:37:17             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 22:37:20             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 22:37:20             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 22:37:22             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 22:37:22             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 22:37:26             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 22:37:26             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 22:37:28             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 22:37:28             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 22:37:42             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 22:37:42             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 22:37:44             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 22:37:44             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 22:42:37             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 22:42:38             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 22:42:38             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 22:42:49             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 22:42:50             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 22:42:51             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 22:42:51             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 22:42:51             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 22:42:54             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 22:42:54             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 22:42:55             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 22:42:55             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 22:42:57             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 22:42:57             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 22:43:01             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 22:43:01             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 22:43:03             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 22:43:03             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 22:43:10             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 22:43:10             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 22:43:12             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 22:43:12             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 22:49:06             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 22:49:07             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 22:49:08             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 22:49:17             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 22:49:18             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 22:49:18             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 22:49:18             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 22:49:18             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 22:49:21             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 22:49:21             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 22:49:23             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 22:49:23             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 22:49:24             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 22:49:24             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 22:49:28             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 22:49:28             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 22:49:29             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 22:49:29             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 22:49:35             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 22:49:35             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 22:49:37             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 22:49:37             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 23:25:09             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 23:25:10             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 23:25:10             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 23:25:22             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 23:25:23             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 23:25:24             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 23:25:24             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 23:25:24             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 23:25:26             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 23:25:26             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 23:25:27             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 23:25:27             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 23:25:29             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 23:25:29             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 23:25:33             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 23:25:33             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 23:25:34             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 23:25:34             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 23:25:44             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 23:25:44             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 23:25:46             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 23:25:46             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 23:48:06             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 23:48:07             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 23:48:08             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 23:48:19             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 23:48:19             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 23:48:20             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 23:48:20             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 23:48:20             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 23:48:22             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 23:48:22             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 23:48:23             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 23:48:23             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 23:48:25             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 23:48:25             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 23:48:27             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 23:48:27             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 23:48:28             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 23:48:28             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-01-13 23:50:06             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 23:50:07             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 23:50:08             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 23:50:17             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-01-13 23:50:17             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-01-13 23:50:18             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-01-13 23:50:18             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-01-13 23:50:18             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 23:50:20             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 23:50:20             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-01-13 23:50:22             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-01-13 23:50:22             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 23:50:23             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 23:50:23             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-01-13 23:50:26             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-01-13 23:50:26             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-01-13 23:50:29             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-01-13 23:50:29             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully

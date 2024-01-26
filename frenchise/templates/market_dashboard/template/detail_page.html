@@ -40,8 +40,9 @@
               <div class="card card-dashboard-one">
                 <div class="card-header">
                   <div>
-                    <h6 class="card-title">Website Audience Metrics</h6>
-                    <p class="card-text">Audience to which the users belonged while on the current date range.</p>
+                    <h3 class="">Nifty 50</h3>
+                    <h4 class="">{{alldata.ltp}}</h4>
+                    <!-- <p class="card-text">Audience to which the users belonged while on the current date range.</p> -->
                   </div>
                   <div class="btn-group">
                     <button class="btn active">Day</button>
@@ -52,20 +53,20 @@
                 <div class="card-body">
                   <div class="card-body-top">
                     <div>
-                      <label class="mg-b-0">Users</label>
-                      <h2>13,956</h2>
+                      <label class="mg-b-0">Open</label>
+                      <h6>{{alldata.open}}</h6>
                     </div>
                     <div>
-                      <label class="mg-b-0">Bounce Rate</label>
-                      <h2>33.50%</h2>
+                      <label class="mg-b-0">High</label>
+                      <h6>{{alldata.high}}</h6>
                     </div>
                     <div>
-                      <label class="mg-b-0">Page Views</label>
-                      <h2>83,123</h2>
+                      <label class="mg-b-0">Low</label>
+                      <h6>{{alldata.low}}</h6>
                     </div>
                     <div>
-                      <label class="mg-b-0">Sessions</label>
-                      <h2>16,869</h2>
+                      <label class="mg-b-0">Previous </label>
+                      <h6>{{alldata.close}}</h6>
                     </div>
                   </div><!-- card-body-top -->
                   <div class="flot-chart-wrapper">
@@ -157,5 +158,6 @@
     </div>
   </div><!-- az-content -->
 
+  
 
 {% endblock main-page %}

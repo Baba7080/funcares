@@ -26,7 +26,7 @@ import base64
 
 
 def Marketdas(request):
-    return render(request, 'market_dashboard/template/detail_page.html' )
+    return render(request, 'market_dashboard/template/all_indices.html' )
 
 def empdas(request):
     return render(request, 'employe_dashboard/template/loan_form.html' )

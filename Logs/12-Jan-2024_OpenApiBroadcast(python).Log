@@ -1,0 +1,4 @@
+2024-01-12 15:21:45             SUCCESS             MOFSLOPENAPI.py             Broadcast Connection Opened
+2024-01-12 15:21:47             SUCCESS             MOFSLOPENAPI.py             Login Packet Sent
+2024-01-12 15:21:47             SUCCESS             MOFSLOPENAPI.py             Script 532540 Register Packet Sent
+2024-01-12 15:21:47             ERROR             MOFSLOPENAPI.py             list.remove(x): x not in list
