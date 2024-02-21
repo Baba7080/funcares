@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect, HttpResponse
-from django.http import HttpResponse,HttpResponseRedirect, JsonResponse
+from django.http import HttpResponse,HttpResponseRedirect, HttpResponseServerError, JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate
 from django.views import View
@@ -27,7 +27,7 @@ from io import BytesIO
 import asyncio
 import websockets
 
-
+   
 
 # Create your views here.
 def scrape_website(request):
@@ -672,6 +672,7 @@ def mosl_Price(request):
     price = {
     "clientcode":"AA020",
     "scripcode":500317
+
     }
     print(price)
 
@@ -935,14 +936,17 @@ def mofslloginfun(request):
     Mofsl = MOFSLOPENAPI(ApiKey, Base_Url, clientcode, SourceID, browsername, browserversion)
     if request.method == 'POST':
         otp = request.POST.get('otp')
-        print(otp)
-        loginmofsl = Mofsl.login(userid, password, Two_FA, otp,vendorinfo)
-        print("mzdcxv")
-        print(loginmofsl)
-        if loginmofsl['status'] == 'SUCCESS':
-            return redirect('MOSL_NSE_BSE_alldata')
-        else:
-            return (request,'market_dashboard/template/market_login.html')
+        print(" OTP:", otp)
+        try:
+            loginmofsl = Mofsl.login(userid, password, Two_FA, otp, vendorinfo)
+            print("loginmofsl:", loginmofsl)
+            if loginmofsl and loginmofsl.get('status') == 'SUCCESS':
+                return redirect('MOSL_NSE_BSE_alldata')
+            else:
+                return render(request, 'market_dashboard/template/market_login.html')
+        except Exception as e:
+            print("An error occurred:", e)
+            return HttpResponseServerError("An error occurred during OTP submission.")
     return render(request,'market_dashboard/template/market_login.html')
     # Login to MOFSL
     print("Logging in...")
@@ -951,6 +955,7 @@ def mofslloginfun(request):
     loginmofsl = Mofsl.login(userid, password, Two_FA, totp,vendorinfo)
     print("mzdcxv")
     print(loginmofsl)
+
 def get_stock_data(symbol):
     # Make a request to Motilal Oswal API
     # Handle authentication and other necessary details
@@ -960,21 +965,22 @@ def get_stock_data(symbol):
         return response.json()
     else:
         return None
-    
 
-def stock_chart(request, symbol):
-    stock_data = get_stock_data(symbol)
-    return render(request, 'stock_chart.html', {'stock_data': stock_data})
 
 def NSE_BSE_data(request):
     print("in nse bse")
+    global context
+
+
+    template_detail_page = 'market_dashboard/template/market_dash.html'
+    template_all_indices = 'market_dashboard/template/all_indices.html'
 
     url = "https://openapi.motilaloswal.com/rest/report/v1/getindexdatabyexchangename"
 
     headers = {
         "Accept": "application/json",
         "User-Agent": "MOSL/V.1.1.0",
-        "Authorization": loginmofsl["AuthToken"],
+        "Authorization": loginmofsl["AuthToken"], 
         "ApiKey": "MHohVro9A0A1Q2Sw",
         "ClientLocalIp": "1.2.3.4",
         "ClientPublicIp": "1.2.3.4",
@@ -989,188 +995,453 @@ def NSE_BSE_data(request):
         "browsername": "Chrome",
         "browserversion": "105.0"
     }
-    # print(headers)
+
     data = {
-        "clientcode": clientcode,  # In case of dealer else not required
+        "clientcode": clientcode, 
         "exchangename": "NSE"
     }
     print("calling NSE_BSE_data func")
-    # NSE_BSE_data(request)
-    response_nse = requests.post(url, json=data, headers=headers)
+
+    try:
+        response_nse = requests.post(url, json=data, headers=headers)
+        print('response nse', response_nse)
+
+        if response_nse.status_code == 200:
+            try:
+                json_data = response_nse.json()
+                print("JSON response:", json_data)
+
+              
+                NIFTY_FIFTY = ""
+                NIFTY_hundred = ""
+                NIFTY_twohundred = ""
+                NIFTY_bank = ""
+                NIFTY_auto = ""
+                NIFTY_fmcg = ""
+                NIFTY_pharma = ""
+                
+                NIFTY_500 = ""
+                NIFTY_COMMODITIES = ""
+                NIFTY_CONSUMPTION = ""
+                NIFTY_DIV_OPPS_50 = ""
+                NIFTY_ENERGY = ""
+                NIFTY_FIN_SERVICE = ""
+                NIFTY_INFRA = ""
+                NIFTY_IT = ""
+                NIFTY_MEDIA = ""
+                NIFTY_METAL = ""
+                NIFTY_MIDCAP_100 = ""
+                NIFTY_MNC = ""
+                NIFTY_NEXT_50 = ""
+                NIFTY_PSE = ""
+                NIFTY_PSU_BANK = ""
+                NIFTY_REALITY = ""
+                NIFTY_SERV_SECTOR = ""
+                NIFTY_SMALLCAP_100 = ""
+                NIFTY_CPSE = ""
+                INDIA_VIX = ""
+                NIFTY100_LIQ_15 = ""
+                NIFTY_GROWSECT_15 = ""
+                NIFTY_MIDCAP_50 = ""
+                NIFTY_MID_SELECT = ""
+               
+
+                responce_data = json_data.get('data', [])
+                print("data dict", responce_data)
+
+                for dt in responce_data:
+                    if dt["indexname"] == "Nifty 50":
+                        NIFTY_FIFTY = dt["indexcode"]
+                    if dt["indexname"] == "Nifty 100":
+                        NIFTY_hundred = dt["indexcode"]
+                    if dt["indexname"] == "Nifty 200":
+                        NIFTY_twohundred = dt["indexcode"]
+                    if dt["indexname"] == "Nifty Bank":
+                        NIFTY_bank = dt["indexcode"]
+                    if dt["indexname"] == "Nifty Auto":
+                        NIFTY_auto = dt["indexcode"]
+                    if dt["indexname"] == "Nifty FMCG":
+                        NIFTY_fmcg = dt["indexcode"]
+                    if dt["indexname"] == "Nifty Pharma":
+                        NIFTY_pharma = dt["indexcode"]
+                    if dt["indexname"] == "Nifty 500":
+                        NIFTY_500 = dt["indexcode"]
+                    if dt["indexname"] == "Nifty Commodities":
+                        NIFTY_COMMODITIES = dt["indexcode"]
+                    if dt["indexname"] == "Nifty Consumption":
+                        NIFTY_CONSUMPTION = dt["indexcode"]
+                    if dt["indexname"] == "Nifty Div Opps 50":
+                        NIFTY_DIV_OPPS_50 = dt["indexcode"]
+                    if dt["indexname"] == "Nifty Energy":
+                        NIFTY_ENERGY = dt["indexcode"]
+                    if dt["indexname"] == "Nifty FIN SERVICE":
+                        NIFTY_FIN_SERVICE = dt["indexcode"]
+                    if dt["indexname"] == "Nifty Infra":
+                        NIFTY_INFRA = dt["indexcode"]
+                    if dt["indexname"] == "Nifty IT":
+                        NIFTY_IT = dt["indexcode"]
+                    if dt["indexname"] == "Nifty Media":
+                        NIFTY_MEDIA = dt["indexcode"]
+                    if dt["indexname"] == "Nifty Metal":
+                        NIFTY_METAL = dt["indexcode"]
+                    if dt["indexname"] == "Nifty MIDCAP 100":
+                        NIFTY_MIDCAP_100 = dt["indexcode"]
+                    if dt["indexname"] == "Nifty MNC":
+                        NIFTY_MNC = dt["indexcode"]
+                    if dt["indexname"] == "Nifty Next 50":
+                        NIFTY_NEXT_50 = dt["indexcode"]
+                    if dt["indexname"] == "Nifty PSE":
+                        NIFTY_PSE = dt["indexcode"]
+                    if dt["indexname"] == "Nifty PSU Bank":
+                        NIFTY_PSU_BANK = dt["indexcode"]
+                    if dt["indexname"] == "Nifty Realty":
+                        NIFTY_REALITY = dt["indexcode"]
+                    if dt["indexname"] == "Nifty Serv Sector":
+                        NIFTY_SERV_SECTOR = dt["indexcode"]
+                    if dt["indexname"] == "Nifty SMLCAP 100":
+                        NIFTY_SMALLCAP_100 = dt["indexcode"]
+                    if dt["indexname"] == "Nifty CPSE":
+                        NIFTY_CPSE = dt["indexcode"]
+                    if dt["indexname"] == "India VIX":
+                        INDIA_VIX = dt["indexcode"]
+                    if dt["indexname"] == "Nifty100 Liq 15":
+                        NIFTY100_LIQ_15 = dt["indexcode"]
+                    if dt["indexname"] == "Nifty GrowSect 15":
+                        NIFTY_GROWSECT_15 = dt["indexcode"]
+                    if dt["indexname"] == "Nifty Midcap 50":
+                        NIFTY_MIDCAP_50 = dt["indexcode"]
+                    if dt["indexname"] == "Nifty MID SELECT":
+                        NIFTY_MID_SELECT = dt["indexcode"]
+
+                context = {
+                    "nifty50": "N" + str(NIFTY_FIFTY),
+                    "nifty100": "N" + str(NIFTY_hundred),
+                    "nifty200": "N" + str(NIFTY_twohundred),
+                    "niftybank": "N" + str(NIFTY_bank),
+                    "niftyauto": "N" + str(NIFTY_auto),
+                    "niftyfmcg": "N" + str(NIFTY_fmcg),
+                    "niftypharma": "N" + str(NIFTY_pharma),
+                    "nifty_mid_select": "N" + str(NIFTY_MID_SELECT),
+                    "nifty_midcap_50": "N" + str(NIFTY_MIDCAP_50),
+                    "nifty_growsect_15": "N" + str(NIFTY_GROWSECT_15),
+                    "nifty_liq_15": "N" + str(NIFTY100_LIQ_15),
+                    "india_vix": "N" + str(INDIA_VIX),
+                    "nifty_cpse": "N" + str(NIFTY_CPSE),
+                    "nifty_smallcap_100": "N" + str(NIFTY_SMALLCAP_100),
+                    "nifty_serv_sector": "N" + str(NIFTY_SERV_SECTOR),
+                    "nifty_realty": "N" + str(NIFTY_REALITY),
+                    "nifty_psu_bank": "N" + str(NIFTY_PSU_BANK),
+                    "nifty_pse": "N" + str(NIFTY_PSE),
+                    "nifty_next_50": "N" + str(NIFTY_NEXT_50),
+                    "nifty_mnc": "N" + str(NIFTY_MNC),
+                    "nifty_metal": "N" + str(NIFTY_METAL),
+                    "nifty_midcap_100": "N" + str(NIFTY_MIDCAP_100),
+                    "nifty_media": "N" + str(NIFTY_MEDIA),
+                    "nifty_it": "N" + str(NIFTY_IT),
+                    "nifty_infra": "N" + str(NIFTY_INFRA),
+                    "nifty_fin_service": "N" + str(NIFTY_FIN_SERVICE),
+                    "nifty_energy": "N" + str(NIFTY_ENERGY),
+                    "nifty_div_opps_50": "N" + str(NIFTY_DIV_OPPS_50),
+                    "nifty_consumption": "N" + str(NIFTY_CONSUMPTION),
+                    "nifty_commodities": "N" + str(NIFTY_COMMODITIES),
+                    "nifty_500": "N" + str(NIFTY_500),
+               
+                }
+
+                NSEData = {
+                    "clientcode": clientcode,
+                    "exchange": "NSE",
+                    "scripcode": NIFTY_FIFTY
+                }
+      
+                get_ltp = Mofsl.GetLtp(NSEData)
+                print(get_ltp)
+
+                context1 = BSEDATA(request)
+                print(context1)
+
+                context.update({
+                    "sensex": "B" + str(context1.get('sensex', ''))
+                })
+
+                daata = {
+                        "clientid": clientcode,
+                        "authtoken": loginmofsl["AuthToken"],
+                        "apikey": ApiKey
+                    }
+                manish = {'clientcode':clientcode,'api':ApiKey,'token':loginmofsl['AuthToken']}
+                print("daataa")
+                print(daata)
+
+                print("res data")
+
+                url_place = "https://openapi.motilaloswal.com/rest/trans/v1/placeorder"
+
+                place_order_request = {
+                    "clientcode": "clientcode",
+                    "exchange": "NSE",
+                    "symboltoken": 1660,
+                    "buyorsell": "BUY",
+                    "ordertype": "LIMIT",
+                    "producttype": "DELIVERY",
+                    "orderduration": "DAY",
+                    "price": 235.5,
+                    "triggerprice": 0,
+                    "quantityinlot": 2,
+                    "disclosedquantity": 0,
+                    "amoorder": "N",
+                    "algoid": "",
+                    "goodtilldate": "",
+                    "tag": " ",
+                    "participantcode": ""
+                }
+                respo_place = requests.post(url_place, json=place_order_request, headers=headers)
+                print("response place order")
+                print(respo_place)
+                print(respo_place.text)
+
+                current_date_time = datetime.now()
+
+                # Format the current date and time
+                formatted_current_date_time = current_date_time.strftime('%d-%b-%Y %H:%M:%S')
+                OrderBookInfo = {
+                    "clientcode": clientcode,
+                    "dateandtime": formatted_current_date_time
+                }
+                print("order book")
+                print(OrderBookInfo)
+                # Replace with your actual implementation
+                orderbook = Mofsl.GetOrderBook(OrderBookInfo)
+                print("response order book ")
+                print(orderbook)
+
+                print("res data")
+                return render(request, template_detail_page, {'alldata': context, 'mani': manish})
+            except ValueError as e:
+                print("Error decoding JSON:", e)
+                return JsonResponse({"error": "Error decoding JSON"})
+        else:
+            print("Request failed with status code:", response_nse.status_code)
+            print("Response content:", response_nse.text)
+            return JsonResponse({"error": "Request failed with status code " + str(response_nse.status_code)})
+
+    except Exception as e:
+        print("An error occurred:", e)
+        return JsonResponse({"error": "An error occurred: " + str(e)})
+
+def stock_chart(request, symbol):
+    stock_data = get_stock_data(symbol)
+    return render(request, 'stock_chart.html', {'stock_data': stock_data})
+
+# def NSE_BSE_data(request):
+#     print("in nse bse")
+
+#     url = "https://openapi.motilaloswal.com/rest/report/v1/getindexdatabyexchangename"
+
+#     headers = {
+#         "Accept": "application/json",
+#         "User-Agent": "MOSL/V.1.1.0",
+#         "Authorization": loginmofsl["AuthToken"],
+#         "ApiKey": "MHohVro9A0A1Q2Sw",
+#         "ClientLocalIp": "1.2.3.4",
+#         "ClientPublicIp": "1.2.3.4",
+#         "MacAddress": "00:00:00:00:00:00",
+#         "SourceId": "WEB",
+#         "vendorinfo": "T0240",
+#         "osname": "Windows 10",
+#         "osversion": "10.0.19041",
+#         "devicemodel": "AHV",
+#         'manufacturer': 'LENOVO',
+#         "installedappid": "AppID",
+#         "browsername": "Chrome",
+#         "browserversion": "105.0"
+#     }
+#     # print(headers)
+#     data = {
+#         "clientcode": clientcode,  # In case of dealer else not required
+#         "exchangename": "NSE"
+#     }
+#     print("calling NSE_BSE_data func")
+#     # NSE_BSE_data(request)
+#     response_nse = requests.post(url, json=data, headers=headers)
+#     print('resonse nse', response_nse)
    
-    # file_path = "example3.json"
+#     # file_path = "example3.json"
 
-    # Writing data to the JSON file
-    # with open(file_path, 'w') as json_file:
-    #     json.dump(response, json_file)
-    #     print("done in example ")
-    # print(response_nse)
-    # print(response_nse.text)
-    # print("json")
-    # print(response_nse.json())
-    NIFTY = ""
-    NIFTY_FIFTY = ""
-    NIFTY_bank = ""
-    NIFTY_twohundred =""
-    NIFTY_hundred =""
-    print("done")
-    res =  response_nse.json()
-    print(res['data'])
-    responce_data = res['data']
-    # print("parsed one")
-    scripc = ""
+#     # Writing data to the JSON file
+#     # with open(file_path, 'w') as json_file:
+#     #     json.dump(response, json_file)
+#     #     print("done in example ")
+#     # print(response_nse)
+#     # print(response_nse.text)
+#     # print("json")
+#     # print(response_nse.json())
+#     NIFTY = ""
+#     NIFTY_FIFTY = ""
+#     NIFTY_bank = ""
+#     NIFTY_twohundred =""
+#     NIFTY_hundred =""
+#     print("done")
+#     res =  response_nse.json()
+#     print(res['data'])
+#     responce_data = res['data']
+#     print("data dict", responce_data)
+#     # print("parsed one")
+#     scripc = ""
     
-    for dt in responce_data:
-        # print(dt["indexcode"])
-        # if dt == 'data':
-        #     for i in dt:
-        #         print(i)
-        if dt["indexname"] == "Nifty 50":
-            NIFTY_FIFTY = dt["indexcode"]
-            scripc = dt['indexcode']
+#     for dt in responce_data:
+#         # print(dt["indexcode"])
+#         # if dt == 'data':
+#         #     for i in dt:
+#         #         print(i)
+#         if dt["indexname"] == "Nifty 50":
+#             NIFTY_FIFTY = dt["indexcode"]
+#             scripc = dt['indexcode']
 
-        if dt["indexname"] == "Nifty 100":
-            NIFTY_hundred = dt["indexcode"]
+#         if dt["indexname"] == "Nifty 100":
+#             NIFTY_hundred = dt["indexcode"]
 
-        if dt["indexname"] == "Nifty 200":
-            NIFTY_twohundred = dt["indexcode"]
+#         if dt["indexname"] == "Nifty 200":
+#             NIFTY_twohundred = dt["indexcode"]
 
-        if dt["indexname"] == "Nifty Bank":
-            NIFTY_bank = dt["indexcode"]
+#         if dt["indexname"] == "Nifty Bank":
+#             NIFTY_bank = dt["indexcode"]
         
-        if dt["indexname"] == "Nifty Auto":
-            NIFTY_auto = dt["indexcode"]
+#         if dt["indexname"] == "Nifty Auto":
+#             NIFTY_auto = dt["indexcode"]
         
-        if dt["indexname"] == "Nifty FMCG":
-            NIFTY_fmcg = dt["indexcode"]
+#         if dt["indexname"] == "Nifty FMCG":
+#             NIFTY_fmcg = dt["indexcode"]
 
-        if dt["indexname"] == "Nifty Pharma":
-            NIFTY_pharma = dt["indexcode"]
+#         if dt["indexname"] == "Nifty Pharma":
+#             NIFTY_pharma = dt["indexcode"]
 
 
-    # print(type(NIFTY))
-    context = {
-        "nifty50":NIFTY_FIFTY,
-        "nifty100":NIFTY_hundred,
-        "nifty200":NIFTY_twohundred,
-        "niftybank":NIFTY_bank,
-        "niftyauto":NIFTY_auto,
-        "niftyfmcg":NIFTY_fmcg,
-        "niftypharma":NIFTY_pharma
-    }
-    NSEData = {
-        "clientcode":clientcode,
-        "exchange":"NSE",
-        "scripcode":NIFTY_FIFTY
-    }
-    get_ltp = Mofsl.GetLtp(NSEData)
-    # print(get_ltp)
-    context1 = BSEDATA(request)
-    # print("bse return ")
-    # print(context1)
-    # print("N"+str(NIFTY_FIFTY))
-    context = {
-        "nifty50":"N"+str(NIFTY_FIFTY),
-        "nifty100":"N"+str(NIFTY_hundred),
-        "nifty200":"N"+str(NIFTY_twohundred),
-        "niftybank":"N"+str(NIFTY_bank),
-        "niftyauto":"N"+str(NIFTY_auto),
-        "niftyfmcg":"N"+str(NIFTY_fmcg),
-        "niftypharma":"N"+str(NIFTY_pharma),
-        "sensex":"B"+str(context1['sensex'])
-    }
-    # url_web = "wss://openapi.motilaloswal.com/"
+#     # print(type(NIFTY))
+#     context = {
+#         "nifty50":NIFTY_FIFTY,
+#         "nifty100":NIFTY_hundred,
+#         "nifty200":NIFTY_twohundred,
+#         "niftybank":NIFTY_bank,
+#         "niftyauto":NIFTY_auto,
+#         "niftyfmcg":NIFTY_fmcg,
+#         "niftypharma":NIFTY_pharma
+#     }
+#     NSEData = {
+#         "clientcode":clientcode,
+#         "exchange":"NSE",
+#         "scripcode":NIFTY_FIFTY
+#     }
+#     get_ltp = Mofsl.GetLtp(NSEData)
+#     print(get_ltp)
+#     context1 = BSEDATA(request)
+#     # print("bse return ")
+#     print(context1)
+#     # print("N"+str(NIFTY_FIFTY))
+#     context = {
+#         "nifty50":"N"+str(NIFTY_FIFTY),
+#         "nifty100":"N"+str(NIFTY_hundred),
+#         "nifty200":"N"+str(NIFTY_twohundred),
+#         "niftybank":"N"+str(NIFTY_bank),
+#         "niftyauto":"N"+str(NIFTY_auto),
+#         "niftyfmcg":"N"+str(NIFTY_fmcg),
+#         "niftypharma":"N"+str(NIFTY_pharma),
+#         "sensex":"B"+str(context1['sensex'])
+#     }
+#     # url_web = "wss://openapi.motilaloswal.com/"
     
-    # redirect('web_conn')
-    daata = {
-        "clientid": clientcode,
-        "authtoken": loginmofsl["AuthToken"],
-        "apikey": ApiKey
-    }
-    manish = {'clientcode':clientcode,'api':ApiKey,'token':loginmofsl['AuthToken']}
-    print("daataa")
-    print(daata)
-    Mofsl.Broadcast_connect()
+#     # redirect('web_conn')
+#     daata = {
+#         "clientid": clientcode,
+#         "authtoken": loginmofsl["AuthToken"],
+#         "apikey": ApiKey
+#     }
+#     manish = {'clientcode':clientcode,'api':ApiKey,'token':loginmofsl['AuthToken']}
+#     print("daataa")
+#     print(daata)
+#     # Mofsl.Broadcast_connect()
     
-    # res = request.get(url_web, json=daata, headers=headers)
-    # tcpconnect = Mofsl.TCPBroadcast_connect()
-    # print("tcp connection")
-    # print(tcpconnect)
-    # tcpcall = Mofsl.__TCPBroadcast_on_open()
-    # print("open")
-    # print(tcpcall)
+#     # res = request.get(url_web, json=daata, headers=headers)
+#     # tcpconnect = Mofsl.TCPBroadcast_connect()
+#     # print("tcp connection")
+#     # print(tcpconnect)
+#     # tcpcall = Mofsl.__TCPBroadcast_on_open()
+#     # print("open")
+#     # print(tcpcall)
 
-    # view_data = ChartConsumer()
-    # vie = view_data.connect()
-    # print(vie)
+#     # view_data = ChartConsumer()
+#     # vie = view_data.connect()
+#     # print(vie)
 
-    # async with websockets.connect(url_web) as websocket:
-    #     await websocket.send(json.dumps(daata))
-    #     response = await websocket.recv()
+#     # async with websockets.connect(url_web) as websocket:
+#     #     await websocket.send(json.dumps(daata))
+#     #     response = await websocket.recv()
 
-    print("res data")
-    # print(response)
-    print("res data")
-    url_place = "https://openapi.motilaloswal.com/rest/trans/v1/placeorder"
+#     print("res data")
+#     # print(response)
+#     print("res data")
+#     url_place = "https://openapi.motilaloswal.com/rest/trans/v1/placeorder"
 
-    place_order_request = {
-        "clientcode":clientcode,
-        "exchange":"NSE",
-        "symboltoken":1660,
-        "buyorsell":"BUY",
-        "ordertype":"LIMIT",
-        "producttype":"DELIVERY",
-        "orderduration":"DAY",
-        "price":235.5,
-        "triggerprice":0,
-        "quantityinlot":2,
-        "disclosedquantity":0,
-        "amoorder":"N",
-        "algoid":"",
-        "goodtilldate":"",
-        "tag":" ", 
-        "participantcode": ""
-    }
-    respo_place = requests.post(url_place, json=place_order_request, headers=headers)
-    print("response place order")
-    print(respo_place)
-    print(respo_place.text)
-    current_date_time = datetime.now()
+#     place_order_request = {
+#         "clientcode":clientcode,
+#         "exchange":"NSE",
+#         "symboltoken":1660,
+#         "buyorsell":"BUY",
+#         "ordertype":"LIMIT",
+#         "producttype":"DELIVERY",
+#         "orderduration":"DAY",
+#         "price":235.5,
+#         "triggerprice":0,
+#         "quantityinlot":2,
+#         "disclosedquantity":0,
+#         "amoorder":"N",
+#         "algoid":"",
+#         "goodtilldate":"",
+#         "tag":" ", 
+#         "participantcode": ""
+#     }
+#     respo_place = requests.post(url_place, json=place_order_request, headers=headers)
+#     print("response place order")
+#     print(respo_place)
+#     print(respo_place.text)
+#     current_date_time = datetime.now()
 
-    # Format the current date and time
-    formatted_current_date_time = current_date_time.strftime('%d-%b-%Y %H:%M:%S')
-    OrderBookInfo = {
-        "clientcode":clientcode,
-        "dateandtime":formatted_current_date_time
-    }
-    print("order book")
-    print(OrderBookInfo)
-    orderbook = Mofsl.GetOrderBook(OrderBookInfo)
-    print("responce order book ")
-    print(orderbook)
-    # print(res)
-    # web_con = Mofsl.Websocket2_connect()
-    # print("web_connection")
-    # print(web_con)
+#     # Format the current date and time
+#     formatted_current_date_time = current_date_time.strftime('%d-%b-%Y %H:%M:%S')
+#     OrderBookInfo = {
+#         "clientcode":clientcode,
+#         "dateandtime":formatted_current_date_time
+#     }
+#     print("order book")
+#     print(OrderBookInfo)
+#     orderbook = Mofsl.GetOrderBook(OrderBookInfo)
+#     print("responce order book ")
+#     print(orderbook)
+#     # print(res)
+#     # web_con = Mofsl.Websocket2_connect()
+#     # print("web_connection")
+#     # print(web_con)
     
 
-    # get_conn = ChartConsumer.connect()
-    # print(get_conn)
+#     # get_conn = ChartConsumer.connect()
+#     # print(get_conn)
 
-    # triggerwebhook = tradingchart(request,loginmofsl["AuthToken"])
+#     # triggerwebhook = tradingchart(request,loginmofsl["AuthToken"])
 
-    # print(triggerwebhook)
+#     # print(triggerwebhook)
 
-    # for ct in triggerwebhook:
-    #     if 
-    # print(context)
-    return render(request, 'market_dashboard/template/market_dash.html',{'alldata':context, 'mani':manish})
+#     # for ct in triggerwebhook:
+#     #     if 
+#     # print(context)
+#     return render(request, 'market_dashboard/template/market_dash.html',{'alldata':context, 'mani':manish})
 
 
-    # print(NIFTY_FIFTY)
-    # print(NIFTY_hundred)
-    # print(NIFTY_twohundred)
-    # print(NIFTY_bank)
+#     # print(NIFTY_FIFTY)
+#     # print(NIFTY_hundred)
+#     # print(NIFTY_twohundred)
+#     # print(NIFTY_bank)
+
+
 def returningdatamofsl(request):
     print("in return")
     daata = {
@@ -1227,10 +1498,10 @@ def getltpbycode(request,code):
     if get_ltp['status'] =="SUCCESS":
         detailLtpData = get_ltp['data']
 
-        return render(request, 'market/detailpage.html',{'alldata':detailLtpData})
+        return render(request, 'market_dashboard/template/detail_page.html',{'alldata':detailLtpData})
 
     else:
-        return render(request, 'market/detailpage.html',{'alldata':get_ltp})
+        return render(request, 'market_dashboard/template/detail_page.html',{'alldata':get_ltp})
 
 
 
@@ -1490,3 +1761,112 @@ def fnoanalytics(request):
 
     return render (request, 'market/fnoanalytics.html', {"html_content": get_html})
 
+
+def all_nse_bse_indices(request):
+
+    url = "https://openapi.motilaloswal.com/rest/report/v1/getindexdatabyexchangename"
+    url_get_ltp = "	https://openapi.motilaloswal.com/rest/report/v1/getltpdata"
+    url_eod_data = "https://openapi.motilaloswal.com/rest/report/v1/geteoddatabyexchangename"
+    headers = {
+        "Accept": "application/json",
+        "User-Agent": "MOSL/V.1.1.0",
+        "Authorization": loginmofsl["AuthToken"],  
+        "ApiKey": "MHohVro9A0A1Q2Sw",
+        "ClientLocalIp": "1.2.3.4",
+        "ClientPublicIp": "1.2.3.4",
+        "MacAddress": "00:00:00:00:00:00",
+        "SourceId": "WEB",
+        "vendorinfo": "T0240",
+        "osname": "Windows 10",
+        "osversion": "10.0.19041",
+        "devicemodel": "AHV",
+        'manufacturer': 'LENOVO',
+        "installedappid": "AppID",
+        "browsername": "Chrome",
+        "browserversion": "105.0"
+    }
+
+    nse_data = {
+        "clientcode":clientcode, 
+        "exchangename":"NSE"
+        }
+    
+    
+
+    response_nse_index = requests.post(url, json=nse_data, headers=headers )
+    res_nse_index = response_nse_index.json()
+    data_n = res_nse_index.get ('data', [])
+    print("skffdgdgfdhfsg", data_n)
+
+    
+    
+
+    context = []
+   
+    for indices_data in data_n:
+        print("indices data-----------------", indices_data)
+        nse_index_code = indices_data['indexcode']
+        print("nse index code--------------" ,nse_index_code)
+        nse_index_name = indices_data['indexname']
+        print("nse index name--------------" ,nse_index_name)
+        
+
+        nse_ohlc_data = {
+            "clientcode":clientcode,
+            "exchange":"NSE",
+            "scripcode":nse_index_code
+        }
+        response_scrip = requests.post(url_get_ltp, json=nse_ohlc_data, headers=headers )
+        res_nse_scrip = response_scrip.json()
+        data_n_scrip = res_nse_scrip.get ('data', [])
+        print("scrip code-------", data_n_scrip)
+
+        open = data_n_scrip['open']
+        high = data_n_scrip['high']
+        low = data_n_scrip['low']
+        close = data_n_scrip['close']
+        ltp = data_n_scrip['ltp']
+        volume = data_n_scrip['volume']
+        ask = data_n_scrip['ask']
+        bid = data_n_scrip['bid']
+
+        context.append({
+            "indexcode": nse_index_code,
+            "indexname": nse_index_name,
+            "open" : open,
+            "high" : high,
+            "low" : low,
+            "close" : close,
+            "ltp" : ltp,
+            "volume" : volume,
+            "ask" : ask,
+            "bid" : bid,
+        })
+
+
+
+
+    return render(request, 'market_dashboard/template/all_indices.html',{"all_data":context})
+
+
+
+
+ 
+                                    
+    #             return render(request, 'market_dashboard/template/all_indices.html')
+    #         except json.JSONDecodeError as e:
+      
+    #             print(f"JSONDecodeError: {e}")
+    #             print("Response Content:", response_data.content.decode())
+
+    #         return HttpResponseServerError("Error decoding JSON response.")
+    #     else:
+    #         # If the request was not successful, handle the error
+    #         error_message = f"Error: {response_data.status_code} - {response_data.text}"
+    #         print(error_message)
+    #         # You might want to handle the error in a way that makes sense for your application
+    #         return render(request, 'market_dashboard/template/404.html', {"error_message": error_message})
+    
+    # except Exception as e:
+    #     print("An error occurred:", e)
+    #     return JsonResponse({"error": "An error occurred: "})

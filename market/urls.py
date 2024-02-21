@@ -15,6 +15,7 @@ urlpatterns = [
     path('MOSL-tradebook/', tradebook, name= 'tradebook'),
     path('MOSL-detailpage/<str:code>', getltpbycode, name= 'detailpage'),
     path('MOSL-NSE-BSE-alldata/', NSE_BSE_data, name= 'MOSL_NSE_BSE_alldata'),
+    path('all_nse_bse_indices/', all_nse_bse_indices, name= 'all_nse_bse_indices'),
 #MOSL - Authentication
     path('MOSL-login/', mosl_login, name= 'mosl_login'),
     path('MOSL-logout/', mosl_logout, name= 'mosl_logout'),

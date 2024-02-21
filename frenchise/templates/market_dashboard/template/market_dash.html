@@ -37,10 +37,10 @@
 
         <div class="az-dashboard-nav"> 
           <nav class="nav">
-            <a class="nav-link active" data-toggle="tab" href="#">Home</a>
-            <a class="nav-link" data-toggle="tab" href="#">Orders</a>
-            <a class="nav-link" data-toggle="tab" href="#">Option Stocks</a>
-            <a class="nav-link" data-toggle="tab" href="#">Indices</a>
+            <a class="nav-link active"href="{% url 'MOSL_NSE_BSE_alldata' %}">Home</a>
+            <a class="nav-link" data-toggle="tab" href="">Orders</a>
+            <a class="nav-link" data-toggle="tab" href="">Option Stocks</a>
+            <a class="nav-link" href="{% url 'all_nse_bse_indices' %}">Indices</a>
           </nav>
 
           <nav class="nav">
@@ -74,7 +74,7 @@
                       <tr>
                         <!-- <td><i class="flag-icon flag-icon-us flag-icon-squared"></i></td> -->
                         <td><strong><a href="{% url 'detailpage' alldata.nifty50 %}">Nifty 50</a></strong></td>
-                        <td><strong>134</strong> (1.51%)</td>
+                        <td><strong>{{alldata.nifty50}}</strong> (1.51%)</td>
                         <td>33.58%</td>
                        </tr>
                        <tr>

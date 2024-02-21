@@ -105,7 +105,7 @@ class ChartConsumer(AsyncWebsocketConsumer):
         global apikey
         global clientid
         global authtoken
-        datafromview = donkeymanish(self)
+        datafromview = manish(self)
         print(datafromview)
         apikey = datafromview['apikey']
         clientid = datafromview['clientid']

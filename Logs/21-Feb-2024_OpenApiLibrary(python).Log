@@ -1,0 +1,353 @@
+2024-02-21 17:38:30             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 17:38:31             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 17:38:31             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 17:38:33             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 17:38:33             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 17:38:34             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 17:39:08             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 17:39:09             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 17:39:09             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 17:39:09             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 17:39:09             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 17:39:11             FAILED             MOFSLOPENAPI.py             HTTPSConnectionPool(host='openapi.motilaloswal.com', port=443): Max retries exceeded with url: /rest/login/v4/authdirectapi (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000207F4F7F6E0>: Failed to resolve 'openapi.motilaloswal.com' ([Errno 11001] getaddrinfo failed)"))
+2024-02-21 17:39:11             FAILED             MOFSLOPENAPI.py             login_Error while sending the webRequest
+2024-02-21 17:39:11             FAILED             MOFSLOPENAPI.py             Login Request failed
+2024-02-21 17:39:41             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 17:39:42             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 17:39:42             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 17:39:42             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 17:39:42             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 17:39:43             FAILED             MOFSLOPENAPI.py             HTTPSConnectionPool(host='openapi.motilaloswal.com', port=443): Max retries exceeded with url: /rest/login/v4/authdirectapi (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000207F50238F0>: Failed to resolve 'openapi.motilaloswal.com' ([Errno 11001] getaddrinfo failed)"))
+2024-02-21 17:39:43             FAILED             MOFSLOPENAPI.py             login_Error while sending the webRequest
+2024-02-21 17:39:43             FAILED             MOFSLOPENAPI.py             Login Request failed
+2024-02-21 21:30:26             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 21:30:27             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 21:30:28             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 21:30:46             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 21:30:47             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 21:30:47             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 21:30:47             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 21:30:47             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 21:30:49             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 21:30:49             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-02-21 21:30:51             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-02-21 21:30:51             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 21:30:53             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 21:30:53             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-02-21 21:30:57             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-02-21 21:30:57             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 21:30:58             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 21:30:58             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-02-21 21:31:11             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-02-21 21:31:11             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 21:31:12             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 21:31:12             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-02-21 21:31:29             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-02-21 21:31:29             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 21:31:30             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 21:31:31             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-02-21 21:52:57             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 21:52:58             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 21:52:58             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 21:53:12             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 21:53:13             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 21:53:13             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 21:53:13             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 21:53:13             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 21:53:14             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 21:53:14             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-02-21 21:53:16             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-02-21 21:53:16             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 21:53:17             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 21:53:17             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-02-21 21:53:20             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-02-21 21:53:20             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 21:53:22             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 21:53:22             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-02-21 21:55:21             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 21:55:22             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 21:55:23             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 21:55:23             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 21:55:23             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 21:55:25             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 21:55:25             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-02-21 21:55:26             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-02-21 21:55:26             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 21:55:28             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 21:55:28             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-02-21 21:55:32             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-02-21 21:55:32             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 21:55:34             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 21:55:34             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-02-21 21:57:22             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 21:57:23             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 21:57:24             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 21:57:34             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 21:57:35             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 21:57:35             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 21:57:35             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 21:57:35             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 21:57:37             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 21:57:37             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-02-21 21:57:38             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-02-21 21:57:38             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 21:57:39             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 21:57:39             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-02-21 21:57:42             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-02-21 21:57:42             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 21:57:44             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 21:57:44             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-02-21 22:11:52             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 22:11:55             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 22:11:56             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 22:12:15             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 22:12:15             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 22:12:16             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 22:12:16             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 22:12:16             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 22:12:17             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 22:12:17             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-02-21 22:12:19             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-02-21 22:12:19             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 22:12:20             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 22:12:20             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-02-21 22:12:23             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-02-21 22:12:23             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 22:12:25             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 22:12:25             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-02-21 22:16:43             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 22:16:44             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 22:16:44             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 22:16:55             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 22:16:56             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 22:16:57             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 22:16:57             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 22:16:57             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 22:16:58             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 22:16:58             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-02-21 22:16:59             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-02-21 22:16:59             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 22:17:01             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 22:17:01             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-02-21 22:17:04             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-02-21 22:17:04             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 22:17:05             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 22:17:05             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-02-21 22:34:30             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 22:34:30             FAILED             MOFSLOPENAPI.py             GetPublicIPAddressHTTPConnectionPool(host='checkip.dyndns.org', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000002A312E80C20>: Failed to resolve 'checkip.dyndns.org' ([Errno 11001] getaddrinfo failed)"))
+2024-02-21 22:34:30             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 22:34:30             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 22:34:41             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 22:34:41             FAILED             MOFSLOPENAPI.py             GetPublicIPAddressHTTPConnectionPool(host='checkip.dyndns.org', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000002A313674AD0>: Failed to resolve 'checkip.dyndns.org' ([Errno 11001] getaddrinfo failed)"))
+2024-02-21 22:34:41             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 22:34:42             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 22:34:42             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 22:34:42             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 22:34:42             FAILED             MOFSLOPENAPI.py             Network connection is unavailable
+2024-02-21 22:34:42             FAILED             MOFSLOPENAPI.py             'NoneType' object is not subscriptable
+2024-02-21 22:34:42             FAILED             MOFSLOPENAPI.py             login_Error while sending the webRequest
+2024-02-21 22:34:42             FAILED             MOFSLOPENAPI.py             Login Request failed
+2024-02-21 22:34:57             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 22:34:57             FAILED             MOFSLOPENAPI.py             GetPublicIPAddressHTTPConnectionPool(host='checkip.dyndns.org', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000002A313717650>: Failed to resolve 'checkip.dyndns.org' ([Errno 11001] getaddrinfo failed)"))
+2024-02-21 22:34:57             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 22:34:57             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 22:34:57             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 22:34:57             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 22:34:57             FAILED             MOFSLOPENAPI.py             Network connection is unavailable
+2024-02-21 22:34:57             FAILED             MOFSLOPENAPI.py             'NoneType' object is not subscriptable
+2024-02-21 22:34:57             FAILED             MOFSLOPENAPI.py             login_Error while sending the webRequest
+2024-02-21 22:34:57             FAILED             MOFSLOPENAPI.py             Login Request failed
+2024-02-21 22:35:05             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 22:35:05             FAILED             MOFSLOPENAPI.py             GetPublicIPAddressHTTPConnectionPool(host='checkip.dyndns.org', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000002A313805790>: Failed to resolve 'checkip.dyndns.org' ([Errno 11001] getaddrinfo failed)"))
+2024-02-21 22:35:05             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 22:35:05             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 22:35:05             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 22:35:05             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 22:35:05             FAILED             MOFSLOPENAPI.py             Network connection is unavailable
+2024-02-21 22:35:05             FAILED             MOFSLOPENAPI.py             'NoneType' object is not subscriptable
+2024-02-21 22:35:05             FAILED             MOFSLOPENAPI.py             login_Error while sending the webRequest
+2024-02-21 22:35:05             FAILED             MOFSLOPENAPI.py             Login Request failed
+2024-02-21 22:35:23             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 22:35:23             FAILED             MOFSLOPENAPI.py             GetPublicIPAddressHTTPConnectionPool(host='checkip.dyndns.org', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000002A312E807A0>: Failed to resolve 'checkip.dyndns.org' ([Errno 11001] getaddrinfo failed)"))
+2024-02-21 22:35:23             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 22:35:23             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 22:35:35             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 22:35:35             FAILED             MOFSLOPENAPI.py             GetPublicIPAddressHTTPConnectionPool(host='checkip.dyndns.org', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000002AE2E5995E0>: Failed to resolve 'checkip.dyndns.org' ([Errno 11001] getaddrinfo failed)"))
+2024-02-21 22:35:35             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 22:35:35             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 22:35:43             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 22:35:43             FAILED             MOFSLOPENAPI.py             GetPublicIPAddressHTTPConnectionPool(host='checkip.dyndns.org', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000002AE2E8B3B30>: Failed to resolve 'checkip.dyndns.org' ([Errno 11001] getaddrinfo failed)"))
+2024-02-21 22:35:43             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 22:35:43             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 22:35:43             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 22:35:43             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 22:35:43             FAILED             MOFSLOPENAPI.py             Network connection is unavailable
+2024-02-21 22:35:43             FAILED             MOFSLOPENAPI.py             'NoneType' object is not subscriptable
+2024-02-21 22:35:43             FAILED             MOFSLOPENAPI.py             login_Error while sending the webRequest
+2024-02-21 22:35:43             FAILED             MOFSLOPENAPI.py             Login Request failed
+2024-02-21 22:35:52             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 22:35:52             FAILED             MOFSLOPENAPI.py             GetPublicIPAddressHTTPConnectionPool(host='checkip.dyndns.org', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000002AE2E8B3FE0>: Failed to resolve 'checkip.dyndns.org' ([Errno 11001] getaddrinfo failed)"))
+2024-02-21 22:35:52             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 22:35:52             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 22:35:52             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 22:35:52             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 22:35:52             FAILED             MOFSLOPENAPI.py             Network connection is unavailable
+2024-02-21 22:35:52             FAILED             MOFSLOPENAPI.py             'NoneType' object is not subscriptable
+2024-02-21 22:35:52             FAILED             MOFSLOPENAPI.py             login_Error while sending the webRequest
+2024-02-21 22:35:52             FAILED             MOFSLOPENAPI.py             Login Request failed
+2024-02-21 22:36:00             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 22:36:00             FAILED             MOFSLOPENAPI.py             GetPublicIPAddressHTTPConnectionPool(host='checkip.dyndns.org', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000002AE2E9126F0>: Failed to resolve 'checkip.dyndns.org' ([Errno 11001] getaddrinfo failed)"))
+2024-02-21 22:36:00             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 22:36:01             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 22:36:01             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 22:36:01             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 22:36:01             FAILED             MOFSLOPENAPI.py             Network connection is unavailable
+2024-02-21 22:36:01             FAILED             MOFSLOPENAPI.py             'NoneType' object is not subscriptable
+2024-02-21 22:36:01             FAILED             MOFSLOPENAPI.py             login_Error while sending the webRequest
+2024-02-21 22:36:01             FAILED             MOFSLOPENAPI.py             Login Request failed
+2024-02-21 22:36:05             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 22:36:05             FAILED             MOFSLOPENAPI.py             GetPublicIPAddressHTTPConnectionPool(host='checkip.dyndns.org', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000002AE2E8F1340>: Failed to resolve 'checkip.dyndns.org' ([Errno 11001] getaddrinfo failed)"))
+2024-02-21 22:36:05             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 22:36:05             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 22:36:05             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 22:36:05             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 22:36:06             FAILED             MOFSLOPENAPI.py             Network connection is unavailable
+2024-02-21 22:36:06             FAILED             MOFSLOPENAPI.py             'NoneType' object is not subscriptable
+2024-02-21 22:36:06             FAILED             MOFSLOPENAPI.py             login_Error while sending the webRequest
+2024-02-21 22:36:06             FAILED             MOFSLOPENAPI.py             Login Request failed
+2024-02-21 22:36:34             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 22:36:36             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 22:36:37             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 22:36:37             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 22:36:37             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 22:36:39             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 22:36:39             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-02-21 22:36:40             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-02-21 22:36:40             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 22:36:42             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 22:36:42             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-02-21 22:36:44             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-02-21 22:36:44             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 22:36:46             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 22:36:46             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-02-21 22:38:02             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 22:38:03             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 22:38:03             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 22:38:08             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 22:38:09             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 22:38:09             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 22:38:09             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 22:38:09             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 22:38:11             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 22:38:11             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-02-21 22:38:14             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-02-21 22:38:14             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 22:38:15             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 22:38:15             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-02-21 22:38:18             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-02-21 22:38:18             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 22:38:20             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 22:38:20             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-02-21 23:20:30             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 23:20:31             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 23:20:31             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 23:23:47             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 23:23:47             FAILED             MOFSLOPENAPI.py             GetPublicIPAddressHTTPConnectionPool(host='checkip.dyndns.org', port=80): Max retries exceeded with url: / (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000029BD63C17C0>: Failed to resolve 'checkip.dyndns.org' ([Errno 11001] getaddrinfo failed)"))
+2024-02-21 23:23:47             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 23:23:47             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 23:23:47             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 23:23:47             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 23:23:47             FAILED             MOFSLOPENAPI.py             Network connection is unavailable
+2024-02-21 23:23:47             FAILED             MOFSLOPENAPI.py             'NoneType' object is not subscriptable
+2024-02-21 23:23:47             FAILED             MOFSLOPENAPI.py             login_Error while sending the webRequest
+2024-02-21 23:23:47             FAILED             MOFSLOPENAPI.py             Login Request failed
+2024-02-21 23:44:34             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 23:44:35             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 23:44:36             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 23:44:46             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 23:44:46             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 23:44:47             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 23:44:47             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 23:44:47             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 23:44:50             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 23:44:50             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-02-21 23:44:51             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-02-21 23:44:51             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 23:44:52             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 23:44:52             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-02-21 23:44:55             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-02-21 23:44:55             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 23:44:56             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 23:44:56             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-02-21 23:45:44             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 23:45:45             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 23:45:45             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 23:45:51             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 23:45:52             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 23:45:53             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 23:45:53             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 23:45:53             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 23:45:55             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 23:45:55             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-02-21 23:45:56             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-02-21 23:45:56             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 23:45:58             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 23:45:58             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-02-21 23:46:01             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-02-21 23:46:01             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 23:46:02             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 23:46:02             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-02-21 23:49:01             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 23:49:02             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 23:49:03             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 23:49:24             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 23:49:25             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 23:49:25             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 23:49:25             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 23:49:25             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 23:49:28             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 23:49:28             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-02-21 23:49:29             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-02-21 23:49:29             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 23:49:30             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 23:49:30             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-02-21 23:49:34             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-02-21 23:49:34             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 23:49:36             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 23:49:36             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-02-21 23:50:22             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 23:50:23             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 23:50:23             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 23:50:34             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 23:50:35             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 23:50:36             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 23:50:36             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 23:50:36             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 23:50:38             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 23:50:38             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-02-21 23:50:39             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-02-21 23:50:39             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 23:50:41             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 23:50:41             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-02-21 23:50:44             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-02-21 23:50:44             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 23:50:46             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 23:50:46             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
+2024-02-21 23:51:56             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 23:51:57             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 23:51:58             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 23:52:46             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor
+2024-02-21 23:52:47             SUCCESS             MOFSLOPENAPI.py             GetManufacturerLENOVO
+2024-02-21 23:52:47             SUCCESS             MOFSLOPENAPI.py             Initilize Constructor Done
+2024-02-21 23:52:47             SUCCESS             MOFSLOPENAPI.py             Initilize login request send
+2024-02-21 23:52:47             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 23:52:48             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 23:52:49             SUCCESS             MOFSLOPENAPI.py             Login sucessfully
+2024-02-21 23:52:50             SUCCESS             MOFSLOPENAPI.py             Initilaize GetLtp request send
+2024-02-21 23:52:50             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 23:52:51             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 23:52:51             SUCCESS             MOFSLOPENAPI.py             GetLtp request sent Successfully
+2024-02-21 23:52:54             SUCCESS             MOFSLOPENAPI.py             Initilaize GetOrderBook request send
+2024-02-21 23:52:54             SUCCESS             MOFSLOPENAPI.py             Initilize Post WebRequest Sent
+2024-02-21 23:52:55             SUCCESS             MOFSLOPENAPI.py             Post WebRequest Send Successfully
+2024-02-21 23:52:55             SUCCESS             MOFSLOPENAPI.py             GetOrderBook request sent Successfully
