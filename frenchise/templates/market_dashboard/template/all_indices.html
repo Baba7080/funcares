@@ -62,7 +62,7 @@
                       <th>LTP</th>
                       <th>Open</th>
                       <th>High</th>
-                      <th class="wd-10p">Low</th>
+                      <th>Low</th>
                       <th>Close</th>
                       <th>ATP</th>
                       <th>Volume</th>
@@ -70,273 +70,27 @@
                     </tr>
                   </thead>
                   <tbody>
+                    {% for at in all_data %}
+                 
                     <tr>
                       <!-- <td><i class="flag-icon flag-icon-gb flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty50}}</strong></td>
-                      <td>{{nse_ohlc.nifty_50_ltp}}</td>
-                      <td>{{nse_ohlc.nifty_50_open}}</td>
-                      <td>{{nse_ohlc.nifty_50_high}}</td>
-                      <td>{{nse_ohlc.nifty_50_close}}</td>
-                      <td>{{nse_ohlc.nifty_50_low}}</td>
-                      <td>{{nse_ohlc.nifty_bank_close}}</td>
-                      <td>2344</td>
-                      <td>{{nse_ohlc.nifty_50_volume}}</td>
+                      <td><strong>{{at.indexname}}</strong></td>
+                      <td>{{at.ltp}}</td>
+                      <td>{{at.open}}</td>
+                      <td>{{at.high}}</td>
+                      <td>{{at.low}}</td>
+                      <td>{{at.close}}</td>
+                      <td>{{at.ask}}</td>
+                      <td>{{at.volume}}</td>
+                      <td>{{at.bid}}</td>
+                      
                     </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-in flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty100}}</strong></td>
-                      <td>{{nse_ohlc.nifty_100_ltp}}</td>
-                      <td>{{nse_ohlc.nifty_100_open}}</td>
-                      <td>{{nse_ohlc.nifty_100_high}}</td>
-                      <td>{{nse_ohlc.nifty_100_low}}</td>
-                      <td>{{nse_ohlc.nifty_100_close}}</td>
-                      <td>{{nse_ohlc.nifty_bank_close}}</td>
-                      <td>2344</td>
-                      <td>{{nse_ohlc.nifty_100_volume}}</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ca flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty200}}</strong></td>
-                      <td>{{nse_ohlc.nifty_200_ltp}}</td>
-                      <td>{{nse_ohlc.nifty_200_open}}</td>
-                      <td>{{nse_ohlc.nifty_200_high}}</td>
-                      <td>{{nse_ohlc.nifty_200_low}}</td>
-                      <td>{{nse_ohlc.nifty_200_close}}</td>
-                      <td>2344</td>
-                      <td>{{nse_ohlc.nifty_200_volume}}</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ca flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_500}}</strong></td>
-                      <td>{{nse_ohlc.nifty_500_ltp}}</td>
-                      <td>{{nse_ohlc.nifty_500_open}}</td>
-                      <td>{{nse_ohlc.nifty_500_high}}</td>
-                      <td>{{nse_ohlc.nifty_500_low}}</td>
-                      <td>{{nse_ohlc.nifty_500_close}}</td>
-                      <td>2344</td>
-                      <td>{{nse_ohlc.nifty_500_volume}}</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-fr flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.niftybank}}</strong></td>
-                      <td>{{nse_ohlc.nifty_bank_ltp}}</td>
-                      <td>{{nse_ohlc.nifty_bank_open}}</td>
-                      <td>{{nse_ohlc.nifty_bank_high}}</td>
-                      <td class="wd-10p">{{nse_ohlc.nifty_bank_low}}</td>
-                      <td>{{nse_ohlc.nifty_bank_close}}</td>
-                      <td>2344</td>
-                      <td>{{nse_ohlc.nifty_bank_volume}}</td>
-                      <!-- <td>{{nse_ohlc.nifty_bank_open}}</td> -->
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.niftyauto}}</strong></td>
-                      <td>{{nse_ohlc.nifty_auto_ltp}}</td>
-                      <td>{{nse_ohlc.nifty_auto_open}}</td>
-                      <td>{{nse_ohlc.nifty_auto_high}}</td>
-                      <td>{{nse_ohlc.nifty_auto_low}}</td>
-                      <td>{{nse_ohlc.nifty_auto_close}}</td>
-                      <td>2344</td>
-                      <td>{{nse_ohlc.nifty_auto_volume}}</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.niftyfmcg}}</strong></td>
-                      <td>{{nse_ohlc.nifty_fmcg_ltp}}</td>
-                      <td>{{nse_ohlc.nifty_fmcg_open}}</td>
-                      <td>{{nse_ohlc.nifty_fmcg_high}}</td>
-                      <td>{{nse_ohlc.nifty_fmcg_low}}</td>
-                      <td>{{nse_ohlc.nifty_fmcg_close}}</td>
-                      <td>2344</td>
-                      <td>{{nse_ohlc.nifty_fmcg_volume}}</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.niftypharma}}</strong></td>
-                      <td>{{nse_ohlc.nifty_pharma_ltp}}</td>
-                      <td>{{nse_ohlc.nifty_pharma_open}}</td>
-                      <td>{{nse_ohlc.nifty_pharma_high}}</td>
-                      <td>{{nse_ohlc.nifty_pharma_low}}</td>
-                      <td>{{nse_ohlc.nifty_pharma_close}}</td>
-                      <td>2344</td>
-                      <td>{{nse_ohlc.nifty_pharma_volume}}</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_mid_select}}</strong></td>
-                      <td>{{nse_ohlc.nifty_mid_select_ltp}}</td>
-                      <td>{{nse_ohlc.nifty_mid_select_open}}</td>
-                      <td>{{nse_ohlc.nifty_mid_select_high}}</td>
-                      <td>{{nse_ohlc.nifty_mid_select_low}}</td>
-                      <td>{{nse_ohlc.nifty_mid_select_close}}</td>
-                      <td>2344</td>
-                      <td>{{nse_ohlc.nifty_mid_select_volume}}</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_midcap_50}}</strong></td>
-                      <td>{{nse_ohlc.nifty_midcap_50_ltp}}</td>
-                      <td>{{nse_ohlc.nifty_midcap_50_open}}</td>
-                      <td>{{nse_ohlc.nifty_midcap_50_high}}</td>
-                      <td>{{nse_ohlc.nifty_midcap_50_low}}</td>
-                      <td>{{nse_ohlc.nifty_midcap_50_close}}</td>
-                      <td>2344</td>
-                      <td>{{nse_ohlc.nifty_midcap_50_volume}}</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_growsect_15}}</strong></td>
-                      <td>{{nse_ohlc.nifty_growsect_15_ltp}}</td>
-                      <td>{{nse_ohlc.nifty_growsect_15_open}}</td>
-                      <td>{{nse_ohlc.nifty_growsect_15_high}}</td>
-                      <td>{{nse_ohlc.nifty_growsect_15_low}}</td>
-                      <td>{{nse_ohlc.nifty_growsect_15_close}}</td>
-                      <td>2344</td>
-                      <td>{{nse_ohlc.nifty_growsect_15_volume}}</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_liq_15}}</strong></td>
-                      <td><strong>197</strong> (2.12%)</td>
-                      <td>32.07%</td>
-                      <td>15.09%</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.india_vix}}</strong></td>
-                      <td><strong>197</strong> (2.12%)</td>
-                      <td>32.07%</td>
-                      <td>15.09%</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_cpse}}</strong></td>
-                      <td><strong>197</strong> (2.12%)</td>
-                      <td>32.07%</td>
-                      <td>15.09%</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_smallcap_100}}</strong></td>
-                      <td><strong>197</strong> (2.12%)</td>
-                      <td>32.07%</td>
-                      <td>15.09%</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_serv_sector}}</strong></td>
-                      <td><strong>197</strong> (2.12%)</td>
-                      <td>32.07%</td>
-                      <td>15.09%</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_realty}}</strong></td>
-                      <td><strong>197</strong> (2.12%)</td>
-                      <td>32.07%</td>
-                      <td>15.09%</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_psu_bank}}</strong></td>
-                      <td><strong>197</strong> (2.12%)</td>
-                      <td>32.07%</td>
-                      <td>15.09%</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_pse}}</strong></td>
-                      <td><strong>197</strong> (2.12%)</td>
-                      <td>32.07%</td>
-                      <td>15.09%</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_next_50}}</strong></td>
-                      <td><strong>197</strong> (2.12%)</td>
-                      <td>32.07%</td>
-                      <td>15.09%</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_mnc}}</strong></td>
-                      <td><strong>197</strong> (2.12%)</td>
-                      <td>32.07%</td>
-                      <td>15.09%</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_metal}}</strong></td>
-                      <td><strong>197</strong> (2.12%)</td>
-                      <td>32.07%</td>
-                      <td>15.09%</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_midcap_100}}</strong></td>
-                      <td><strong>197</strong> (2.12%)</td>
-                      <td>32.07%</td>
-                      <td>15.09%</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_media}}</strong></td>
-                      <td><strong>197</strong> (2.12%)</td>
-                      <td>32.07%</td>
-                      <td>15.09%</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_it}}</strong></td>
-                      <td><strong>197</strong> (2.12%)</td>
-                      <td>32.07%</td>
-                      <td>15.09%</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_infra}}</strong></td>
-                      <td><strong>197</strong> (2.12%)</td>
-                      <td>32.07%</td>
-                      <td>15.09%</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_fin_service}}</strong></td>
-                      <td><strong>197</strong> (2.12%)</td>
-                      <td>32.07%</td>
-                      <td>15.09%</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_energy}}</strong></td>
-                      <td><strong>197</strong> (2.12%)</td>
-                      <td>32.07%</td>
-                      <td>15.09%</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_div_opps_50}}</strong></td>
-                      <td><strong>197</strong> (2.12%)</td>
-                      <td>32.07%</td>
-                      <td>15.09%</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_consumption}}</strong></td>
-                      <td><strong>197</strong> (2.12%)</td>
-                      <td>32.07%</td>
-                      <td>15.09%</td>
-                    </tr>
-                    <tr>
-                      <!-- <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td> -->
-                      <td><strong>{{ind_name.nifty_commodities}}</strong></td>
-                      <td><strong>197</strong> (2.12%)</td>
-                      <td>32.07%</td>
-                      <td>15.09%</td>
-                    </tr>
+            
+                    {% endfor %}
 
                   </tbody>
                 </table>
+
               </div><!-- table-responsive -->
             </div><!-- card -->
           </div><!-- col-lg -->
