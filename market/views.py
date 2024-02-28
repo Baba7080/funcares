@@ -1790,26 +1790,16 @@ def all_nse_bse_indices(request):
         "clientcode":clientcode, 
         "exchangename":"NSE"
         }
-    
-    
-
+ 
     response_nse_index = requests.post(url, json=nse_data, headers=headers )
     res_nse_index = response_nse_index.json()
     data_n = res_nse_index.get ('data', [])
-    print("skffdgdgfdhfsg", data_n)
-
-    
-    
 
     context = []
    
     for indices_data in data_n:
-        print("indices data-----------------", indices_data)
         nse_index_code = indices_data['indexcode']
-        print("nse index code--------------" ,nse_index_code)
         nse_index_name = indices_data['indexname']
-        print("nse index name--------------" ,nse_index_name)
-        
 
         nse_ohlc_data = {
             "clientcode":clientcode,
@@ -1819,7 +1809,6 @@ def all_nse_bse_indices(request):
         response_scrip = requests.post(url_get_ltp, json=nse_ohlc_data, headers=headers )
         res_nse_scrip = response_scrip.json()
         data_n_scrip = res_nse_scrip.get ('data', [])
-        print("scrip code-------", data_n_scrip)
 
         open = data_n_scrip['open']
         high = data_n_scrip['high']
@@ -1842,9 +1831,6 @@ def all_nse_bse_indices(request):
             "ask" : ask,
             "bid" : bid,
         })
-
-
-
 
     return render(request, 'market_dashboard/template/all_indices.html',{"all_data":context})
 
