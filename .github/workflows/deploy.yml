@@ -1,0 +1,23 @@
+name: Django CI
+
+# Trigger workflows
+on:
+    push:
+        branches: ["main"]
+    pull_request:
+        branches: ['main']
+
+#authenticate to server
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest 
+        steps:
+            - uses: actions/chechout@v2
+            - name: Checkout repository
+              uses: appleboy/ssh-action@master
+              with:
+                host: http://13.201.70.183/
+                username: ec2-user
+                port: 80
+                script: "cd /devalaya/.scripts/deploy.sh"
