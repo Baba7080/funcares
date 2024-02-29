@@ -1,23 +1,50 @@
+# name: Django CI
+
+# # Trigger workflows
+# on:
+#     push:
+#         branches: ["main"]
+#     pull_request:
+#         branches: ['main']
+
+# #authenticate to server
+
+# jobs:
+#     deploy:
+#         runs-on: ubuntu-latest 
+#         steps:
+#             - uses: actions/chechout@v2
+#             - name: Checkout repository
+#               uses: appleboy/ssh-action@master
+#               with:
+#                 host: http://13.201.70.183/
+#                 username: ec2-user
+#                 port: 80
+#                 script: "cd /devalaya/.scripts/deploy.sh"
+
+
 name: Django CI
 
 # Trigger workflows
 on:
-    push:
-        branches: ["main"]
-    pull_request:
-        branches: ['main']
-
-#authenticate to server
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ['main']
 
 jobs:
-    deploy:
-        runs-on: ubuntu-latest 
-        steps:
-            - uses: actions/chechout@v2
-            - name: Checkout repository
-              uses: appleboy/ssh-action@master
-              with:
-                host: http://13.201.70.183/
-                username: ec2-user
-                port: 80
-                script: "cd /devalaya/.scripts/deploy.sh"
+  deploy:
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: SSH and deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /path/to/your/deployment/directory
+            git pull origin main
+            # Additional deployment steps as needed
