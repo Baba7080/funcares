@@ -1,0 +1,114 @@
+{% extends 'market_dashboard/template/market_base.html' %}
+{% load static %}
+{% block title %} Home {% endblock title %}
+
+{% block main-page %}
+
+<div class="az-content az-content-dashboard">
+    <div class="container">
+      <div class="az-content-body">
+        <div class="az-dashboard-one-title">
+          <div>
+            <h2 class="az-dashboard-title">Welcome {{request.user.username}}</h2>
+            <h3 class="az-dashboard-title">All Indices</h3>
+          </div>
+          <div class="az-content-header-right">
+            <div class="media">
+              <div class="media-body">
+                <label>Start Date</label>
+                <h6>Oct 10, 2018</h6>
+              </div><!-- media-body -->
+            </div><!-- media -->
+            <div class="media">
+              <div class="media-body">
+                <label>End Date</label>
+                <h6>Oct 23, 2018</h6>
+              </div><!-- media-body -->
+            </div><!-- media -->
+            <div class="media">
+              <div class="media-body">
+                <label>Event Category</label>
+                <h6>All Categories</h6>
+              </div><!-- media-body -->
+            </div><!-- media -->
+            <a href="" class="btn btn-purple">Export</a>
+          </div>
+        </div><!-- az-dashboard-one-title -->
+        <div class="az-dashboard-nav"> 
+            <nav class="nav">
+                <a class="nav-link active"href="{% url 'MOSL_NSE_BSE_alldata' %}">Home</a>
+                <a class="nav-link" data-toggle="tab" href="">Orders</a>
+                <a class="nav-link" data-toggle="tab" href="">Option Stocks</a>
+                <a class="nav-link" href="{% url 'all_nse_bse_indices' %}">Indices</a>
+            </nav>
+  
+            <nav class="nav">
+              <a class="nav-link" href="#"><i class="far fa-save"></i> Save Report</a>
+              <a class="nav-link" href="#"><i class="far fa-file-pdf"></i> Export to PDF</a>
+              <a class="nav-link" href="#"><i class="far fa-envelope"></i>Send to Email</a>
+              <a class="nav-link" href="#"><i class="fas fa-ellipsis-h"></i></a>
+            </nav>
+          </div>
+        <div class="col-lg-12 col-xl-12 mg-t-20 mg-lg-t-0 mb-5">
+            <div class="card card-table-one">
+              <h4 class="">NSE Indices</h4>
+              <!-- <p class="az-content-text mg-b-20">Part of this date range occurs before the new users metric had been calculated, so the old users metric is displayed.</p> -->
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <!-- <th class="wd-5p">&nbsp;</th> -->
+                      <th class="wd-25p">Exchange Name</th>                           
+                      <th>Instrument Name</th>
+                      <th>Expiry Date</th>
+                      <th>Date</th>
+                      <th>Scrip Full Name</th>
+                      <th>scripshortname</th>
+                      <th>Open</th>
+                      <th>High</th>
+                      <th>Low</th>
+                      <th>Close</th>                   
+                      <th>Volume</th>
+                      <th>strike price </th>
+                      <th>option type</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for at in all_data %}
+                 
+                    <tr>
+                      <!-- <td><i class="flag-icon flag-icon-gb flag-icon-squared"></i></td> -->
+                      <td><strong>{{at.exchange_name}}</strong></td>
+                      <td>{{at.instrument_name}}</td>
+                      
+                      <td>{{at.expiry_date}}</td>
+                      <td>{{at.date}}</td>
+                      <td>{{at.scrip_fullname}}</td>
+                      <td>{{at.Scrip_shortname}}</td>
+                    
+                      <td>{{at.open}}</td>
+                      <td>{{at.high}}</td>
+                      <td>{{at.low}}</td>
+                      <td>{{at.close}}</td>
+                      <td>{{at.volume}}</td>
+                    
+                      <td>{{at.strike_price}}</td>
+                      <td>{{at.option_type}}</td>
+                    
+                      
+                    </tr>
+            
+                    {% endfor %}
+
+                  </tbody>
+                </table>
+
+              </div><!-- table-responsive -->
+            </div><!-- card -->
+          </div><!-- col-lg -->
+
+    </div>
+  </div><!-- az-content -->
+
+
+{% endblock main-page %}

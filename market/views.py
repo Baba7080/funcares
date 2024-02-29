@@ -1795,6 +1795,7 @@ def all_nse_bse_indices(request):
     res_nse_index = response_nse_index.json()
     data_n = res_nse_index.get ('data', [])
 
+
     context = []
    
     for indices_data in data_n:
@@ -1810,6 +1811,9 @@ def all_nse_bse_indices(request):
         res_nse_scrip = response_scrip.json()
         data_n_scrip = res_nse_scrip.get ('data', [])
 
+      
+
+
         open = data_n_scrip['open']
         high = data_n_scrip['high']
         low = data_n_scrip['low']
@@ -1818,6 +1822,8 @@ def all_nse_bse_indices(request):
         volume = data_n_scrip['volume']
         ask = data_n_scrip['ask']
         bid = data_n_scrip['bid']
+
+        
 
         context.append({
             "indexcode": nse_index_code,
@@ -1835,10 +1841,80 @@ def all_nse_bse_indices(request):
     return render(request, 'market_dashboard/template/all_indices.html',{"all_data":context})
 
 
+def stock_options_data(request):
 
+    context = []
+    url_eod_data = "https://openapi.motilaloswal.com/rest/report/v1/geteoddatabyexchangename"
 
- 
-                                    
+    headers = {
+        "Accept": "application/json",
+        "User-Agent": "MOSL/V.1.1.0",
+        "Authorization": loginmofsl["AuthToken"],  
+        "ApiKey": "MHohVro9A0A1Q2Sw",
+        "ClientLocalIp": "1.2.3.4",
+        "ClientPublicIp": "1.2.3.4",
+        "MacAddress": "00:00:00:00:00:00",
+        "SourceId": "WEB",
+        "vendorinfo": "T0240",
+        "osname": "Windows 10",
+        "osversion": "10.0.19041",
+        "devicemodel": "AHV",
+        'manufacturer': 'LENOVO',
+        "installedappid": "AppID",
+        "browsername": "Chrome",
+        "browserversion": "105.0"
+    }
+
+    eod_data =    {
+            "clientcode":"AA020",
+            "exchangename":"NSEFO"
+            }
+        
+    response_eod = requests.post(url_eod_data, json=eod_data, headers=headers )
+    res_nse_eod = response_eod.json()
+    data_n_eod = res_nse_eod.get ('data', [])
+
+    for stock_op_data in data_n_eod:
+   
+
+        open = stock_op_data['open']
+        high = stock_op_data['high']
+        low = stock_op_data['low']
+        close = stock_op_data['close']
+    
+        volume = stock_op_data['volume']
+        scrip_fullname = stock_op_data['scripfullname']
+        exchange_name = stock_op_data['exchange']
+        instrument_name = stock_op_data['instrumentname']
+    
+        expiry_date = stock_op_data['expirydate']
+        date = stock_op_data['date']
+        Scrip_shortname = stock_op_data['scripshortname']
+        strike_price = stock_op_data['strikeprice']
+        option_type = stock_op_data['optiontype']
+
+        
+
+        context.append({
+            "scrip_fullname": scrip_fullname,
+            "instrument_name": instrument_name,
+            "open" : open,
+            "high" : high,
+            "low" : low,
+            "close" : close,
+            "exchange_name" : exchange_name,
+            "volume" : volume,
+            "expiry_date" : expiry_date,
+            "date" : date,
+            "Scrip_shortname" : Scrip_shortname,
+            "strike_price" : strike_price,
+            "option_type" : option_type,
+        
+        })
+
+    return render(request, 'market_dashboard/template/derivative_data.html',{"all_data":context})
+
+                                
     #             return render(request, 'market_dashboard/template/all_indices.html')
     #         except json.JSONDecodeError as e:
       
